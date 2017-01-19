@@ -1,0 +1,357 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CDC9454E1E2F522B00E6946F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9454D1E2F522B00E6946F /* AppDelegate.swift */; };
+		CDC945501E2F522B00E6946F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9454F1E2F522B00E6946F /* ViewController.swift */; };
+		CDC945531E2F522B00E6946F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC945511E2F522B00E6946F /* Main.storyboard */; };
+		CDC945561E2F522B00E6946F /* Qadmni.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDC945541E2F522B00E6946F /* Qadmni.xcdatamodeld */; };
+		CDC945581E2F522B00E6946F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC945571E2F522B00E6946F /* Assets.xcassets */; };
+		CDC9455B1E2F522B00E6946F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC945591E2F522B00E6946F /* LaunchScreen.storyboard */; };
+		CDC945641E2F54D700E6946F /* test_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC945631E2F54D700E6946F /* test_logo.png */; };
+		CDC945661E2F7FA000E6946F /* splash_screen_back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDC945651E2F7FA000E6946F /* splash_screen_back.jpg */; };
+		CDC945681E2F7FAC00E6946F /* qadmni_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC945671E2F7FAC00E6946F /* qadmni_splash.png */; };
+		CDC9456A1E2F828900E6946F /* login_back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDC945691E2F828900E6946F /* login_back.jpg */; };
+		CDC9456C1E2F837500E6946F /* qadmni_img_logo_english.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC9456B1E2F837500E6946F /* qadmni_img_logo_english.png */; };
+		CDC9456E1E2F919B00E6946F /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9456D1E2F919B00E6946F /* UserLoginViewController.swift */; };
+		CDC945701E2F98C800E6946F /* UITextField + textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9456F1E2F98C800E6946F /* UITextField + textfield.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CDC9454A1E2F522B00E6946F /* Qadmni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qadmni.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDC9454D1E2F522B00E6946F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CDC9454F1E2F522B00E6946F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDC945521E2F522B00E6946F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CDC945551E2F522B00E6946F /* Qadmni.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Qadmni.xcdatamodel; sourceTree = "<group>"; };
+		CDC945571E2F522B00E6946F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDC9455A1E2F522B00E6946F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDC9455C1E2F522B00E6946F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDC945631E2F54D700E6946F /* test_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_logo.png; sourceTree = "<group>"; };
+		CDC945651E2F7FA000E6946F /* splash_screen_back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splash_screen_back.jpg; sourceTree = "<group>"; };
+		CDC945671E2F7FAC00E6946F /* qadmni_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qadmni_splash.png; sourceTree = "<group>"; };
+		CDC945691E2F828900E6946F /* login_back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login_back.jpg; sourceTree = "<group>"; };
+		CDC9456B1E2F837500E6946F /* qadmni_img_logo_english.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qadmni_img_logo_english.png; sourceTree = "<group>"; };
+		CDC9456D1E2F919B00E6946F /* UserLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoginViewController.swift; sourceTree = "<group>"; };
+		CDC9456F1E2F98C800E6946F /* UITextField + textfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField + textfield.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDC945471E2F522B00E6946F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CDC945411E2F522B00E6946F = {
+			isa = PBXGroup;
+			children = (
+				CDC9454C1E2F522B00E6946F /* Qadmni */,
+				CDC9454B1E2F522B00E6946F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CDC9454B1E2F522B00E6946F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDC9454A1E2F522B00E6946F /* Qadmni.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDC9454C1E2F522B00E6946F /* Qadmni */ = {
+			isa = PBXGroup;
+			children = (
+				CDC9454D1E2F522B00E6946F /* AppDelegate.swift */,
+				CDC9454F1E2F522B00E6946F /* ViewController.swift */,
+				CDC9456D1E2F919B00E6946F /* UserLoginViewController.swift */,
+				CDC9456F1E2F98C800E6946F /* UITextField + textfield.swift */,
+				CDC945621E2F54C300E6946F /* Resources */,
+				CDC945511E2F522B00E6946F /* Main.storyboard */,
+				CDC945571E2F522B00E6946F /* Assets.xcassets */,
+				CDC945591E2F522B00E6946F /* LaunchScreen.storyboard */,
+				CDC9455C1E2F522B00E6946F /* Info.plist */,
+				CDC945541E2F522B00E6946F /* Qadmni.xcdatamodeld */,
+			);
+			path = Qadmni;
+			sourceTree = "<group>";
+		};
+		CDC945621E2F54C300E6946F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CDC945691E2F828900E6946F /* login_back.jpg */,
+				CDC945631E2F54D700E6946F /* test_logo.png */,
+				CDC945651E2F7FA000E6946F /* splash_screen_back.jpg */,
+				CDC945671E2F7FAC00E6946F /* qadmni_splash.png */,
+				CDC9456B1E2F837500E6946F /* qadmni_img_logo_english.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDC945491E2F522B00E6946F /* Qadmni */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDC9455F1E2F522B00E6946F /* Build configuration list for PBXNativeTarget "Qadmni" */;
+			buildPhases = (
+				CDC945461E2F522B00E6946F /* Sources */,
+				CDC945471E2F522B00E6946F /* Frameworks */,
+				CDC945481E2F522B00E6946F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Qadmni;
+			productName = Qadmni;
+			productReference = CDC9454A1E2F522B00E6946F /* Qadmni.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDC945421E2F522B00E6946F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Qadmni;
+				TargetAttributes = {
+					CDC945491E2F522B00E6946F = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CDC945451E2F522B00E6946F /* Build configuration list for PBXProject "Qadmni" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDC945411E2F522B00E6946F;
+			productRefGroup = CDC9454B1E2F522B00E6946F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDC945491E2F522B00E6946F /* Qadmni */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDC945481E2F522B00E6946F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDC945661E2F7FA000E6946F /* splash_screen_back.jpg in Resources */,
+				CDC945641E2F54D700E6946F /* test_logo.png in Resources */,
+				CDC945681E2F7FAC00E6946F /* qadmni_splash.png in Resources */,
+				CDC9455B1E2F522B00E6946F /* LaunchScreen.storyboard in Resources */,
+				CDC945581E2F522B00E6946F /* Assets.xcassets in Resources */,
+				CDC9456C1E2F837500E6946F /* qadmni_img_logo_english.png in Resources */,
+				CDC9456A1E2F828900E6946F /* login_back.jpg in Resources */,
+				CDC945531E2F522B00E6946F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDC945461E2F522B00E6946F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDC945561E2F522B00E6946F /* Qadmni.xcdatamodeld in Sources */,
+				CDC945501E2F522B00E6946F /* ViewController.swift in Sources */,
+				CDC9454E1E2F522B00E6946F /* AppDelegate.swift in Sources */,
+				CDC945701E2F98C800E6946F /* UITextField + textfield.swift in Sources */,
+				CDC9456E1E2F919B00E6946F /* UserLoginViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CDC945511E2F522B00E6946F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDC945521E2F522B00E6946F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CDC945591E2F522B00E6946F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDC9455A1E2F522B00E6946F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CDC9455D1E2F522B00E6946F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CDC9455E1E2F522B00E6946F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDC945601E2F522B00E6946F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Qadmni/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qadmni.Qadmni;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CDC945611E2F522B00E6946F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Qadmni/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qadmni.Qadmni;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDC945451E2F522B00E6946F /* Build configuration list for PBXProject "Qadmni" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDC9455D1E2F522B00E6946F /* Debug */,
+				CDC9455E1E2F522B00E6946F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDC9455F1E2F522B00E6946F /* Build configuration list for PBXNativeTarget "Qadmni" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDC945601E2F522B00E6946F /* Debug */,
+				CDC945611E2F522B00E6946F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CDC945541E2F522B00E6946F /* Qadmni.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CDC945551E2F522B00E6946F /* Qadmni.xcdatamodel */,
+			);
+			currentVersion = CDC945551E2F522B00E6946F /* Qadmni.xcdatamodel */;
+			path = Qadmni.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CDC945421E2F522B00E6946F /* Project object */;
+}
