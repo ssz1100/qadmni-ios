@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CDC52C491E30E4BF00C860FA /* VendorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC52C481E30E4BF00C860FA /* VendorLoginViewController.swift */; };
 		CDC9454E1E2F522B00E6946F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9454D1E2F522B00E6946F /* AppDelegate.swift */; };
 		CDC945501E2F522B00E6946F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9454F1E2F522B00E6946F /* ViewController.swift */; };
 		CDC945531E2F522B00E6946F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC945511E2F522B00E6946F /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CDC52C481E30E4BF00C860FA /* VendorLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorLoginViewController.swift; sourceTree = "<group>"; };
 		CDC9454A1E2F522B00E6946F /* Qadmni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qadmni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC9454D1E2F522B00E6946F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDC9454F1E2F522B00E6946F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				CDC9454D1E2F522B00E6946F /* AppDelegate.swift */,
 				CDC9454F1E2F522B00E6946F /* ViewController.swift */,
 				CDC9456D1E2F919B00E6946F /* UserLoginViewController.swift */,
+				CDC52C481E30E4BF00C860FA /* VendorLoginViewController.swift */,
 				CDC9456F1E2F98C800E6946F /* UITextField + textfield.swift */,
 				CDC945621E2F54C300E6946F /* Resources */,
 				CDC945511E2F522B00E6946F /* Main.storyboard */,
@@ -175,6 +178,7 @@
 			files = (
 				CDC945561E2F522B00E6946F /* Qadmni.xcdatamodeld in Sources */,
 				CDC945501E2F522B00E6946F /* ViewController.swift in Sources */,
+				CDC52C491E30E4BF00C860FA /* VendorLoginViewController.swift in Sources */,
 				CDC9454E1E2F522B00E6946F /* AppDelegate.swift in Sources */,
 				CDC945701E2F98C800E6946F /* UITextField + textfield.swift in Sources */,
 				CDC9456E1E2F919B00E6946F /* UserLoginViewController.swift in Sources */,
@@ -337,6 +341,7 @@
 				CDC945611E2F522B00E6946F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
