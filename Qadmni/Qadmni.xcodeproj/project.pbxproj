@@ -21,6 +21,10 @@
 		CDC9456C1E2F837500E6946F /* qadmni_img_logo_english.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC9456B1E2F837500E6946F /* qadmni_img_logo_english.png */; };
 		CDC9456E1E2F919B00E6946F /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9456D1E2F919B00E6946F /* UserLoginViewController.swift */; };
 		CDC945701E2F98C800E6946F /* UITextField + textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9456F1E2F98C800E6946F /* UITextField + textfield.swift */; };
+		CDFB2FFE1E32211C00A742E9 /* register_back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDFB2FFD1E32211C00A742E9 /* register_back.jpg */; };
+		CDFB30001E3221CC00A742E9 /* UserRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFB2FFF1E3221CC00A742E9 /* UserRegisterViewController.swift */; };
+		CDFB30021E323F8100A742E9 /* VendorRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFB30011E323F8100A742E9 /* VendorRegisterViewController.swift */; };
+		CDFB30041E32498D00A742E9 /* VendorShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFB30031E32498D00A742E9 /* VendorShopDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		CDC9456B1E2F837500E6946F /* qadmni_img_logo_english.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qadmni_img_logo_english.png; sourceTree = "<group>"; };
 		CDC9456D1E2F919B00E6946F /* UserLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoginViewController.swift; sourceTree = "<group>"; };
 		CDC9456F1E2F98C800E6946F /* UITextField + textfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField + textfield.swift"; sourceTree = "<group>"; };
+		CDFB2FFD1E32211C00A742E9 /* register_back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = register_back.jpg; sourceTree = "<group>"; };
+		CDFB2FFF1E3221CC00A742E9 /* UserRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegisterViewController.swift; sourceTree = "<group>"; };
+		CDFB30011E323F8100A742E9 /* VendorRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorRegisterViewController.swift; sourceTree = "<group>"; };
+		CDFB30031E32498D00A742E9 /* VendorShopDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorShopDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,9 @@
 				CDC9454F1E2F522B00E6946F /* ViewController.swift */,
 				CDC9456D1E2F919B00E6946F /* UserLoginViewController.swift */,
 				CDC52C481E30E4BF00C860FA /* VendorLoginViewController.swift */,
+				CDFB2FFF1E3221CC00A742E9 /* UserRegisterViewController.swift */,
+				CDFB30011E323F8100A742E9 /* VendorRegisterViewController.swift */,
+				CDFB30031E32498D00A742E9 /* VendorShopDetailViewController.swift */,
 				CDC9456F1E2F98C800E6946F /* UITextField + textfield.swift */,
 				CDC945621E2F54C300E6946F /* Resources */,
 				CDC945511E2F522B00E6946F /* Main.storyboard */,
@@ -95,6 +106,7 @@
 				CDC945651E2F7FA000E6946F /* splash_screen_back.jpg */,
 				CDC945671E2F7FAC00E6946F /* qadmni_splash.png */,
 				CDC9456B1E2F837500E6946F /* qadmni_img_logo_english.png */,
+				CDFB2FFD1E32211C00A742E9 /* register_back.jpg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -161,6 +173,7 @@
 				CDC945661E2F7FA000E6946F /* splash_screen_back.jpg in Resources */,
 				CDC945641E2F54D700E6946F /* test_logo.png in Resources */,
 				CDC945681E2F7FAC00E6946F /* qadmni_splash.png in Resources */,
+				CDFB2FFE1E32211C00A742E9 /* register_back.jpg in Resources */,
 				CDC9455B1E2F522B00E6946F /* LaunchScreen.storyboard in Resources */,
 				CDC945581E2F522B00E6946F /* Assets.xcassets in Resources */,
 				CDC9456C1E2F837500E6946F /* qadmni_img_logo_english.png in Resources */,
@@ -179,7 +192,10 @@
 				CDC945561E2F522B00E6946F /* Qadmni.xcdatamodeld in Sources */,
 				CDC945501E2F522B00E6946F /* ViewController.swift in Sources */,
 				CDC52C491E30E4BF00C860FA /* VendorLoginViewController.swift in Sources */,
+				CDFB30021E323F8100A742E9 /* VendorRegisterViewController.swift in Sources */,
+				CDFB30001E3221CC00A742E9 /* UserRegisterViewController.swift in Sources */,
 				CDC9454E1E2F522B00E6946F /* AppDelegate.swift in Sources */,
+				CDFB30041E32498D00A742E9 /* VendorShopDetailViewController.swift in Sources */,
 				CDC945701E2F98C800E6946F /* UITextField + textfield.swift in Sources */,
 				CDC9456E1E2F919B00E6946F /* UserLoginViewController.swift in Sources */,
 			);

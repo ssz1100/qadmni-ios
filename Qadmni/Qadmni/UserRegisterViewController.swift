@@ -1,26 +1,33 @@
 //
-//  VendorLoginViewController.swift
+//  UserRegisterViewController.swift
 //  Qadmni
 //
-//  Created by Prakash Sabale on 19/01/17.
+//  Created by Prakash Sabale on 20/01/17.
 //  Copyright © 2017 Qadmni. All rights reserved.
 //
 
 import UIKit
 
-class VendorLoginViewController: UIViewController {
+class UserRegisterViewController: UIViewController {
     
-    @IBOutlet weak var userNameTxtField: UITextField!
     
-    @IBOutlet weak var passwordTxtField: UITextField!
+    @IBOutlet weak var nameTxtField: UITextField!
+    
+    @IBOutlet weak var confirmPasswordtxtField: UITextField!
 
-    @IBOutlet weak var loginVendorButton: UIButton!
+    @IBOutlet weak var passwordTxtField: UITextField!
     
+    @IBOutlet weak var emailTxtField: UITextField!
+    
+    @IBOutlet weak var phoneTxtField: UITextField!
+    
+    @IBOutlet weak var registerButtonOutlet: UIButton!
     
     @IBOutlet weak var subView: UIView!
     
-    @IBAction func loginVendorButtonTapped(_ sender: UIButton) {
+    @IBAction func registerUser(_ sender: UIButton) {
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,15 +40,21 @@ class VendorLoginViewController: UIViewController {
         subView.layer.cornerRadius = 10
         subView.layer.masksToBounds = true
         
-        self.userNameTxtField.underlined()
+        self.nameTxtField.underlined()
+        self.passwordTxtField.underlined()
+        self.confirmPasswordtxtField.underlined()
+        self.emailTxtField.underlined()
+        self.phoneTxtField.underlined()
         
-        self.loginVendorButton.roundedButton()
+        self.registerButtonOutlet.roundedButton()
         
         
         
         
         
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
