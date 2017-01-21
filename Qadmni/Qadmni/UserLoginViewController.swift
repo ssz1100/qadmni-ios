@@ -22,25 +22,27 @@ class UserLoginViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let frame = CGRect.init(x: 0, y: 0, width: 40, height: 40)
+        let imageSize = CGSize.init(width: 25, height: 25)
+        
+        let userloginImage = UIImage(named:"userlogin")
+        userNameTxtField.addLeftIcon(userloginImage, frame: frame, imageSize: imageSize)
+        let passwordImage = UIImage(named:"password")
+        passwordTxtField.addLeftIcon(passwordImage, frame: frame, imageSize: imageSize)
 
         
     }
     
     override func viewDidLayoutSubviews() {
-        subView.layer.borderColor = UIColor.white.cgColor
-        subView.layer.borderWidth = 1
-        subView.layer.cornerRadius = 10
-        subView.layer.masksToBounds = true
+
+        self.subView.roundedView()
+        
         
         self.userNameTxtField.underlined()
         
         self.loginButtonOutlet.roundedButton()
-        
-        
-        
-        
-    
-    }
+           }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

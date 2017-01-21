@@ -22,6 +22,7 @@ extension UITextField
         self.layer.masksToBounds = true
     }
     
+    
     ///  Add a image icon on the left side of the textfield
     public func addLeftIcon(_ image: UIImage?, frame: CGRect, imageSize: CGSize) {
         let leftView = UIView()
@@ -29,7 +30,7 @@ extension UITextField
         let imgView = UIImageView()
         
         
-        imgView.frame = CGRect(x: frame.width - 8 - imageSize.width, y: (frame.height - imageSize.height) / 2 , width: imageSize.width, height: imageSize.height)
+        imgView.frame = CGRect(x: frame.width - 10 - imageSize.width, y: (frame.height - imageSize.height) / 2 , width: imageSize.width, height: imageSize.height)
         imgView.image = image
         leftView.addSubview(imgView)
         self.leftView = leftView
@@ -79,6 +80,20 @@ extension UILabel
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
     }
+
+}
+
+extension UIView
+{
+    func roundedView()
+    {
+        self.layer.borderColor = UIColor.white.cgColor
+        self.layer.borderWidth = 1
+        self.layer.cornerRadius = 10
+        self.layer.masksToBounds = true
+    
+    }
+
 
 }
 

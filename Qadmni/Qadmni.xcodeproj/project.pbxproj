@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD0377951E33657B00FAE471 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0377941E33657B00FAE471 /* ForgotPasswordViewController.swift */; };
 		CDC52C491E30E4BF00C860FA /* VendorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC52C481E30E4BF00C860FA /* VendorLoginViewController.swift */; };
 		CDC9454E1E2F522B00E6946F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9454D1E2F522B00E6946F /* AppDelegate.swift */; };
 		CDC945501E2F522B00E6946F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9454F1E2F522B00E6946F /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD0377941E33657B00FAE471 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		CDC52C481E30E4BF00C860FA /* VendorLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorLoginViewController.swift; sourceTree = "<group>"; };
 		CDC9454A1E2F522B00E6946F /* Qadmni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qadmni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC9454D1E2F522B00E6946F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				CDFB2FFF1E3221CC00A742E9 /* UserRegisterViewController.swift */,
 				CDFB30011E323F8100A742E9 /* VendorRegisterViewController.swift */,
 				CDFB30031E32498D00A742E9 /* VendorShopDetailViewController.swift */,
+				CD0377941E33657B00FAE471 /* ForgotPasswordViewController.swift */,
 				CDC9456F1E2F98C800E6946F /* UITextField + textfield.swift */,
 				CDC945621E2F54C300E6946F /* Resources */,
 				CDC945511E2F522B00E6946F /* Main.storyboard */,
@@ -195,6 +198,7 @@
 				CDFB30021E323F8100A742E9 /* VendorRegisterViewController.swift in Sources */,
 				CDFB30001E3221CC00A742E9 /* UserRegisterViewController.swift in Sources */,
 				CDC9454E1E2F522B00E6946F /* AppDelegate.swift in Sources */,
+				CD0377951E33657B00FAE471 /* ForgotPasswordViewController.swift in Sources */,
 				CDFB30041E32498D00A742E9 /* VendorShopDetailViewController.swift in Sources */,
 				CDC945701E2F98C800E6946F /* UITextField + textfield.swift in Sources */,
 				CDC9456E1E2F919B00E6946F /* UserLoginViewController.swift in Sources */,

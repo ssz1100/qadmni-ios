@@ -31,20 +31,29 @@ class UserRegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let frame = CGRect.init(x: 0, y: 0, width: 30, height: 30)
+        let imageSize = CGSize.init(width: 18, height: 18)
+        
+        let userloginImage = UIImage(named:"userlogin")
+        emailTxtField.addLeftIcon(userloginImage, frame: frame, imageSize: imageSize)
+        let passwordImage = UIImage(named:"password")
+        passwordTxtField.addLeftIcon(passwordImage, frame: frame, imageSize: imageSize)
+        confirmPasswordtxtField.addLeftIcon(passwordImage, frame: frame, imageSize: imageSize)
+        let userNameImage = UIImage(named:"username")
+        nameTxtField.addLeftIcon(userNameImage, frame: frame, imageSize: imageSize)
+        let phoneImage = UIImage(named:"phone")
+        phoneTxtField.addLeftIcon(phoneImage, frame: frame, imageSize: imageSize)
+
     }
     
     override func viewDidLayoutSubviews() {
-        subView.layer.borderColor = UIColor.white.cgColor
-        subView.layer.borderWidth = 1
-        subView.layer.cornerRadius = 10
-        subView.layer.masksToBounds = true
+       self.subView.roundedView()
         
         self.nameTxtField.underlined()
         self.passwordTxtField.underlined()
         self.confirmPasswordtxtField.underlined()
         self.emailTxtField.underlined()
-        self.phoneTxtField.underlined()
+        
         
         self.registerButtonOutlet.roundedButton()
         
