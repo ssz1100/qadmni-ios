@@ -93,6 +93,19 @@ extension UIView
         self.layer.masksToBounds = true
     
     }
+}
+
+extension UIImageView
+{
+    func roundedImageView()
+    {
+        self.layer.borderWidth = 0.5
+        self.layer.masksToBounds = false
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.cornerRadius = self.frame.height/2
+        self.clipsToBounds = true
+    
+    }
 
 
 }

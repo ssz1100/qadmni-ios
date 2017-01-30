@@ -8,6 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		CD0377951E33657B00FAE471 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0377941E33657B00FAE471 /* ForgotPasswordViewController.swift */; };
+		CD7CDC6A1E35EEA000D35F19 /* QuickStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CDC691E35EEA000D35F19 /* QuickStartViewController.swift */; };
+		CD7CDC6C1E360C3900D35F19 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CDC6B1E360C3900D35F19 /* LeftViewController.swift */; };
+		CD7CDC6E1E361E7400D35F19 /* LeftMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CDC6D1E361E7400D35F19 /* LeftMenuTableViewCell.swift */; };
+		CD84D9371E3B144C0083BF71 /* UserCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD84D9361E3B144C0083BF71 /* UserCartViewController.swift */; };
+		CD84D93A1E3B28390083BF71 /* UserCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD84D9391E3B28390083BF71 /* UserCartTableViewCell.swift */; };
+		CD84D93C1E3B60240083BF71 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD84D93B1E3B60240083BF71 /* MapKit.framework */; };
+		CD84D93E1E3B802D0083BF71 /* PlaceOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD84D93D1E3B802D0083BF71 /* PlaceOrderViewController.swift */; };
+		CD9923391E3742BD00B814EA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9923381E3742BD00B814EA /* TableViewController.swift */; };
+		CD99233B1E3772E800B814EA /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD99233A1E3772E700B814EA /* SecondTableViewController.swift */; };
+		CDA429C01E3C87720069D928 /* ConfirmPayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA429BF1E3C87720069D928 /* ConfirmPayViewController.swift */; };
+		CDA429C21E3C89720069D928 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA429C11E3C89720069D928 /* FilterViewController.swift */; };
+		CDA429C41E3CA0B80069D928 /* ic_lang_setting_banner.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA429C31E3CA0B80069D928 /* ic_lang_setting_banner.png */; };
+		CDA429C61E3CA7F60069D928 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA429C51E3CA7F60069D928 /* SettingViewController.swift */; };
+		CDA429C81E3CB9F80069D928 /* ic_action_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA429C71E3CB9F80069D928 /* ic_action_camera.png */; };
+		CDA429CA1E3CD7E10069D928 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA429C91E3CD7E10069D928 /* AddProductViewController.swift */; };
+		CDB5D10B1E3F0D8900AC20F0 /* LeftVendorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5D10A1E3F0D8900AC20F0 /* LeftVendorViewController.swift */; };
+		CDB5D10F1E3F25DF00AC20F0 /* LeftVendorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5D10E1E3F25DF00AC20F0 /* LeftVendorTableViewCell.swift */; };
+		CDB5D1111E3F29B900AC20F0 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5D1101E3F29B900AC20F0 /* ProductListViewController.swift */; };
+		CDB5D1131E3F441C00AC20F0 /* ice_cream_one.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDB5D1121E3F441C00AC20F0 /* ice_cream_one.jpg */; };
+		CDB5D1151E3F4E7000AC20F0 /* ProductListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5D1141E3F4E7000AC20F0 /* ProductListTableViewCell.swift */; };
+		CDB5D1171E3F5CFA00AC20F0 /* VendorOrderStatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5D1161E3F5CFA00AC20F0 /* VendorOrderStatusTableViewController.swift */; };
+		CDB5D1191E3F5DCE00AC20F0 /* VendorOrderStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5D1181E3F5DCE00AC20F0 /* VendorOrderStatusTableViewCell.swift */; };
+		CDB5D11B1E3F6F2D00AC20F0 /* form_wiz_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDB5D11A1E3F6F2D00AC20F0 /* form_wiz_1.jpg */; };
 		CDC52C491E30E4BF00C860FA /* VendorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC52C481E30E4BF00C860FA /* VendorLoginViewController.swift */; };
 		CDC9454E1E2F522B00E6946F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9454D1E2F522B00E6946F /* AppDelegate.swift */; };
 		CDC945501E2F522B00E6946F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9454F1E2F522B00E6946F /* ViewController.swift */; };
@@ -26,10 +49,36 @@
 		CDFB30001E3221CC00A742E9 /* UserRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFB2FFF1E3221CC00A742E9 /* UserRegisterViewController.swift */; };
 		CDFB30021E323F8100A742E9 /* VendorRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFB30011E323F8100A742E9 /* VendorRegisterViewController.swift */; };
 		CDFB30041E32498D00A742E9 /* VendorShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFB30031E32498D00A742E9 /* VendorShopDetailViewController.swift */; };
+		F258554A6B38318CF0BC32E3 /* Pods_Qadmni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 394D19E85BDCCD123005A67E /* Pods_Qadmni.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		394D19E85BDCCD123005A67E /* Pods_Qadmni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Qadmni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAAECFAA4EF22160736EB017 /* Pods-Qadmni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qadmni.release.xcconfig"; path = "Pods/Target Support Files/Pods-Qadmni/Pods-Qadmni.release.xcconfig"; sourceTree = "<group>"; };
 		CD0377941E33657B00FAE471 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		CD7CDC691E35EEA000D35F19 /* QuickStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickStartViewController.swift; sourceTree = "<group>"; };
+		CD7CDC6B1E360C3900D35F19 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		CD7CDC6D1E361E7400D35F19 /* LeftMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuTableViewCell.swift; sourceTree = "<group>"; };
+		CD84D9361E3B144C0083BF71 /* UserCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCartViewController.swift; sourceTree = "<group>"; };
+		CD84D9391E3B28390083BF71 /* UserCartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCartTableViewCell.swift; sourceTree = "<group>"; };
+		CD84D93B1E3B60240083BF71 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CD84D93D1E3B802D0083BF71 /* PlaceOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceOrderViewController.swift; sourceTree = "<group>"; };
+		CD9923381E3742BD00B814EA /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		CD99233A1E3772E700B814EA /* SecondTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
+		CDA429BF1E3C87720069D928 /* ConfirmPayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmPayViewController.swift; sourceTree = "<group>"; };
+		CDA429C11E3C89720069D928 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		CDA429C31E3CA0B80069D928 /* ic_lang_setting_banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_lang_setting_banner.png; sourceTree = "<group>"; };
+		CDA429C51E3CA7F60069D928 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		CDA429C71E3CB9F80069D928 /* ic_action_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_camera.png; sourceTree = "<group>"; };
+		CDA429C91E3CD7E10069D928 /* AddProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
+		CDB5D10A1E3F0D8900AC20F0 /* LeftVendorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftVendorViewController.swift; sourceTree = "<group>"; };
+		CDB5D10E1E3F25DF00AC20F0 /* LeftVendorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftVendorTableViewCell.swift; sourceTree = "<group>"; };
+		CDB5D1101E3F29B900AC20F0 /* ProductListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		CDB5D1121E3F441C00AC20F0 /* ice_cream_one.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ice_cream_one.jpg; sourceTree = "<group>"; };
+		CDB5D1141E3F4E7000AC20F0 /* ProductListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListTableViewCell.swift; sourceTree = "<group>"; };
+		CDB5D1161E3F5CFA00AC20F0 /* VendorOrderStatusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorOrderStatusTableViewController.swift; sourceTree = "<group>"; };
+		CDB5D1181E3F5DCE00AC20F0 /* VendorOrderStatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorOrderStatusTableViewCell.swift; sourceTree = "<group>"; };
+		CDB5D11A1E3F6F2D00AC20F0 /* form_wiz_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = form_wiz_1.jpg; sourceTree = "<group>"; };
 		CDC52C481E30E4BF00C860FA /* VendorLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorLoginViewController.swift; sourceTree = "<group>"; };
 		CDC9454A1E2F522B00E6946F /* Qadmni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qadmni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC9454D1E2F522B00E6946F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +99,7 @@
 		CDFB2FFF1E3221CC00A742E9 /* UserRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegisterViewController.swift; sourceTree = "<group>"; };
 		CDFB30011E323F8100A742E9 /* VendorRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorRegisterViewController.swift; sourceTree = "<group>"; };
 		CDFB30031E32498D00A742E9 /* VendorShopDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorShopDetailViewController.swift; sourceTree = "<group>"; };
+		D2D8735FB8F9FC0253303BF4 /* Pods-Qadmni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qadmni.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Qadmni/Pods-Qadmni.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,17 +107,51 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD84D93C1E3B60240083BF71 /* MapKit.framework in Frameworks */,
+				F258554A6B38318CF0BC32E3 /* Pods_Qadmni.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0837CC68E550CE06F6476F40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD84D93B1E3B60240083BF71 /* MapKit.framework */,
+				394D19E85BDCCD123005A67E /* Pods_Qadmni.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A618DA6A5ECFCB46F040E939 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2D8735FB8F9FC0253303BF4 /* Pods-Qadmni.debug.xcconfig */,
+				CAAECFAA4EF22160736EB017 /* Pods-Qadmni.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CD84D9381E3B28110083BF71 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CD84D9391E3B28390083BF71 /* UserCartTableViewCell.swift */,
+				CD7CDC6D1E361E7400D35F19 /* LeftMenuTableViewCell.swift */,
+				CDB5D10E1E3F25DF00AC20F0 /* LeftVendorTableViewCell.swift */,
+				CDB5D1141E3F4E7000AC20F0 /* ProductListTableViewCell.swift */,
+				CDB5D1181E3F5DCE00AC20F0 /* VendorOrderStatusTableViewCell.swift */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
 		CDC945411E2F522B00E6946F = {
 			isa = PBXGroup;
 			children = (
 				CDC9454C1E2F522B00E6946F /* Qadmni */,
 				CDC9454B1E2F522B00E6946F /* Products */,
+				A618DA6A5ECFCB46F040E939 /* Pods */,
+				0837CC68E550CE06F6476F40 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,7 +174,21 @@
 				CDFB30011E323F8100A742E9 /* VendorRegisterViewController.swift */,
 				CDFB30031E32498D00A742E9 /* VendorShopDetailViewController.swift */,
 				CD0377941E33657B00FAE471 /* ForgotPasswordViewController.swift */,
+				CD84D9361E3B144C0083BF71 /* UserCartViewController.swift */,
+				CD84D93D1E3B802D0083BF71 /* PlaceOrderViewController.swift */,
+				CDA429BF1E3C87720069D928 /* ConfirmPayViewController.swift */,
+				CDA429C11E3C89720069D928 /* FilterViewController.swift */,
+				CDA429C51E3CA7F60069D928 /* SettingViewController.swift */,
+				CDA429C91E3CD7E10069D928 /* AddProductViewController.swift */,
+				CD7CDC691E35EEA000D35F19 /* QuickStartViewController.swift */,
+				CD7CDC6B1E360C3900D35F19 /* LeftViewController.swift */,
+				CDB5D10A1E3F0D8900AC20F0 /* LeftVendorViewController.swift */,
+				CDB5D1101E3F29B900AC20F0 /* ProductListViewController.swift */,
+				CDB5D1161E3F5CFA00AC20F0 /* VendorOrderStatusTableViewController.swift */,
+				CD9923381E3742BD00B814EA /* TableViewController.swift */,
+				CD99233A1E3772E700B814EA /* SecondTableViewController.swift */,
 				CDC9456F1E2F98C800E6946F /* UITextField + textfield.swift */,
+				CD84D9381E3B28110083BF71 /* TableViewCell */,
 				CDC945621E2F54C300E6946F /* Resources */,
 				CDC945511E2F522B00E6946F /* Main.storyboard */,
 				CDC945571E2F522B00E6946F /* Assets.xcassets */,
@@ -104,6 +202,10 @@
 		CDC945621E2F54C300E6946F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CDB5D11A1E3F6F2D00AC20F0 /* form_wiz_1.jpg */,
+				CDB5D1121E3F441C00AC20F0 /* ice_cream_one.jpg */,
+				CDA429C71E3CB9F80069D928 /* ic_action_camera.png */,
+				CDA429C31E3CA0B80069D928 /* ic_lang_setting_banner.png */,
 				CDC945691E2F828900E6946F /* login_back.jpg */,
 				CDC945631E2F54D700E6946F /* test_logo.png */,
 				CDC945651E2F7FA000E6946F /* splash_screen_back.jpg */,
@@ -121,9 +223,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDC9455F1E2F522B00E6946F /* Build configuration list for PBXNativeTarget "Qadmni" */;
 			buildPhases = (
+				875FCEA955C3882055F1F369 /* [CP] Check Pods Manifest.lock */,
 				CDC945461E2F522B00E6946F /* Sources */,
 				CDC945471E2F522B00E6946F /* Frameworks */,
 				CDC945481E2F522B00E6946F /* Resources */,
+				FC063FE480E3D0695EFCF16E /* [CP] Embed Pods Frameworks */,
+				62E2BE2754BE6B0101558858 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,6 +251,7 @@
 				TargetAttributes = {
 					CDC945491E2F522B00E6946F = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 2TURKNDYVZ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -177,9 +283,13 @@
 				CDC945641E2F54D700E6946F /* test_logo.png in Resources */,
 				CDC945681E2F7FAC00E6946F /* qadmni_splash.png in Resources */,
 				CDFB2FFE1E32211C00A742E9 /* register_back.jpg in Resources */,
+				CDA429C41E3CA0B80069D928 /* ic_lang_setting_banner.png in Resources */,
 				CDC9455B1E2F522B00E6946F /* LaunchScreen.storyboard in Resources */,
+				CDA429C81E3CB9F80069D928 /* ic_action_camera.png in Resources */,
 				CDC945581E2F522B00E6946F /* Assets.xcassets in Resources */,
 				CDC9456C1E2F837500E6946F /* qadmni_img_logo_english.png in Resources */,
+				CDB5D11B1E3F6F2D00AC20F0 /* form_wiz_1.jpg in Resources */,
+				CDB5D1131E3F441C00AC20F0 /* ice_cream_one.jpg in Resources */,
 				CDC9456A1E2F828900E6946F /* login_back.jpg in Resources */,
 				CDC945531E2F522B00E6946F /* Main.storyboard in Resources */,
 			);
@@ -187,21 +297,87 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		62E2BE2754BE6B0101558858 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Qadmni/Pods-Qadmni-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		875FCEA955C3882055F1F369 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC063FE480E3D0695EFCF16E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Qadmni/Pods-Qadmni-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CDC945461E2F522B00E6946F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDA429CA1E3CD7E10069D928 /* AddProductViewController.swift in Sources */,
+				CD7CDC6A1E35EEA000D35F19 /* QuickStartViewController.swift in Sources */,
+				CDB5D1111E3F29B900AC20F0 /* ProductListViewController.swift in Sources */,
+				CD9923391E3742BD00B814EA /* TableViewController.swift in Sources */,
 				CDC945561E2F522B00E6946F /* Qadmni.xcdatamodeld in Sources */,
 				CDC945501E2F522B00E6946F /* ViewController.swift in Sources */,
 				CDC52C491E30E4BF00C860FA /* VendorLoginViewController.swift in Sources */,
+				CDB5D10B1E3F0D8900AC20F0 /* LeftVendorViewController.swift in Sources */,
+				CDA429C61E3CA7F60069D928 /* SettingViewController.swift in Sources */,
 				CDFB30021E323F8100A742E9 /* VendorRegisterViewController.swift in Sources */,
 				CDFB30001E3221CC00A742E9 /* UserRegisterViewController.swift in Sources */,
+				CDB5D1171E3F5CFA00AC20F0 /* VendorOrderStatusTableViewController.swift in Sources */,
+				CDB5D1191E3F5DCE00AC20F0 /* VendorOrderStatusTableViewCell.swift in Sources */,
+				CD99233B1E3772E800B814EA /* SecondTableViewController.swift in Sources */,
 				CDC9454E1E2F522B00E6946F /* AppDelegate.swift in Sources */,
+				CDA429C01E3C87720069D928 /* ConfirmPayViewController.swift in Sources */,
+				CD7CDC6E1E361E7400D35F19 /* LeftMenuTableViewCell.swift in Sources */,
+				CD84D93A1E3B28390083BF71 /* UserCartTableViewCell.swift in Sources */,
+				CD84D93E1E3B802D0083BF71 /* PlaceOrderViewController.swift in Sources */,
 				CD0377951E33657B00FAE471 /* ForgotPasswordViewController.swift in Sources */,
+				CDA429C21E3C89720069D928 /* FilterViewController.swift in Sources */,
+				CDB5D1151E3F4E7000AC20F0 /* ProductListTableViewCell.swift in Sources */,
 				CDFB30041E32498D00A742E9 /* VendorShopDetailViewController.swift in Sources */,
+				CD7CDC6C1E360C3900D35F19 /* LeftViewController.swift in Sources */,
 				CDC945701E2F98C800E6946F /* UITextField + textfield.swift in Sources */,
 				CDC9456E1E2F919B00E6946F /* UserLoginViewController.swift in Sources */,
+				CD84D9371E3B144C0083BF71 /* UserCartViewController.swift in Sources */,
+				CDB5D10F1E3F25DF00AC20F0 /* LeftVendorTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +443,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -310,7 +486,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -320,8 +496,10 @@
 		};
 		CDC945601E2F522B00E6946F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2D8735FB8F9FC0253303BF4 /* Pods-Qadmni.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2TURKNDYVZ;
 				INFOPLIST_FILE = Qadmni/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qadmni.Qadmni;
@@ -332,8 +510,10 @@
 		};
 		CDC945611E2F522B00E6946F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAAECFAA4EF22160736EB017 /* Pods-Qadmni.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2TURKNDYVZ;
 				INFOPLIST_FILE = Qadmni/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qadmni.Qadmni;
