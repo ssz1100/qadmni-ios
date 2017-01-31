@@ -40,11 +40,17 @@
 		CDC9455B1E2F522B00E6946F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC945591E2F522B00E6946F /* LaunchScreen.storyboard */; };
 		CDC945641E2F54D700E6946F /* test_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC945631E2F54D700E6946F /* test_logo.png */; };
 		CDC945661E2F7FA000E6946F /* splash_screen_back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDC945651E2F7FA000E6946F /* splash_screen_back.jpg */; };
-		CDC945681E2F7FAC00E6946F /* qadmni_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC945671E2F7FAC00E6946F /* qadmni_splash.png */; };
 		CDC9456A1E2F828900E6946F /* login_back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDC945691E2F828900E6946F /* login_back.jpg */; };
 		CDC9456C1E2F837500E6946F /* qadmni_img_logo_english.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC9456B1E2F837500E6946F /* qadmni_img_logo_english.png */; };
 		CDC9456E1E2F919B00E6946F /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9456D1E2F919B00E6946F /* UserLoginViewController.swift */; };
 		CDC945701E2F98C800E6946F /* UITextField + textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9456F1E2F98C800E6946F /* UITextField + textfield.swift */; };
+		CDE322D91E40763500002DBD /* VendorOrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE322D81E40763500002DBD /* VendorOrderDetailsViewController.swift */; };
+		CDE322DB1E4077C800002DBD /* MyFavouritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE322DA1E4077C800002DBD /* MyFavouritesTableViewController.swift */; };
+		CDE322DD1E40789800002DBD /* MyFavouritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE322DC1E40789800002DBD /* MyFavouritesTableViewCell.swift */; };
+		CDE322DF1E409D1F00002DBD /* profile_back_demo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDE322DE1E409D1F00002DBD /* profile_back_demo.jpg */; };
+		CDE322E11E40A18700002DBD /* dummy_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDE322E01E40A18700002DBD /* dummy_image.jpg */; };
+		CDE322E31E40AFA700002DBD /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE322E21E40AFA700002DBD /* MyProfileViewController.swift */; };
+		CDE322E51E40B41E00002DBD /* header_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE322E41E40B41E00002DBD /* header_icon.png */; };
 		CDFB2FFE1E32211C00A742E9 /* register_back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDFB2FFD1E32211C00A742E9 /* register_back.jpg */; };
 		CDFB30001E3221CC00A742E9 /* UserRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFB2FFF1E3221CC00A742E9 /* UserRegisterViewController.swift */; };
 		CDFB30021E323F8100A742E9 /* VendorRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFB30011E323F8100A742E9 /* VendorRegisterViewController.swift */; };
@@ -90,11 +96,17 @@
 		CDC9455C1E2F522B00E6946F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDC945631E2F54D700E6946F /* test_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_logo.png; sourceTree = "<group>"; };
 		CDC945651E2F7FA000E6946F /* splash_screen_back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splash_screen_back.jpg; sourceTree = "<group>"; };
-		CDC945671E2F7FAC00E6946F /* qadmni_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qadmni_splash.png; sourceTree = "<group>"; };
 		CDC945691E2F828900E6946F /* login_back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login_back.jpg; sourceTree = "<group>"; };
 		CDC9456B1E2F837500E6946F /* qadmni_img_logo_english.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qadmni_img_logo_english.png; sourceTree = "<group>"; };
 		CDC9456D1E2F919B00E6946F /* UserLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoginViewController.swift; sourceTree = "<group>"; };
 		CDC9456F1E2F98C800E6946F /* UITextField + textfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField + textfield.swift"; sourceTree = "<group>"; };
+		CDE322D81E40763500002DBD /* VendorOrderDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorOrderDetailsViewController.swift; sourceTree = "<group>"; };
+		CDE322DA1E4077C800002DBD /* MyFavouritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFavouritesTableViewController.swift; sourceTree = "<group>"; };
+		CDE322DC1E40789800002DBD /* MyFavouritesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFavouritesTableViewCell.swift; sourceTree = "<group>"; };
+		CDE322DE1E409D1F00002DBD /* profile_back_demo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile_back_demo.jpg; sourceTree = "<group>"; };
+		CDE322E01E40A18700002DBD /* dummy_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dummy_image.jpg; sourceTree = "<group>"; };
+		CDE322E21E40AFA700002DBD /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		CDE322E41E40B41E00002DBD /* header_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_icon.png; sourceTree = "<group>"; };
 		CDFB2FFD1E32211C00A742E9 /* register_back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = register_back.jpg; sourceTree = "<group>"; };
 		CDFB2FFF1E3221CC00A742E9 /* UserRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegisterViewController.swift; sourceTree = "<group>"; };
 		CDFB30011E323F8100A742E9 /* VendorRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorRegisterViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +153,7 @@
 				CDB5D10E1E3F25DF00AC20F0 /* LeftVendorTableViewCell.swift */,
 				CDB5D1141E3F4E7000AC20F0 /* ProductListTableViewCell.swift */,
 				CDB5D1181E3F5DCE00AC20F0 /* VendorOrderStatusTableViewCell.swift */,
+				CDE322DC1E40789800002DBD /* MyFavouritesTableViewCell.swift */,
 			);
 			name = TableViewCell;
 			sourceTree = "<group>";
@@ -185,6 +198,9 @@
 				CDB5D10A1E3F0D8900AC20F0 /* LeftVendorViewController.swift */,
 				CDB5D1101E3F29B900AC20F0 /* ProductListViewController.swift */,
 				CDB5D1161E3F5CFA00AC20F0 /* VendorOrderStatusTableViewController.swift */,
+				CDE322D81E40763500002DBD /* VendorOrderDetailsViewController.swift */,
+				CDE322DA1E4077C800002DBD /* MyFavouritesTableViewController.swift */,
+				CDE322E21E40AFA700002DBD /* MyProfileViewController.swift */,
 				CD9923381E3742BD00B814EA /* TableViewController.swift */,
 				CD99233A1E3772E700B814EA /* SecondTableViewController.swift */,
 				CDC9456F1E2F98C800E6946F /* UITextField + textfield.swift */,
@@ -202,6 +218,9 @@
 		CDC945621E2F54C300E6946F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CDE322E41E40B41E00002DBD /* header_icon.png */,
+				CDE322E01E40A18700002DBD /* dummy_image.jpg */,
+				CDE322DE1E409D1F00002DBD /* profile_back_demo.jpg */,
 				CDB5D11A1E3F6F2D00AC20F0 /* form_wiz_1.jpg */,
 				CDB5D1121E3F441C00AC20F0 /* ice_cream_one.jpg */,
 				CDA429C71E3CB9F80069D928 /* ic_action_camera.png */,
@@ -209,7 +228,6 @@
 				CDC945691E2F828900E6946F /* login_back.jpg */,
 				CDC945631E2F54D700E6946F /* test_logo.png */,
 				CDC945651E2F7FA000E6946F /* splash_screen_back.jpg */,
-				CDC945671E2F7FAC00E6946F /* qadmni_splash.png */,
 				CDC9456B1E2F837500E6946F /* qadmni_img_logo_english.png */,
 				CDFB2FFD1E32211C00A742E9 /* register_back.jpg */,
 			);
@@ -281,7 +299,9 @@
 			files = (
 				CDC945661E2F7FA000E6946F /* splash_screen_back.jpg in Resources */,
 				CDC945641E2F54D700E6946F /* test_logo.png in Resources */,
-				CDC945681E2F7FAC00E6946F /* qadmni_splash.png in Resources */,
+				CDE322E11E40A18700002DBD /* dummy_image.jpg in Resources */,
+				CDE322DF1E409D1F00002DBD /* profile_back_demo.jpg in Resources */,
+				CDE322E51E40B41E00002DBD /* header_icon.png in Resources */,
 				CDFB2FFE1E32211C00A742E9 /* register_back.jpg in Resources */,
 				CDA429C41E3CA0B80069D928 /* ic_lang_setting_banner.png in Resources */,
 				CDC9455B1E2F522B00E6946F /* LaunchScreen.storyboard in Resources */,
@@ -364,14 +384,18 @@
 				CDB5D1171E3F5CFA00AC20F0 /* VendorOrderStatusTableViewController.swift in Sources */,
 				CDB5D1191E3F5DCE00AC20F0 /* VendorOrderStatusTableViewCell.swift in Sources */,
 				CD99233B1E3772E800B814EA /* SecondTableViewController.swift in Sources */,
+				CDE322E31E40AFA700002DBD /* MyProfileViewController.swift in Sources */,
+				CDE322DD1E40789800002DBD /* MyFavouritesTableViewCell.swift in Sources */,
 				CDC9454E1E2F522B00E6946F /* AppDelegate.swift in Sources */,
 				CDA429C01E3C87720069D928 /* ConfirmPayViewController.swift in Sources */,
+				CDE322D91E40763500002DBD /* VendorOrderDetailsViewController.swift in Sources */,
 				CD7CDC6E1E361E7400D35F19 /* LeftMenuTableViewCell.swift in Sources */,
 				CD84D93A1E3B28390083BF71 /* UserCartTableViewCell.swift in Sources */,
 				CD84D93E1E3B802D0083BF71 /* PlaceOrderViewController.swift in Sources */,
 				CD0377951E33657B00FAE471 /* ForgotPasswordViewController.swift in Sources */,
 				CDA429C21E3C89720069D928 /* FilterViewController.swift in Sources */,
 				CDB5D1151E3F4E7000AC20F0 /* ProductListTableViewCell.swift in Sources */,
+				CDE322DB1E4077C800002DBD /* MyFavouritesTableViewController.swift in Sources */,
 				CDFB30041E32498D00A742E9 /* VendorShopDetailViewController.swift in Sources */,
 				CD7CDC6C1E360C3900D35F19 /* LeftViewController.swift in Sources */,
 				CDC945701E2F98C800E6946F /* UITextField + textfield.swift in Sources */,

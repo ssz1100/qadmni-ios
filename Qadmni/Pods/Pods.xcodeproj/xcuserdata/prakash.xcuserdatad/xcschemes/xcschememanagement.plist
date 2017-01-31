@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Cosmos.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>DLRadioButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,22 +37,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>747E9C06B684B52E40F30B816BFE454C</key>
+		<key>0B24ED6464667FB35BDACE275D9DBC0E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8B5ACCA4D62F8FABE37018107237DB26</key>
+		<key>20E2FB83974AED2DB089AAB77349958A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>96D046076BCFD75740F8D7A6E5505163</key>
+		<key>4FDC533A4360A68ABDCE852F04B30927</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A0B6D9ADFD2F9F3FC9CF1303057E83A7</key>
+		<key>737E5BCFC6710354CD9D3296F7B993DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E24B4581F116E97520576071849627F0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

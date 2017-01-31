@@ -7,6 +7,7 @@ target 'Qadmni' do
  pod ’SWRevealViewController’
  pod 'XLPagerTabStrip'
  pod 'DLRadioButton'
+ pod 'Cosmos'
   # Pods for Qadmni
 
 end

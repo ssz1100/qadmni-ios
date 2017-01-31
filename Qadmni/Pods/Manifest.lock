@@ -1,18 +1,21 @@
 PODS:
+  - Cosmos (8.0.2)
   - DLRadioButton (1.4.9)
   - SWRevealViewController (2.3.0)
-  - XLPagerTabStrip (6.0.0)
+  - XLPagerTabStrip (7.0.0)
 
 DEPENDENCIES:
+  - Cosmos
   - DLRadioButton
   - SWRevealViewController
   - XLPagerTabStrip
 
 SPEC CHECKSUMS:
+  Cosmos: 007c0b8e33a85e5363911bdd933571bbe221f7ef
   DLRadioButton: 7bb8a6e3768b572469ace553391ab4d2af6f9c19
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
-  XLPagerTabStrip: c46e802a8dcac29edbcea573de8fe920e052455b
+  XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
 
-PODFILE CHECKSUM: 1a661c1543b6769ff85f13d79fa21588322e8f2f
+PODFILE CHECKSUM: 8f22d86a27415fe401fa63c934ceb5766bac2dfd
 
 COCOAPODS: 1.1.1

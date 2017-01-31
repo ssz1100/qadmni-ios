@@ -11,6 +11,8 @@ import SWRevealViewController
 
 class LeftVendorViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
+    @IBOutlet var leftProfileImage: UIImageView!
+    
     var menuNameArray:Array = [String]()
     var menuIconImage :Array = [UIImage]()
 
@@ -20,6 +22,8 @@ class LeftVendorViewController: UIViewController,UITableViewDataSource,UITableVi
 
         menuNameArray = ["My Orders","My Profile","Setting","Logout"]
         menuIconImage = [UIImage(named:"basket")!,UIImage(named:"profile")!,UIImage(named:"setting")!,UIImage(named:"logout")!]
+        
+        leftProfileImage.roundedImageView()
     }
 
     override func didReceiveMemoryWarning() {
