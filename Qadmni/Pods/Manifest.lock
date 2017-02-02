@@ -1,21 +1,35 @@
 PODS:
+  - Alamofire (4.3.0)
   - Cosmos (8.0.2)
   - DLRadioButton (1.4.9)
+  - EVReflection (4.1.0):
+    - EVReflection/Core (= 4.1.0)
+  - EVReflection/Core (4.1.0)
+  - IQKeyboardManagerSwift (4.0.8)
+  - MBProgressHUD (1.0.0)
   - SWRevealViewController (2.3.0)
   - XLPagerTabStrip (7.0.0)
 
 DEPENDENCIES:
+  - Alamofire
   - Cosmos
   - DLRadioButton
+  - EVReflection
+  - IQKeyboardManagerSwift
+  - MBProgressHUD
   - SWRevealViewController
   - XLPagerTabStrip
 
 SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   Cosmos: 007c0b8e33a85e5363911bdd933571bbe221f7ef
   DLRadioButton: 7bb8a6e3768b572469ace553391ab4d2af6f9c19
+  EVReflection: 22bb8525d0da6459fce6bb6e92010bf3cd81f093
+  IQKeyboardManagerSwift: c04bc9f68473823f825eb44d958fce98d921bead
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
   XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
 
-PODFILE CHECKSUM: 8f22d86a27415fe401fa63c934ceb5766bac2dfd
+PODFILE CHECKSUM: 5b8f8a72b4d07bcbfee472cd183ba501b4133ffc
 
 COCOAPODS: 1.1.1

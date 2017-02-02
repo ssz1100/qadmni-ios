@@ -44,6 +44,14 @@
 		CDC9456C1E2F837500E6946F /* qadmni_img_logo_english.png in Resources */ = {isa = PBXBuildFile; fileRef = CDC9456B1E2F837500E6946F /* qadmni_img_logo_english.png */; };
 		CDC9456E1E2F919B00E6946F /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9456D1E2F919B00E6946F /* UserLoginViewController.swift */; };
 		CDC945701E2F98C800E6946F /* UITextField + textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9456F1E2F98C800E6946F /* UITextField + textfield.swift */; };
+		CDCE592B1E41C1D900BE36CE /* BaseRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE592A1E41C1D900BE36CE /* BaseRequestModel.swift */; };
+		CDCE592D1E41C2CE00BE36CE /* LoginVendorRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE592C1E41C2CE00BE36CE /* LoginVendorRequestModel.swift */; };
+		CDCE592F1E41C59800BE36CE /* ServiceFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE592E1E41C59800BE36CE /* ServiceFacade.swift */; };
+		CDCE59321E41C64700BE36CE /* PropertyReaderFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE59311E41C64700BE36CE /* PropertyReaderFile.swift */; };
+		CDCE59341E41CB1900BE36CE /* BaseResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE59331E41CB1900BE36CE /* BaseResponseModel.swift */; };
+		CDCE59361E420FA200BE36CE /* VendorUserRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE59351E420FA200BE36CE /* VendorUserRequestModel.swift */; };
+		CDCE59381E420FE500BE36CE /* VendorLangCodeRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE59371E420FE500BE36CE /* VendorLangCodeRequestModel.swift */; };
+		CDCE593A1E42132A00BE36CE /* VendorLoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE59391E42132A00BE36CE /* VendorLoginResponseModel.swift */; };
 		CDE322D91E40763500002DBD /* VendorOrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE322D81E40763500002DBD /* VendorOrderDetailsViewController.swift */; };
 		CDE322DB1E4077C800002DBD /* MyFavouritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE322DA1E4077C800002DBD /* MyFavouritesTableViewController.swift */; };
 		CDE322DD1E40789800002DBD /* MyFavouritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE322DC1E40789800002DBD /* MyFavouritesTableViewCell.swift */; };
@@ -51,6 +59,8 @@
 		CDE322E11E40A18700002DBD /* dummy_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDE322E01E40A18700002DBD /* dummy_image.jpg */; };
 		CDE322E31E40AFA700002DBD /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE322E21E40AFA700002DBD /* MyProfileViewController.swift */; };
 		CDE322E51E40B41E00002DBD /* header_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE322E41E40B41E00002DBD /* header_icon.png */; };
+		CDE4DB121E435E41000F7A38 /* MyData.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDE4DB101E435E41000F7A38 /* MyData.plist */; };
+		CDE4DB131E435E41000F7A38 /* PlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4DB111E435E41000F7A38 /* PlistManager.swift */; };
 		CDFB2FFE1E32211C00A742E9 /* register_back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDFB2FFD1E32211C00A742E9 /* register_back.jpg */; };
 		CDFB30001E3221CC00A742E9 /* UserRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFB2FFF1E3221CC00A742E9 /* UserRegisterViewController.swift */; };
 		CDFB30021E323F8100A742E9 /* VendorRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFB30011E323F8100A742E9 /* VendorRegisterViewController.swift */; };
@@ -100,6 +110,14 @@
 		CDC9456B1E2F837500E6946F /* qadmni_img_logo_english.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qadmni_img_logo_english.png; sourceTree = "<group>"; };
 		CDC9456D1E2F919B00E6946F /* UserLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoginViewController.swift; sourceTree = "<group>"; };
 		CDC9456F1E2F98C800E6946F /* UITextField + textfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField + textfield.swift"; sourceTree = "<group>"; };
+		CDCE592A1E41C1D900BE36CE /* BaseRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequestModel.swift; sourceTree = "<group>"; };
+		CDCE592C1E41C2CE00BE36CE /* LoginVendorRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVendorRequestModel.swift; sourceTree = "<group>"; };
+		CDCE592E1E41C59800BE36CE /* ServiceFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceFacade.swift; sourceTree = "<group>"; };
+		CDCE59311E41C64700BE36CE /* PropertyReaderFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyReaderFile.swift; sourceTree = "<group>"; };
+		CDCE59331E41CB1900BE36CE /* BaseResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponseModel.swift; sourceTree = "<group>"; };
+		CDCE59351E420FA200BE36CE /* VendorUserRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorUserRequestModel.swift; sourceTree = "<group>"; };
+		CDCE59371E420FE500BE36CE /* VendorLangCodeRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorLangCodeRequestModel.swift; sourceTree = "<group>"; };
+		CDCE59391E42132A00BE36CE /* VendorLoginResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorLoginResponseModel.swift; sourceTree = "<group>"; };
 		CDE322D81E40763500002DBD /* VendorOrderDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorOrderDetailsViewController.swift; sourceTree = "<group>"; };
 		CDE322DA1E4077C800002DBD /* MyFavouritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFavouritesTableViewController.swift; sourceTree = "<group>"; };
 		CDE322DC1E40789800002DBD /* MyFavouritesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFavouritesTableViewCell.swift; sourceTree = "<group>"; };
@@ -107,6 +125,8 @@
 		CDE322E01E40A18700002DBD /* dummy_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dummy_image.jpg; sourceTree = "<group>"; };
 		CDE322E21E40AFA700002DBD /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		CDE322E41E40B41E00002DBD /* header_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_icon.png; sourceTree = "<group>"; };
+		CDE4DB101E435E41000F7A38 /* MyData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MyData.plist; sourceTree = "<group>"; };
+		CDE4DB111E435E41000F7A38 /* PlistManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistManager.swift; sourceTree = "<group>"; };
 		CDFB2FFD1E32211C00A742E9 /* register_back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = register_back.jpg; sourceTree = "<group>"; };
 		CDFB2FFF1E3221CC00A742E9 /* UserRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegisterViewController.swift; sourceTree = "<group>"; };
 		CDFB30011E323F8100A742E9 /* VendorRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorRegisterViewController.swift; sourceTree = "<group>"; };
@@ -180,30 +200,14 @@
 			isa = PBXGroup;
 			children = (
 				CDC9454D1E2F522B00E6946F /* AppDelegate.swift */,
-				CDC9454F1E2F522B00E6946F /* ViewController.swift */,
-				CDC9456D1E2F919B00E6946F /* UserLoginViewController.swift */,
-				CDC52C481E30E4BF00C860FA /* VendorLoginViewController.swift */,
-				CDFB2FFF1E3221CC00A742E9 /* UserRegisterViewController.swift */,
-				CDFB30011E323F8100A742E9 /* VendorRegisterViewController.swift */,
-				CDFB30031E32498D00A742E9 /* VendorShopDetailViewController.swift */,
-				CD0377941E33657B00FAE471 /* ForgotPasswordViewController.swift */,
-				CD84D9361E3B144C0083BF71 /* UserCartViewController.swift */,
-				CD84D93D1E3B802D0083BF71 /* PlaceOrderViewController.swift */,
-				CDA429BF1E3C87720069D928 /* ConfirmPayViewController.swift */,
-				CDA429C11E3C89720069D928 /* FilterViewController.swift */,
-				CDA429C51E3CA7F60069D928 /* SettingViewController.swift */,
-				CDA429C91E3CD7E10069D928 /* AddProductViewController.swift */,
-				CD7CDC691E35EEA000D35F19 /* QuickStartViewController.swift */,
-				CD7CDC6B1E360C3900D35F19 /* LeftViewController.swift */,
-				CDB5D10A1E3F0D8900AC20F0 /* LeftVendorViewController.swift */,
-				CDB5D1101E3F29B900AC20F0 /* ProductListViewController.swift */,
-				CDB5D1161E3F5CFA00AC20F0 /* VendorOrderStatusTableViewController.swift */,
-				CDE322D81E40763500002DBD /* VendorOrderDetailsViewController.swift */,
-				CDE322DA1E4077C800002DBD /* MyFavouritesTableViewController.swift */,
-				CDE322E21E40AFA700002DBD /* MyProfileViewController.swift */,
-				CD9923381E3742BD00B814EA /* TableViewController.swift */,
-				CD99233A1E3772E700B814EA /* SecondTableViewController.swift */,
-				CDC9456F1E2F98C800E6946F /* UITextField + textfield.swift */,
+				CDE4DB0F1E4321C1000F7A38 /* PropertyList */,
+				CDCE59301E41C62100BE36CE /* Utils */,
+				CDCE59271E41BE2E00BE36CE /* VendorResponseModel */,
+				CDCE59261E41BE1800BE36CE /* VendorRequestModel */,
+				CDCE59251E41BDFC00BE36CE /* ServiceFacade */,
+				CDCE59241E41B7A400BE36CE /* CommonViewControllers */,
+				CDCE59231E41AD8200BE36CE /* VendorViewControllers */,
+				CDCE59221E41AD5F00BE36CE /* UserViewControllers */,
 				CD84D9381E3B28110083BF71 /* TableViewCell */,
 				CDC945621E2F54C300E6946F /* Resources */,
 				CDC945511E2F522B00E6946F /* Main.storyboard */,
@@ -232,6 +236,96 @@
 				CDFB2FFD1E32211C00A742E9 /* register_back.jpg */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		CDCE59221E41AD5F00BE36CE /* UserViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CDE322DA1E4077C800002DBD /* MyFavouritesTableViewController.swift */,
+				CD7CDC6B1E360C3900D35F19 /* LeftViewController.swift */,
+				CDC9456D1E2F919B00E6946F /* UserLoginViewController.swift */,
+				CDFB2FFF1E3221CC00A742E9 /* UserRegisterViewController.swift */,
+				CD84D9361E3B144C0083BF71 /* UserCartViewController.swift */,
+				CD84D93D1E3B802D0083BF71 /* PlaceOrderViewController.swift */,
+				CDA429BF1E3C87720069D928 /* ConfirmPayViewController.swift */,
+				CDA429C11E3C89720069D928 /* FilterViewController.swift */,
+			);
+			name = UserViewControllers;
+			sourceTree = "<group>";
+		};
+		CDCE59231E41AD8200BE36CE /* VendorViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CDE322D81E40763500002DBD /* VendorOrderDetailsViewController.swift */,
+				CDB5D1161E3F5CFA00AC20F0 /* VendorOrderStatusTableViewController.swift */,
+				CDB5D1101E3F29B900AC20F0 /* ProductListViewController.swift */,
+				CDB5D10A1E3F0D8900AC20F0 /* LeftVendorViewController.swift */,
+				CDC52C481E30E4BF00C860FA /* VendorLoginViewController.swift */,
+				CDFB30011E323F8100A742E9 /* VendorRegisterViewController.swift */,
+				CDFB30031E32498D00A742E9 /* VendorShopDetailViewController.swift */,
+				CDA429C91E3CD7E10069D928 /* AddProductViewController.swift */,
+			);
+			name = VendorViewControllers;
+			sourceTree = "<group>";
+		};
+		CDCE59241E41B7A400BE36CE /* CommonViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CDC9454F1E2F522B00E6946F /* ViewController.swift */,
+				CD0377941E33657B00FAE471 /* ForgotPasswordViewController.swift */,
+				CDA429C51E3CA7F60069D928 /* SettingViewController.swift */,
+				CD7CDC691E35EEA000D35F19 /* QuickStartViewController.swift */,
+				CDE322E21E40AFA700002DBD /* MyProfileViewController.swift */,
+				CD9923381E3742BD00B814EA /* TableViewController.swift */,
+				CD99233A1E3772E700B814EA /* SecondTableViewController.swift */,
+				CDC9456F1E2F98C800E6946F /* UITextField + textfield.swift */,
+			);
+			name = CommonViewControllers;
+			sourceTree = "<group>";
+		};
+		CDCE59251E41BDFC00BE36CE /* ServiceFacade */ = {
+			isa = PBXGroup;
+			children = (
+				CDCE592E1E41C59800BE36CE /* ServiceFacade.swift */,
+			);
+			name = ServiceFacade;
+			sourceTree = "<group>";
+		};
+		CDCE59261E41BE1800BE36CE /* VendorRequestModel */ = {
+			isa = PBXGroup;
+			children = (
+				CDCE592A1E41C1D900BE36CE /* BaseRequestModel.swift */,
+				CDCE592C1E41C2CE00BE36CE /* LoginVendorRequestModel.swift */,
+				CDCE59351E420FA200BE36CE /* VendorUserRequestModel.swift */,
+				CDCE59371E420FE500BE36CE /* VendorLangCodeRequestModel.swift */,
+			);
+			name = VendorRequestModel;
+			sourceTree = "<group>";
+		};
+		CDCE59271E41BE2E00BE36CE /* VendorResponseModel */ = {
+			isa = PBXGroup;
+			children = (
+				CDCE59331E41CB1900BE36CE /* BaseResponseModel.swift */,
+				CDCE59391E42132A00BE36CE /* VendorLoginResponseModel.swift */,
+			);
+			name = VendorResponseModel;
+			sourceTree = "<group>";
+		};
+		CDCE59301E41C62100BE36CE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CDCE59311E41C64700BE36CE /* PropertyReaderFile.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		CDE4DB0F1E4321C1000F7A38 /* PropertyList */ = {
+			isa = PBXGroup;
+			children = (
+				CDE4DB101E435E41000F7A38 /* MyData.plist */,
+				CDE4DB111E435E41000F7A38 /* PlistManager.swift */,
+			);
+			name = PropertyList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +397,7 @@
 				CDE322DF1E409D1F00002DBD /* profile_back_demo.jpg in Resources */,
 				CDE322E51E40B41E00002DBD /* header_icon.png in Resources */,
 				CDFB2FFE1E32211C00A742E9 /* register_back.jpg in Resources */,
+				CDE4DB121E435E41000F7A38 /* MyData.plist in Resources */,
 				CDA429C41E3CA0B80069D928 /* ic_lang_setting_banner.png in Resources */,
 				CDC9455B1E2F522B00E6946F /* LaunchScreen.storyboard in Resources */,
 				CDA429C81E3CB9F80069D928 /* ic_action_camera.png in Resources */,
@@ -373,6 +468,7 @@
 				CDA429CA1E3CD7E10069D928 /* AddProductViewController.swift in Sources */,
 				CD7CDC6A1E35EEA000D35F19 /* QuickStartViewController.swift in Sources */,
 				CDB5D1111E3F29B900AC20F0 /* ProductListViewController.swift in Sources */,
+				CDCE592D1E41C2CE00BE36CE /* LoginVendorRequestModel.swift in Sources */,
 				CD9923391E3742BD00B814EA /* TableViewController.swift in Sources */,
 				CDC945561E2F522B00E6946F /* Qadmni.xcdatamodeld in Sources */,
 				CDC945501E2F522B00E6946F /* ViewController.swift in Sources */,
@@ -381,6 +477,9 @@
 				CDA429C61E3CA7F60069D928 /* SettingViewController.swift in Sources */,
 				CDFB30021E323F8100A742E9 /* VendorRegisterViewController.swift in Sources */,
 				CDFB30001E3221CC00A742E9 /* UserRegisterViewController.swift in Sources */,
+				CDCE592B1E41C1D900BE36CE /* BaseRequestModel.swift in Sources */,
+				CDCE59341E41CB1900BE36CE /* BaseResponseModel.swift in Sources */,
+				CDE4DB131E435E41000F7A38 /* PlistManager.swift in Sources */,
 				CDB5D1171E3F5CFA00AC20F0 /* VendorOrderStatusTableViewController.swift in Sources */,
 				CDB5D1191E3F5DCE00AC20F0 /* VendorOrderStatusTableViewCell.swift in Sources */,
 				CD99233B1E3772E800B814EA /* SecondTableViewController.swift in Sources */,
@@ -391,13 +490,18 @@
 				CDE322D91E40763500002DBD /* VendorOrderDetailsViewController.swift in Sources */,
 				CD7CDC6E1E361E7400D35F19 /* LeftMenuTableViewCell.swift in Sources */,
 				CD84D93A1E3B28390083BF71 /* UserCartTableViewCell.swift in Sources */,
+				CDCE59361E420FA200BE36CE /* VendorUserRequestModel.swift in Sources */,
 				CD84D93E1E3B802D0083BF71 /* PlaceOrderViewController.swift in Sources */,
 				CD0377951E33657B00FAE471 /* ForgotPasswordViewController.swift in Sources */,
 				CDA429C21E3C89720069D928 /* FilterViewController.swift in Sources */,
 				CDB5D1151E3F4E7000AC20F0 /* ProductListTableViewCell.swift in Sources */,
 				CDE322DB1E4077C800002DBD /* MyFavouritesTableViewController.swift in Sources */,
+				CDCE59381E420FE500BE36CE /* VendorLangCodeRequestModel.swift in Sources */,
+				CDCE592F1E41C59800BE36CE /* ServiceFacade.swift in Sources */,
+				CDCE593A1E42132A00BE36CE /* VendorLoginResponseModel.swift in Sources */,
 				CDFB30041E32498D00A742E9 /* VendorShopDetailViewController.swift in Sources */,
 				CD7CDC6C1E360C3900D35F19 /* LeftViewController.swift in Sources */,
+				CDCE59321E41C64700BE36CE /* PropertyReaderFile.swift in Sources */,
 				CDC945701E2F98C800E6946F /* UITextField + textfield.swift in Sources */,
 				CDC9456E1E2F919B00E6946F /* UserLoginViewController.swift in Sources */,
 				CD84D9371E3B144C0083BF71 /* UserCartViewController.swift in Sources */,

@@ -8,6 +8,11 @@ target 'Qadmni' do
  pod 'XLPagerTabStrip'
  pod 'DLRadioButton'
  pod 'Cosmos'
+ pod 'Alamofire'
+ pod 'EVReflection'
+ pod 'MBProgressHUD'
+ pod 'IQKeyboardManagerSwift'
+ 
   # Pods for Qadmni
 
 end

@@ -4,12 +4,32 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Cosmos.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>DLRadioButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>EVReflection.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,12 +57,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0B24ED6464667FB35BDACE275D9DBC0E</key>
+		<key>41FA54D12162DAD51D02FC58A2CD5034</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>20E2FB83974AED2DB089AAB77349958A</key>
+		<key>4DC059E04CBA98AEDDB5C34E02D551E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,17 +72,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>737E5BCFC6710354CD9D3296F7B993DB</key>
+		<key>53A1DA381AE0E72D2D9F9EBD60BD4A45</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E24B4581F116E97520576071849627F0</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9AAB2077BCA8E341C7F83370229F7335</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6B7DCCCFACD79834F24B2A011035CA1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E7B614CC4E2AE02FB7D1CC92DE9EE9F6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>F6A77E2753C279F67F70C5C21D6FAE15</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FC55CAC59759FBABF3F7227BB3070393</key>
 		<dict>
 			<key>primary</key>
 			<true/>

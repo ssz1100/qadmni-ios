@@ -1,10 +1,10 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Cosmos" "$PODS_CONFIGURATION_BUILD_DIR/DLRadioButton" "$PODS_CONFIGURATION_BUILD_DIR/SWRevealViewController" "$PODS_CONFIGURATION_BUILD_DIR/XLPagerTabStrip"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Alamofire" "$PODS_CONFIGURATION_BUILD_DIR/Cosmos" "$PODS_CONFIGURATION_BUILD_DIR/DLRadioButton" "$PODS_CONFIGURATION_BUILD_DIR/EVReflection" "$PODS_CONFIGURATION_BUILD_DIR/IQKeyboardManagerSwift" "$PODS_CONFIGURATION_BUILD_DIR/MBProgressHUD" "$PODS_CONFIGURATION_BUILD_DIR/SWRevealViewController" "$PODS_CONFIGURATION_BUILD_DIR/XLPagerTabStrip"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/Cosmos/Cosmos.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/DLRadioButton/DLRadioButton.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SWRevealViewController/SWRevealViewController.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/XLPagerTabStrip/XLPagerTabStrip.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "Cosmos" -framework "DLRadioButton" -framework "SWRevealViewController" -framework "XLPagerTabStrip"
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/Alamofire/Alamofire.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Cosmos/Cosmos.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/DLRadioButton/DLRadioButton.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/EVReflection/EVReflection.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/MBProgressHUD/MBProgressHUD.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SWRevealViewController/SWRevealViewController.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/XLPagerTabStrip/XLPagerTabStrip.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "Alamofire" -framework "Cosmos" -framework "DLRadioButton" -framework "EVReflection" -framework "IQKeyboardManagerSwift" -framework "MBProgressHUD" -framework "SWRevealViewController" -framework "XLPagerTabStrip"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
