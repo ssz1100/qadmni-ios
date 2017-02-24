@@ -83,5 +83,85 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Qadmni/VendorOrderDetailsViewController.swift"
+            timestampString = "509638345.280144"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "updateStatusbuttonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Qadmni/ServiceFacade.swift"
+            timestampString = "509638354.97629"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "494"
+            endingLineNumber = "494"
+            landmarkName = "UpdateDeliveryStatus(vendorDataRequest:vendorUserRequest:vendorLangCodeRequest:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Qadmni/ServiceFacade.swift"
+            timestampString = "509638356.529036"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "496"
+            endingLineNumber = "496"
+            landmarkName = "UpdateDeliveryStatus(vendorDataRequest:vendorUserRequest:vendorLangCodeRequest:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Qadmni.ServiceFacade.(UpdateDeliveryStatus (vendorDataRequest : Swift.Optional&lt;Qadmni.UpdateDelStatusViewController&gt;, vendorUserRequest : Swift.Optional&lt;Qadmni.VendorUserRequestModel&gt;, vendorLangCodeRequest : Swift.Optional&lt;Qadmni.VendorLangCodeRequestmodel&gt;, completionHandler : (Swift.Optional&lt;Qadmni.BaseResponseModel&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "Qadmni"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prakash/Documents/VibeosysProjects/qadmni-ios/Qadmni/Qadmni/ServiceFacade.swift"
+                  timestampString = "509638463.389223"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "496"
+                  endingLineNumber = "496"
+                  offsetFromSymbolStart = "1446">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Qadmni.ServiceFacade.(UpdateDeliveryStatus (vendorDataRequest : Swift.Optional&lt;Qadmni.UpdateDelStatusViewController&gt;, vendorUserRequest : Swift.Optional&lt;Qadmni.VendorUserRequestModel&gt;, vendorLangCodeRequest : Swift.Optional&lt;Qadmni.VendorLangCodeRequestmodel&gt;, completionHandler : (Swift.Optional&lt;Qadmni.BaseResponseModel&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "Qadmni"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prakash/Documents/VibeosysProjects/qadmni-ios/Qadmni/Qadmni/ServiceFacade.swift"
+                  timestampString = "509638463.391846"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "496"
+                  endingLineNumber = "496"
+                  offsetFromSymbolStart = "2451">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

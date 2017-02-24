@@ -60,6 +60,11 @@
 		CDA4A0351E5C6BCC00F6A100 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA4A0341E5C6BCC00F6A100 /* MobileCoreServices.framework */; };
 		CDA4A0371E5C6BE200F6A100 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA4A0361E5C6BE200F6A100 /* SystemConfiguration.framework */; };
 		CDA4A0391E5C6BF300F6A100 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA4A0381E5C6BF300F6A100 /* SafariServices.framework */; };
+		CDAE23AC1E60628A0024F4A4 /* form_wiz_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDAE23AB1E60628A0024F4A4 /* form_wiz_1.jpg */; };
+		CDAE23AE1E6062A50024F4A4 /* form_wiz_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDAE23AD1E6062A50024F4A4 /* form_wiz_2.jpg */; };
+		CDAE23B01E6062B70024F4A4 /* form_wiz_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDAE23AF1E6062B70024F4A4 /* form_wiz_3.jpg */; };
+		CDAE23B21E60667F0024F4A4 /* StatusGoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE23B11E60667F0024F4A4 /* StatusGoogleMapViewController.swift */; };
+		CDAE23B41E6070C50024F4A4 /* UpdateDelStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE23B31E6070C50024F4A4 /* UpdateDelStatusViewController.swift */; };
 		CDB0A73A1E5EEAF800009C91 /* VendorOrderReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0A7391E5EEAF700009C91 /* VendorOrderReqModel.swift */; };
 		CDB0A73C1E5EEDCE00009C91 /* VendorOrderResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0A73B1E5EEDCE00009C91 /* VendorOrderResponseModel.swift */; };
 		CDB0A73E1E5EFD8200009C91 /* UpdateStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0A73D1E5EFD8200009C91 /* UpdateStatusModel.swift */; };
@@ -71,7 +76,6 @@
 		CDB5D1151E3F4E7000AC20F0 /* ProductListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5D1141E3F4E7000AC20F0 /* ProductListTableViewCell.swift */; };
 		CDB5D1171E3F5CFA00AC20F0 /* VendorOrderStatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5D1161E3F5CFA00AC20F0 /* VendorOrderStatusTableViewController.swift */; };
 		CDB5D1191E3F5DCE00AC20F0 /* VendorOrderStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5D1181E3F5DCE00AC20F0 /* VendorOrderStatusTableViewCell.swift */; };
-		CDB5D11B1E3F6F2D00AC20F0 /* form_wiz_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDB5D11A1E3F6F2D00AC20F0 /* form_wiz_1.jpg */; };
 		CDC52C491E30E4BF00C860FA /* VendorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC52C481E30E4BF00C860FA /* VendorLoginViewController.swift */; };
 		CDC9454E1E2F522B00E6946F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9454D1E2F522B00E6946F /* AppDelegate.swift */; };
 		CDC945501E2F522B00E6946F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9454F1E2F522B00E6946F /* ViewController.swift */; };
@@ -175,6 +179,11 @@
 		CDA4A0361E5C6BE200F6A100 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CDA4A0381E5C6BF300F6A100 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		CDA4A03A1E5C6F7900F6A100 /* Qadmni-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Qadmni-Bridging-Header.h"; sourceTree = "<group>"; };
+		CDAE23AB1E60628A0024F4A4 /* form_wiz_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = form_wiz_1.jpg; sourceTree = "<group>"; };
+		CDAE23AD1E6062A50024F4A4 /* form_wiz_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = form_wiz_2.jpg; sourceTree = "<group>"; };
+		CDAE23AF1E6062B70024F4A4 /* form_wiz_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = form_wiz_3.jpg; sourceTree = "<group>"; };
+		CDAE23B11E60667F0024F4A4 /* StatusGoogleMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusGoogleMapViewController.swift; sourceTree = "<group>"; };
+		CDAE23B31E6070C50024F4A4 /* UpdateDelStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateDelStatusViewController.swift; sourceTree = "<group>"; };
 		CDB0A7391E5EEAF700009C91 /* VendorOrderReqModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorOrderReqModel.swift; sourceTree = "<group>"; };
 		CDB0A73B1E5EEDCE00009C91 /* VendorOrderResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorOrderResponseModel.swift; sourceTree = "<group>"; };
 		CDB0A73D1E5EFD8200009C91 /* UpdateStatusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateStatusModel.swift; sourceTree = "<group>"; };
@@ -186,7 +195,6 @@
 		CDB5D1141E3F4E7000AC20F0 /* ProductListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListTableViewCell.swift; sourceTree = "<group>"; };
 		CDB5D1161E3F5CFA00AC20F0 /* VendorOrderStatusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorOrderStatusTableViewController.swift; sourceTree = "<group>"; };
 		CDB5D1181E3F5DCE00AC20F0 /* VendorOrderStatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorOrderStatusTableViewCell.swift; sourceTree = "<group>"; };
-		CDB5D11A1E3F6F2D00AC20F0 /* form_wiz_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = form_wiz_1.jpg; sourceTree = "<group>"; };
 		CDC52C481E30E4BF00C860FA /* VendorLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorLoginViewController.swift; sourceTree = "<group>"; };
 		CDC9454A1E2F522B00E6946F /* Qadmni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qadmni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC9454D1E2F522B00E6946F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -366,11 +374,13 @@
 		CDC945621E2F54C300E6946F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CDAE23AB1E60628A0024F4A4 /* form_wiz_1.jpg */,
+				CDAE23AD1E6062A50024F4A4 /* form_wiz_2.jpg */,
+				CDAE23AF1E6062B70024F4A4 /* form_wiz_3.jpg */,
 				CD9FA4471E49ED1F002BC631 /* splash_screen_back_one.png */,
 				CDE322E41E40B41E00002DBD /* header_icon.png */,
 				CDE322E01E40A18700002DBD /* dummy_image.jpg */,
 				CDE322DE1E409D1F00002DBD /* profile_back_demo.jpg */,
-				CDB5D11A1E3F6F2D00AC20F0 /* form_wiz_1.jpg */,
 				CDB5D1121E3F441C00AC20F0 /* ice_cream_one.jpg */,
 				CDA429C71E3CB9F80069D928 /* ic_action_camera.png */,
 				CDA429C31E3CA0B80069D928 /* ic_lang_setting_banner.png */,
@@ -402,6 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				CDE322D81E40763500002DBD /* VendorOrderDetailsViewController.swift */,
+				CDAE23B11E60667F0024F4A4 /* StatusGoogleMapViewController.swift */,
 				CDB5D1161E3F5CFA00AC20F0 /* VendorOrderStatusTableViewController.swift */,
 				CDB5D1101E3F29B900AC20F0 /* ProductListViewController.swift */,
 				CDB5D10A1E3F0D8900AC20F0 /* LeftVendorViewController.swift */,
@@ -454,6 +465,7 @@
 				CD81D7401E4B314B00FA33FE /* AddProductRequestModel.swift */,
 				CDB352ED1E4D8F0F002D8C98 /* AddProductImageRequestmodel.swift */,
 				CDB0A7391E5EEAF700009C91 /* VendorOrderReqModel.swift */,
+				CDAE23B31E6070C50024F4A4 /* UpdateDelStatusViewController.swift */,
 				CDE6FDC11E53457A009A18E7 /* VendorForgotPasswordRequestModel.swift */,
 			);
 			name = VendorRequestModel;
@@ -589,7 +601,9 @@
 				CDA429C81E3CB9F80069D928 /* ic_action_camera.png in Resources */,
 				CDC945581E2F522B00E6946F /* Assets.xcassets in Resources */,
 				CDC9456C1E2F837500E6946F /* qadmni_img_logo_english.png in Resources */,
-				CDB5D11B1E3F6F2D00AC20F0 /* form_wiz_1.jpg in Resources */,
+				CDAE23AE1E6062A50024F4A4 /* form_wiz_2.jpg in Resources */,
+				CDAE23B01E6062B70024F4A4 /* form_wiz_3.jpg in Resources */,
+				CDAE23AC1E60628A0024F4A4 /* form_wiz_1.jpg in Resources */,
 				CDB5D1131E3F441C00AC20F0 /* ice_cream_one.jpg in Resources */,
 				CDC9456A1E2F828900E6946F /* login_back.jpg in Resources */,
 				CDC945531E2F522B00E6946F /* Main.storyboard in Resources */,
@@ -698,6 +712,7 @@
 				CD33D1DD1E5883EB00D38DB9 /* CustDetailsPlaceOrderReqModel.swift in Sources */,
 				CDE322DD1E40789800002DBD /* MyFavouritesTableViewCell.swift in Sources */,
 				CDC9454E1E2F522B00E6946F /* AppDelegate.swift in Sources */,
+				CDAE23B21E60667F0024F4A4 /* StatusGoogleMapViewController.swift in Sources */,
 				CDE6FDB41E52EB6A009A18E7 /* CustomerLangCodeRequestModel.swift in Sources */,
 				CDE6FDB01E52EB37009A18E7 /* CustomerLoginRequestModel.swift in Sources */,
 				CDA429C01E3C87720069D928 /* ConfirmPayViewController.swift in Sources */,
@@ -715,6 +730,7 @@
 				CD9565131E5AB82300AF3A7E /* CustOrderedItemResModel.swift in Sources */,
 				CDB0A73C1E5EEDCE00009C91 /* VendorOrderResponseModel.swift in Sources */,
 				CD84D93E1E3B802D0083BF71 /* PlaceOrderViewController.swift in Sources */,
+				CDAE23B41E6070C50024F4A4 /* UpdateDelStatusViewController.swift in Sources */,
 				CD0377951E33657B00FAE471 /* ForgotPasswordViewController.swift in Sources */,
 				CDA429C21E3C89720069D928 /* FilterViewController.swift in Sources */,
 				CDB5D1151E3F4E7000AC20F0 /* ProductListTableViewCell.swift in Sources */,
@@ -861,7 +877,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qadmni.Qadmni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Qadmni/Qadmni-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -878,7 +894,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qadmni.Qadmni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Qadmni/Qadmni-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -60,6 +60,18 @@ class VendorOrderStatusTableViewController: UITableViewController {
         cell.deleiveryTypeLabel.text = self.vendorOrderResponseModel[indexPath.row].deliveryType
         let amountString : String = String(self.vendorOrderResponseModel[indexPath.row].amountInSAR)
         cell.amountLabel.text = amountString
+        
+        let serverdateFormatter = DateFormatter()
+        serverdateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        let strDate:String = self.vendorOrderResponseModel[indexPath.row].orderDate
+        let date = serverdateFormatter.date(from: strDate)
+        
+        let displayDateFormatter = DateFormatter()
+        displayDateFormatter.dateFormat = "dd/MM/yyyy hh:mm a"
+        let displayDate = displayDateFormatter.string(from: date!)
+        cell.orderDateLabel.text = displayDate
+
+        
         if (self.vendorOrderResponseModel[indexPath.row].isGitWrap == false)
         {
         cell.giftMessageVIew.removeFromSuperview()
@@ -67,59 +79,15 @@ class VendorOrderStatusTableViewController: UITableViewController {
         else{
         cell.giftMessageLabel.text = self.vendorOrderResponseModel[indexPath.row].giftMessage
         }
-        
-        
-        
-
-        
-
-        return cell
+               return cell
     }
 
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: VendorOrderDetailsViewController = storyboard.instantiateViewController(withIdentifier: "VendorOrderDetailsViewController") as! VendorOrderDetailsViewController
+        vc.vendorOrderResponseModel = self.vendorOrderResponseModel[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
