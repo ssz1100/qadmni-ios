@@ -14,12 +14,16 @@ class VendorOrderStatusTableViewCell: UITableViewCell {
     
     @IBOutlet var orderDateLabel: UILabel!
     @IBOutlet var paymentModeLabel: UILabel!
+    @IBOutlet var amountLabel: UILabel!
+    @IBOutlet var giftMessageLabel: UILabel!
     
     @IBOutlet var deleiveryTypeLabel: UILabel!
     
     @IBOutlet var customerNameLabel: UILabel!
     
+    @IBOutlet var giftMessageVIew: UIView!
     
+    @IBOutlet var subView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

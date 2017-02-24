@@ -10,6 +10,20 @@ import UIKit
 
 class VendorOrderDetailsViewController: UIViewController {
 
+    @IBOutlet var orderIdLabel: UILabel!
+    @IBOutlet var orderDateLabel: UILabel!
+    @IBOutlet var paymentModeLabel: UILabel!
+    @IBOutlet var deliveryTypeLabel: UILabel!
+    @IBOutlet var amountLabel: UILabel!
+    @IBOutlet var customerNameLabel: UILabel!
+    @IBOutlet var giftMessageLabel: UILabel!
+    @IBOutlet var addressLabel: UILabel!
+    @IBOutlet var statusImageview: UIImageView!
+    
+    @IBAction func showOnMapButtonTapped(_ sender: UIButton) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

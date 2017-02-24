@@ -25,7 +25,7 @@ public protocol EVReflectable: class, NSObjectProtocol  {
      
      - returns: Return an array with value pairs of the object property name and json key name.
      */
-    func propertyMapping() -> [(String?, String?)]
+    func propertyMapping() -> [(keyInObject: String?, keyInResource: String?)]
     
     /**
      Override this method when you want custom property value conversion
@@ -34,7 +34,7 @@ public protocol EVReflectable: class, NSObjectProtocol  {
      
      - returns: Returns an array where each item is a combination of the folowing 3 values: A string for the property name where the custom conversion is for, a setter function and a getter function.
      */
-    func propertyConverters() -> [(String?, ((Any?)->())?, (() -> Any?)? )]
+    func propertyConverters() -> [(key: String, decodeConverter: ((Any?)->()), encodeConverter: (() -> Any?))]
     
     /**
      This is a general functon where you can filter for specific values (like nil or empty string) when creating a dictionary
@@ -116,7 +116,7 @@ extension EVReflectable where Self: NSObject {
     
     
     /**
-     Convenience init for creating an object whith the property values of a dictionary.
+    init for creating an object whith the property values of a dictionary.
      
      - parameter dictionary: The dictionary that will be used to create this object
      - parameter conversionOptions: Option set for the various conversion options.
@@ -127,7 +127,7 @@ extension EVReflectable where Self: NSObject {
     }
     
     /**
-     Convenience init for creating an object whith the contents of a json string.
+    init for creating an object whith the contents of a json string.
      
      - parameter json: The json string that will be used to create this object
      - parameter conversionOptions: Option set for the various conversion options.
@@ -139,7 +139,7 @@ extension EVReflectable where Self: NSObject {
     }
     
     /**
-     Convenience init for creating an object whith the property values of json Data.
+    init for creating an object whith the property values of json Data.
      
      - parameter dictionary: The dictionary that will be used to create this object
      - parameter conversionOptions: Option set for the various conversion options.
@@ -180,7 +180,7 @@ extension EVReflectable where Self: NSObject {
     }
     
     /**
-     Convenience init for creating an object whith the property values of an other object.
+    init for creating an object whith the property values of an other object.
      
      - parameter usingValuesFrom: The object of whicht the values will be used to create this object
      - parameter conversionOptions: Option set for the various conversion options.
@@ -270,7 +270,7 @@ extension EVReflectable {
      
      - returns: Return an array with value pairs of the object property name and json key name.
      */
-    public func propertyMapping() -> [(String?, String?)] {
+    public func propertyMapping() -> [(keyInObject: String?, keyInResource: String?)] {
         return []
     }
     
@@ -281,7 +281,7 @@ extension EVReflectable {
      
      - returns: Returns an array where each item is a combination of the folowing 3 values: A string for the property name where the custom conversion is for, a setter function and a getter function.
      */
-    public func propertyConverters() -> [(String?, ((Any?)->())?, (() -> Any?)? )] {
+    public func propertyConverters() -> [(key: String, decodeConverter: ((Any?)->()), encodeConverter: (() -> Any?))] {
         return []
     }
     
@@ -403,7 +403,7 @@ extension EVReflectable {
 
     
     /**
-     Convenience method for instantiating an array from a json string.
+    method for instantiating an array from a json string.
      
      - parameter json: The json string
      - parameter conversionOptions: Option set for the various conversion options.
@@ -532,7 +532,7 @@ extension EVReflectable {
     }
     
     /**
-     Convenience function for adding a new status message to the evReflectionStatus array
+    function for adding a new status message to the evReflectionStatus array
      
      - parameter type:    A string to specify the message type
      - parameter message: The message for the status.

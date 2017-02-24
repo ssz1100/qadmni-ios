@@ -12,6 +12,9 @@ target 'Qadmni' do
  pod 'EVReflection'
  pod 'MBProgressHUD'
  pod 'IQKeyboardManagerSwift'
+ pod 'GoogleMaps'
+ pod 'GooglePlaces'
+ pod 'PayPal-iOS-SDK'
  
   # Pods for Qadmni
 

@@ -1,0 +1,5 @@
+XSym
+0056
+78e40a383327624a3b23a7cf59d99be3
+../../../PayPal-iOS-SDK/PayPalMobile/PayPalOAuthScopes.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

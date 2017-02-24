@@ -9,10 +9,12 @@
 import UIKit
 import Alamofire
 import EVReflection
+import MBProgressHUD
 
-class VendorLoginViewController: UIViewController {
+class VendorLoginViewController: UIViewController,UITextFieldDelegate {
     
     let vendorLoginResponseModel:VendorLoginResponseModel = VendorLoginResponseModel()
+    var userDefaultManager : UserDefaultManager = UserDefaultManager()
     
     @IBOutlet weak var userNameTxtField: UITextField!
     
@@ -25,35 +27,25 @@ class VendorLoginViewController: UIViewController {
     
     @IBAction func loginVendorButtonTapped(_ sender: UIButton)
     {
-//        var baseRequestModel : BaseRequestModel = BaseRequestModel()
-//        var vendorLoginRequestModel : LoginVendorRequestModel = LoginVendorRequestModel()
-//        vendorLoginRequestModel.emailId = userNameTxtField.text!
-//        vendorLoginRequestModel.password = passwordTxtField.text!
-//        vendorLoginRequestModel.pushNotificationId = "xfdxffev"
-//
-//        
-//        baseRequestModel.user = ""
-//        baseRequestModel.data = vendorLoginRequestModel.toJsonString()
-//        baseRequestModel.langCode=""
-//        
-//     let serviceFacade = ServiceFacade(configUrl : PropertyReaderFile.getBaseUrl())
-//        serviceFacade.requestToServer(endUrl:"vendorlogin",baseRequestParameter: baseRequestModel,requestToken: 1,completionHandler : {
-//            response in
-//        
-//        })
         
-         print(NSHomeDirectory())
+        let checkOut : Bool = validateData()
         
-        let delagate = UIApplication.shared.delegate as! AppDelegate
-        let pathForPlistFile = delagate.plistPathInDocuments
+        if(!checkOut)
+        {
+            return;
+        }
         
         
+
         let vendorLoginUser = VendorUserRequestModel()
         let vendorLoginData = LoginVendorRequestModel()
         let vendorLangCode = VendorLangCodeRequestmodel()
         
+        
         vendorLoginData.emailId = userNameTxtField.text!
         vendorLoginData.password = passwordTxtField.text!
+        
+        showActivity()
         
         let serviceFacade = ServiceFacade(configUrl : PropertyReaderFile.getBaseUrl())
         serviceFacade.vendorLogin(vendorDataRequest: vendorLoginData,
@@ -61,22 +53,31 @@ class VendorLoginViewController: UIViewController {
                                   vendorLangCodeRequest: vendorLangCode,
                                   completionHandler: {
                                     response in
-                                    debugPrint(response)
-//                                    let producerId = "producerId"
-//                                    let producerName = "producerName"
-//                                    let businessNameEn = "businessNameEn"
-//                                    let businessNameAr = "businessNameAr"
-//                                    let businessAddress = "businessAddress"
-//                                    let businessLat = "businessLat"
-//                                    let businessLong = "businessLong"
+                                    debugPrint(response!)
                                     
-                    PlistManager.sharedInstance.saveValue(value: response?.producerId as AnyObject, forKey: "producerId")
-                    PlistManager.sharedInstance.saveValue(value: response?.producerName as AnyObject, forKey: "producerName")
-                    PlistManager.sharedInstance.saveValue(value: response?.businessNameEn as AnyObject, forKey: "businessNameEn")
-                    PlistManager.sharedInstance.saveValue(value: response?.businessNameAr as AnyObject, forKey: "businessNameAr")
-                    PlistManager.sharedInstance.saveValue(value: response?.businessAddress as AnyObject, forKey: "businessAddress")
-                    PlistManager.sharedInstance.saveValue(value: response?.businessLat as AnyObject, forKey: "businessLat")
-                    PlistManager.sharedInstance.saveValue(value: response?.businessLong as AnyObject, forKey: "businessLong")
+                                    self.hideActivity()
+                          
+                           
+                        if(response?.errorCode == 0)
+                        {
+                            response?.emailId = self.userNameTxtField.text!
+                            response?.password = self.passwordTxtField.text!
+                            self.userDefaultManager.saveVendorData(vendorResponse: response)
+                            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "VendorSWRevealViewController") as UIViewController
+                            self.present(vc, animated: true, completion: nil)
+                            
+                           
+                            
+                        }
+                        else
+                        {
+                          self.showAlertMessage(title: "Authenication Error", message: (response?.message)!)
+                            self.userNameTxtField.text! = ""
+                            self.passwordTxtField.text! = ""
+                        }
+                            
+                    
                                     
         
         })
@@ -89,10 +90,6 @@ class VendorLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
-
         let frame = CGRect.init(x: 0, y: 0, width: 40, height:40)
         let imageSize = CGSize.init(width: 30, height: 30)
         
@@ -106,29 +103,56 @@ class VendorLoginViewController: UIViewController {
     override func viewDidLayoutSubviews() {
        self.subView.roundedView()        
         self.userNameTxtField.underlined()
-        
         self.loginVendorButton.roundedButton()
         
-        
-        
-        
-        
-    }
+          }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func validateData() -> Bool
+    {
+        
+        if (self.userNameTxtField.text?.isEmpty)!
+        {
+            self.showAlertMessage(title: "Info", message: "Please Enter User Name")
+            return false
+        }
+        else if (self.passwordTxtField.text?.isEmpty)!
+        {
+            self.showAlertMessage(title: "Info", message: "Please Enter Password")
+            return false
+        }
+                return true
+        
+        
     }
-    */
+    
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        if (textField == userNameTxtField)
+        {
+            userNameTxtField.resignFirstResponder()
+            passwordTxtField.becomeFirstResponder()
+        }
+        else if (textField == passwordTxtField)
+        {
+            self.view.endEditing(true)
+
+        }
+        
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        self.view.endEditing(true)
+    }
+    
+    
+    
 
 }

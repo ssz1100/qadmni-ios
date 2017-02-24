@@ -67,7 +67,7 @@ final public class EVReflection {
             var skipKey = false
             if conversionOptions.contains(.PropertyMapping) {
                 if let reflectable = anyObject as? EVReflectable {
-                    if let mapping = reflectable.propertyMapping().filter({$0.0 == k as? String}).first {
+                    if let mapping = reflectable.propertyMapping().filter({$0.keyInObject == k as? String}).first {
                         if mapping.1 == nil {
                             skipKey = true
                         }
@@ -113,8 +113,8 @@ final public class EVReflection {
         for (objectKey, _) in properties {
             if conversionOptions.contains(.PropertyMapping) {
                 if let reflectable = anyObject as? EVReflectable {
-                    if let mapping = reflectable.propertyMapping().filter({$0.1 == objectKey as? String}).first {
-                        keyMapping[objectKey as? String ?? ""] = mapping.0
+                    if let mapping = reflectable.propertyMapping().filter({$0.keyInResource == objectKey as? String}).first {
+                        keyMapping[objectKey as? String ?? ""] = mapping.keyInObject
                     }
                 }
             }
@@ -203,6 +203,30 @@ final public class EVReflection {
             }
         }
                 
+        return result
+    }
+
+    /**
+     Return an array of dictionaries as the representation for the json string
+     
+     - parameter json: The json string that will be converted
+     
+     - returns: The dictionary representation of the json
+     */
+    public class func dictionaryArrayFromJson(_ json: String?) -> [NSDictionary] {
+        let result = [NSDictionary]()
+        if json == nil {
+            print("ERROR: nil is not valid json!")
+        } else if let jsonData = json!.data(using: String.Encoding.utf8) {
+            do {
+                if let jsonDic = try JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.mutableContainers) as? [NSDictionary] {
+                    return jsonDic
+                }
+            } catch {
+                print("ERROR: Invalid json! \(error.localizedDescription)")
+            }
+        }
+        
         return result
     }
     
@@ -556,7 +580,7 @@ final public class EVReflection {
         dateFormatter = DateFormatter()
         dateFormatter!.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter!.timeZone = TimeZone(secondsFromGMT: 0)
-        dateFormatter!.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZ"
+        dateFormatter!.dateFormat = "yyyy'-'MM'-'dd' 'HH':'mm':'ssZ"
         return dateFormatter!
     }
     
@@ -832,9 +856,6 @@ final public class EVReflection {
         
         if conversionOptions.contains(.PropertyConverter) {
             if let (_, propertySetter, _) = (anyObject as? EVReflectable)?.propertyConverters().filter({$0.0 == key}).first {
-                guard let propertySetter = propertySetter else {
-                    return  // if the propertySetter is nil, skip setting the property
-                }
                 propertySetter(value)
                 return
             }
@@ -1270,7 +1291,7 @@ final public class EVReflection {
                 }
                 if conversionOptions.contains(.PropertyMapping) {
                     if let reflectable = theObject as? EVReflectable {
-                        if let mapping = reflectable.propertyMapping().filter({$0.0 == originalKey}).first {
+                        if let mapping = reflectable.propertyMapping().filter({$0.keyInObject == originalKey}).first {
                             if mapping.1 == nil {
                                 skipThisKey = true
                             } else {
@@ -1288,9 +1309,6 @@ final public class EVReflection {
                     if conversionOptions.contains(.PropertyConverter) {
                         // If there is a properyConverter, then use the result of that instead.
                         if let (_, _, propertyGetter) = (theObject as? EVReflectable)?.propertyConverters().filter({$0.0 == originalKey}).first {
-                            guard let propertyGetter = propertyGetter else {
-                                continue    // if propertyGetter is nil, skip getting the property
-                            }
                             value = propertyGetter() as Any                            
                             let (unboxedValue2, _, _) = valueForAny(theObject, key: originalKey, anyValue: value, conversionOptions: conversionOptions, isCachable: isCachable, parents: parents)
                             unboxedValue = unboxedValue2

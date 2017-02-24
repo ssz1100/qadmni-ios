@@ -18,5 +18,7 @@ public class VendorLoginResponseModel : BaseResponseModel
     var businessAddress : String = ""
     var businessLat : Double = 0
     var businessLong : Double = 0
+    var emailId : String = ""
+    var password : String = ""
 
 }

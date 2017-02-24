@@ -8,7 +8,9 @@
 
 import UIKit
 
+@available(iOS 10.0, *)
 class UserCartViewController: UIViewController, UITableViewDataSource,UITableViewDelegate {
+    var cartList : [MyCartModel] = []
     
     @IBOutlet var tableview: UITableView!
     
@@ -26,6 +28,16 @@ class UserCartViewController: UIViewController, UITableViewDataSource,UITableVie
 
       tableview.delegate = self
       tableview.dataSource = self
+        let coreData = CoreData()
+        let cartModel:MyCartModel=MyCartModel()
+        cartModel.productId=3970
+        cartModel.producerId=19351
+        cartModel.productName="Choco Biscuits"
+        cartModel.productQuantity=4
+        cartModel.unitPrice=100.00
+      coreData.storeUserData(cartModel: cartModel)
+       cartList =  coreData.getUserCoreDataDetails()
+       
         
         
     }
@@ -37,11 +49,16 @@ class UserCartViewController: UIViewController, UITableViewDataSource,UITableVie
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 1
+        return cartList.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! UserCartTableViewCell
-        return cell
+        cell.productLabel.text = cartList[indexPath.row].productName
+        let price:String = String(format:"%.2f",cartList[indexPath.row].unitPrice)
+        cell.priceLabel.text = price
+        let quantity : String = String(cartList[indexPath.row].productQuantity)
+        cell.quantitylabel.text = quantity
+                return cell
     }
        
     

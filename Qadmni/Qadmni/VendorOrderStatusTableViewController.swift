@@ -9,12 +9,29 @@
 import UIKit
 
 class VendorOrderStatusTableViewController: UITableViewController {
+    var vendorOrderResponseModel : [VendorOrderResponseModel] = []
+    var userDefaultManager : UserDefaultManager = UserDefaultManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        tableView.delegate = self
-//        tableView.dataSource = self
+        let vendorOrderUser : VendorUserRequestModel = self.userDefaultManager.getVendorDetail()
+        let vendorOrderData = VendorOrderReqModel()
+        let vendorLangCode = VendorLangCodeRequestmodel()
+        
+        
+        let serviceFacade = ServiceFacade(configUrl : PropertyReaderFile.getBaseUrl())
+        serviceFacade.VendorOrder(vendorDataRequest: vendorOrderData,
+                                  vendorUserRequest: vendorOrderUser,
+                                  vendorLangCodeRequest: vendorLangCode,
+                                  completionHandler:{
+                                        response in
+                                    self.vendorOrderResponseModel = response as! [VendorOrderResponseModel]
+                                    self.tableView.reloadData()
+
+        })
+        
+        
         
 
             }
@@ -26,18 +43,33 @@ class VendorOrderStatusTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-                return 1
-    }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 2
+        return vendorOrderResponseModel.count
     }
 
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> VendorOrderStatusTableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! VendorOrderStatusTableViewCell
+        cell.subView.roundedGreyBorder()
+        let orderIdString: String = String(self.vendorOrderResponseModel[indexPath.row].orderId)
+        cell.orderIdLabel.text = orderIdString
+        cell.customerNameLabel.text = self.vendorOrderResponseModel[indexPath.row].customerName
+        cell.paymentModeLabel.text = self.vendorOrderResponseModel[indexPath.row].paymentMethod
+        cell.deleiveryTypeLabel.text = self.vendorOrderResponseModel[indexPath.row].deliveryType
+        let amountString : String = String(self.vendorOrderResponseModel[indexPath.row].amountInSAR)
+        cell.amountLabel.text = amountString
+        if (self.vendorOrderResponseModel[indexPath.row].isGitWrap == false)
+        {
+        cell.giftMessageVIew.removeFromSuperview()
+        }
+        else{
+        cell.giftMessageLabel.text = self.vendorOrderResponseModel[indexPath.row].giftMessage
+        }
+        
+        
+        
 
         
 

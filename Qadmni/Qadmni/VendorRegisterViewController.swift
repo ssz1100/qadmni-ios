@@ -8,7 +8,11 @@
 
 import UIKit
 
-class VendorRegisterViewController: UIViewController {
+class VendorRegisterViewController: UIViewController,UITextFieldDelegate {
+    
+    var producerName : String = ""
+    var password : String = ""
+    var emailId : String = ""
     
     @IBOutlet weak var nameTxtField: UITextField!
     
@@ -24,6 +28,49 @@ class VendorRegisterViewController: UIViewController {
     @IBOutlet weak var subView: UIView!
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
+        
+        let checkOut : Bool = validateData()
+        
+        if(!checkOut)
+        {
+            return;
+        }
+        
+        let vendorUser = VendorUserRequestModel()
+        let vendorData = VendorEmailValidateRequestModel()
+        let vendorLangCode = VendorLangCodeRequestmodel()
+        
+        
+        vendorData.emailId = self.emailTxtField.text!
+        self.showActivity()
+        let serviceFacade = ServiceFacade(configUrl : PropertyReaderFile.getBaseUrl())
+        serviceFacade.VendorEmailValidate(vendorDataRequest: vendorData,
+                                          vendorUserRequest: vendorUser,
+                                          vendorLangCodeRequest: vendorLangCode,
+                                          completionHandler: {
+                                            response in
+                                            self.hideActivity()
+                                            
+                                            if(response?.errorCode == 0)
+                                            {
+                                                
+                                                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                                let vc: VendorShopDetailViewController = storyboard.instantiateViewController(withIdentifier: "VendorShopDetailViewController") as! VendorShopDetailViewController
+                                                vc.producerName = self.producerName
+                                                vc.emailId = self.emailId
+                                                vc.password = self.password
+                                                self.present(vc, animated: true, completion: nil)
+
+                                            
+                                            }
+                                          else{
+                                            self.showAlertMessage(title: "Alert", message: "Email Id Exist with another user pleaser try different")
+                                            }
+                                            
+                                            
+        })
+
+        
     }
     
     
@@ -47,6 +94,11 @@ class VendorRegisterViewController: UIViewController {
         nameTxtField.addLeftIcon(userNameImage, frame: frame, imageSize: imageSize)
         let phoneImage = UIImage(named:"phone")
         phoneTxtField.addLeftIcon(phoneImage, frame: frame, imageSize: imageSize)
+        
+        producerName = nameTxtField.text!
+        password = passwordTxtField.text!
+        emailId = emailTxtField.text!
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -68,15 +120,79 @@ class VendorRegisterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func validateData() -> Bool
+    {
+        
+        if (self.nameTxtField.text?.isEmpty)!
+        {
+            self.showAlertMessage(title: "Info", message: "Please enter name")
+            return false
+        }
+        else if (self.passwordTxtField.text?.isEmpty)!
+        {
+            self.showAlertMessage(title: "Info", message: "Please enter password")
+            return false
+        }
+        else if (self.confirmPasswordTxtField.text?.isEmpty)!
+        {
+            self.showAlertMessage(title: "Info", message: "Please enter confirmpassword")
+            return false
+        }
+        else if (self.emailTxtField.text?.isEmpty)!
+        {
+            self.showAlertMessage(title: "Info", message: "Please enter email")
+            return false
+        }
+        else if (self.phoneTxtField.text?.isEmpty)!
+        {
+            self.showAlertMessage(title: "Info", message: "Please enter phonenumber")
+            return false
+        }
+        else if (self.passwordTxtField.text != self.confirmPasswordTxtField.text)
+        {
+            self.showAlertMessage(title: "Alert", message: "Password unmatched")
+            return false
+        }
+        return true
+        
+        
     }
-    */
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        if (textField == nameTxtField)
+        {
+            nameTxtField.resignFirstResponder()
+            passwordTxtField.becomeFirstResponder()
+        }
+        else if (textField == passwordTxtField)
+        {
+            passwordTxtField.resignFirstResponder()
+            confirmPasswordTxtField.becomeFirstResponder()
+            
+        }
+        else if (textField == confirmPasswordTxtField)
+        {
+           confirmPasswordTxtField.resignFirstResponder()
+           emailTxtField.becomeFirstResponder()
+        }
+        else if (textField == emailTxtField)
+        {
+            emailTxtField.resignFirstResponder()
+            phoneTxtField.becomeFirstResponder()
+        }
+        else if (textField == phoneTxtField)
+        {
+           self.view.endEditing(true)
+        }
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        self.view.endEditing(true)
+    }
+    
 
+   
 }

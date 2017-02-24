@@ -37,7 +37,7 @@ public protocol EVRaw {
 /**
  Default implementation for getting the rawValue for any other type
  */
-extension EVRaw where Self: RawRepresentable {
+public extension EVRaw where Self: RawRepresentable {
     var anyRawValue: Any {
         get {
             return rawValue as Any
@@ -82,6 +82,8 @@ public extension EVAssociated {
         }
     }
 }
+
+
 
 /**
  Dictionary extension for creating a dictionary from an array of enum values

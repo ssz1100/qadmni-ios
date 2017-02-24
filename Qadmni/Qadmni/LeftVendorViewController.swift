@@ -10,6 +10,7 @@ import UIKit
 import SWRevealViewController
 
 class LeftVendorViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    @IBOutlet var vendorTableView: UITableView!
     
     @IBOutlet var leftProfileImage: UIImageView!
     
@@ -24,7 +25,21 @@ class LeftVendorViewController: UIViewController,UITableViewDataSource,UITableVi
         menuIconImage = [UIImage(named:"basket")!,UIImage(named:"profile")!,UIImage(named:"setting")!,UIImage(named:"logout")!]
         
         leftProfileImage.roundedImageView()
+        vendorTableView.delegate = self
+        vendorTableView.dataSource = self
+        
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "OrderStatusNavigation"
+//        {
+//            let navigationController = segue.destination as! UINavigationController
+//            let destinationController = navigationController.viewControllers[0] as! VendorOrderStatusTableViewController
+//            
+//            self.navigationController?.pushViewController(destinationController, animated: true)
+//            
+//        }
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,16 +58,18 @@ class LeftVendorViewController: UIViewController,UITableViewDataSource,UITableVi
         
         
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (indexPath as NSIndexPath).row == 0
+        {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "OrderStatusNavigation") as! UINavigationController
+           
+            self.present(vc, animated: true, completion: nil)
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        }
     }
-    */
 
+   
 }

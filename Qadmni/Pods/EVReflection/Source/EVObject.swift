@@ -121,7 +121,7 @@ open class EVObject: NSObject, NSCoding, EVReflectable  {
      
      - returns: Return an array with value pairs of the object property name and json key name.
      */
-    open func propertyMapping() -> [(String?, String?)] {
+    open func propertyMapping() -> [(keyInObject: String?, keyInResource: String?)] {
         return []
     }
     
@@ -132,7 +132,7 @@ open class EVObject: NSObject, NSCoding, EVReflectable  {
      
      - returns: Returns an array where each item is a combination of the folowing 3 values: A string for the property name where the custom conversion is for, a setter function and a getter function.
      */
-    open func propertyConverters() -> [(String?, ((Any?)->())?, (() -> Any?)? )] {
+    open func propertyConverters() -> [(key: String, decodeConverter: ((Any?)->()), encodeConverter: (() -> Any?))] {
         return []
     }
     

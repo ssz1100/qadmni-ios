@@ -9,38 +9,24 @@
 
 import UIKit
 import CoreData
+import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var plistPathInDocuments : String = String()
-    
-//    func preparePlistForVendor()
-//    {
-//       
-//        let rootPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, .userDomainMask, true)[0]
-//        
-//         plistPathInDocuments = rootPath + "/vendorList.plist"
-//        
-//        if !FileManager.default.fileExists(atPath: plistPathInDocuments)
-//        {
-//        let plistPathInBundle = Bundle.main.path(forResource: "vendorList", ofType: "plist") as String!
-//            do {
-//                try FileManager.default.copyItem(atPath: plistPathInBundle!, toPath: plistPathInDocuments)
-//        
-//            }
-//            catch{
-//                print(error)
-//            }
-//        
-//        }
-//      
-//    }
+        
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-       PlistManager.sharedInstance.startPlistManager()
+         print(NSHomeDirectory())
+
+        GMSServices.provideAPIKey("AIzaSyA8CA7g54OOFJFaMp9j8FzS0K0uh4azFCM")
+        GMSPlacesClient.provideAPIKey("AIzaSyA8CA7g54OOFJFaMp9j8FzS0K0uh4azFCM")
+        
+        PayPalMobile .initializeWithClientIds(forEnvironments: [PayPalEnvironmentProduction:"ARUsUW_-mWCE1NAAdf0Xy4KtxxpTgv9KsM3XtEpG3DlW3C3t7J_Qikz1dA1DfUUN2c0UQUpKfGJaG23z" ,
+                                                                PayPalEnvironmentSandbox: "AazpbjT0kIEf-4PEdLZL7S9Y6F2BU5zLN9vOn9AGgkjLcLHj0bFwIrOxQK-7vXwmT-0Q9SmVGapM5hDS"])
         return true
     }
 
@@ -68,9 +54,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        self.saveContext()
     }
 
-    // MARK: - Core Data stack
+   //  MARK: - Core Data stack
 
-//    @available(iOS 10.0, *)
+   
 //    lazy var persistentContainer: NSPersistentContainer = {
 //        /*
 //         The persistent container for the application. This implementation
@@ -101,6 +87,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //
 //    // MARK: - Core Data Saving support
 //
+//   
 //    func saveContext () {
 //        let context = persistentContainer.viewContext
 //        if context.hasChanges {
@@ -114,6 +101,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            }
 //        }
 //    }
-//
+
 }
 

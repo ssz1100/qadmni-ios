@@ -8,7 +8,8 @@
 
 import UIKit
 
-class UserLoginViewController: UIViewController {
+class UserLoginViewController: UIViewController,UITextFieldDelegate {
+    var userDefaultManager : UserDefaultManager = UserDefaultManager()
     
     
     @IBOutlet weak var userNameTxtField: UITextField!
@@ -19,6 +20,57 @@ class UserLoginViewController: UIViewController {
     @IBOutlet weak var loginButtonOutlet: UIButton!
     
     @IBAction func loginButton(_ sender: UIButton) {
+        
+        let checkOut : Bool = validateData()
+        
+        if(!checkOut)
+        {
+            return;
+        }
+
+        
+        let customerLoginData = CustomerLoginRequestModel()
+        let customerLoginUser = CustomerUserRequestModel()
+        let customerLangCode = CustomerLangCodeRequestModel()
+        
+        customerLoginData.emailId = self.userNameTxtField.text!
+        customerLoginData.password = self.passwordTxtField.text!
+        
+        self.showActivity()
+        let serviceFacadeUser = ServiceFacadeUser(configUrl : PropertyReaderFile.getBaseUrl())
+        serviceFacadeUser.CustomerLogin(customerDataRequest: customerLoginData,
+                                        customerUserRequest: customerLoginUser,
+                                        customerLangCodeRequest: customerLangCode,
+                                        completionHandler: {
+                                            response in
+                                            self.hideActivity()
+                                            if(response?.errorCode == 0)
+                                            {
+                                                response?.emailId = self.userNameTxtField.text!
+                                                response?.password = self.passwordTxtField.text!
+                                               self.userDefaultManager.saveCustomerData(customerResponse: response)
+                                                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                                let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "SWRevealViewController") as UIViewController
+                                                self.present(vc, animated: true, completion: nil)
+                                                
+                                                
+                                                
+                                            }
+                                            else
+                                            {
+                                                self.showAlertMessage(title: "Authenication Error", message: (response?.message)!)
+                                                self.userNameTxtField.text! = ""
+                                                self.passwordTxtField.text! = ""
+                                            }
+
+                                            
+        
+        })
+        
+        
+        
+        
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,15 +101,49 @@ class UserLoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func validateData() -> Bool
+    {
+        
+        if (self.userNameTxtField.text?.isEmpty)!
+        {
+            self.showAlertMessage(title: "Info", message: "Please Enter User Name")
+            return false
+        }
+        else if (self.passwordTxtField.text?.isEmpty)!
+        {
+            self.showAlertMessage(title: "Info", message: "Please Enter Password")
+            return false
+        }
+        return true
+        
+        
     }
-    */
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        if (textField == userNameTxtField)
+        {
+            userNameTxtField.resignFirstResponder()
+            passwordTxtField.becomeFirstResponder()
+        }
+        else if (textField == passwordTxtField)
+        {
+            self.view.endEditing(true)
+            
+        }
+        
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        self.view.endEditing(true)
+    }
+    
+
+    
+
+    
 
 }

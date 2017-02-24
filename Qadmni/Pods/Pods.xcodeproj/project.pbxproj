@@ -7,117 +7,118 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		015C902B9C0E63DA0519A0D34E10F739 /* CosmosSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4038FD6C3263A957C4975E69593EAEDD /* CosmosSettings.swift */; };
-		015F532EE442FBC76E278EB0F761C68D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
+		015C902B9C0E63DA0519A0D34E10F739 /* CosmosSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F0CAB8123E38DD9FAEA1BCD858F09 /* CosmosSettings.swift */; };
 		08F70BDD45F0B73F1AD27507808FEC3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
-		0968524ED4DE8DF7834055C5B6089D72 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4A79D9246A25B3BC697552B3057A80 /* MBProgressHUD-dummy.m */; };
-		0B9FAA59E53F8381BAD75316E70145BE /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F955ECADE8CDDF3191E9008CB40A7BFA /* IQUIView+IQKeyboardToolbar.swift */; };
-		0EC88D04EAE0CD3EFD3C3C89C1B9F45F /* CosmosLocalizedRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77069F0CF565F67FA0BD1968EA757F0 /* CosmosLocalizedRating.swift */; };
-		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB89A0BE0574C57F23E6C85B0A88CAB /* Timeline.swift */; };
+		0968524ED4DE8DF7834055C5B6089D72 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D8F91297D0BA6BEE3F19C315D599A /* MBProgressHUD-dummy.m */; };
+		0B9FAA59E53F8381BAD75316E70145BE /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3F47C2DAF50480AADA15F2ED4A3CDB /* IQUIView+IQKeyboardToolbar.swift */; };
+		0EC88D04EAE0CD3EFD3C3C89C1B9F45F /* CosmosLocalizedRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448A3736F897CA3D8BC540A2838F88DB /* CosmosLocalizedRating.swift */; };
+		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4FA97CB5FCA6214B6360DE9B589F66 /* Timeline.swift */; };
 		1215629D558162CE728B27386DA02D1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
-		123D28717B28730D7DDD56E56B646294 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1657A2CFA5F81E597EB715FA3C9931A /* IQUITextFieldView+Additions.swift */; };
-		144E65DD44A42778F59EC6253216860F /* PagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2EA32448B2ADDB7F191BC42DBCF1CB /* PagerTabStripViewController.swift */; };
-		186D0D27D142D613DEEF020B86FBA0B8 /* EVReflection-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B774E359A30E3C895D9E5A73D25570D /* EVReflection-dummy.m */; };
-		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 06F0211416A1C59D788A696EE9A96301 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		123D28717B28730D7DDD56E56B646294 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B718BC6D7203850BDD55B9ED229B03F7 /* IQUITextFieldView+Additions.swift */; };
+		144E65DD44A42778F59EC6253216860F /* PagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720ADD80D5CBAD8DF83B520F743EBF8A /* PagerTabStripViewController.swift */; };
+		171F9524FCCAED4A31616FC7B75955FD /* EVReflectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E2325036F95A6055867A8252F4D22C /* EVReflectable.swift */; };
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80A4E542449FAEE9129BA970EC7E66D1 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1C8F85A1033B5AE0FE8126CE2E937E9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8EF2301073B01E30612B5B1BD94446 /* CoreGraphics.framework */; };
-		22BF5066806248FBD63CD64193B95AB6 /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F53FB8C54CD3EF16772AC2771192E2 /* IQUIScrollView+Additions.swift */; };
-		25DFA72039CBA011EBA738AA73084A8E /* CosmosSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7416A8CECD4E20DE36DF5D0278FF4EC /* CosmosSize.swift */; };
-		26BB296FF5E51BCAF5E48E11FA050BE3 /* ButtonBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FC87D042CA4B006A8D4B356761128D /* ButtonBarViewCell.swift */; };
+		22BF5066806248FBD63CD64193B95AB6 /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D012E7161368613C6552467F0E04C9 /* IQUIScrollView+Additions.swift */; };
+		25DFA72039CBA011EBA738AA73084A8E /* CosmosSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6328F53D9A8C7B490D67EBCE9CD92 /* CosmosSize.swift */; };
+		26BB296FF5E51BCAF5E48E11FA050BE3 /* ButtonBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99907652D84990C4AE57E50FFA3831 /* ButtonBarViewCell.swift */; };
 		26F5CF0B1F79BAF7972C28BF8386103A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
-		285518536E838AA3BB250C777AA27354 /* TwitterPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F28974B99265D403C8F4336D86AA7 /* TwitterPagerTabStripViewController.swift */; };
-		28A794912ED1E06B05D96DF5ED0AED19 /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DF193A8743D34F89DB714703F3ADE1A /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2AADD3E796E6ADDB47388FE655FA68E2 /* ButtonCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 8E51CEA3FEC33D1E1F4271EEDD1AD5B5 /* ButtonCell.xib */; };
-		2ACE2CA98DCC1A396CCBA9DA7C195E9D /* PagerTabStripError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92B1AEFE1ACA0929D9464C6E1E860A5 /* PagerTabStripError.swift */; };
+		285518536E838AA3BB250C777AA27354 /* TwitterPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F97EDEB991CA9361CFA199449C4677C /* TwitterPagerTabStripViewController.swift */; };
+		28A794912ED1E06B05D96DF5ED0AED19 /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D8E59D10B9297E532BCAA4EFD5E383E9 /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2AADD3E796E6ADDB47388FE655FA68E2 /* ButtonCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = B5A9E2E6AA1F53E903DE59B0A0E91889 /* ButtonCell.xib */; };
+		2ACE2CA98DCC1A396CCBA9DA7C195E9D /* PagerTabStripError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56251600EC41A85C0D6EE00DBA2F4D28 /* PagerTabStripError.swift */; };
 		2B973A7B2176BC9FD92E4EEB6A9C1CA4 /* Pods-Qadmni-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DDBE9C9A9E04618F6BBC8BEA9F126499 /* Pods-Qadmni-dummy.m */; };
-		2BC48BA9EC7B6F6F334FB9CF2758D461 /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CD43E2EA4CB337B7EC87111204709C /* IQUIView+Hierarchy.swift */; };
-		2EBD7B6D6EEBAD72870AECB44D1E3AE2 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E5DE3028C5461D935EEC484985288E /* IQBarButtonItem.swift */; };
-		32D47B0AE0C145C1E9662CC2468FED0E /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B3B3AD7A1BD84DD1E25EAA2BAE412D /* IQTitleBarButtonItem.swift */; };
-		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84A43A569A6EA68FA9AABA98C42193 /* TaskDelegate.swift */; };
-		36AE14B8E02D64CF8B84067C50F59E47 /* EVArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1E764B99F504339A6470D191A1D9F7 /* EVArrayExtension.swift */; };
-		371F422D050761A63F0156F537B8902D /* CosmosDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B267C6D468E8B33C03CC7482340141 /* CosmosDefaultSettings.swift */; };
-		37D48BA2331A3AF638550D336745AAC7 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC77E65FA7C775D34E7851EBD8C22CDA /* SwipeDirection.swift */; };
-		3B7613B65FEA6639EA842531AF355C34 /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1CF0D581DBC82FDE53343B13364173 /* ButtonBarPagerTabStripViewController.swift */; };
-		3DF6ECF23D38E7DA5B5B2B43707F2F4D /* Cosmos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 827353C64C08D797326ADFE2B7ACA7CE /* Cosmos-dummy.m */; };
-		3F099D061FAF3EC116780170EB747903 /* EVReflection-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9BB953D3B52C6CB22345ABB437E7BC4 /* EVReflection-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BC48BA9EC7B6F6F334FB9CF2758D461 /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FF7DD34DEA158892A5C9BB06935914 /* IQUIView+Hierarchy.swift */; };
+		2EBD7B6D6EEBAD72870AECB44D1E3AE2 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5C0315A0C6EEB49707538BAEEBD5FA /* IQBarButtonItem.swift */; };
+		301EB48846341A23AA1AC016B4CE098B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
+		32D47B0AE0C145C1E9662CC2468FED0E /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDEA874BD0432511888DD7648EC718C /* IQTitleBarButtonItem.swift */; };
+		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD906F3B5A23D620BF7134597DBFD98 /* TaskDelegate.swift */; };
+		371F422D050761A63F0156F537B8902D /* CosmosDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B4DB7D2C60735A30A6F76E1034C57 /* CosmosDefaultSettings.swift */; };
+		37D48BA2331A3AF638550D336745AAC7 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5806E840116E25EA10358C10AA9C430C /* SwipeDirection.swift */; };
+		3B7613B65FEA6639EA842531AF355C34 /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C344103FD53EDF39C571AE24C2B11 /* ButtonBarPagerTabStripViewController.swift */; };
+		3DF6ECF23D38E7DA5B5B2B43707F2F4D /* Cosmos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D33B428C3E95E7695D934BD8D1C9686A /* Cosmos-dummy.m */; };
 		3F8C11CDB30A0234576DA15DB03B4451 /* Pods-Qadmni-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 915BC5EFCBE37FFB26CE2F3C3FBEA0DD /* Pods-Qadmni-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		424AD9605CBDCD867083B9820784E0AC /* CosmosText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC463C6CAFE340B67BFB816A51C408C /* CosmosText.swift */; };
-		45F546D14166EDEE46371951EC705C03 /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569FFB15A4BEA1FC3B7708A084179644 /* CosmosView.swift */; };
-		4F40A9CBB316E7100828F0C6F5714946 /* CosmosTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC89F38D5F7B2CBEB4D5D3A8611204E /* CosmosTouch.swift */; };
-		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E6DF535F53B71CDDA17829C0FE3A7 /* Request.swift */; };
+		424AD9605CBDCD867083B9820784E0AC /* CosmosText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C396F55C90C1E640FFAEBC04A4A5E2D6 /* CosmosText.swift */; };
+		45F546D14166EDEE46371951EC705C03 /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D31FE0D6A578FB7213C22B79C8C4F92 /* CosmosView.swift */; };
+		4F40A9CBB316E7100828F0C6F5714946 /* CosmosTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0903AADAE2ED6373216FC3CA6DDD2F /* CosmosTouch.swift */; };
+		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD33F169337CFA67D830CA6E83CD979 /* Request.swift */; };
 		5A48A6D1C355653343F1516D03554A92 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8EF2301073B01E30612B5B1BD94446 /* CoreGraphics.framework */; };
-		5B981698211292E1F92A21CC9F182675 /* IQKeyboardManagerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F4B03FE3068C1F4875893AE3FAC263 /* IQKeyboardManagerSwift-dummy.m */; };
-		5C1B7FB4706A09F7E95F26B02797BE19 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F9666327FC9D37C0BA8C5059B7FC5 /* IQKeyboardReturnKeyHandler.swift */; };
-		5CE90BC83123FE1347CF9C1AF2A4D1E0 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2CC5240C0A5498811A213F97A323E9 /* BarView.swift */; };
-		5E7E0B70C0D1CCD0AC694A99E8324ECD /* DLRadioButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DE2A94BACEF362FC4F629AA59C8205 /* DLRadioButton-dummy.m */; };
-		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7515E5EFDD3D8922C1E1521BD95939EA /* DispatchQueue+Alamofire.swift */; };
-		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FCE6AF75761053C92197490C34F06 /* ServerTrustPolicy.swift */; };
-		6F743D449CFAA66537E254DAF2F31E7B /* PagerTabStripBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82FE36C68B90CDA06893CB5E1E079F8 /* PagerTabStripBehaviour.swift */; };
-		748F0A83509C0AF6C4325D52678AAC63 /* SWRevealViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E514B592224856704647D7923AB8D3F3 /* SWRevealViewController-dummy.m */; };
-		772AA23F937746CCA9D3F0AAA797D963 /* SWRevealViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 686506D791B05B2296F95D98841D14FA /* SWRevealViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7963DB05C81F0B074BB1D90E14DD7BD6 /* SegmentedPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B3E42E061A0030257F3270A06F11B3 /* SegmentedPagerTabStripViewController.swift */; };
-		7B0AD43D2E0C9380BE2678335CBC0B8D /* EVWorkaroundHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60AB5DCAE61D893FEB1F3248D29AB16 /* EVWorkaroundHelpers.swift */; };
-		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7650B08871FF1DF9D1DFB0A2F598F7F8 /* SessionDelegate.swift */; };
-		7BC574855D3A294AFA0D524A28FECDB7 /* FXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3FA02E91E964FAB5A36A652EA76DD3 /* FXPageControl.m */; };
-		7CC5A43D7E1372EB6292FCBC0151A36E /* CosmosAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6177F8B2860B35F0B278B34B5080338 /* CosmosAccessibility.swift */; };
-		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD90ED5E130773A3F18E4C9594C81D12 /* Result.swift */; };
-		81FAC802594170E8C1855D03A1BE5169 /* BaseButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC6EA279319EC91E93ABFCDB7807102 /* BaseButtonBarPagerTabStripViewController.swift */; };
-		84116DD709725E60919846D7B1AF714B /* DLRadioButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84059D2C528CE5307489C59F00F6BBEA /* DLRadioButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		847B520190675A2016E524FC3291F154 /* IndicatorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEC154EF479D8E95B65B1784D61F56 /* IndicatorInfo.swift */; };
-		84BAF6B074BAD851CD308A45A38956E8 /* EVObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3E90AB6B02CF5901017311B5775268 /* EVObject.swift */; };
-		8798E208C8450D641243A2AF9C9D3050 /* EVReflectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97D7C048F25D767F793621EB792F3C /* EVReflectable.swift */; };
-		88BA9FFC474BD7B995A0CEA06FF431F7 /* StarFillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49178FD505CEA538A7855003DB0E3CF /* StarFillMode.swift */; };
-		897C38C8E3C31950E2E93A4D6937CCC4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FA927D440400C324EAE9403787BFF8FB /* MBProgressHUD.m */; };
-		89959176E9E2C981CE0A235B706E8AA7 /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3F8F7723A2786447A46353F4DFD94 /* IQKeyboardManagerConstants.swift */; };
-		8F2D8EC348F59816CFDEA65538E3E532 /* DLRadioButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B8E907B9293FA30C9C412A9F5BEF128 /* DLRadioButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		96AB25A99E5C37789EAC7DB84C8D57D3 /* EVReflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F23B68FD6BFC688F206D0C43107985 /* EVReflection.swift */; };
-		98976E748F69163B0C0161E59A6823EA /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3862644F043D6B3670842ABE73B8AADF /* ButtonBarView.swift */; };
+		5B981698211292E1F92A21CC9F182675 /* IQKeyboardManagerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B7EF534E034B2CEF82069D1EFDDD94 /* IQKeyboardManagerSwift-dummy.m */; };
+		5C1B7FB4706A09F7E95F26B02797BE19 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1FBA07AE73D2ECD0EE87F621E6CD6 /* IQKeyboardReturnKeyHandler.swift */; };
+		5CE90BC83123FE1347CF9C1AF2A4D1E0 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8CB37F2E1F48E533C944DB754508A7 /* BarView.swift */; };
+		5E7E0B70C0D1CCD0AC694A99E8324ECD /* DLRadioButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5763A28752C3814428FF3BA6B4BE7A9E /* DLRadioButton-dummy.m */; };
+		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4840700FA73D970735447B2C74044FC2 /* DispatchQueue+Alamofire.swift */; };
+		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105339F1133DD8C37DEBB6539DB681D1 /* ServerTrustPolicy.swift */; };
+		6F743D449CFAA66537E254DAF2F31E7B /* PagerTabStripBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA0B2CF7EF297B52F5BEB4EB11DAB5C /* PagerTabStripBehaviour.swift */; };
+		748F0A83509C0AF6C4325D52678AAC63 /* SWRevealViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C741D74A8318562D1F58CFFA13F70F /* SWRevealViewController-dummy.m */; };
+		772AA23F937746CCA9D3F0AAA797D963 /* SWRevealViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FCECD71D849807B03A4D6C2DCC65755 /* SWRevealViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7963DB05C81F0B074BB1D90E14DD7BD6 /* SegmentedPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6F2CE56FBE231E637D91AE9C100F0 /* SegmentedPagerTabStripViewController.swift */; };
+		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2F02ACD7EC60B1207F8B6282434D71 /* SessionDelegate.swift */; };
+		7BC574855D3A294AFA0D524A28FECDB7 /* FXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B908732B7DAAE0566B6DDED2421B71 /* FXPageControl.m */; };
+		7CC5A43D7E1372EB6292FCBC0151A36E /* CosmosAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62732C4062DD38C432DBA2537A0AE37 /* CosmosAccessibility.swift */; };
+		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6C50C0B0DBDD36A618A019D634A184 /* Result.swift */; };
+		80A47DE68840853EC42EF437C852BC79 /* EVReflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5463063F2087B4566C74A65FC2807AD /* EVReflection.swift */; };
+		81FAC802594170E8C1855D03A1BE5169 /* BaseButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D31452A53AC4B77FCCDED26A7D09E4 /* BaseButtonBarPagerTabStripViewController.swift */; };
+		84116DD709725E60919846D7B1AF714B /* DLRadioButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5185E6AB7AF417BB72924B12C5AB67B6 /* DLRadioButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		847B520190675A2016E524FC3291F154 /* IndicatorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DF2144A668DAE1CA0343A575332E32 /* IndicatorInfo.swift */; };
+		88BA9FFC474BD7B995A0CEA06FF431F7 /* StarFillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6961015093BE8E694BD2A35A3E6C761D /* StarFillMode.swift */; };
+		897C38C8E3C31950E2E93A4D6937CCC4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BA56BDCF283CD5F475D72C1213FF76FF /* MBProgressHUD.m */; };
+		89959176E9E2C981CE0A235B706E8AA7 /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574C9A8498EBD9DF88EDB74342D08E6B /* IQKeyboardManagerConstants.swift */; };
+		8DD1B22639B1F9872A87985933594EC4 /* EVReflection-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D2F14A16E6E597949CFD49B844585F /* EVReflection-dummy.m */; };
+		8F2D8EC348F59816CFDEA65538E3E532 /* DLRadioButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 508DD2DE2C68E9ADA730440BEBC1C027 /* DLRadioButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98976E748F69163B0C0161E59A6823EA /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDF2CB93EF6A538000326A0D9F2BE35 /* ButtonBarView.swift */; };
 		98DF470CA8F6DD132AFAC1398FCD579C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8EF2301073B01E30612B5B1BD94446 /* CoreGraphics.framework */; };
-		99F08F6FE2B165EEBD5E01EDDA176620 /* CosmosRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE96F2660A7948423F98255B27D85F8C /* CosmosRating.swift */; };
+		99F08F6FE2B165EEBD5E01EDDA176620 /* CosmosRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0ABB5BEB932E0B2EC8A0C83D014EF5 /* CosmosRating.swift */; };
+		9D233F839F5156AE6EF7C162D64FB521 /* EVReflection-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AA009212B52A5819705B46424A1C1FE2 /* EVReflection-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9EA742F6BCB0D800806DFBB39F8898F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
-		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81C7708590F5B5F3559DAB6706DBF3 /* AFError.swift */; };
+		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C59A9F7CC53128D1A212B932946E /* AFError.swift */; };
 		9F5F331FE1FCE98CADFDD30166D6EE22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
 		A04BFC558D69E7DBB68023C80A9CFE4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
-		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7BE7B37E5A9CF7181A714DCC7956C7 /* NetworkReachabilityManager.swift */; };
-		A50218EC76648886FE767F1DCD9626DE /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D4696A18036FFF70525C8835E5E9BE /* IQPreviousNextView.swift */; };
-		A5BF8DBDD8660DBCFE712657F3D82BDA /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 519E42299E268B4B5032925EF178D766 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A88CFE3F9DCE30C3AA3A2F6086C6EE84 /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DE945961E937AF6C7C76B5C12A9B59 /* IQKeyboardManager.swift */; };
-		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39568E50BF60FA3A53C119990E226935 /* Alamofire-dummy.m */; };
-		A9F1A9CF01AF7F7A691A0A8C9E2D3A71 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D952509783D9FDE7135BB432FDDA59B7 /* IQToolbar.swift */; };
-		AA971D9492DD9B9E288045C2C0CC9A99 /* CosmosLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1781608A87CE9AA95ACFA6BAC629256 /* CosmosLayers.swift */; };
-		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C148E8BC545F522BC6B9513A3C0891D3 /* SessionManager.swift */; };
-		B01F3B184B166D419759B904E5FC3CF2 /* FXPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 95E7382632057A359910968110B716D6 /* FXPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B0E679FF770EE8E7073391580C373D92 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B0A8678317A8934CCCBAC1FA293C21 /* IQTextView.swift */; };
+		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB00A9F203927CC2669435F47D981AD /* NetworkReachabilityManager.swift */; };
+		A50218EC76648886FE767F1DCD9626DE /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241DC41ECA5298E0AE756F8501EA1FE /* IQPreviousNextView.swift */; };
+		A5BF8DBDD8660DBCFE712657F3D82BDA /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C35788226A94A697E279104C01799E /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A88CFE3F9DCE30C3AA3A2F6086C6EE84 /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6203D08313110504FDAFD8E957BC17 /* IQKeyboardManager.swift */; };
+		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 700A30AB2DA0CF6FDBB0FAE3CD315059 /* Alamofire-dummy.m */; };
+		A9F1A9CF01AF7F7A691A0A8C9E2D3A71 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C830B9BABB64F434549969E46D7763B /* IQToolbar.swift */; };
+		AA971D9492DD9B9E288045C2C0CC9A99 /* CosmosLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDEF40AFD0EC639B6AB8D3517C30C0E /* CosmosLayers.swift */; };
+		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2DAEFF15CD8FEEF7F49D82219E0E53 /* SessionManager.swift */; };
+		B01F3B184B166D419759B904E5FC3CF2 /* FXPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 56111E89048D99913EE564BC58AF62DE /* FXPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0E679FF770EE8E7073391580C373D92 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF19A0350EA15DA223A1FADFC9DA8F24 /* IQTextView.swift */; };
 		B14CC8C1DDBA915FDC17004D54B40D50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
-		B49E26DF5871F564A7C9528173CE2D5F /* IQKeyboardManagerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF8E1ECFA0FB8C56D7C2A3E84142DC59 /* IQKeyboardManagerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A79AA328FAFD1639D88A48196BBB2A /* MultipartFormData.swift */; };
+		B49E26DF5871F564A7C9528173CE2D5F /* IQKeyboardManagerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BB0E2C7627055E6A155D801E867311D /* IQKeyboardManagerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72201A5A9EEC4DE06A51691D1C784D08 /* MultipartFormData.swift */; };
+		B6815E0CB5845EE4B26F9D33AED8FC70 /* EVObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9988D3550844DB6D06913E6D0C19ADBD /* EVObject.swift */; };
 		B9557585483AD395045D19F792D8BDE7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1FD743D031D373EDF29CC526F758E2 /* UIKit.framework */; };
-		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7B289A00860D2FDD64BC0018EBB79F /* Validation.swift */; };
-		BCD6B3BA5E1132F0FD49AC39F2BF4D62 /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6CDBC7BC2EF830FF92A1C7F126A5A1 /* IQKeyboardManagerConstantsInternal.swift */; };
-		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E269329390EB0230E34071A8DFFEAFC /* ParameterEncoding.swift */; };
-		C019A56E4EF2BAB627CC3BA107449428 /* XLPagerTabStrip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FF693C62F17CF19F9101533409B7BA /* XLPagerTabStrip-dummy.m */; };
+		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D7A4A361EDEF1051543CF48F5EEC08 /* Validation.swift */; };
+		BCD6B3BA5E1132F0FD49AC39F2BF4D62 /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590A7F3092B4332ECD59A694F207246E /* IQKeyboardManagerConstantsInternal.swift */; };
+		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B1BEDD2D1E5811B1A560484519DF9 /* ParameterEncoding.swift */; };
+		C019A56E4EF2BAB627CC3BA107449428 /* XLPagerTabStrip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6ACDCB6A764EC56BEF85FEDFAB858 /* XLPagerTabStrip-dummy.m */; };
 		C2832F804A220151106FBDAE1238DB8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1FD743D031D373EDF29CC526F758E2 /* UIKit.framework */; };
-		C759ACB2C97ED8A9EC91C2DF79C95F1D /* IQUIWindow+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD84FCEB0596A3C1BC943EE43C5F2D78 /* IQUIWindow+Hierarchy.swift */; };
-		C79D2F2FCE3EF9B31D1222E0C4A59DC5 /* RightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C289B2DD9F6DAA80884CC0D88572C0 /* RightToLeft.swift */; };
-		C92BC0B8E4CBCFD16762838B30654F29 /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288C0153455516EA81FF9E088CD41E3F /* IQUIViewController+Additions.swift */; };
+		C759ACB2C97ED8A9EC91C2DF79C95F1D /* IQUIWindow+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81696A189B38058266E381E76AD1AB79 /* IQUIWindow+Hierarchy.swift */; };
+		C79D2F2FCE3EF9B31D1222E0C4A59DC5 /* RightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FBF33DB08F3807F95A5542FADA596 /* RightToLeft.swift */; };
+		C92BC0B8E4CBCFD16762838B30654F29 /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED378C6194FDDBABD8B0905A0052B3 /* IQUIViewController+Additions.swift */; };
 		C958C2F36E1291F722324D8006EB6840 /* XLPagerTabStrip.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A69D374274175EB8FDCAC6D511F85B54 /* XLPagerTabStrip.bundle */; };
-		C95B658D689425ED9DAA95EB479B44A6 /* StarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328030E3CA359BD3932C0F907C9200E /* StarLayer.swift */; };
-		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F349A17AA0CA9E17B2DBF4BA987EEFAA /* Response.swift */; };
-		D2F6808F71CDF11246762062D7CAFD1A /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E51CEA3FEC33D1E1F4271EEDD1AD5B5 /* ButtonCell.xib */; };
-		D65B8481AFF5531FC2E4382CBA63C057 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ACBFE4D54E86B70E23193C976273DBC0 /* IQKeyboardManager.bundle */; };
+		C95B658D689425ED9DAA95EB479B44A6 /* StarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D58A87D303ABB0050F67FBF682788 /* StarLayer.swift */; };
+		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C656B6E358BB3BBA42834835C5D4339 /* Response.swift */; };
+		D2F6808F71CDF11246762062D7CAFD1A /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5A9E2E6AA1F53E903DE59B0A0E91889 /* ButtonCell.xib */; };
+		D65B8481AFF5531FC2E4382CBA63C057 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7F6170CFC185551505BF65BE6C435ADF /* IQKeyboardManager.bundle */; };
 		DA3FBCF3B21EB18151C3BC2645107E0D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51498E299B7CB17BCC8B54F93C150FAA /* QuartzCore.framework */; };
-		DE5E91A47C1BF6869DF17747D61C2FF1 /* Cosmos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D94D161A82B5E93BC979CDEE80D87248 /* Cosmos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E2D8D1AA0D41C73C4B570DE682C05D72 /* CosmosTouchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C1ABE99D8E2039CE5683FFE2F9360C /* CosmosTouchTarget.swift */; };
-		E9AD3D7B3B4B82CD4D9B817109239F55 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A913524A72A461497E216ED82AB5C /* IQNSArray+Sort.swift */; };
-		EC0B0B3A8CC60D15E6B35CE8F91DFEA6 /* BarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2779FA46FE784138635A5B0B2436AB /* BarPagerTabStripViewController.swift */; };
-		ED6BF043C5611337831C1DCD10D55CC2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8531AFC83769567E7E267AF1BB1A54 /* SWRevealViewController.m */; };
-		ED99E12D90C1F5701C3A2CDDCC9D1689 /* SWRevealViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F99626D42FA16EB8CAF374B2B134C937 /* SWRevealViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF2F59EEA3194DFCFB39352F4DA16D76 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D132B03B917C2093A9F89B762A0A0A6B /* DLRadioButton.m */; };
-		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1F3FE4147D643397C020938698F77 /* Notifications.swift */; };
+		DCCAF7B6B69DB6D77DD2F72738F8CB4A /* EVWorkaroundHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF3BDC248DD640772160EAD756E8DB1 /* EVWorkaroundHelpers.swift */; };
+		DE5E91A47C1BF6869DF17747D61C2FF1 /* Cosmos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 70183F9F8B1925D0EF200D65C1B7FCD1 /* Cosmos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2D8D1AA0D41C73C4B570DE682C05D72 /* CosmosTouchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE49CB4C9274392F7DC14AD0A01176D /* CosmosTouchTarget.swift */; };
+		E517AF9CA32ED75A9C8D655124617479 /* EVDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A0A7629FA36669EB669EFBA0A33D5E /* EVDictionaryExtension.swift */; };
+		E9AD3D7B3B4B82CD4D9B817109239F55 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05FD72C48CF29271DAEF00828B2C463 /* IQNSArray+Sort.swift */; };
+		EC0B0B3A8CC60D15E6B35CE8F91DFEA6 /* BarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DF4589D31CC734FD6322FFF4C5471F /* BarPagerTabStripViewController.swift */; };
+		ED6BF043C5611337831C1DCD10D55CC2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1E0F38D8C277F7E20ECC245A2588DF /* SWRevealViewController.m */; };
+		ED99E12D90C1F5701C3A2CDDCC9D1689 /* SWRevealViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CB29454C2686815F03E4ACB136707CF /* SWRevealViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF2F59EEA3194DFCFB39352F4DA16D76 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F44AE315AC1D9096206DDB0550B957 /* DLRadioButton.m */; };
+		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C55E10ADF16B4DF914AAB9BB180F2 /* Notifications.swift */; };
 		F37DDDC2660EB17E1BE35429C1C58AD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
-		F66DE3EF01408C42C115587B201CB541 /* CosmosLayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E144FF0EB11045F28A02A95305C689FA /* CosmosLayerHelper.swift */; };
-		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603A6022DCD47C8AF40A3E43292441FD /* ResponseSerialization.swift */; };
-		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF3A681716086580C6A93CF6F17FD6 /* Alamofire.swift */; };
-		FA042CAAD042E5C1366FD45BB8C44E53 /* XLPagerTabStrip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8798CA7DEBF1F8F63A5E40C391928D73 /* XLPagerTabStrip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F66DE3EF01408C42C115587B201CB541 /* CosmosLayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5901598B68A3B3F9E4E6655B0FD6EB0 /* CosmosLayerHelper.swift */; };
+		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528F1131DBDE43F6D8719F1E43B697C /* ResponseSerialization.swift */; };
+		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1107637013D72990CA6070EB9F2243E0 /* Alamofire.swift */; };
+		FA042CAAD042E5C1366FD45BB8C44E53 /* XLPagerTabStrip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D379EB57BBE2A080224A8B7B342BCC1 /* XLPagerTabStrip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB48B8C4CE5A21A96CE4197F9A261AA3 /* EVArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A49F3936E5E83A606655AE6A1550D /* EVArrayExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,7 +168,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9AAB2077BCA8E341C7F83370229F7335;
+			remoteGlobalIDString = 3A66455BB54C60581ED2154CB2279474;
 			remoteInfo = EVReflection;
 		};
 		D4F2D87C39977846965BC8D31C1E365A /* PBXContainerItemProxy */ = {
@@ -187,156 +188,182 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		013F9666327FC9D37C0BA8C5059B7FC5 /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardReturnKeyHandler.swift; path = IQKeyboardManagerSwift/IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
-		0328030E3CA359BD3932C0F907C9200E /* StarLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarLayer.swift; path = Cosmos/StarLayer.swift; sourceTree = "<group>"; };
-		0602AB2E710900EB8EB6AA0749C4EC3E /* XLPagerTabStrip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = XLPagerTabStrip.modulemap; sourceTree = "<group>"; };
-		06F0211416A1C59D788A696EE9A96301 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		00F8F946577F9C9141D52106F453EF08 /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalFuturePaymentViewController.h; path = PayPalMobile/PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
+		064DC8110F0D10D8A442AD1C25D1FCBE /* EVReflection.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = EVReflection.modulemap; sourceTree = "<group>"; };
 		0963BB9B804A51DD8B0CBC99D6281B1B /* EVReflection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EVReflection.framework; path = EVReflection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D81C7708590F5B5F3559DAB6706DBF3 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		09C741D74A8318562D1F58CFFA13F70F /* SWRevealViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWRevealViewController-dummy.m"; sourceTree = "<group>"; };
+		09D31452A53AC4B77FCCDED26A7D09E4 /* BaseButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseButtonBarPagerTabStripViewController.swift; path = Sources/BaseButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		0C1E0F38D8C277F7E20ECC245A2588DF /* SWRevealViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = SWRevealViewController/SWRevealViewController.m; sourceTree = "<group>"; };
+		0C656B6E358BB3BBA42834835C5D4339 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		0C830B9BABB64F434549969E46D7763B /* IQToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQToolbar.swift; path = IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift; sourceTree = "<group>"; };
+		0CF415C5061089ACE81FDF8C9499D403 /* EVReflection-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EVReflection-prefix.pch"; sourceTree = "<group>"; };
 		0D8EF2301073B01E30612B5B1BD94446 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		0F8531AFC83769567E7E267AF1BB1A54 /* SWRevealViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = SWRevealViewController/SWRevealViewController.m; sourceTree = "<group>"; };
-		12BEF398B8A3253F27EF29554525F5FB /* IQKeyboardManagerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = IQKeyboardManagerSwift.modulemap; sourceTree = "<group>"; };
-		17F23B68FD6BFC688F206D0C43107985 /* EVReflection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EVReflection.swift; path = Source/EVReflection.swift; sourceTree = "<group>"; };
-		190576189CDC675346A0509A875D8100 /* Cosmos-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-prefix.pch"; sourceTree = "<group>"; };
-		19CD43E2EA4CB337B7EC87111204709C /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+Hierarchy.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
-		1E84A43A569A6EA68FA9AABA98C42193 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		26A79AA328FAFD1639D88A48196BBB2A /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		288C0153455516EA81FF9E088CD41E3F /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIViewController+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
-		2B774E359A30E3C895D9E5A73D25570D /* EVReflection-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EVReflection-dummy.m"; sourceTree = "<group>"; };
-		2C7FCE6AF75761053C92197490C34F06 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		336345B63D26149C6C73E9B32480F67D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36FF693C62F17CF19F9101533409B7BA /* XLPagerTabStrip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLPagerTabStrip-dummy.m"; sourceTree = "<group>"; };
-		3862644F043D6B3670842ABE73B8AADF /* ButtonBarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarView.swift; path = Sources/ButtonBarView.swift; sourceTree = "<group>"; };
-		39568E50BF60FA3A53C119990E226935 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		3ADCF3E39DB614D44D7A339C846F8C38 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
-		3B4E6DF535F53B71CDDA17829C0FE3A7 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		0DD906F3B5A23D620BF7134597DBFD98 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		0E35C59A9F7CC53128D1A212B932946E /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		0E8CB37F2E1F48E533C944DB754508A7 /* BarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarView.swift; path = Sources/BarView.swift; sourceTree = "<group>"; };
+		105339F1133DD8C37DEBB6539DB681D1 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		1107637013D72990CA6070EB9F2243E0 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		1241817443DB61AE933F971AD028532D /* libopencv_core.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libopencv_core.a; path = CardIO/libopencv_core.a; sourceTree = "<group>"; };
+		1241DC41ECA5298E0AE756F8501EA1FE /* IQPreviousNextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQPreviousNextView.swift; path = IQKeyboardManagerSwift/IQToolbar/IQPreviousNextView.swift; sourceTree = "<group>"; };
+		19F44AE315AC1D9096206DDB0550B957 /* DLRadioButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DLRadioButton.m; path = DLRadioButton/DLRadioButton.m; sourceTree = "<group>"; };
+		1CA0B2CF7EF297B52F5BEB4EB11DAB5C /* PagerTabStripBehaviour.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripBehaviour.swift; path = Sources/PagerTabStripBehaviour.swift; sourceTree = "<group>"; };
+		1CE49CB4C9274392F7DC14AD0A01176D /* CosmosTouchTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouchTarget.swift; path = Cosmos/Helpers/CosmosTouchTarget.swift; sourceTree = "<group>"; };
+		1D379EB57BBE2A080224A8B7B342BCC1 /* XLPagerTabStrip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-umbrella.h"; sourceTree = "<group>"; };
+		1DFC7E95EF81306DB133AE42FE7E54B3 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		1F99907652D84990C4AE57E50FFA3831 /* ButtonBarViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarViewCell.swift; path = Sources/ButtonBarViewCell.swift; sourceTree = "<group>"; };
+		1FCECD71D849807B03A4D6C2DCC65755 /* SWRevealViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = SWRevealViewController/SWRevealViewController.h; sourceTree = "<group>"; };
+		26D6328F53D9A8C7B490D67EBCE9CD92 /* CosmosSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSize.swift; path = Cosmos/CosmosSize.swift; sourceTree = "<group>"; };
+		27869471EAF9FCFFAAE8575CE780B4E5 /* DLRadioButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DLRadioButton.xcconfig; sourceTree = "<group>"; };
+		2A6C50C0B0DBDD36A618A019D634A184 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		2BE6ACDCB6A764EC56BEF85FEDFAB858 /* XLPagerTabStrip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLPagerTabStrip-dummy.m"; sourceTree = "<group>"; };
+		2CB29454C2686815F03E4ACB136707CF /* SWRevealViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWRevealViewController-umbrella.h"; sourceTree = "<group>"; };
+		2D4FA97CB5FCA6214B6360DE9B589F66 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		2DDEA874BD0432511888DD7648EC718C /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTitleBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
+		2F826D79967C7C7E75A64A0F18D55358 /* CardIOPaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOPaymentViewController.h; path = CardIO/CardIOPaymentViewController.h; sourceTree = "<group>"; };
+		2F97EDEB991CA9361CFA199449C4677C /* TwitterPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TwitterPagerTabStripViewController.swift; path = Sources/TwitterPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		32E36FEA8B23FD79AA9E60D6E91F46C4 /* Cosmos-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-prefix.pch"; sourceTree = "<group>"; };
+		373C5FB217D9572DD6F213A26EAE0D4F /* PayPalOAuthScopes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalOAuthScopes.h; path = PayPalMobile/PayPalOAuthScopes.h; sourceTree = "<group>"; };
+		38CFA8DBFD791F00BCB9B67F60BF6619 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		39A8606B8C938D58CC8FF75B90EA34D3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C828DBCB44D05AEB34D633F4F01641A /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD.framework; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F2779FA46FE784138635A5B0B2436AB /* BarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarPagerTabStripViewController.swift; path = Sources/BarPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		4038FD6C3263A957C4975E69593EAEDD /* CosmosSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSettings.swift; path = Cosmos/CosmosSettings.swift; sourceTree = "<group>"; };
-		42CEC154EF479D8E95B65B1784D61F56 /* IndicatorInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndicatorInfo.swift; path = Sources/IndicatorInfo.swift; sourceTree = "<group>"; };
-		4451ABE2E026E178F08AD7742C6FDD4E /* DLRadioButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DLRadioButton-prefix.pch"; sourceTree = "<group>"; };
+		448A3736F897CA3D8BC540A2838F88DB /* CosmosLocalizedRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLocalizedRating.swift; path = Cosmos/CosmosLocalizedRating.swift; sourceTree = "<group>"; };
+		452B1BEDD2D1E5811B1A560484519DF9 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		47505761465CC5916DF4DA96FF676CB1 /* Pods-Qadmni.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Qadmni.modulemap"; sourceTree = "<group>"; };
 		4779CD8E39869583CE88F53A6224603E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49C289B2DD9F6DAA80884CC0D88572C0 /* RightToLeft.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RightToLeft.swift; path = Cosmos/Helpers/RightToLeft.swift; sourceTree = "<group>"; };
-		4AC89F38D5F7B2CBEB4D5D3A8611204E /* CosmosTouch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouch.swift; path = Cosmos/CosmosTouch.swift; sourceTree = "<group>"; };
-		4D3E90AB6B02CF5901017311B5775268 /* EVObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EVObject.swift; path = Source/EVObject.swift; sourceTree = "<group>"; };
-		4D7F28974B99265D403C8F4336D86AA7 /* TwitterPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TwitterPagerTabStripViewController.swift; path = Sources/TwitterPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		4840700FA73D970735447B2C74044FC2 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		4DEA349EADDFE6ACAC6FD10F8E16300D /* Pods-Qadmni-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Qadmni-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4F6203D08313110504FDAFD8E957BC17 /* IQKeyboardManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManager.swift; path = IQKeyboardManagerSwift/IQKeyboardManager.swift; sourceTree = "<group>"; };
+		4FA37CFEB4D54DB09224706EB77317A1 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
+		507522383D17D8F2DECC2B165F463D66 /* DLRadioButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DLRadioButton.modulemap; sourceTree = "<group>"; };
+		508DD2DE2C68E9ADA730440BEBC1C027 /* DLRadioButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DLRadioButton.h; path = DLRadioButton/DLRadioButton.h; sourceTree = "<group>"; };
 		51498E299B7CB17BCC8B54F93C150FAA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		519E42299E268B4B5032925EF178D766 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		52C1ABE99D8E2039CE5683FFE2F9360C /* CosmosTouchTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouchTarget.swift; path = Cosmos/Helpers/CosmosTouchTarget.swift; sourceTree = "<group>"; };
-		55B3E42E061A0030257F3270A06F11B3 /* SegmentedPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedPagerTabStripViewController.swift; path = Sources/SegmentedPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		55C728A578313FCDD667A1FA1AB768D4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		569FFB15A4BEA1FC3B7708A084179644 /* CosmosView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosView.swift; path = Cosmos/CosmosView.swift; sourceTree = "<group>"; };
-		56BFA76C0C654779286DEB66D3E94462 /* EVReflection.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = EVReflection.modulemap; sourceTree = "<group>"; };
-		603A6022DCD47C8AF40A3E43292441FD /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		5185E6AB7AF417BB72924B12C5AB67B6 /* DLRadioButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DLRadioButton-umbrella.h"; sourceTree = "<group>"; };
+		51D012E7161368613C6552467F0E04C9 /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIScrollView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
+		51D4FE87DBEA27C0CDD56919FD3F0682 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5517732A1F85DCF7F36C872001E341EE /* libPayPalMobile.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libPayPalMobile.a; path = PayPalMobile/libPayPalMobile.a; sourceTree = "<group>"; };
+		56111E89048D99913EE564BC58AF62DE /* FXPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FXPageControl.h; path = Sources/FXPageControl.h; sourceTree = "<group>"; };
+		56251600EC41A85C0D6EE00DBA2F4D28 /* PagerTabStripError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripError.swift; path = Sources/PagerTabStripError.swift; sourceTree = "<group>"; };
+		56D2F14A16E6E597949CFD49B844585F /* EVReflection-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EVReflection-dummy.m"; sourceTree = "<group>"; };
+		574C9A8498EBD9DF88EDB74342D08E6B /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstants.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
+		5763A28752C3814428FF3BA6B4BE7A9E /* DLRadioButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DLRadioButton-dummy.m"; sourceTree = "<group>"; };
+		57D302EF175F0481329F355899182CF8 /* PayPalMobile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalMobile.h; path = PayPalMobile/PayPalMobile.h; sourceTree = "<group>"; };
+		5806E840116E25EA10358C10AA9C430C /* SwipeDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeDirection.swift; path = Sources/SwipeDirection.swift; sourceTree = "<group>"; };
+		590A7F3092B4332ECD59A694F207246E /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstantsInternal.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
+		5BB0E2C7627055E6A155D801E867311D /* IQKeyboardManagerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-umbrella.h"; sourceTree = "<group>"; };
+		5C0674E43BAF8C7666B0EEB383D473B4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		632A3C9DF87A46E98474F8A3FDBCEB6F /* SWRevealViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SWRevealViewController.modulemap; sourceTree = "<group>"; };
+		639A84FABA829BDE36125A9F16EC8EAA /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
 		63B17ED2116F2C50E76339B3DB642AC7 /* DLRadioButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DLRadioButton.framework; path = DLRadioButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63FA2EC76BBB7DAB92758D95B1AFC186 /* Pods-Qadmni-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Qadmni-resources.sh"; sourceTree = "<group>"; };
-		65A14074611EACFEF7C4AFA40C5C9376 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		67B3B3AD7A1BD84DD1E25EAA2BAE412D /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTitleBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
-		686506D791B05B2296F95D98841D14FA /* SWRevealViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = SWRevealViewController/SWRevealViewController.h; sourceTree = "<group>"; };
-		6A1CF0D581DBC82FDE53343B13364173 /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarPagerTabStripViewController.swift; path = Sources/ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		6DF193A8743D34F89DB714703F3ADE1A /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
-		6E269329390EB0230E34071A8DFFEAFC /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		6E7B289A00860D2FDD64BC0018EBB79F /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		746DC0795382E0865FCA1772161211B7 /* IQKeyboardManagerSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManagerSwift.xcconfig; sourceTree = "<group>"; };
-		7515E5EFDD3D8922C1E1521BD95939EA /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		7650B08871FF1DF9D1DFB0A2F598F7F8 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		7B17461960995B3F5E371C95698A720C /* Cosmos.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cosmos.xcconfig; sourceTree = "<group>"; };
-		7CF95B9E467044E344CC28151983B3CC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		80F53FB8C54CD3EF16772AC2771192E2 /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIScrollView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
-		81B267C6D468E8B33C03CC7482340141 /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosDefaultSettings.swift; path = Cosmos/CosmosDefaultSettings.swift; sourceTree = "<group>"; };
-		827353C64C08D797326ADFE2B7ACA7CE /* Cosmos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cosmos-dummy.m"; sourceTree = "<group>"; };
-		84059D2C528CE5307489C59F00F6BBEA /* DLRadioButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DLRadioButton-umbrella.h"; sourceTree = "<group>"; };
-		8798CA7DEBF1F8F63A5E40C391928D73 /* XLPagerTabStrip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-umbrella.h"; sourceTree = "<group>"; };
-		8B842B318ADAA099C4A2893365EACDAD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8BCFCA25D2470505CCC7065DCB362E2A /* DLRadioButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DLRadioButton.xcconfig; sourceTree = "<group>"; };
-		8E4A79D9246A25B3BC697552B3057A80 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		8E51CEA3FEC33D1E1F4271EEDD1AD5B5 /* ButtonCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ButtonCell.xib; path = Sources/ButtonCell.xib; sourceTree = "<group>"; };
-		8E96E5FF838021F3825FDA4FBD910639 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67B595DBD329B0F0B105F7B1BE25F728 /* XLPagerTabStrip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = XLPagerTabStrip.modulemap; sourceTree = "<group>"; };
+		6961015093BE8E694BD2A35A3E6C761D /* StarFillMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarFillMode.swift; path = Cosmos/StarFillMode.swift; sourceTree = "<group>"; };
+		69ABD1A87E27CB2DC2853B8D0F7D7E84 /* DLRadioButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DLRadioButton-prefix.pch"; sourceTree = "<group>"; };
+		6C0D8F91297D0BA6BEE3F19C315D599A /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		6E4B52C875E6ADD5343074E4CAD86227 /* CardIOView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOView.h; path = CardIO/CardIOView.h; sourceTree = "<group>"; };
+		6E5C0315A0C6EEB49707538BAEEBD5FA /* IQBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQBarButtonItem.swift; sourceTree = "<group>"; };
+		700A30AB2DA0CF6FDBB0FAE3CD315059 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		70183F9F8B1925D0EF200D65C1B7FCD1 /* Cosmos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-umbrella.h"; sourceTree = "<group>"; };
+		720ADD80D5CBAD8DF83B520F743EBF8A /* PagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripViewController.swift; path = Sources/PagerTabStripViewController.swift; sourceTree = "<group>"; };
+		72201A5A9EEC4DE06A51691D1C784D08 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		7A95A5ED7D085C0E62F8A4EFBF1B416E /* PayPalProfileSharingViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalProfileSharingViewController.h; path = PayPalMobile/PayPalProfileSharingViewController.h; sourceTree = "<group>"; };
+		7CE4E98FC0F0B1C48D71AC060B30BB26 /* ResourceBundle-XLPagerTabStrip-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-XLPagerTabStrip-Info.plist"; sourceTree = "<group>"; };
+		7EC3352266594556B492AF755D6159F4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F6170CFC185551505BF65BE6C435ADF /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IQKeyboardManager.bundle; path = IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		80A4E542449FAEE9129BA970EC7E66D1 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		81696A189B38058266E381E76AD1AB79 /* IQUIWindow+Hierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIWindow+Hierarchy.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIWindow+Hierarchy.swift"; sourceTree = "<group>"; };
+		842FBF33DB08F3807F95A5542FADA596 /* RightToLeft.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RightToLeft.swift; path = Cosmos/Helpers/RightToLeft.swift; sourceTree = "<group>"; };
+		8BDF2CB93EF6A538000326A0D9F2BE35 /* ButtonBarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarView.swift; path = Sources/ButtonBarView.swift; sourceTree = "<group>"; };
+		8D1EE1C0B11771E08337D7EA4B0FB413 /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOCreditCardInfo.h; path = CardIO/CardIOCreditCardInfo.h; sourceTree = "<group>"; };
+		8D31FE0D6A578FB7213C22B79C8C4F92 /* CosmosView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosView.swift; path = Cosmos/CosmosView.swift; sourceTree = "<group>"; };
 		915BC5EFCBE37FFB26CE2F3C3FBEA0DD /* Pods-Qadmni-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Qadmni-umbrella.h"; sourceTree = "<group>"; };
+		92FA5BBFBF1FD769B3FA6CF9487A1513 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		952BFD8FD84460D1C5152AC3F49FE69F /* Pods_Qadmni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Qadmni.framework; path = "Pods-Qadmni.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		95E7382632057A359910968110B716D6 /* FXPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FXPageControl.h; path = Sources/FXPageControl.h; sourceTree = "<group>"; };
-		986D47FABA0BE7FD7DFFB739F83514BF /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
-		9B34BD33943AB1A44C50B8487A4AFEEF /* IQKeyboardManagerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-prefix.pch"; sourceTree = "<group>"; };
-		9B8E907B9293FA30C9C412A9F5BEF128 /* DLRadioButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DLRadioButton.h; path = DLRadioButton/DLRadioButton.h; sourceTree = "<group>"; };
-		9BF3F8F7723A2786447A46353F4DFD94 /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstants.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
-		A1657A2CFA5F81E597EB715FA3C9931A /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUITextFieldView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
+		9698B4C1E74F727ACF4658BF379A4970 /* IQKeyboardManagerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-prefix.pch"; sourceTree = "<group>"; };
+		98563C379F13A98669C73AABB1BE584D /* SWRevealViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWRevealViewController.xcconfig; sourceTree = "<group>"; };
+		9988D3550844DB6D06913E6D0C19ADBD /* EVObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EVObject.swift; path = Source/EVObject.swift; sourceTree = "<group>"; };
+		99DF4589D31CC734FD6322FFF4C5471F /* BarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarPagerTabStripViewController.swift; path = Sources/BarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		9AF3BDC248DD640772160EAD756E8DB1 /* EVWorkaroundHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EVWorkaroundHelpers.swift; path = Source/EVWorkaroundHelpers.swift; sourceTree = "<group>"; };
+		A0B2E0D3EB4F47DD5E8F1F8001A120B5 /* Cosmos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Cosmos.modulemap; sourceTree = "<group>"; };
+		A3F860611B353FC4BAE0B5157395BA3E /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
 		A44B31E15AC75D010BA414AE8F83A7E5 /* SWRevealViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SWRevealViewController.framework; path = SWRevealViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A47ABE943FFAAE9AB4D5A3AF2E6EB655 /* XLPagerTabStrip.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLPagerTabStrip.xcconfig; sourceTree = "<group>"; };
-		A6177F8B2860B35F0B278B34B5080338 /* CosmosAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosAccessibility.swift; path = Cosmos/CosmosAccessibility.swift; sourceTree = "<group>"; };
+		A5901598B68A3B3F9E4E6655B0FD6EB0 /* CosmosLayerHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayerHelper.swift; path = Cosmos/CosmosLayerHelper.swift; sourceTree = "<group>"; };
 		A68BB45757ABD59751904157D5A15FE2 /* Pods-Qadmni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Qadmni.debug.xcconfig"; sourceTree = "<group>"; };
 		A69D374274175EB8FDCAC6D511F85B54 /* XLPagerTabStrip.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = XLPagerTabStrip.bundle; path = XLPagerTabStrip.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7416A8CECD4E20DE36DF5D0278FF4EC /* CosmosSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSize.swift; path = Cosmos/CosmosSize.swift; sourceTree = "<group>"; };
-		A82FE36C68B90CDA06893CB5E1E079F8 /* PagerTabStripBehaviour.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripBehaviour.swift; path = Sources/PagerTabStripBehaviour.swift; sourceTree = "<group>"; };
-		A89E50B7C250CAC5078CF12A6FD8BD1E /* SWRevealViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWRevealViewController.xcconfig; sourceTree = "<group>"; };
-		A99128ED3553F3DE2E5005637BF25375 /* XLPagerTabStrip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-prefix.pch"; sourceTree = "<group>"; };
-		A9E5DE3028C5461D935EEC484985288E /* IQBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQBarButtonItem.swift; sourceTree = "<group>"; };
-		ABDECA229D2CD857EC3D841034F1A454 /* SWRevealViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWRevealViewController-prefix.pch"; sourceTree = "<group>"; };
-		ACBFE4D54E86B70E23193C976273DBC0 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IQKeyboardManager.bundle; path = IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle; sourceTree = "<group>"; };
-		AD6CDBC7BC2EF830FF92A1C7F126A5A1 /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstantsInternal.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
-		AD90ED5E130773A3F18E4C9594C81D12 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		AE06E8E9D46A1D4712F2542A9794C459 /* Cosmos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Cosmos.modulemap; sourceTree = "<group>"; };
-		AF8E1ECFA0FB8C56D7C2A3E84142DC59 /* IQKeyboardManagerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-umbrella.h"; sourceTree = "<group>"; };
-		B1781608A87CE9AA95ACFA6BAC629256 /* CosmosLayers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayers.swift; path = Cosmos/CosmosLayers.swift; sourceTree = "<group>"; };
-		B2DE2A94BACEF362FC4F629AA59C8205 /* DLRadioButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DLRadioButton-dummy.m"; sourceTree = "<group>"; };
+		A8AB4B2557D4D074A8A5731946F2E07F /* CardIOUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOUtilities.h; path = CardIO/CardIOUtilities.h; sourceTree = "<group>"; };
+		AA009212B52A5819705B46424A1C1FE2 /* EVReflection-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EVReflection-umbrella.h"; sourceTree = "<group>"; };
+		AA18A50B2B15E8A233F4A119CAFDAA95 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD0903AADAE2ED6373216FC3CA6DDD2F /* CosmosTouch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouch.swift; path = Cosmos/CosmosTouch.swift; sourceTree = "<group>"; };
+		AE68F647D4F55BCF1AA3F5A1B92652AB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF3F47C2DAF50480AADA15F2ED4A3CDB /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+IQKeyboardToolbar.swift"; path = "IQKeyboardManagerSwift/IQToolbar/IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
+		AFDEF40AFD0EC639B6AB8D3517C30C0E /* CosmosLayers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayers.swift; path = Cosmos/CosmosLayers.swift; sourceTree = "<group>"; };
 		B4869773D5842CDEBCF0EB8675BB3F71 /* Pods-Qadmni-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Qadmni-acknowledgements.plist"; sourceTree = "<group>"; };
+		B5463063F2087B4566C74A65FC2807AD /* EVReflection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EVReflection.swift; path = Source/EVReflection.swift; sourceTree = "<group>"; };
+		B5A9E2E6AA1F53E903DE59B0A0E91889 /* ButtonCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ButtonCell.xib; path = Sources/ButtonCell.xib; sourceTree = "<group>"; };
 		B5C6572236E9BC6DD8FCBF9109FA8E37 /* Pods-Qadmni-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Qadmni-frameworks.sh"; sourceTree = "<group>"; };
-		B64B15B89523BF464C6B759C24542724 /* SWRevealViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SWRevealViewController.modulemap; sourceTree = "<group>"; };
-		B934B6A68AE540ACF4C4B0BEF7193F1B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BDC463C6CAFE340B67BFB816A51C408C /* CosmosText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosText.swift; path = Cosmos/CosmosText.swift; sourceTree = "<group>"; };
-		BFB1F3FE4147D643397C020938698F77 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		C148E8BC545F522BC6B9513A3C0891D3 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		C4B0A8678317A8934CCCBAC1FA293C21 /* IQTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTextView.swift; path = IQKeyboardManagerSwift/IQTextView/IQTextView.swift; sourceTree = "<group>"; };
-		C60AB5DCAE61D893FEB1F3248D29AB16 /* EVWorkaroundHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EVWorkaroundHelpers.swift; path = Source/EVWorkaroundHelpers.swift; sourceTree = "<group>"; };
-		C616909C5BB64B669336FFB3D639FBA0 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		C7DE945961E937AF6C7C76B5C12A9B59 /* IQKeyboardManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManager.swift; path = IQKeyboardManagerSwift/IQKeyboardManager.swift; sourceTree = "<group>"; };
-		C8D4696A18036FFF70525C8835E5E9BE /* IQPreviousNextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQPreviousNextView.swift; path = IQKeyboardManagerSwift/IQToolbar/IQPreviousNextView.swift; sourceTree = "<group>"; };
-		CC77E65FA7C775D34E7851EBD8C22CDA /* SwipeDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeDirection.swift; path = Sources/SwipeDirection.swift; sourceTree = "<group>"; };
+		B62732C4062DD38C432DBA2537A0AE37 /* CosmosAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosAccessibility.swift; path = Cosmos/CosmosAccessibility.swift; sourceTree = "<group>"; };
+		B718BC6D7203850BDD55B9ED229B03F7 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUITextFieldView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
+		B75C41C8F4ACD775B33171C6B0395C0E /* Cosmos.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cosmos.xcconfig; sourceTree = "<group>"; };
+		B8E909484850C58495BDB0D969EECEE1 /* XLPagerTabStrip.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLPagerTabStrip.xcconfig; sourceTree = "<group>"; };
+		B9DD724E76407C392EFDED8457E87558 /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalPaymentViewController.h; path = PayPalMobile/PayPalPaymentViewController.h; sourceTree = "<group>"; };
+		BA56BDCF283CD5F475D72C1213FF76FF /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		BC6D47666F1ACA288628F0E3B7A6649F /* CardIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIO.h; path = CardIO/CardIO.h; sourceTree = "<group>"; };
+		BD32A23D615690D4D354D6F74364A48C /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		BD5D58A87D303ABB0050F67FBF682788 /* StarLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarLayer.swift; path = Cosmos/StarLayer.swift; sourceTree = "<group>"; };
+		BE2DAEFF15CD8FEEF7F49D82219E0E53 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		BE722D5C31B6AB666506DF110C3E1780 /* CardIOViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOViewDelegate.h; path = CardIO/CardIOViewDelegate.h; sourceTree = "<group>"; };
+		C05FD72C48CF29271DAEF00828B2C463 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQNSArray+Sort.swift"; path = "IQKeyboardManagerSwift/Categories/IQNSArray+Sort.swift"; sourceTree = "<group>"; };
+		C0FC0BC97E6C27490852C1BA4734C215 /* IQKeyboardManagerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = IQKeyboardManagerSwift.modulemap; sourceTree = "<group>"; };
+		C2C35788226A94A697E279104C01799E /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		C396F55C90C1E640FFAEBC04A4A5E2D6 /* CosmosText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosText.swift; path = Cosmos/CosmosText.swift; sourceTree = "<group>"; };
+		C494F97FA7BB961186DCD67BBA1D7543 /* EVReflection.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EVReflection.xcconfig; sourceTree = "<group>"; };
+		C4C431760CF0B8034739D35000AA85BD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C75F0CAB8123E38DD9FAEA1BCD858F09 /* CosmosSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSettings.swift; path = Cosmos/CosmosSettings.swift; sourceTree = "<group>"; };
+		CB00BDD930DB4B25704A948A41518AC6 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		CC5C55E10ADF16B4DF914AAB9BB180F2 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		CCDBF6DAF03184494EB4DFB0CE4ECD9F /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cosmos.framework; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD84FCEB0596A3C1BC943EE43C5F2D78 /* IQUIWindow+Hierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIWindow+Hierarchy.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIWindow+Hierarchy.swift"; sourceTree = "<group>"; };
-		CF3FA02E91E964FAB5A36A652EA76DD3 /* FXPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXPageControl.m; path = Sources/FXPageControl.m; sourceTree = "<group>"; };
-		D07809C714BB24E61A15258D97F87533 /* EVReflection.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EVReflection.xcconfig; sourceTree = "<group>"; };
-		D132B03B917C2093A9F89B762A0A0A6B /* DLRadioButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DLRadioButton.m; path = DLRadioButton/DLRadioButton.m; sourceTree = "<group>"; };
+		CCE175FC8D4ED58BCD396EE33D5AD127 /* libCardIO.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libCardIO.a; path = CardIO/libCardIO.a; sourceTree = "<group>"; };
+		CD2F02ACD7EC60B1207F8B6282434D71 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		CDF1FBA07AE73D2ECD0EE87F621E6CD6 /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardReturnKeyHandler.swift; path = IQKeyboardManagerSwift/IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
+		CEA81C54BBC62C3F3D7353C5F1D04A74 /* CardIODetectionMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIODetectionMode.h; path = CardIO/CardIODetectionMode.h; sourceTree = "<group>"; };
+		D09757356F42E07F1CF4382067AE18A0 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
+		D1B908732B7DAAE0566B6DDED2421B71 /* FXPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXPageControl.m; path = Sources/FXPageControl.m; sourceTree = "<group>"; };
+		D2B7EF534E034B2CEF82069D1EFDDD94 /* IQKeyboardManagerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQKeyboardManagerSwift-dummy.m"; sourceTree = "<group>"; };
+		D33B428C3E95E7695D934BD8D1C9686A /* Cosmos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cosmos-dummy.m"; sourceTree = "<group>"; };
 		D37A085A3DD3D7F49A544C19DFDF7C34 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D94D161A82B5E93BC979CDEE80D87248 /* Cosmos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-umbrella.h"; sourceTree = "<group>"; };
-		D952509783D9FDE7135BB432FDDA59B7 /* IQToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQToolbar.swift; path = IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift; sourceTree = "<group>"; };
+		D528F1131DBDE43F6D8719F1E43B697C /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		D8E59D10B9297E532BCAA4EFD5E383E9 /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		DAB00A9F203927CC2669435F47D981AD /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		DBBBF59E4D3925FD84F97D82DC9D9241 /* Pods-Qadmni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Qadmni.release.xcconfig"; sourceTree = "<group>"; };
-		DBC6EA279319EC91E93ABFCDB7807102 /* BaseButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseButtonBarPagerTabStripViewController.swift; path = Sources/BaseButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		DBD247130907DDB7B2221DEF7011F989 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		DD988EB4710CDB2000107D7B66B9A055 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDBE9C9A9E04618F6BBC8BEA9F126499 /* Pods-Qadmni-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Qadmni-dummy.m"; sourceTree = "<group>"; };
+		DDED378C6194FDDBABD8B0905A0052B3 /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIViewController+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
+		DE21DF887EED02C9302669FB9B145120 /* XLPagerTabStrip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-prefix.pch"; sourceTree = "<group>"; };
+		DFD1DD9BA935514E28C203EA5E24BAC7 /* libopencv_imgproc.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libopencv_imgproc.a; path = CardIO/libopencv_imgproc.a; sourceTree = "<group>"; };
 		E06AC8A7D6F63275421B659B7E6827C4 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XLPagerTabStrip.framework; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E144FF0EB11045F28A02A95305C689FA /* CosmosLayerHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayerHelper.swift; path = Cosmos/CosmosLayerHelper.swift; sourceTree = "<group>"; };
 		E191A5D6920AE8484F5276E28B9364E7 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IQKeyboardManagerSwift.framework; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4FC87D042CA4B006A8D4B356761128D /* ButtonBarViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarViewCell.swift; path = Sources/ButtonBarViewCell.swift; sourceTree = "<group>"; };
-		E514B592224856704647D7923AB8D3F3 /* SWRevealViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWRevealViewController-dummy.m"; sourceTree = "<group>"; };
-		E6F4B03FE3068C1F4875893AE3FAC263 /* IQKeyboardManagerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQKeyboardManagerSwift-dummy.m"; sourceTree = "<group>"; };
-		E82A913524A72A461497E216ED82AB5C /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQNSArray+Sort.swift"; path = "IQKeyboardManagerSwift/Categories/IQNSArray+Sort.swift"; sourceTree = "<group>"; };
-		E92B1AEFE1ACA0929D9464C6E1E860A5 /* PagerTabStripError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripError.swift; path = Sources/PagerTabStripError.swift; sourceTree = "<group>"; };
-		E9BB953D3B52C6CB22345ABB437E7BC4 /* EVReflection-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EVReflection-umbrella.h"; sourceTree = "<group>"; };
-		EA1E764B99F504339A6470D191A1D9F7 /* EVArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EVArrayExtension.swift; path = Source/EVArrayExtension.swift; sourceTree = "<group>"; };
-		EB5B45D04E1B6EB6A3BB1933BBDA0AF3 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		E1D6F2CE56FBE231E637D91AE9C100F0 /* SegmentedPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedPagerTabStripViewController.swift; path = Sources/SegmentedPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		E550B93FC87A4AE315647F4AE8A874F4 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		EA038D479DFBCCB51ADBA8DA573E409A /* PayPalPayment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalPayment.h; path = PayPalMobile/PayPalPayment.h; sourceTree = "<group>"; };
+		EA0ABB5BEB932E0B2EC8A0C83D014EF5 /* CosmosRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosRating.swift; path = Cosmos/CosmosRating.swift; sourceTree = "<group>"; };
+		EA29B811EE2E007780618B074656A0C7 /* PayPalConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalConfiguration.h; path = PayPalMobile/PayPalConfiguration.h; sourceTree = "<group>"; };
+		EA3A49F3936E5E83A606655AE6A1550D /* EVArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EVArrayExtension.swift; path = Source/EVArrayExtension.swift; sourceTree = "<group>"; };
 		EC1FD743D031D373EDF29CC526F758E2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		EC2EA32448B2ADDB7F191BC42DBCF1CB /* PagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripViewController.swift; path = Sources/PagerTabStripViewController.swift; sourceTree = "<group>"; };
-		ECB89A0BE0574C57F23E6C85B0A88CAB /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		EEAF3A681716086580C6A93CF6F17FD6 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		EF2CC5240C0A5498811A213F97A323E9 /* BarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarView.swift; path = Sources/BarView.swift; sourceTree = "<group>"; };
-		EFACF194AE0155CE6F6C334406936DD5 /* EVReflection-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EVReflection-prefix.pch"; sourceTree = "<group>"; };
-		EFF87EE1B68FB73C62486F3FED4B1182 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F10465A2CD3520C753F74A8F04B3078E /* DLRadioButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DLRadioButton.modulemap; sourceTree = "<group>"; };
-		F349A17AA0CA9E17B2DBF4BA987EEFAA /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		F49178FD505CEA538A7855003DB0E3CF /* StarFillMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarFillMode.swift; path = Cosmos/StarFillMode.swift; sourceTree = "<group>"; };
-		F77069F0CF565F67FA0BD1968EA757F0 /* CosmosLocalizedRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLocalizedRating.swift; path = Cosmos/CosmosLocalizedRating.swift; sourceTree = "<group>"; };
-		F7DECD2D4FE05D6759426B9CAAF4F9A5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F955ECADE8CDDF3191E9008CB40A7BFA /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+IQKeyboardToolbar.swift"; path = "IQKeyboardManagerSwift/IQToolbar/IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
-		F99626D42FA16EB8CAF374B2B134C937 /* SWRevealViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWRevealViewController-umbrella.h"; sourceTree = "<group>"; };
-		FA927D440400C324EAE9403787BFF8FB /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		FB97D7C048F25D767F793621EB792F3C /* EVReflectable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EVReflectable.swift; path = Source/EVReflectable.swift; sourceTree = "<group>"; };
-		FC7BE7B37E5A9CF7181A714DCC7956C7 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		FD8FB1240EB6A04B9456485390EDFDE4 /* ResourceBundle-XLPagerTabStrip-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-XLPagerTabStrip-Info.plist"; sourceTree = "<group>"; };
-		FE96F2660A7948423F98255B27D85F8C /* CosmosRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosRating.swift; path = Cosmos/CosmosRating.swift; sourceTree = "<group>"; };
+		ECD33F169337CFA67D830CA6E83CD979 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		ED2C344103FD53EDF39C571AE24C2B11 /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarPagerTabStripViewController.swift; path = Sources/ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		F1DF2144A668DAE1CA0343A575332E32 /* IndicatorInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndicatorInfo.swift; path = Sources/IndicatorInfo.swift; sourceTree = "<group>"; };
+		F2A0A7629FA36669EB669EFBA0A33D5E /* EVDictionaryExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EVDictionaryExtension.swift; path = Source/EVDictionaryExtension.swift; sourceTree = "<group>"; };
+		F3892B9130058B9B2E7E868C88891A1B /* SWRevealViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWRevealViewController-prefix.pch"; sourceTree = "<group>"; };
+		F3FE88C4AEF01C5453E3188CEBD81EB2 /* CardIOPaymentViewControllerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOPaymentViewControllerDelegate.h; path = CardIO/CardIOPaymentViewControllerDelegate.h; sourceTree = "<group>"; };
+		F5AEEB3D8D6BD084661C9E291C9590D6 /* IQKeyboardManagerSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManagerSwift.xcconfig; sourceTree = "<group>"; };
+		F5FF7DD34DEA158892A5C9BB06935914 /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+Hierarchy.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
+		F7D7A4A361EDEF1051543CF48F5EEC08 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		F8E2325036F95A6055867A8252F4D22C /* EVReflectable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EVReflectable.swift; path = Source/EVReflectable.swift; sourceTree = "<group>"; };
+		FBF8FDCFBE2F07CDF5DB14F844369D0D /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		FCD73FD12260A16C7C736629BDA35B6C /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		FD8B4DB7D2C60735A30A6F76E1034C57 /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosDefaultSettings.swift; path = Cosmos/CosmosDefaultSettings.swift; sourceTree = "<group>"; };
+		FF19A0350EA15DA223A1FADFC9DA8F24 /* IQTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTextView.swift; path = IQKeyboardManagerSwift/IQTextView/IQTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,6 +391,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F37DDDC2660EB17E1BE35429C1C58AD4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		247A7FF69938D457D9BD148BBE554A61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301EB48846341A23AA1AC016B4CE098B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,14 +443,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F26B59EA30643F555240205CB4941CA3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				015F532EE442FBC76E278EB0F761C68D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F6EDAE47D918673A84104F88EC5C41BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -428,6 +455,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		012CAF4D35593BF96B044089ACFCD357 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				51D4FE87DBEA27C0CDD56919FD3F0682 /* Info.plist */,
+				632A3C9DF87A46E98474F8A3FDBCEB6F /* SWRevealViewController.modulemap */,
+				98563C379F13A98669C73AABB1BE584D /* SWRevealViewController.xcconfig */,
+				09C741D74A8318562D1F58CFFA13F70F /* SWRevealViewController-dummy.m */,
+				F3892B9130058B9B2E7E868C88891A1B /* SWRevealViewController-prefix.pch */,
+				2CB29454C2686815F03E4ACB136707CF /* SWRevealViewController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SWRevealViewController";
+			sourceTree = "<group>";
+		};
+		057D0956E6B23F89B159A432C6EEDBCB /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				6026611500AB04406B7CBD2C74F16BF5 /* Frameworks */,
+				880C6BC4379DFF1D8076BD80E956DF8C /* Resources */,
+			);
+			name = GooglePlaces;
+			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		069DECD50BE4D9DDCFBA48AD53E5BDEB /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				52A9661F7E10DCFEE2C9139C8BE843D8 /* Frameworks */,
+				218EAD7DFC982651A8D9F260C16E6900 /* Resources */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		0EC19611AB3024BF0320D84376DE524B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				507522383D17D8F2DECC2B165F463D66 /* DLRadioButton.modulemap */,
+				27869471EAF9FCFFAAE8575CE780B4E5 /* DLRadioButton.xcconfig */,
+				5763A28752C3814428FF3BA6B4BE7A9E /* DLRadioButton-dummy.m */,
+				69ABD1A87E27CB2DC2853B8D0F7D7E84 /* DLRadioButton-prefix.pch */,
+				5185E6AB7AF417BB72924B12C5AB67B6 /* DLRadioButton-umbrella.h */,
+				AA18A50B2B15E8A233F4A119CAFDAA95 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DLRadioButton";
+			sourceTree = "<group>";
+		};
 		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,14 +510,52 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1FBD483FD891D4050BCEFE68DE71A2DB /* EVReflection */ = {
+		182936F4232564F221FF7CB65809B2E5 /* CardIO */ = {
 			isa = PBXGroup;
 			children = (
-				7B213E5AD580F3C932223D859BD78C1E /* Core */,
-				4FBA0D54DFA33B861B8322531E941025 /* Support Files */,
+				BC6D47666F1ACA288628F0E3B7A6649F /* CardIO.h */,
+				8D1EE1C0B11771E08337D7EA4B0FB413 /* CardIOCreditCardInfo.h */,
+				CEA81C54BBC62C3F3D7353C5F1D04A74 /* CardIODetectionMode.h */,
+				2F826D79967C7C7E75A64A0F18D55358 /* CardIOPaymentViewController.h */,
+				F3FE88C4AEF01C5453E3188CEBD81EB2 /* CardIOPaymentViewControllerDelegate.h */,
+				A8AB4B2557D4D074A8A5731946F2E07F /* CardIOUtilities.h */,
+				6E4B52C875E6ADD5343074E4CAD86227 /* CardIOView.h */,
+				BE722D5C31B6AB666506DF110C3E1780 /* CardIOViewDelegate.h */,
+				1DA16E819FCABDE1669936B423581E39 /* Frameworks */,
 			);
-			name = EVReflection;
-			path = EVReflection;
+			name = CardIO;
+			path = CardIO;
+			sourceTree = "<group>";
+		};
+		1BE6B51C5100FA504DF9E6932DAFC83C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EA3A49F3936E5E83A606655AE6A1550D /* EVArrayExtension.swift */,
+				F2A0A7629FA36669EB669EFBA0A33D5E /* EVDictionaryExtension.swift */,
+				9988D3550844DB6D06913E6D0C19ADBD /* EVObject.swift */,
+				F8E2325036F95A6055867A8252F4D22C /* EVReflectable.swift */,
+				B5463063F2087B4566C74A65FC2807AD /* EVReflection.swift */,
+				9AF3BDC248DD640772160EAD756E8DB1 /* EVWorkaroundHelpers.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		1DA16E819FCABDE1669936B423581E39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCE175FC8D4ED58BCD396EE33D5AD127 /* libCardIO.a */,
+				1241817443DB61AE933F971AD028532D /* libopencv_core.a */,
+				DFD1DD9BA935514E28C203EA5E24BAC7 /* libopencv_imgproc.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		218EAD7DFC982651A8D9F260C16E6900 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				38CFA8DBFD791F00BCB9B67F60BF6619 /* GoogleMaps.bundle */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		2691F93227E549B2A03FB9E6D0C3C623 /* iOS */ = {
@@ -457,37 +569,31 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		288F0F3BE1550A2C3C308086AE5AF66D /* Resources */ = {
+		2F2AEE30EACFBC224A67970B3935227C /* EVReflection */ = {
 			isa = PBXGroup;
 			children = (
+				1BE6B51C5100FA504DF9E6932DAFC83C /* Core */,
+				D9D0E0146A83D6B01AECA070095511C6 /* Support Files */,
 			);
-			name = Resources;
+			name = EVReflection;
+			path = EVReflection;
 			sourceTree = "<group>";
 		};
-		380E1EB2494A1BE4F85016F9919D38E4 /* XLPagerTabStrip */ = {
+		353E3F032FCE3E29463BE39D4DE15653 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3F2779FA46FE784138635A5B0B2436AB /* BarPagerTabStripViewController.swift */,
-				EF2CC5240C0A5498811A213F97A323E9 /* BarView.swift */,
-				DBC6EA279319EC91E93ABFCDB7807102 /* BaseButtonBarPagerTabStripViewController.swift */,
-				6A1CF0D581DBC82FDE53343B13364173 /* ButtonBarPagerTabStripViewController.swift */,
-				3862644F043D6B3670842ABE73B8AADF /* ButtonBarView.swift */,
-				E4FC87D042CA4B006A8D4B356761128D /* ButtonBarViewCell.swift */,
-				8E51CEA3FEC33D1E1F4271EEDD1AD5B5 /* ButtonCell.xib */,
-				95E7382632057A359910968110B716D6 /* FXPageControl.h */,
-				CF3FA02E91E964FAB5A36A652EA76DD3 /* FXPageControl.m */,
-				42CEC154EF479D8E95B65B1784D61F56 /* IndicatorInfo.swift */,
-				A82FE36C68B90CDA06893CB5E1E079F8 /* PagerTabStripBehaviour.swift */,
-				E92B1AEFE1ACA0929D9464C6E1E860A5 /* PagerTabStripError.swift */,
-				EC2EA32448B2ADDB7F191BC42DBCF1CB /* PagerTabStripViewController.swift */,
-				55B3E42E061A0030257F3270A06F11B3 /* SegmentedPagerTabStripViewController.swift */,
-				CC77E65FA7C775D34E7851EBD8C22CDA /* SwipeDirection.swift */,
-				4D7F28974B99265D403C8F4336D86AA7 /* TwitterPagerTabStripViewController.swift */,
-				288F0F3BE1550A2C3C308086AE5AF66D /* Resources */,
-				C018DB3C980D584209A51CFF9BCA79C3 /* Support Files */,
+				5517732A1F85DCF7F36C872001E341EE /* libPayPalMobile.a */,
 			);
-			name = XLPagerTabStrip;
-			path = XLPagerTabStrip;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		371E80419DEBDB6B750E6B58C525A278 /* PayPal-iOS-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				BCD92D610D670079CB7889FFB0A0B16A /* Core */,
+			);
+			name = "PayPal-iOS-SDK";
+			path = "PayPal-iOS-SDK";
 			sourceTree = "<group>";
 		};
 		38D9CF54692C94353327CD738974119E /* Targets Support Files */ = {
@@ -498,75 +604,77 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		4FBA0D54DFA33B861B8322531E941025 /* Support Files */ = {
+		3AB2CA983C07172128064580B2776C3F /* SWRevealViewController */ = {
 			isa = PBXGroup;
 			children = (
-				56BFA76C0C654779286DEB66D3E94462 /* EVReflection.modulemap */,
-				D07809C714BB24E61A15258D97F87533 /* EVReflection.xcconfig */,
-				2B774E359A30E3C895D9E5A73D25570D /* EVReflection-dummy.m */,
-				EFACF194AE0155CE6F6C334406936DD5 /* EVReflection-prefix.pch */,
-				E9BB953D3B52C6CB22345ABB437E7BC4 /* EVReflection-umbrella.h */,
-				B934B6A68AE540ACF4C4B0BEF7193F1B /* Info.plist */,
+				1FCECD71D849807B03A4D6C2DCC65755 /* SWRevealViewController.h */,
+				0C1E0F38D8C277F7E20ECC245A2588DF /* SWRevealViewController.m */,
+				012CAF4D35593BF96B044089ACFCD357 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/EVReflection";
+			name = SWRevealViewController;
+			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
-		569494F67383156B2DFD3F3D3ECEF1A7 /* Resources */ = {
+		4BC49F4083F60E619AF3BBC7021EC3D3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				ACBFE4D54E86B70E23193C976273DBC0 /* IQKeyboardManager.bundle */,
+				818D283F1219CEEE2D7D94BE4A8516B3 /* Alamofire */,
+				182936F4232564F221FF7CB65809B2E5 /* CardIO */,
+				A50DE294CE4F1AFFDFD8EFC527881FA8 /* Cosmos */,
+				717AAC59E92418ED6D63AD990D74F601 /* DLRadioButton */,
+				2F2AEE30EACFBC224A67970B3935227C /* EVReflection */,
+				598FB88BDD1E03BB4D092FE0131716DA /* GoogleMaps */,
+				057D0956E6B23F89B159A432C6EEDBCB /* GooglePlaces */,
+				AEEF2F75C878B74AC6B7B4F319199F75 /* IQKeyboardManagerSwift */,
+				7EED7D8A3A1CD6F3EAA2007ED7FB9293 /* MBProgressHUD */,
+				371E80419DEBDB6B750E6B58C525A278 /* PayPal-iOS-SDK */,
+				3AB2CA983C07172128064580B2776C3F /* SWRevealViewController */,
+				C768350AC92766D9512BDC23FCB9D9D0 /* XLPagerTabStrip */,
 			);
-			name = Resources;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		585DC82CFDEFDD7341B7EA4B32280D3C /* Cosmos */ = {
+		52A9661F7E10DCFEE2C9139C8BE843D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A6177F8B2860B35F0B278B34B5080338 /* CosmosAccessibility.swift */,
-				81B267C6D468E8B33C03CC7482340141 /* CosmosDefaultSettings.swift */,
-				E144FF0EB11045F28A02A95305C689FA /* CosmosLayerHelper.swift */,
-				B1781608A87CE9AA95ACFA6BAC629256 /* CosmosLayers.swift */,
-				F77069F0CF565F67FA0BD1968EA757F0 /* CosmosLocalizedRating.swift */,
-				FE96F2660A7948423F98255B27D85F8C /* CosmosRating.swift */,
-				4038FD6C3263A957C4975E69593EAEDD /* CosmosSettings.swift */,
-				A7416A8CECD4E20DE36DF5D0278FF4EC /* CosmosSize.swift */,
-				BDC463C6CAFE340B67BFB816A51C408C /* CosmosText.swift */,
-				4AC89F38D5F7B2CBEB4D5D3A8611204E /* CosmosTouch.swift */,
-				52C1ABE99D8E2039CE5683FFE2F9360C /* CosmosTouchTarget.swift */,
-				569FFB15A4BEA1FC3B7708A084179644 /* CosmosView.swift */,
-				49C289B2DD9F6DAA80884CC0D88572C0 /* RightToLeft.swift */,
-				F49178FD505CEA538A7855003DB0E3CF /* StarFillMode.swift */,
-				0328030E3CA359BD3932C0F907C9200E /* StarLayer.swift */,
-				795B0CEE533959FDE20781D5636798CD /* Support Files */,
+				E550B93FC87A4AE315647F4AE8A874F4 /* GoogleMaps.framework */,
+				BD32A23D615690D4D354D6F74364A48C /* GoogleMapsCore.framework */,
 			);
-			name = Cosmos;
-			path = Cosmos;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		68D0C6A003C9A479CE12B36E9F0BCE7A /* MBProgressHUD */ = {
+		54762BB2C089B5E992266EA1F6604173 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				519E42299E268B4B5032925EF178D766 /* MBProgressHUD.h */,
-				FA927D440400C324EAE9403787BFF8FB /* MBProgressHUD.m */,
-				FBE19240B9B3FC58AE2EE761280A69A7 /* Support Files */,
+				5E51071E9E411A6359A1F641F05A8758 /* Frameworks */,
 			);
-			name = MBProgressHUD;
-			path = MBProgressHUD;
+			name = Base;
 			sourceTree = "<group>";
 		};
-		6BFD21B8B3F97C0DE877EDEE75F1A2E7 /* Support Files */ = {
+		598FB88BDD1E03BB4D092FE0131716DA /* GoogleMaps */ = {
 			isa = PBXGroup;
 			children = (
-				8E96E5FF838021F3825FDA4FBD910639 /* Info.plist */,
-				B64B15B89523BF464C6B759C24542724 /* SWRevealViewController.modulemap */,
-				A89E50B7C250CAC5078CF12A6FD8BD1E /* SWRevealViewController.xcconfig */,
-				E514B592224856704647D7923AB8D3F3 /* SWRevealViewController-dummy.m */,
-				ABDECA229D2CD857EC3D841034F1A454 /* SWRevealViewController-prefix.pch */,
-				F99626D42FA16EB8CAF374B2B134C937 /* SWRevealViewController-umbrella.h */,
+				54762BB2C089B5E992266EA1F6604173 /* Base */,
+				069DECD50BE4D9DDCFBA48AD53E5BDEB /* Maps */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SWRevealViewController";
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		5E51071E9E411A6359A1F641F05A8758 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCD73FD12260A16C7C736629BDA35B6C /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6026611500AB04406B7CBD2C74F16BF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FA37CFEB4D54DB09224706EB77317A1 /* GooglePlaces.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		6EDD0EE3E0FFE36D78FAE47A6E3F3D54 /* Products */ = {
@@ -584,6 +692,17 @@
 				E06AC8A7D6F63275421B659B7E6827C4 /* XLPagerTabStrip.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		717AAC59E92418ED6D63AD990D74F601 /* DLRadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				508DD2DE2C68E9ADA730440BEBC1C027 /* DLRadioButton.h */,
+				19F44AE315AC1D9096206DDB0550B957 /* DLRadioButton.m */,
+				0EC19611AB3024BF0320D84376DE524B /* Support Files */,
+			);
+			name = DLRadioButton;
+			path = DLRadioButton;
 			sourceTree = "<group>";
 		};
 		73E162F2FA3679BB6704566923916793 /* Pods-Qadmni */ = {
@@ -604,206 +723,264 @@
 			path = "Target Support Files/Pods-Qadmni";
 			sourceTree = "<group>";
 		};
-		795B0CEE533959FDE20781D5636798CD /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AE06E8E9D46A1D4712F2542A9794C459 /* Cosmos.modulemap */,
-				7B17461960995B3F5E371C95698A720C /* Cosmos.xcconfig */,
-				827353C64C08D797326ADFE2B7ACA7CE /* Cosmos-dummy.m */,
-				190576189CDC675346A0509A875D8100 /* Cosmos-prefix.pch */,
-				D94D161A82B5E93BC979CDEE80D87248 /* Cosmos-umbrella.h */,
-				336345B63D26149C6C73E9B32480F67D /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Cosmos";
-			sourceTree = "<group>";
-		};
-		7B213E5AD580F3C932223D859BD78C1E /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				EA1E764B99F504339A6470D191A1D9F7 /* EVArrayExtension.swift */,
-				4D3E90AB6B02CF5901017311B5775268 /* EVObject.swift */,
-				FB97D7C048F25D767F793621EB792F3C /* EVReflectable.swift */,
-				17F23B68FD6BFC688F206D0C43107985 /* EVReflection.swift */,
-				C60AB5DCAE61D893FEB1F3248D29AB16 /* EVWorkaroundHelpers.swift */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
-				C4AF63F37ED4A850D64E43CD69B7A178 /* Pods */,
+				4BC49F4083F60E619AF3BBC7021EC3D3 /* Pods */,
 				6EDD0EE3E0FFE36D78FAE47A6E3F3D54 /* Products */,
 				38D9CF54692C94353327CD738974119E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		808FF7C230F39AD79B4EE9ACD974E507 /* DLRadioButton */ = {
+		7E131FE7E203BA4348CEF6063F11BBA3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9B8E907B9293FA30C9C412A9F5BEF128 /* DLRadioButton.h */,
-				D132B03B917C2093A9F89B762A0A0A6B /* DLRadioButton.m */,
-				C1B863C7B028463015D1BD34DE73DC51 /* Support Files */,
+				7F6170CFC185551505BF65BE6C435ADF /* IQKeyboardManager.bundle */,
 			);
-			name = DLRadioButton;
-			path = DLRadioButton;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		A624D9C928516AC70DEF09C4CA07D3CC /* Support Files */ = {
+		7EED7D8A3A1CD6F3EAA2007ED7FB9293 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				55C728A578313FCDD667A1FA1AB768D4 /* Info.plist */,
-				12BEF398B8A3253F27EF29554525F5FB /* IQKeyboardManagerSwift.modulemap */,
-				746DC0795382E0865FCA1772161211B7 /* IQKeyboardManagerSwift.xcconfig */,
-				E6F4B03FE3068C1F4875893AE3FAC263 /* IQKeyboardManagerSwift-dummy.m */,
-				9B34BD33943AB1A44C50B8487A4AFEEF /* IQKeyboardManagerSwift-prefix.pch */,
-				AF8E1ECFA0FB8C56D7C2A3E84142DC59 /* IQKeyboardManagerSwift-umbrella.h */,
+				C2C35788226A94A697E279104C01799E /* MBProgressHUD.h */,
+				BA56BDCF283CD5F475D72C1213FF76FF /* MBProgressHUD.m */,
+				BB28FF4CDD9D9F3E3253261A20AD2A5D /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/IQKeyboardManagerSwift";
+			name = MBProgressHUD;
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
-		BFF7FDBAF1F48018BF6D9ED5E1C4C831 /* SWRevealViewController */ = {
+		818D283F1219CEEE2D7D94BE4A8516B3 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				686506D791B05B2296F95D98841D14FA /* SWRevealViewController.h */,
-				0F8531AFC83769567E7E267AF1BB1A54 /* SWRevealViewController.m */,
-				6BFD21B8B3F97C0DE877EDEE75F1A2E7 /* Support Files */,
-			);
-			name = SWRevealViewController;
-			path = SWRevealViewController;
-			sourceTree = "<group>";
-		};
-		C018DB3C980D584209A51CFF9BCA79C3 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EFF87EE1B68FB73C62486F3FED4B1182 /* Info.plist */,
-				FD8FB1240EB6A04B9456485390EDFDE4 /* ResourceBundle-XLPagerTabStrip-Info.plist */,
-				0602AB2E710900EB8EB6AA0749C4EC3E /* XLPagerTabStrip.modulemap */,
-				A47ABE943FFAAE9AB4D5A3AF2E6EB655 /* XLPagerTabStrip.xcconfig */,
-				36FF693C62F17CF19F9101533409B7BA /* XLPagerTabStrip-dummy.m */,
-				A99128ED3553F3DE2E5005637BF25375 /* XLPagerTabStrip-prefix.pch */,
-				8798CA7DEBF1F8F63A5E40C391928D73 /* XLPagerTabStrip-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/XLPagerTabStrip";
-			sourceTree = "<group>";
-		};
-		C1B863C7B028463015D1BD34DE73DC51 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F10465A2CD3520C753F74A8F04B3078E /* DLRadioButton.modulemap */,
-				8BCFCA25D2470505CCC7065DCB362E2A /* DLRadioButton.xcconfig */,
-				B2DE2A94BACEF362FC4F629AA59C8205 /* DLRadioButton-dummy.m */,
-				4451ABE2E026E178F08AD7742C6FDD4E /* DLRadioButton-prefix.pch */,
-				84059D2C528CE5307489C59F00F6BBEA /* DLRadioButton-umbrella.h */,
-				F7DECD2D4FE05D6759426B9CAAF4F9A5 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/DLRadioButton";
-			sourceTree = "<group>";
-		};
-		C3F8EC366C5E72C6B38072317C7F833E /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				0D81C7708590F5B5F3559DAB6706DBF3 /* AFError.swift */,
-				EEAF3A681716086580C6A93CF6F17FD6 /* Alamofire.swift */,
-				7515E5EFDD3D8922C1E1521BD95939EA /* DispatchQueue+Alamofire.swift */,
-				26A79AA328FAFD1639D88A48196BBB2A /* MultipartFormData.swift */,
-				FC7BE7B37E5A9CF7181A714DCC7956C7 /* NetworkReachabilityManager.swift */,
-				BFB1F3FE4147D643397C020938698F77 /* Notifications.swift */,
-				6E269329390EB0230E34071A8DFFEAFC /* ParameterEncoding.swift */,
-				3B4E6DF535F53B71CDDA17829C0FE3A7 /* Request.swift */,
-				F349A17AA0CA9E17B2DBF4BA987EEFAA /* Response.swift */,
-				603A6022DCD47C8AF40A3E43292441FD /* ResponseSerialization.swift */,
-				AD90ED5E130773A3F18E4C9594C81D12 /* Result.swift */,
-				2C7FCE6AF75761053C92197490C34F06 /* ServerTrustPolicy.swift */,
-				7650B08871FF1DF9D1DFB0A2F598F7F8 /* SessionDelegate.swift */,
-				C148E8BC545F522BC6B9513A3C0891D3 /* SessionManager.swift */,
-				1E84A43A569A6EA68FA9AABA98C42193 /* TaskDelegate.swift */,
-				ECB89A0BE0574C57F23E6C85B0A88CAB /* Timeline.swift */,
-				6E7B289A00860D2FDD64BC0018EBB79F /* Validation.swift */,
-				D00ADC61296B811D53A1D51FB9F22F19 /* Support Files */,
+				0E35C59A9F7CC53128D1A212B932946E /* AFError.swift */,
+				1107637013D72990CA6070EB9F2243E0 /* Alamofire.swift */,
+				4840700FA73D970735447B2C74044FC2 /* DispatchQueue+Alamofire.swift */,
+				72201A5A9EEC4DE06A51691D1C784D08 /* MultipartFormData.swift */,
+				DAB00A9F203927CC2669435F47D981AD /* NetworkReachabilityManager.swift */,
+				CC5C55E10ADF16B4DF914AAB9BB180F2 /* Notifications.swift */,
+				452B1BEDD2D1E5811B1A560484519DF9 /* ParameterEncoding.swift */,
+				ECD33F169337CFA67D830CA6E83CD979 /* Request.swift */,
+				0C656B6E358BB3BBA42834835C5D4339 /* Response.swift */,
+				D528F1131DBDE43F6D8719F1E43B697C /* ResponseSerialization.swift */,
+				2A6C50C0B0DBDD36A618A019D634A184 /* Result.swift */,
+				105339F1133DD8C37DEBB6539DB681D1 /* ServerTrustPolicy.swift */,
+				CD2F02ACD7EC60B1207F8B6282434D71 /* SessionDelegate.swift */,
+				BE2DAEFF15CD8FEEF7F49D82219E0E53 /* SessionManager.swift */,
+				0DD906F3B5A23D620BF7134597DBFD98 /* TaskDelegate.swift */,
+				2D4FA97CB5FCA6214B6360DE9B589F66 /* Timeline.swift */,
+				F7D7A4A361EDEF1051543CF48F5EEC08 /* Validation.swift */,
+				FED424D2037148B9250A669E7298B170 /* Support Files */,
 			);
 			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
-		C4AF63F37ED4A850D64E43CD69B7A178 /* Pods */ = {
+		880C6BC4379DFF1D8076BD80E956DF8C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C3F8EC366C5E72C6B38072317C7F833E /* Alamofire */,
-				585DC82CFDEFDD7341B7EA4B32280D3C /* Cosmos */,
-				808FF7C230F39AD79B4EE9ACD974E507 /* DLRadioButton */,
-				1FBD483FD891D4050BCEFE68DE71A2DB /* EVReflection */,
-				F9EC2CA173E9B7D81D1EE92E2B5141C5 /* IQKeyboardManagerSwift */,
-				68D0C6A003C9A479CE12B36E9F0BCE7A /* MBProgressHUD */,
-				BFF7FDBAF1F48018BF6D9ED5E1C4C831 /* SWRevealViewController */,
-				380E1EB2494A1BE4F85016F9919D38E4 /* XLPagerTabStrip */,
+				639A84FABA829BDE36125A9F16EC8EAA /* GooglePlaces.bundle */,
 			);
-			name = Pods;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		D00ADC61296B811D53A1D51FB9F22F19 /* Support Files */ = {
+		8BC544B525D72B9BEBDC0DDEFC1AA461 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				65A14074611EACFEF7C4AFA40C5C9376 /* Alamofire.modulemap */,
-				DBD247130907DDB7B2221DEF7011F989 /* Alamofire.xcconfig */,
-				39568E50BF60FA3A53C119990E226935 /* Alamofire-dummy.m */,
-				C616909C5BB64B669336FFB3D639FBA0 /* Alamofire-prefix.pch */,
-				06F0211416A1C59D788A696EE9A96301 /* Alamofire-umbrella.h */,
-				8B842B318ADAA099C4A2893365EACDAD /* Info.plist */,
+				C4C431760CF0B8034739D35000AA85BD /* Info.plist */,
+				C0FC0BC97E6C27490852C1BA4734C215 /* IQKeyboardManagerSwift.modulemap */,
+				F5AEEB3D8D6BD084661C9E291C9590D6 /* IQKeyboardManagerSwift.xcconfig */,
+				D2B7EF534E034B2CEF82069D1EFDDD94 /* IQKeyboardManagerSwift-dummy.m */,
+				9698B4C1E74F727ACF4658BF379A4970 /* IQKeyboardManagerSwift-prefix.pch */,
+				5BB0E2C7627055E6A155D801E867311D /* IQKeyboardManagerSwift-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Alamofire";
+			path = "../Target Support Files/IQKeyboardManagerSwift";
 			sourceTree = "<group>";
 		};
-		F9EC2CA173E9B7D81D1EE92E2B5141C5 /* IQKeyboardManagerSwift */ = {
+		8DFDA3F3DAB5F177ACC495D670E2F7CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A9E5DE3028C5461D935EEC484985288E /* IQBarButtonItem.swift */,
-				C7DE945961E937AF6C7C76B5C12A9B59 /* IQKeyboardManager.swift */,
-				9BF3F8F7723A2786447A46353F4DFD94 /* IQKeyboardManagerConstants.swift */,
-				AD6CDBC7BC2EF830FF92A1C7F126A5A1 /* IQKeyboardManagerConstantsInternal.swift */,
-				013F9666327FC9D37C0BA8C5059B7FC5 /* IQKeyboardReturnKeyHandler.swift */,
-				E82A913524A72A461497E216ED82AB5C /* IQNSArray+Sort.swift */,
-				C8D4696A18036FFF70525C8835E5E9BE /* IQPreviousNextView.swift */,
-				C4B0A8678317A8934CCCBAC1FA293C21 /* IQTextView.swift */,
-				67B3B3AD7A1BD84DD1E25EAA2BAE412D /* IQTitleBarButtonItem.swift */,
-				D952509783D9FDE7135BB432FDDA59B7 /* IQToolbar.swift */,
-				80F53FB8C54CD3EF16772AC2771192E2 /* IQUIScrollView+Additions.swift */,
-				A1657A2CFA5F81E597EB715FA3C9931A /* IQUITextFieldView+Additions.swift */,
-				19CD43E2EA4CB337B7EC87111204709C /* IQUIView+Hierarchy.swift */,
-				F955ECADE8CDDF3191E9008CB40A7BFA /* IQUIView+IQKeyboardToolbar.swift */,
-				288C0153455516EA81FF9E088CD41E3F /* IQUIViewController+Additions.swift */,
-				CD84FCEB0596A3C1BC943EE43C5F2D78 /* IQUIWindow+Hierarchy.swift */,
-				569494F67383156B2DFD3F3D3ECEF1A7 /* Resources */,
-				A624D9C928516AC70DEF09C4CA07D3CC /* Support Files */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		949928D95FDFF09F969C8006C5B889DC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				39A8606B8C938D58CC8FF75B90EA34D3 /* Info.plist */,
+				7CE4E98FC0F0B1C48D71AC060B30BB26 /* ResourceBundle-XLPagerTabStrip-Info.plist */,
+				67B595DBD329B0F0B105F7B1BE25F728 /* XLPagerTabStrip.modulemap */,
+				B8E909484850C58495BDB0D969EECEE1 /* XLPagerTabStrip.xcconfig */,
+				2BE6ACDCB6A764EC56BEF85FEDFAB858 /* XLPagerTabStrip-dummy.m */,
+				DE21DF887EED02C9302669FB9B145120 /* XLPagerTabStrip-prefix.pch */,
+				1D379EB57BBE2A080224A8B7B342BCC1 /* XLPagerTabStrip-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/XLPagerTabStrip";
+			sourceTree = "<group>";
+		};
+		A50DE294CE4F1AFFDFD8EFC527881FA8 /* Cosmos */ = {
+			isa = PBXGroup;
+			children = (
+				B62732C4062DD38C432DBA2537A0AE37 /* CosmosAccessibility.swift */,
+				FD8B4DB7D2C60735A30A6F76E1034C57 /* CosmosDefaultSettings.swift */,
+				A5901598B68A3B3F9E4E6655B0FD6EB0 /* CosmosLayerHelper.swift */,
+				AFDEF40AFD0EC639B6AB8D3517C30C0E /* CosmosLayers.swift */,
+				448A3736F897CA3D8BC540A2838F88DB /* CosmosLocalizedRating.swift */,
+				EA0ABB5BEB932E0B2EC8A0C83D014EF5 /* CosmosRating.swift */,
+				C75F0CAB8123E38DD9FAEA1BCD858F09 /* CosmosSettings.swift */,
+				26D6328F53D9A8C7B490D67EBCE9CD92 /* CosmosSize.swift */,
+				C396F55C90C1E640FFAEBC04A4A5E2D6 /* CosmosText.swift */,
+				AD0903AADAE2ED6373216FC3CA6DDD2F /* CosmosTouch.swift */,
+				1CE49CB4C9274392F7DC14AD0A01176D /* CosmosTouchTarget.swift */,
+				8D31FE0D6A578FB7213C22B79C8C4F92 /* CosmosView.swift */,
+				842FBF33DB08F3807F95A5542FADA596 /* RightToLeft.swift */,
+				6961015093BE8E694BD2A35A3E6C761D /* StarFillMode.swift */,
+				BD5D58A87D303ABB0050F67FBF682788 /* StarLayer.swift */,
+				FDF5B0CADB240771EFBBDFE644C51440 /* Support Files */,
+			);
+			name = Cosmos;
+			path = Cosmos;
+			sourceTree = "<group>";
+		};
+		AEEF2F75C878B74AC6B7B4F319199F75 /* IQKeyboardManagerSwift */ = {
+			isa = PBXGroup;
+			children = (
+				6E5C0315A0C6EEB49707538BAEEBD5FA /* IQBarButtonItem.swift */,
+				4F6203D08313110504FDAFD8E957BC17 /* IQKeyboardManager.swift */,
+				574C9A8498EBD9DF88EDB74342D08E6B /* IQKeyboardManagerConstants.swift */,
+				590A7F3092B4332ECD59A694F207246E /* IQKeyboardManagerConstantsInternal.swift */,
+				CDF1FBA07AE73D2ECD0EE87F621E6CD6 /* IQKeyboardReturnKeyHandler.swift */,
+				C05FD72C48CF29271DAEF00828B2C463 /* IQNSArray+Sort.swift */,
+				1241DC41ECA5298E0AE756F8501EA1FE /* IQPreviousNextView.swift */,
+				FF19A0350EA15DA223A1FADFC9DA8F24 /* IQTextView.swift */,
+				2DDEA874BD0432511888DD7648EC718C /* IQTitleBarButtonItem.swift */,
+				0C830B9BABB64F434549969E46D7763B /* IQToolbar.swift */,
+				51D012E7161368613C6552467F0E04C9 /* IQUIScrollView+Additions.swift */,
+				B718BC6D7203850BDD55B9ED229B03F7 /* IQUITextFieldView+Additions.swift */,
+				F5FF7DD34DEA158892A5C9BB06935914 /* IQUIView+Hierarchy.swift */,
+				AF3F47C2DAF50480AADA15F2ED4A3CDB /* IQUIView+IQKeyboardToolbar.swift */,
+				DDED378C6194FDDBABD8B0905A0052B3 /* IQUIViewController+Additions.swift */,
+				81696A189B38058266E381E76AD1AB79 /* IQUIWindow+Hierarchy.swift */,
+				7E131FE7E203BA4348CEF6063F11BBA3 /* Resources */,
+				8BC544B525D72B9BEBDC0DDEFC1AA461 /* Support Files */,
 			);
 			name = IQKeyboardManagerSwift;
 			path = IQKeyboardManagerSwift;
 			sourceTree = "<group>";
 		};
-		FBE19240B9B3FC58AE2EE761280A69A7 /* Support Files */ = {
+		BB28FF4CDD9D9F3E3253261A20AD2A5D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7CF95B9E467044E344CC28151983B3CC /* Info.plist */,
-				3ADCF3E39DB614D44D7A339C846F8C38 /* MBProgressHUD.modulemap */,
-				986D47FABA0BE7FD7DFFB739F83514BF /* MBProgressHUD.xcconfig */,
-				8E4A79D9246A25B3BC697552B3057A80 /* MBProgressHUD-dummy.m */,
-				EB5B45D04E1B6EB6A3BB1933BBDA0AF3 /* MBProgressHUD-prefix.pch */,
-				6DF193A8743D34F89DB714703F3ADE1A /* MBProgressHUD-umbrella.h */,
+				7EC3352266594556B492AF755D6159F4 /* Info.plist */,
+				D09757356F42E07F1CF4382067AE18A0 /* MBProgressHUD.modulemap */,
+				A3F860611B353FC4BAE0B5157395BA3E /* MBProgressHUD.xcconfig */,
+				6C0D8F91297D0BA6BEE3F19C315D599A /* MBProgressHUD-dummy.m */,
+				92FA5BBFBF1FD769B3FA6CF9487A1513 /* MBProgressHUD-prefix.pch */,
+				D8E59D10B9297E532BCAA4EFD5E383E9 /* MBProgressHUD-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MBProgressHUD";
 			sourceTree = "<group>";
 		};
+		BCD92D610D670079CB7889FFB0A0B16A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EA29B811EE2E007780618B074656A0C7 /* PayPalConfiguration.h */,
+				00F8F946577F9C9141D52106F453EF08 /* PayPalFuturePaymentViewController.h */,
+				57D302EF175F0481329F355899182CF8 /* PayPalMobile.h */,
+				373C5FB217D9572DD6F213A26EAE0D4F /* PayPalOAuthScopes.h */,
+				EA038D479DFBCCB51ADBA8DA573E409A /* PayPalPayment.h */,
+				B9DD724E76407C392EFDED8457E87558 /* PayPalPaymentViewController.h */,
+				7A95A5ED7D085C0E62F8A4EFBF1B416E /* PayPalProfileSharingViewController.h */,
+				353E3F032FCE3E29463BE39D4DE15653 /* Frameworks */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		C768350AC92766D9512BDC23FCB9D9D0 /* XLPagerTabStrip */ = {
+			isa = PBXGroup;
+			children = (
+				99DF4589D31CC734FD6322FFF4C5471F /* BarPagerTabStripViewController.swift */,
+				0E8CB37F2E1F48E533C944DB754508A7 /* BarView.swift */,
+				09D31452A53AC4B77FCCDED26A7D09E4 /* BaseButtonBarPagerTabStripViewController.swift */,
+				ED2C344103FD53EDF39C571AE24C2B11 /* ButtonBarPagerTabStripViewController.swift */,
+				8BDF2CB93EF6A538000326A0D9F2BE35 /* ButtonBarView.swift */,
+				1F99907652D84990C4AE57E50FFA3831 /* ButtonBarViewCell.swift */,
+				B5A9E2E6AA1F53E903DE59B0A0E91889 /* ButtonCell.xib */,
+				56111E89048D99913EE564BC58AF62DE /* FXPageControl.h */,
+				D1B908732B7DAAE0566B6DDED2421B71 /* FXPageControl.m */,
+				F1DF2144A668DAE1CA0343A575332E32 /* IndicatorInfo.swift */,
+				1CA0B2CF7EF297B52F5BEB4EB11DAB5C /* PagerTabStripBehaviour.swift */,
+				56251600EC41A85C0D6EE00DBA2F4D28 /* PagerTabStripError.swift */,
+				720ADD80D5CBAD8DF83B520F743EBF8A /* PagerTabStripViewController.swift */,
+				E1D6F2CE56FBE231E637D91AE9C100F0 /* SegmentedPagerTabStripViewController.swift */,
+				5806E840116E25EA10358C10AA9C430C /* SwipeDirection.swift */,
+				2F97EDEB991CA9361CFA199449C4677C /* TwitterPagerTabStripViewController.swift */,
+				8DFDA3F3DAB5F177ACC495D670E2F7CE /* Resources */,
+				949928D95FDFF09F969C8006C5B889DC /* Support Files */,
+			);
+			name = XLPagerTabStrip;
+			path = XLPagerTabStrip;
+			sourceTree = "<group>";
+		};
+		D9D0E0146A83D6B01AECA070095511C6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				064DC8110F0D10D8A442AD1C25D1FCBE /* EVReflection.modulemap */,
+				C494F97FA7BB961186DCD67BBA1D7543 /* EVReflection.xcconfig */,
+				56D2F14A16E6E597949CFD49B844585F /* EVReflection-dummy.m */,
+				0CF415C5061089ACE81FDF8C9499D403 /* EVReflection-prefix.pch */,
+				AA009212B52A5819705B46424A1C1FE2 /* EVReflection-umbrella.h */,
+				DD988EB4710CDB2000107D7B66B9A055 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/EVReflection";
+			sourceTree = "<group>";
+		};
+		FDF5B0CADB240771EFBBDFE644C51440 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A0B2E0D3EB4F47DD5E8F1F8001A120B5 /* Cosmos.modulemap */,
+				B75C41C8F4ACD775B33171C6B0395C0E /* Cosmos.xcconfig */,
+				D33B428C3E95E7695D934BD8D1C9686A /* Cosmos-dummy.m */,
+				32E36FEA8B23FD79AA9E60D6E91F46C4 /* Cosmos-prefix.pch */,
+				70183F9F8B1925D0EF200D65C1B7FCD1 /* Cosmos-umbrella.h */,
+				AE68F647D4F55BCF1AA3F5A1B92652AB /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Cosmos";
+			sourceTree = "<group>";
+		};
+		FED424D2037148B9250A669E7298B170 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB00BDD930DB4B25704A948A41518AC6 /* Alamofire.modulemap */,
+				1DFC7E95EF81306DB133AE42FE7E54B3 /* Alamofire.xcconfig */,
+				700A30AB2DA0CF6FDBB0FAE3CD315059 /* Alamofire-dummy.m */,
+				FBF8FDCFBE2F07CDF5DB14F844369D0D /* Alamofire-prefix.pch */,
+				80A4E542449FAEE9129BA970EC7E66D1 /* Alamofire-umbrella.h */,
+				5C0674E43BAF8C7666B0EEB383D473B4 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		115EB26429A8A5DDE25EA133F5E96FC5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D233F839F5156AE6EF7C162D64FB521 /* EVReflection-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		197B7877D5D346F405BDD059EF96DBDC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -819,14 +996,6 @@
 			files = (
 				84116DD709725E60919846D7B1AF714B /* DLRadioButton-umbrella.h in Headers */,
 				8F2D8EC348F59816CFDEA65538E3E532 /* DLRadioButton.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		37E422AD058054567FCFE05294FED462 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3F099D061FAF3EC116780170EB747903 /* EVReflection-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -883,6 +1052,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3A66455BB54C60581ED2154CB2279474 /* EVReflection */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46CF92244EA474C24D27FDB7BEA7AFE5 /* Build configuration list for PBXNativeTarget "EVReflection" */;
+			buildPhases = (
+				9B50C8FB384E7AC3EC39969689D08EEC /* Sources */,
+				247A7FF69938D457D9BD148BBE554A61 /* Frameworks */,
+				115EB26429A8A5DDE25EA133F5E96FC5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EVReflection;
+			productName = EVReflection;
+			productReference = 0963BB9B804A51DD8B0CBC99D6281B1B /* EVReflection.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		41FA54D12162DAD51D02FC58A2CD5034 /* MBProgressHUD */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC1874913BA1F82C4953C3C7F551AB22 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
@@ -975,23 +1161,6 @@
 			name = Alamofire;
 			productName = Alamofire;
 			productReference = D37A085A3DD3D7F49A544C19DFDF7C34 /* Alamofire.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		9AAB2077BCA8E341C7F83370229F7335 /* EVReflection */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7DD91F912E2F117756F08EA9044692D5 /* Build configuration list for PBXNativeTarget "EVReflection" */;
-			buildPhases = (
-				2CCA52F764C6E43FD19084E49ED3D5DB /* Sources */,
-				F26B59EA30643F555240205CB4941CA3 /* Frameworks */,
-				37E422AD058054567FCFE05294FED462 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EVReflection;
-			productName = EVReflection;
-			productReference = 0963BB9B804A51DD8B0CBC99D6281B1B /* EVReflection.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C6B7DCCCFACD79834F24B2A011035CA1 /* XLPagerTabStrip-XLPagerTabStrip */ = {
@@ -1088,7 +1257,7 @@
 				88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */,
 				4FDC533A4360A68ABDCE852F04B30927 /* Cosmos */,
 				F6A77E2753C279F67F70C5C21D6FAE15 /* DLRadioButton */,
-				9AAB2077BCA8E341C7F83370229F7335 /* EVReflection */,
+				3A66455BB54C60581ED2154CB2279474 /* EVReflection */,
 				4DC059E04CBA98AEDDB5C34E02D551E9 /* IQKeyboardManagerSwift */,
 				41FA54D12162DAD51D02FC58A2CD5034 /* MBProgressHUD */,
 				53A1DA381AE0E72D2D9F9EBD60BD4A45 /* Pods-Qadmni */,
@@ -1147,19 +1316,6 @@
 				37D48BA2331A3AF638550D336745AAC7 /* SwipeDirection.swift in Sources */,
 				285518536E838AA3BB250C777AA27354 /* TwitterPagerTabStripViewController.swift in Sources */,
 				C019A56E4EF2BAB627CC3BA107449428 /* XLPagerTabStrip-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CCA52F764C6E43FD19084E49ED3D5DB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				36AE14B8E02D64CF8B84067C50F59E47 /* EVArrayExtension.swift in Sources */,
-				84BAF6B074BAD851CD308A45A38956E8 /* EVObject.swift in Sources */,
-				8798E208C8450D641243A2AF9C9D3050 /* EVReflectable.swift in Sources */,
-				186D0D27D142D613DEEF020B86FBA0B8 /* EVReflection-dummy.m in Sources */,
-				96AB25A99E5C37789EAC7DB84C8D57D3 /* EVReflection.swift in Sources */,
-				7B0AD43D2E0C9380BE2678335CBC0B8D /* EVWorkaroundHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1235,6 +1391,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9B50C8FB384E7AC3EC39969689D08EEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB48B8C4CE5A21A96CE4197F9A261AA3 /* EVArrayExtension.swift in Sources */,
+				E517AF9CA32ED75A9C8D655124617479 /* EVDictionaryExtension.swift in Sources */,
+				B6815E0CB5845EE4B26F9D33AED8FC70 /* EVObject.swift in Sources */,
+				171F9524FCCAED4A31616FC7B75955FD /* EVReflectable.swift in Sources */,
+				8DD1B22639B1F9872A87985933594EC4 /* EVReflection-dummy.m in Sources */,
+				80A47DE68840853EC42EF437C852BC79 /* EVReflection.swift in Sources */,
+				DCCAF7B6B69DB6D77DD2F72738F8CB4A /* EVWorkaroundHelpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AB0925B8AA80E6202908F358FE239182 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1307,7 +1477,7 @@
 		ACB575B1808CB2E2876FD088E5E25EEF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = EVReflection;
-			target = 9AAB2077BCA8E341C7F83370229F7335 /* EVReflection */;
+			target = 3A66455BB54C60581ED2154CB2279474 /* EVReflection */;
 			targetProxy = B010C47455B66007597071767903EA4F /* PBXContainerItemProxy */;
 		};
 		C77F419A894B2AEBD42944C79A2AA8BE /* PBXTargetDependency */ = {
@@ -1339,7 +1509,7 @@
 /* Begin XCBuildConfiguration section */
 		045928D42CEEF90297685EC223510790 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A47ABE943FFAAE9AB4D5A3AF2E6EB655 /* XLPagerTabStrip.xcconfig */;
+			baseConfigurationReference = B8E909484850C58495BDB0D969EECEE1 /* XLPagerTabStrip.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XLPagerTabStrip";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1356,7 +1526,7 @@
 		};
 		0A29B6F510198AF64EFD762EF6FA97A5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBD247130907DDB7B2221DEF7011F989 /* Alamofire.xcconfig */;
+			baseConfigurationReference = 1DFC7E95EF81306DB133AE42FE7E54B3 /* Alamofire.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1386,9 +1556,42 @@
 			};
 			name = Release;
 		};
+		0B78D6CAF1A27F9A0F0672D64AED19FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C494F97FA7BB961186DCD67BBA1D7543 /* EVReflection.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EVReflection/EVReflection-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EVReflection/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EVReflection/EVReflection.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = EVReflection;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		18C3A91D366611A397C5AA34C52AD741 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A89E50B7C250CAC5078CF12A6FD8BD1E /* SWRevealViewController.xcconfig */;
+			baseConfigurationReference = 98563C379F13A98669C73AABB1BE584D /* SWRevealViewController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1420,7 +1623,7 @@
 		};
 		27A51848F6751436EFC7BA2C3531E6C6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A47ABE943FFAAE9AB4D5A3AF2E6EB655 /* XLPagerTabStrip.xcconfig */;
+			baseConfigurationReference = B8E909484850C58495BDB0D969EECEE1 /* XLPagerTabStrip.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1452,7 +1655,7 @@
 		};
 		3BCE0805F247CD432444A5A7155C5686 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BCFCA25D2470505CCC7065DCB362E2A /* DLRadioButton.xcconfig */;
+			baseConfigurationReference = 27869471EAF9FCFFAAE8575CE780B4E5 /* DLRadioButton.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1564,7 +1767,7 @@
 		};
 		5A7D61BFAF476FFEAAC1C3C5B50DD91C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 986D47FABA0BE7FD7DFFB739F83514BF /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = A3F860611B353FC4BAE0B5157395BA3E /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1631,7 +1834,7 @@
 		};
 		7D5D3A7AC9B6B06E99F08C24EAC4B877 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A47ABE943FFAAE9AB4D5A3AF2E6EB655 /* XLPagerTabStrip.xcconfig */;
+			baseConfigurationReference = B8E909484850C58495BDB0D969EECEE1 /* XLPagerTabStrip.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XLPagerTabStrip";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1646,42 +1849,9 @@
 			};
 			name = Debug;
 		};
-		851B08990F9D970ECB6B5DD1AB14E283 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D07809C714BB24E61A15258D97F87533 /* EVReflection.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/EVReflection/EVReflection-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EVReflection/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EVReflection/EVReflection.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = EVReflection;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		8AAA9E77A095DA5CEB8AEEB6C49DF400 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BCFCA25D2470505CCC7065DCB362E2A /* DLRadioButton.xcconfig */;
+			baseConfigurationReference = 27869471EAF9FCFFAAE8575CE780B4E5 /* DLRadioButton.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1713,7 +1883,7 @@
 		};
 		8B057773120D53DBB692700549D84EAD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 746DC0795382E0865FCA1772161211B7 /* IQKeyboardManagerSwift.xcconfig */;
+			baseConfigurationReference = F5AEEB3D8D6BD084661C9E291C9590D6 /* IQKeyboardManagerSwift.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1745,7 +1915,7 @@
 		};
 		A2ED5D07909FC9971ABEC4BB630EC6C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 746DC0795382E0865FCA1772161211B7 /* IQKeyboardManagerSwift.xcconfig */;
+			baseConfigurationReference = F5AEEB3D8D6BD084661C9E291C9590D6 /* IQKeyboardManagerSwift.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1778,7 +1948,7 @@
 		};
 		AE319A3E9937ED4451818A57FE7F2721 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A47ABE943FFAAE9AB4D5A3AF2E6EB655 /* XLPagerTabStrip.xcconfig */;
+			baseConfigurationReference = B8E909484850C58495BDB0D969EECEE1 /* XLPagerTabStrip.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1808,38 +1978,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		B3DFC59F42301E34E95C27180AD52CEE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D07809C714BB24E61A15258D97F87533 /* EVReflection.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/EVReflection/EVReflection-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EVReflection/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EVReflection/EVReflection.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = EVReflection;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1883,7 +2021,7 @@
 		};
 		B73A481611B1D804EE5092BA03B1AFEE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A89E50B7C250CAC5078CF12A6FD8BD1E /* SWRevealViewController.xcconfig */;
+			baseConfigurationReference = 98563C379F13A98669C73AABB1BE584D /* SWRevealViewController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1915,7 +2053,7 @@
 		};
 		D328BF5AC7A27E80E5214F7E51F21B4A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B17461960995B3F5E371C95698A720C /* Cosmos.xcconfig */;
+			baseConfigurationReference = B75C41C8F4ACD775B33171C6B0395C0E /* Cosmos.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1947,7 +2085,7 @@
 		};
 		D75065D84EBB32D4AF0CA10C29B62DBB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 986D47FABA0BE7FD7DFFB739F83514BF /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = A3F860611B353FC4BAE0B5157395BA3E /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1979,7 +2117,7 @@
 		};
 		E8FFBAAF3F155FD16002C12A1DC0EF0E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B17461960995B3F5E371C95698A720C /* Cosmos.xcconfig */;
+			baseConfigurationReference = B75C41C8F4ACD775B33171C6B0395C0E /* Cosmos.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2012,7 +2150,7 @@
 		};
 		F383079BFBF927813EA3613CFB679FDE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBD247130907DDB7B2221DEF7011F989 /* Alamofire.xcconfig */;
+			baseConfigurationReference = 1DFC7E95EF81306DB133AE42FE7E54B3 /* Alamofire.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2042,6 +2180,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		F3873CE062BA8100B5E776EC235436BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C494F97FA7BB961186DCD67BBA1D7543 /* EVReflection.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EVReflection/EVReflection-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EVReflection/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EVReflection/EVReflection.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = EVReflection;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -2091,6 +2261,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		46CF92244EA474C24D27FDB7BEA7AFE5 /* Build configuration list for PBXNativeTarget "EVReflection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B78D6CAF1A27F9A0F0672D64AED19FC /* Debug */,
+				F3873CE062BA8100B5E776EC235436BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		63C75912D8C965A455AA21213F31FACC /* Build configuration list for PBXNativeTarget "SWRevealViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2114,15 +2293,6 @@
 			buildConfigurations = (
 				A2ED5D07909FC9971ABEC4BB630EC6C8 /* Debug */,
 				8B057773120D53DBB692700549D84EAD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7DD91F912E2F117756F08EA9044692D5 /* Build configuration list for PBXNativeTarget "EVReflection" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				851B08990F9D970ECB6B5DD1AB14E283 /* Debug */,
-				B3DFC59F42301E34E95C27180AD52CEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

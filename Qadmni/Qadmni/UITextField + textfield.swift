@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MBProgressHUD
 
 extension UITextField
 {
@@ -94,6 +95,13 @@ extension UIView
     
     }
     
+    func roundedGreyBorder()
+    {
+        self.layer.borderColor = UIColor.gray.cgColor
+        self.layer.borderWidth = 1
+        self.layer.cornerRadius = 10
+        self.layer.masksToBounds = true
+    }
     
     }
 
@@ -112,18 +120,44 @@ extension UIImageView
 
 }
 
-extension UITableViewCell
-{
-    func roundedGreyBorder()
-    {
-        self.layer.borderColor = UIColor.gray.cgColor
-        self.layer.borderWidth = 1
-        self.layer.cornerRadius = 10
-        self.layer.masksToBounds = true
-        
-    }
+
 
     
+
+
+extension UIViewController
+{
+    
+    func showAlertMessage(title: String, message : String)
+    {
+        let alertView = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
+        let callActionHandler = { (action:UIAlertAction!) -> Void in
+            
+            print("showAlert")
+        }
+        let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: callActionHandler)
+        alertView.addAction(defaultAction)
+        alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
+        self.present(alertView, animated: true)
+        
+        
+    }
+    
+    
+    func showActivity()
+    {
+        let loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
+        loadingNotification.mode = MBProgressHUDMode.indeterminate
+        loadingNotification.label.text = "Loading"
+    }
+    
+    func hideActivity()
+    {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    
+    
 }
+
 
 

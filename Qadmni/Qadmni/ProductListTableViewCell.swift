@@ -10,6 +10,7 @@ import UIKit
 
 class ProductListTableViewCell: UITableViewCell {
     
+    @IBOutlet var productAvailableLabel: UILabel!
     @IBOutlet var displayProductImage: UIImageView!
     
     @IBOutlet var displayProductName: UILabel!

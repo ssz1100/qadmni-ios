@@ -11,6 +11,7 @@ import EVReflection
 
 public class VendorUserRequestModel : EVObject
 {
-
+    var producerId : Int32 = 0
+    var password : String = ""
 
 }
