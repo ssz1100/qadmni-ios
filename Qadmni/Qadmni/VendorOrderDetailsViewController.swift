@@ -42,6 +42,13 @@ class VendorOrderDetailsViewController: UIViewController,UIPickerViewDelegate,UI
                                            vendorLangCodeRequest: vendorLangCode,
                                            completionHandler: {
                                             response in
+                                            if (response?.errorCode == 0)
+                                            {
+                                            self.showAlertMessage(title: "Order Status", message: (response?.message)!)
+                                            }else{
+                                                self.showAlertMessage(title: "Order Status", message: (response?.message)!)
+
+                                            }
         
         
         })
@@ -126,7 +133,23 @@ class VendorOrderDetailsViewController: UIViewController,UIPickerViewDelegate,UI
         return changeStatusData.count
     }
     public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return changeStatusData[row].statusCode
+        let statusMessage : String = changeStatusData[row].statusCode
+        var readableString : String = ""
+
+        switch (statusMessage) {
+        case  "READY_TO_PICKUP":
+            readableString = "Ready to pickup"
+            break
+        case "Order Status waiting" :
+         readableString =  "Order Status waiting"
+            break
+        case "PICKUP_COMPLETE" :
+            readableString = "Order pickup complete"
+        default:
+            readableString = ""
+            break
+        }
+        return readableString
         
     }
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){

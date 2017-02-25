@@ -349,17 +349,14 @@ public class ServiceFacade
                 addProductResponseModel.message = responseErrorMessage
                 
                 if(responseErrorCode == 0){
-                    let addProductData : String? = responseValue["data"] as? String
+                    let responseRegistrationData : String? = responseValue["data"] as? String
                     
-                    let dict : NSDictionary = EVReflection.dictionaryFromJson(addProductData);
+                    let dict : NSDictionary = EVReflection.dictionaryFromJson(responseRegistrationData);
                     
                     addProductResponseModel = EVReflection.setPropertiesfromDictionary(dict, anyObject: addProductResponseModel)
-                    addProductResponseModel = AddProductResponseModel(json : addProductData)
+                    addProductResponseModel = AddProductResponseModel(json : responseRegistrationData)
                     
                 }
-
-                
-                
                 completionHandler(addProductResponseModel)
                 
         }
@@ -505,7 +502,7 @@ public class ServiceFacade
 
 
     
-    public func AddproductMultiPathData(filePathUrl:URL?,addProductImage : AddProductImageRequestModel?)
+    public func AddproductMultiPathData(fileData :Data,addProductImage : AddProductImageRequestModel?)
     {
       let endPointUrl : URL = URL(string:baseUrl + "addproductimage")!
         
@@ -516,9 +513,11 @@ public class ServiceFacade
        
         
         Alamofire.upload(multipartFormData: { (multipartFormData) in
-            multipartFormData.append(filePathUrl!, withName: "photo", fileName: "abc.jpeg", mimeType: "image/jpeg")
-            
-           multipartFormData.append((addProductImageString?.data(using: String.Encoding.utf8))!, withName: "json")
+            multipartFormData.append(fileData,
+                                     withName: "photo",
+                                     fileName: "abc.jpeg",
+                                     mimeType: "image/jpeg")
+            multipartFormData.append((addProductImageString?.data(using: String.Encoding.utf8))!, withName: "json")
 //            for (key, value) in params {
 //                multipartFormData.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
 //            }

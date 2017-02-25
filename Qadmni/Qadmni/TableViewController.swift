@@ -11,6 +11,9 @@ import XLPagerTabStrip
 
 class TableViewController: UITableViewController , IndicatorInfoProvider {
     
+    
+    
+    
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo
     {
         return IndicatorInfo.init(title: "Dessert")

@@ -14,7 +14,7 @@ UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDeleg
     var categoryId : Int = 0
     var userDefaultManager : UserDefaultManager = UserDefaultManager()
     var imageURL : URL? = nil
-    var productId : Int32 = 0
+    //var productId : Int32 = 0
     var image : UIImage!
     var imageData: Data!
 
@@ -83,17 +83,26 @@ UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDeleg
                                        vendorLangCodeRequest: vendorLangCode,
                                        completionHandler: {
                                         response in
-                                       self.productId = (response?.productId)!
-                                        print(self.productId)
-        
+//                                       self.productId = (response?.productId)!
+//                                        print(self.productId)
+                                        self.addMulipartImage(productId: (response?.productId)!)
+                                        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ProductListViewController") as UIViewController
+                                        self.present(vc, animated: true, completion: nil)
+
         })
-       var addProductImageRequest = AddProductImageRequestModel()
-        addProductImageRequest.productId = productId
-        addProductImageRequest = self.userDefaultManager.getVendorImageDetail()
-        serviceFacade.AddproductMultiPathData(filePathUrl: imageURL, addProductImage: addProductImageRequest)
         
         
 
+    }
+    
+    private func addMulipartImage(productId : Int32)
+    {
+        var addProductImageRequest = AddProductImageRequestModel()
+        addProductImageRequest = self.userDefaultManager.getVendorImageDetail()
+        addProductImageRequest.productId = productId
+        let serviceFacade = ServiceFacade(configUrl : PropertyReaderFile.getBaseUrl())
+        serviceFacade.AddproductMultiPathData(fileData: imageData, addProductImage: addProductImageRequest)
     }
 
     override func viewDidLoad() {
@@ -132,16 +141,19 @@ UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDeleg
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
     {
         imageURL = (info[UIImagePickerControllerReferenceURL] as! NSURL) as URL
-        let imageName = imageURL?.absoluteString
         
-
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+        //let imageName = imageURL?.absoluteString
+        
+        
+         let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
             productDisplay.image = pickedImage
             image = productDisplay.image!
             imageData = UIImageJPEGRepresentation(image!, 100)
+        
            
             
-        }
+        
+        
         
         dismiss(animated: true, completion: nil)
       

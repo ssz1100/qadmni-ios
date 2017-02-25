@@ -13,4 +13,12 @@ public class UpdateStatusModel : EVObject
 {
     var statusId : Int32 = 0
     var statusCode : String = ""
+    
+//    func getReadableStatus()-> String
+//    {
+//        if (self.statusCode == "READY_TO_PICKUP")
+//        {
+//       return
+//        }
+//    }
 }

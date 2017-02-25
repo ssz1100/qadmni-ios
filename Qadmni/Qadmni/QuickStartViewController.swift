@@ -23,6 +23,9 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController
     
     
     override func viewDidLoad() {
+        
+        
+        
         settings.style.buttonBarBackgroundColor = .white
         settings.style.buttonBarItemBackgroundColor = .white
         settings.style.selectedBarBackgroundColor = purpleInspireColor
@@ -37,17 +40,20 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController
             guard changeCurrentIndex == true else { return }
             oldCell?.label.textColor = .black
             newCell?.label.textColor =  self?.purpleInspireColor
+//            self.buttonBarView.selectedBar.backgroundColor = UIColor.white
         }
-
         
         super.viewDidLoad()
+
+        
+        
         
 //        self.settings.style.selectedBarHeight = 2
 //        self.settings.style.selectedBarBackgroundColor = UIColor.gray
         
        
         
-        PagerTabStripBehaviour.progressive(skipIntermediateViewControllers: true, elasticIndicatorLimit: true)
+        //PagerTabStripBehaviour.progressive(skipIntermediateViewControllers: true, elasticIndicatorLimit: true)
         
         
     
@@ -77,15 +83,5 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController
     }
     
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
