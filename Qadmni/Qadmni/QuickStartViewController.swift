@@ -14,8 +14,13 @@ import XLPagerTabStrip
 class QuickStartViewController: ButtonBarPagerTabStripViewController
     
 {
+    var initialLoading : Bool = true
+    
+    var categoryListGroup = DispatchGroup()
+    var categoryArray : [CustCategoryListResModel] = []
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
+
     
     
 
@@ -43,6 +48,38 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController
 //            self.buttonBarView.selectedBar.backgroundColor = UIColor.white
         }
         
+        
+        
+        self.menuButton.target = revealViewController()
+        self.menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+
+        
+                                            
+        
+        let custCategoryUser = CustomerUserRequestModel()
+        let custCategoryData = CustcategoryListReqModel()
+        let custLangCode = CustomerLangCodeRequestModel()
+        //var controllerList:[UIViewController] = []
+        //var categoryArray : [CustCategoryListResModel] = []
+        let serviceFacadeUser = ServiceFacadeUser(configUrl : PropertyReaderFile.getBaseUrl())
+        
+        //self.categoryListGroup.enter()
+        serviceFacadeUser.CustomerCategory(customerDataRequest: custCategoryData,
+                                           customerUserRequest: custCategoryUser,
+                                           customerLangCodeRequest: custLangCode,
+                                           completionHandler:{
+                                            response in
+                                            
+                                            self.categoryArray = response as! [CustCategoryListResModel]
+                                            //self.datasource = viewControllers()
+                                            self.initialLoading = false
+                                            self.reloadPagerTabStripView()
+                                            //self.categoryListGroup.leave()
+                                            
+                                            
+                                            
+        })
+        
         super.viewDidLoad()
 
         
@@ -50,29 +87,58 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController
         
 //        self.settings.style.selectedBarHeight = 2
 //        self.settings.style.selectedBarBackgroundColor = UIColor.gray
-        
-       
-        
         //PagerTabStripBehaviour.progressive(skipIntermediateViewControllers: true, elasticIndicatorLimit: true)
         
         
     
-        self.menuButton.target = revealViewController()
-        self.menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-        
+    
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController]
     {
-        let child_1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TableViewController")
-        let child_2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondTableViewController")
-        return [child_1, child_2]
+        var controllerList:[UIViewController] = []
+        if(initialLoading)
+        {
+            self.showActivity()
+        }
+        else{
+            self.hideActivity()
+        }
+        if(categoryArray.count == 0) {
+        var tabViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TableViewController") 
+        controllerList.append(tabViewController)
+        }else{
+            controllerList = self.generateViewControllerList(categoryList: categoryArray)
+        }
+                return controllerList
+ 
+        
+        
+//        let child_1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TableViewController")
+//        let child_2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TableViewController")
+//        let child_3 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TableViewController")
+//        let child_4 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TableViewController")
+//        let child_5 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TableViewController")
+//        return [child_1, child_2,child_3,child_4,child_5]
 //        return[TableViewController(),SecondTableViewController()]
     }
+
+private func generateViewControllerList(categoryList:[CustCategoryListResModel] )-> [UIViewController]
+ {
+    
+    var vc : [UIViewController] = []
+    
+    for category:CustCategoryListResModel in categoryList {
+        var tableView : TableViewController = TableViewController.init(categoryId: Int32(category.categoryId), categoryName: category.category)
+//        var categoryTabViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TableViewController")
+        vc.append(tableView)
+          }
+    return vc
+
+}
+
+
     override func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int, withProgressPercentage progressPercentage: CGFloat, indexWasChanged: Bool)
      {
     
@@ -81,7 +147,8 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController
     override func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int)
     {
     }
-    
-    
 
 }
+    
+
+

@@ -301,6 +301,59 @@ public class ServiceFacadeUser
                 
         }
     }
+    
+    public func CustomerCategory(customerDataRequest:CustcategoryListReqModel?,
+                               customerUserRequest:CustomerUserRequestModel?,
+                               customerLangCodeRequest:CustomerLangCodeRequestModel?,
+                               completionHandler: @escaping ([CustCategoryListResModel?])->Void)
+    {
+        let endPointUrl : URL = URL(string:baseUrl + "categorylist")!
+        let customerDataString : String? = ""
+        let customerUserString : String? = ""
+        let customerLangCodeString : String? = ""
+        
+        let custCategoryParameter: Parameters = buildRequestParameters(dataString: customerDataString, userString: customerUserString, langCodeString: customerLangCodeString)
+        //let dispatchQueue = DispatchQueue(label: "Main", qos: .userInitiated, attributes: .concurrent, autoreleaseFrequency: .inherit, target: nil)
+        
+        let alamoFireRequest:DataRequest = Alamofire.request(endPointUrl,
+                          method: .post,
+                          parameters: nil,
+                          encoding: JSONEncoding.default,
+                          headers: nil);
+        
+            alamoFireRequest.responseJSON (queue: DispatchQueue.main, completionHandler: {
+                response in
+                let custCategoryListResModel = CustCategoryListResModel()
+                guard response.result.isSuccess else{
+                    //completionHandler(nil)
+                    return
+                }
+                guard  let responseValue = response.result.value as? [String : AnyObject]
+                    else{
+                      //  completionHandler(nil)
+                        return
+                        
+                }
+                
+                let responseErrorCode : Int32 = responseValue["errorCode"] as! Int32
+                custCategoryListResModel.errorCode = responseErrorCode
+                let responseErrorMessage : String = (responseValue["message"] as? String)!
+                custCategoryListResModel.message = responseErrorMessage
+                
+                var dict: Array<CustCategoryListResModel> = []
+                if(responseErrorCode == 0)
+                {
+                    let responseData : String = (responseValue["data"] as? String)!
+                    dict=[CustCategoryListResModel](json:responseData)
+                    
+                }
+                completionHandler(dict)
+                
+        })
+        
+    }
+    
+
 
     
     

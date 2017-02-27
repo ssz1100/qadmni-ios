@@ -23,7 +23,37 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "quickStartSegue" {
+//            
+//            let custCategoryUser = CustomerUserRequestModel()
+//            let custCategoryData = CustcategoryListReqModel()
+//            let custLangCode = CustomerLangCodeRequestModel()
+//
+//            let serviceFacadeUser = ServiceFacadeUser(configUrl : PropertyReaderFile.getBaseUrl())
+//            
+//            serviceFacadeUser.CustomerCategory(customerDataRequest: custCategoryData,
+//                                               customerUserRequest: custCategoryUser,
+//                                               customerLangCodeRequest: custLangCode,
+//                                               completionHandler: {
+//                                                response in
+//                                                
+//                                                let destinationController = segue.destination as! QuickStartViewController
+//                                                destinationController.categoryArray = response as! [CustCategoryListResModel]
+//            })
+            
+                                                
+
+            
+            
+            
+            
+        }
 
 
-}
+
+
+
+
+
 
