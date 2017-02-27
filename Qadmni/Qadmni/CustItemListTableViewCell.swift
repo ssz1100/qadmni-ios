@@ -7,8 +7,20 @@
 //
 
 import UIKit
+import Cosmos
 
 class CustItemListTableViewCell: UITableViewCell {
+    @IBOutlet var displayItemImage: UIView!
+    @IBOutlet var itemName: UILabel!
+    @IBOutlet var favImage: UIImageView!
+    @IBOutlet var itemRatingView: CosmosView!
+    @IBOutlet var producerNameLabel: UILabel!
+    @IBOutlet var itemDescription: UILabel!
+    @IBOutlet var distanceLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var amountLabel: UILabel!
+    @IBOutlet var qautityLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -353,6 +353,61 @@ public class ServiceFacadeUser
         
     }
     
+    
+    public func CustomerItemlist(customerDataRequest:CustItemListReqModel?,
+                            customerUserRequest:CustomerUserRequestModel?,
+                            customerLangCodeRequest:CustomerLangCodeRequestModel?,
+                            completionHandler: @escaping (CustItemListResModel?)->Void)
+    {
+        let endPointUrl : URL = URL(string:baseUrl + "itemlist")!
+        let custDataString : String? = customerDataRequest?.toJsonString()
+        let custUserString : String? = customerUserRequest?.toJsonString()
+        let custLangCodeString : String? = customerLangCodeRequest?.toJsonString()
+        
+        let custOrderParameter: Parameters = buildRequestParameters(dataString: custDataString, userString: custUserString, langCodeString: custLangCodeString)
+        
+        
+        Alamofire.request(endPointUrl,
+                          method: .post,
+                          parameters: custOrderParameter,
+                          encoding: JSONEncoding.default,
+                          headers: nil)
+            .responseJSON{
+                response in
+                var custItemListResModel = CustItemListResModel()
+                guard response.result.isSuccess else{
+                    completionHandler(custItemListResModel)
+                    return
+                }
+                guard  let responseValue = response.result.value as? [String : AnyObject]
+                    else{
+                        completionHandler(custItemListResModel)
+                        return
+                        
+                }
+                
+                let responseErrorCode : Int32 = responseValue["errorCode"] as! Int32
+                custItemListResModel.errorCode = responseErrorCode
+                let responseErrorMessage : String = (responseValue["message"] as? String)!
+                custItemListResModel.message = responseErrorMessage
+                if(responseErrorCode == 0){
+                    let responseProcessOrderData : String? = responseValue["data"] as? String
+                    
+                    let dict : NSDictionary = EVReflection.dictionaryFromJson(responseProcessOrderData);
+                    
+                    custItemListResModel = EVReflection.setPropertiesfromDictionary(dict, anyObject: custItemListResModel)
+                    custItemListResModel = CustItemListResModel(json : responseProcessOrderData)
+                    
+                }
+                completionHandler(custItemListResModel)
+
+                
+                
+        }
+        
+    }
+
+    
 
 
     

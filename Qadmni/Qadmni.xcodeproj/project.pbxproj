@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		CD0377951E33657B00FAE471 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0377941E33657B00FAE471 /* ForgotPasswordViewController.swift */; };
 		CD0560091E6456C400E87A07 /* CustItemListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0560081E6456C300E87A07 /* CustItemListTableViewCell.swift */; };
+		CD05600B1E6461D100E87A07 /* CustItemListReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD05600A1E6461D000E87A07 /* CustItemListReqModel.swift */; };
+		CD05600D1E64626600E87A07 /* CustItemListResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD05600C1E64626600E87A07 /* CustItemListResModel.swift */; };
+		CD05600F1E6462B300E87A07 /* ItemInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD05600E1E6462B300E87A07 /* ItemInfoModel.swift */; };
+		CD0560111E6465DC00E87A07 /* ProducerLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0560101E6465DC00E87A07 /* ProducerLocationModel.swift */; };
 		CD33D1DB1E5854D300D38DB9 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33D1DA1E5854D300D38DB9 /* CheckBox.swift */; };
 		CD33D1DD1E5883EB00D38DB9 /* CustDetailsPlaceOrderReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33D1DC1E5883EB00D38DB9 /* CustDetailsPlaceOrderReqModel.swift */; };
 		CD33D1DF1E5884FE00D38DB9 /* ItemRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33D1DE1E5884FE00D38DB9 /* ItemRequestModel.swift */; };
@@ -130,6 +134,10 @@
 		CAAECFAA4EF22160736EB017 /* Pods-Qadmni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qadmni.release.xcconfig"; path = "Pods/Target Support Files/Pods-Qadmni/Pods-Qadmni.release.xcconfig"; sourceTree = "<group>"; };
 		CD0377941E33657B00FAE471 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		CD0560081E6456C300E87A07 /* CustItemListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustItemListTableViewCell.swift; sourceTree = "<group>"; };
+		CD05600A1E6461D000E87A07 /* CustItemListReqModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustItemListReqModel.swift; sourceTree = "<group>"; };
+		CD05600C1E64626600E87A07 /* CustItemListResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustItemListResModel.swift; sourceTree = "<group>"; };
+		CD05600E1E6462B300E87A07 /* ItemInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemInfoModel.swift; sourceTree = "<group>"; };
+		CD0560101E6465DC00E87A07 /* ProducerLocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProducerLocationModel.swift; sourceTree = "<group>"; };
 		CD33D1DA1E5854D300D38DB9 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		CD33D1DC1E5883EB00D38DB9 /* CustDetailsPlaceOrderReqModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustDetailsPlaceOrderReqModel.swift; sourceTree = "<group>"; };
 		CD33D1DE1E5884FE00D38DB9 /* ItemRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemRequestModel.swift; sourceTree = "<group>"; };
@@ -515,6 +523,7 @@
 				CD33D1DE1E5884FE00D38DB9 /* ItemRequestModel.swift */,
 				CDA49FFF1E5C1D7200F6A100 /* CustProcessOrderReqModel.swift */,
 				CDA4A0281E5C473200F6A100 /* CustConfirmOrderReqModel.swift */,
+				CD05600A1E6461D000E87A07 /* CustItemListReqModel.swift */,
 			);
 			name = CustomerRequestModel;
 			sourceTree = "<group>";
@@ -531,6 +540,9 @@
 				CD9565141E5AB8FE00AF3A7E /* CustChargeBreakupResModel.swift */,
 				CDA4A0011E5C1FCD00F6A100 /* CustProcessOrderResModel.swift */,
 				CDA4A0031E5C201300F6A100 /* PayPalInfoResModel.swift */,
+				CD05600C1E64626600E87A07 /* CustItemListResModel.swift */,
+				CD05600E1E6462B300E87A07 /* ItemInfoModel.swift */,
+				CD0560101E6465DC00E87A07 /* ProducerLocationModel.swift */,
 			);
 			name = CustomerResponseModel;
 			sourceTree = "<group>";
@@ -706,7 +718,9 @@
 				CDCE59341E41CB1900BE36CE /* BaseResponseModel.swift in Sources */,
 				CD9565111E5AB78900AF3A7E /* CustPlaceOrderResModel.swift in Sources */,
 				CD81D73A1E4AEFFE00FA33FE /* VendorItemRequestModel.swift in Sources */,
+				CD05600B1E6461D100E87A07 /* CustItemListReqModel.swift in Sources */,
 				CD33D1E11E58867800D38DB9 /* PaymentMethod.swift in Sources */,
+				CD05600F1E6462B300E87A07 /* ItemInfoModel.swift in Sources */,
 				CDE6FDB21E52EB50009A18E7 /* CustomerUserRequestModel.swift in Sources */,
 				CD81D73F1E4B0DAD00FA33FE /* UserDefaultManager.swift in Sources */,
 				CDEC80CF1E449BB8004FE5B6 /* GoogleMapViewController.swift in Sources */,
@@ -746,10 +760,12 @@
 				CD0377951E33657B00FAE471 /* ForgotPasswordViewController.swift in Sources */,
 				CDA429C21E3C89720069D928 /* FilterViewController.swift in Sources */,
 				CDB5D1151E3F4E7000AC20F0 /* ProductListTableViewCell.swift in Sources */,
+				CD0560111E6465DC00E87A07 /* ProducerLocationModel.swift in Sources */,
 				CDE322DB1E4077C800002DBD /* MyFavouritesTableViewController.swift in Sources */,
 				CDCE59381E420FE500BE36CE /* VendorLangCodeRequestModel.swift in Sources */,
 				CDCE592F1E41C59800BE36CE /* ServiceFacade.swift in Sources */,
 				CDE6FDAC1E52E9AD009A18E7 /* ServiceFacadeUser.swift in Sources */,
+				CD05600D1E64626600E87A07 /* CustItemListResModel.swift in Sources */,
 				CDCE593A1E42132A00BE36CE /* VendorLoginResponseModel.swift in Sources */,
 				CDFB30041E32498D00A742E9 /* VendorShopDetailViewController.swift in Sources */,
 				CD6FF9B91E5B21B400616634 /* ProcessItemTableViewCell.swift in Sources */,

@@ -36,6 +36,20 @@ class TableViewController: UITableViewController , IndicatorInfoProvider {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let custItemListUser = CustomerUserRequestModel()
+        let custItemListData = CustItemListReqModel()
+        let custLangCode = CustomerLangCodeRequestModel()
+        custItemListData.categoryId = categoryId
+        let serviceFacadeUser = ServiceFacadeUser(configUrl : PropertyReaderFile.getBaseUrl())
+        serviceFacadeUser.CustomerItemlist(customerDataRequest: custItemListData,
+                                           customerUserRequest: custItemListUser,
+                                           customerLangCodeRequest: custLangCode,
+                                           completionHandler: {
+                                            response  in
+        })
+        
+        
+        
                 
         
         
@@ -58,7 +72,7 @@ class TableViewController: UITableViewController , IndicatorInfoProvider {
 
     
 override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustItemListTableViewCell
 
         // Configure the cell...
 
