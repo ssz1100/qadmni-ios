@@ -12,6 +12,7 @@ import SWRevealViewController
 import XLPagerTabStrip
 import CoreLocation
 import Alamofire
+import EVReflection
 
 class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocationManagerDelegate
     
@@ -183,7 +184,8 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
             let googleDistanceUrl : String = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins="
             let apiKey : String = "&key="+"AIzaSyA8CA7g54OOFJFaMp9j8FzS0K0uh4azFCM"
             let custCurrentLocation : String = String(self.customerLattitude)+","+String(self.customerLongitude)
-            let producerLocation : String = "&destinations=" + String(producerModel.businessLat)+","+String(producerModel.businessLong)
+           // let producerLocation : String = "&destinations=" + String(producerModel.businessLat)+","+String(producerModel.businessLong)
+            let producerLocation : String = "&destinations=18.5319231,73.829899"
             let finalString : String = googleDistanceUrl+custCurrentLocation+producerLocation+apiKey
             
             Alamofire.request(finalString,
@@ -195,16 +197,27 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
                     guard response.result.isSuccess else{
                         return
                     }
-                    guard  let responseValue = response.result.value as? String
-                        else{
-                            return
-                    }
+//                    guard  let responseValue = response.result.value as? [String : AnyObject]
+//                        else{
+//                            return
+//                    }
                     
-                    debugPrint(responseValue)
-                    var rows : [GoogleDistanceResModel] = [GoogleDistanceResModel](json:responseValue)
-                    producerModel.distance=rows[0].distance.text
-                    producerModel.distanceDouble=rows[0].distance.value
-                    producerModel.time=rows[0].duration.text
+                    //debugPrint(responseValue)
+                     let dict : NSDictionary = response.result.value  as! NSDictionary
+                    var rows: NSArray = dict.value(forKey: "rows") as! NSArray
+                    let rowsDict:NSDictionary=rows[0] as! NSDictionary
+                    var elements : NSArray = rowsDict.value(forKey: "elements") as! NSArray
+                    let elementDist:NSDictionary=elements[0] as! NSDictionary
+                  //  var googleDistanceResModel : [GoogleDistanceResModel] = [GoogleDistanceResModel](json:elementDist)
+//                   var rows:[GoogleDistanceResModel] = []
+                    //rows=EVReflection.setPropertiesfromDictionary(dict, anyObject:rows )
+                    let distance:NSDictionary=elementDist.value(forKey: "distance") as! NSDictionary
+                    producerModel.distance=distance.value(forKey: "text") as! String
+                    producerModel.distanceDouble=distance.value(forKey: "value") as! Double
+                    let duration : NSDictionary = elementDist.value(forKey: "duration") as! NSDictionary
+                   producerModel.time=duration.value(forKey: "text") as! String
+                    print(dict)
+                    print(elementDist)
                     
             }
         }

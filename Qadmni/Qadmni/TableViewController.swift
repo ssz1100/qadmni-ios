@@ -16,6 +16,7 @@ class TableViewController: UITableViewController , IndicatorInfoProvider {
     var categoryId :Int32 = 0
     var categoryName: String?
     var itemsData: [DisplayItemList]=[]
+    let coreData = CoreData()
     /*init(categoryId: Int32 ,categoryName: String,items:[DisplayItemList])
     {
         //super.init()
@@ -84,7 +85,8 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
         cell?.amountLabel.text = amountString
         let reviewString : String = String(self.itemsData[indexPath.row].reviews)
         cell?.reviewLabel.text = reviewString + " Review"
-        
+        let rating : Double = Double(self.itemsData[indexPath.row].rating)!
+        cell?.itemRatingView.rating = rating
         
         let url = URL(string:self.itemsData[indexPath.row].imageUrl)
         if(url == nil){}
@@ -93,6 +95,11 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
         let data = NSData(contentsOf:url!)
             cell?.itemImage.image = UIImage(data:data as! Data)
         }
+        
+        cell?.qautityLabel.text = String(self.itemsData[indexPath.row].itemQuantity)
+        cell?.stepperValue.tag = indexPath.row
+        cell?.stepperValue.addTarget(self, action:#selector(stepperTapped(sender:)), for: .touchUpInside)
+        
     
         
         
@@ -108,6 +115,21 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
     
 
         return cell!
+    }
+    
+    func stepperTapped(sender : UIStepper)
+    {
+        itemsData[sender.tag].itemQuantity = Int32(sender.value)
+        let cartModel:MyCartModel=MyCartModel()
+        cartModel.productId=itemsData[sender.tag].itemId
+        cartModel.producerId=itemsData[sender.tag].producerData.producerId
+        cartModel.productName=itemsData[sender.tag].itemName
+        cartModel.productQuantity = Int16(itemsData[sender.tag].itemQuantity)
+        cartModel.unitPrice=itemsData[sender.tag].unitPrice
+        coreData.storeUserData(cartModel: cartModel)
+        tableView.reloadData()
+        
+    
     }
     
 

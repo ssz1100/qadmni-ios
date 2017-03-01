@@ -28,6 +28,9 @@ class FilterViewController: UIViewController {
     
     @IBAction func applyButtonTabbed(_ sender: UIButton) {
     }
+    @IBAction func filterBackButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 
     override func viewDidLoad() {

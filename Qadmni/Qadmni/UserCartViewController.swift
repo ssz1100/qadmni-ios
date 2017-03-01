@@ -22,6 +22,11 @@ class UserCartViewController: UIViewController, UITableViewDataSource,UITableVie
     
     @IBAction func proceedToPayButton(_ sender: UIButton) {
     }
+    
+    @IBAction func myCartBackButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +34,7 @@ class UserCartViewController: UIViewController, UITableViewDataSource,UITableVie
       tableview.delegate = self
       tableview.dataSource = self
         let coreData = CoreData()
-        let cartModel:MyCartModel=MyCartModel()
-        cartModel.productId=3970
-        cartModel.producerId=19351
-        cartModel.productName="Choco Biscuits"
-        cartModel.productQuantity=4
-        cartModel.unitPrice=100.00
-      coreData.storeUserData(cartModel: cartModel)
+        
        cartList =  coreData.getUserCoreDataDetails()
        
         

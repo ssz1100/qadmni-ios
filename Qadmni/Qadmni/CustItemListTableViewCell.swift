@@ -26,6 +26,8 @@ class CustItemListTableViewCell: UITableViewCell {
     
     @IBOutlet var reviewLabel: UILabel!
     
+    @IBOutlet var stepperValue : UIStepper!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
