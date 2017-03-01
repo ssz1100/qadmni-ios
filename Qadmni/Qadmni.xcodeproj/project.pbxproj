@@ -41,7 +41,6 @@
 		CD9565131E5AB82300AF3A7E /* CustOrderedItemResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9565121E5AB82300AF3A7E /* CustOrderedItemResModel.swift */; };
 		CD9565151E5AB8FE00AF3A7E /* CustChargeBreakupResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9565141E5AB8FE00AF3A7E /* CustChargeBreakupResModel.swift */; };
 		CD9923391E3742BD00B814EA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9923381E3742BD00B814EA /* TableViewController.swift */; };
-		CD99233B1E3772E800B814EA /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD99233A1E3772E700B814EA /* SecondTableViewController.swift */; };
 		CD9A11531E45ADC00043DA43 /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9A11521E45ADBF0043DA43 /* SearchResultsController.swift */; };
 		CD9B2BA31E54375A008A949F /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9B2BA21E54375A008A949F /* CoreData.swift */; };
 		CD9B2BA51E543C3F008A949F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9B2BA41E543C3F008A949F /* CoreData.framework */; };
@@ -103,6 +102,11 @@
 		CDCE59361E420FA200BE36CE /* VendorUserRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE59351E420FA200BE36CE /* VendorUserRequestModel.swift */; };
 		CDCE59381E420FE500BE36CE /* VendorLangCodeRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE59371E420FE500BE36CE /* VendorLangCodeRequestModel.swift */; };
 		CDCE593A1E42132A00BE36CE /* VendorLoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE59391E42132A00BE36CE /* VendorLoginResponseModel.swift */; };
+		CDDA80231E658D93009F45AF /* ProducerItemListdataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA80221E658D93009F45AF /* ProducerItemListdataModel.swift */; };
+		CDDA80251E659646009F45AF /* GoogleDistanceResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA80241E659646009F45AF /* GoogleDistanceResModel.swift */; };
+		CDDA80271E659697009F45AF /* DurationResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA80261E659697009F45AF /* DurationResModel.swift */; };
+		CDDA80291E65970A009F45AF /* DistanceResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA80281E65970A009F45AF /* DistanceResModel.swift */; };
+		CDDA802B1E65A7E3009F45AF /* DisplayItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA802A1E65A7E3009F45AF /* DisplayItemList.swift */; };
 		CDE322D91E40763500002DBD /* VendorOrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE322D81E40763500002DBD /* VendorOrderDetailsViewController.swift */; };
 		CDE322DB1E4077C800002DBD /* MyFavouritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE322DA1E4077C800002DBD /* MyFavouritesTableViewController.swift */; };
 		CDE322DD1E40789800002DBD /* MyFavouritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE322DC1E40789800002DBD /* MyFavouritesTableViewCell.swift */; };
@@ -166,7 +170,6 @@
 		CD9565121E5AB82300AF3A7E /* CustOrderedItemResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustOrderedItemResModel.swift; sourceTree = "<group>"; };
 		CD9565141E5AB8FE00AF3A7E /* CustChargeBreakupResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustChargeBreakupResModel.swift; sourceTree = "<group>"; };
 		CD9923381E3742BD00B814EA /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		CD99233A1E3772E700B814EA /* SecondTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
 		CD9A11521E45ADBF0043DA43 /* SearchResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsController.swift; sourceTree = "<group>"; };
 		CD9B2BA21E54375A008A949F /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		CD9B2BA41E543C3F008A949F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -231,6 +234,11 @@
 		CDCE59351E420FA200BE36CE /* VendorUserRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorUserRequestModel.swift; sourceTree = "<group>"; };
 		CDCE59371E420FE500BE36CE /* VendorLangCodeRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorLangCodeRequestModel.swift; sourceTree = "<group>"; };
 		CDCE59391E42132A00BE36CE /* VendorLoginResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorLoginResponseModel.swift; sourceTree = "<group>"; };
+		CDDA80221E658D93009F45AF /* ProducerItemListdataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProducerItemListdataModel.swift; sourceTree = "<group>"; };
+		CDDA80241E659646009F45AF /* GoogleDistanceResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDistanceResModel.swift; sourceTree = "<group>"; };
+		CDDA80261E659697009F45AF /* DurationResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurationResModel.swift; sourceTree = "<group>"; };
+		CDDA80281E65970A009F45AF /* DistanceResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceResModel.swift; sourceTree = "<group>"; };
+		CDDA802A1E65A7E3009F45AF /* DisplayItemList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayItemList.swift; sourceTree = "<group>"; };
 		CDE322D81E40763500002DBD /* VendorOrderDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorOrderDetailsViewController.swift; sourceTree = "<group>"; };
 		CDE322DA1E4077C800002DBD /* MyFavouritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFavouritesTableViewController.swift; sourceTree = "<group>"; };
 		CDE322DC1E40789800002DBD /* MyFavouritesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFavouritesTableViewCell.swift; sourceTree = "<group>"; };
@@ -450,7 +458,6 @@
 				CD7CDC691E35EEA000D35F19 /* QuickStartViewController.swift */,
 				CDE322E21E40AFA700002DBD /* MyProfileViewController.swift */,
 				CD9923381E3742BD00B814EA /* TableViewController.swift */,
-				CD99233A1E3772E700B814EA /* SecondTableViewController.swift */,
 				CD33D1DA1E5854D300D38DB9 /* CheckBox.swift */,
 				CDC9456F1E2F98C800E6946F /* UITextField + textfield.swift */,
 			);
@@ -543,6 +550,11 @@
 				CD05600C1E64626600E87A07 /* CustItemListResModel.swift */,
 				CD05600E1E6462B300E87A07 /* ItemInfoModel.swift */,
 				CD0560101E6465DC00E87A07 /* ProducerLocationModel.swift */,
+				CDDA80241E659646009F45AF /* GoogleDistanceResModel.swift */,
+				CDDA80221E658D93009F45AF /* ProducerItemListdataModel.swift */,
+				CDDA80261E659697009F45AF /* DurationResModel.swift */,
+				CDDA80281E65970A009F45AF /* DistanceResModel.swift */,
+				CDDA802A1E65A7E3009F45AF /* DisplayItemList.swift */,
 			);
 			name = CustomerResponseModel;
 			sourceTree = "<group>";
@@ -698,6 +710,7 @@
 				CDE6FDB61E52EBC6009A18E7 /* CustomerLoginResponseModel.swift in Sources */,
 				CDC945501E2F522B00E6946F /* ViewController.swift in Sources */,
 				CDC52C491E30E4BF00C860FA /* VendorLoginViewController.swift in Sources */,
+				CDDA80291E65970A009F45AF /* DistanceResModel.swift in Sources */,
 				CDB5D10B1E3F0D8900AC20F0 /* LeftVendorViewController.swift in Sources */,
 				CDA429C61E3CA7F60069D928 /* SettingViewController.swift in Sources */,
 				CD33D1DB1E5854D300D38DB9 /* CheckBox.swift in Sources */,
@@ -705,6 +718,7 @@
 				CDFB30021E323F8100A742E9 /* VendorRegisterViewController.swift in Sources */,
 				CD9FA4441E498D67002BC631 /* VendorSignupRequestModel.swift in Sources */,
 				CDFB30001E3221CC00A742E9 /* UserRegisterViewController.swift in Sources */,
+				CDDA80251E659646009F45AF /* GoogleDistanceResModel.swift in Sources */,
 				CD33D1E31E5887C000D38DB9 /* DelieveryMethods.swift in Sources */,
 				CDB0A73E1E5EFD8200009C91 /* UpdateStatusModel.swift in Sources */,
 				CD9FA4461E49903A002BC631 /* VendorEmailValidateRequestModel.swift in Sources */,
@@ -718,6 +732,7 @@
 				CDCE59341E41CB1900BE36CE /* BaseResponseModel.swift in Sources */,
 				CD9565111E5AB78900AF3A7E /* CustPlaceOrderResModel.swift in Sources */,
 				CD81D73A1E4AEFFE00FA33FE /* VendorItemRequestModel.swift in Sources */,
+				CDDA80231E658D93009F45AF /* ProducerItemListdataModel.swift in Sources */,
 				CD05600B1E6461D100E87A07 /* CustItemListReqModel.swift in Sources */,
 				CD33D1E11E58867800D38DB9 /* PaymentMethod.swift in Sources */,
 				CD05600F1E6462B300E87A07 /* ItemInfoModel.swift in Sources */,
@@ -731,7 +746,7 @@
 				CDB5D1191E3F5DCE00AC20F0 /* VendorOrderStatusTableViewCell.swift in Sources */,
 				CDB0A73A1E5EEAF800009C91 /* VendorOrderReqModel.swift in Sources */,
 				CD33D1DF1E5884FE00D38DB9 /* ItemRequestModel.swift in Sources */,
-				CD99233B1E3772E800B814EA /* SecondTableViewController.swift in Sources */,
+				CDDA802B1E65A7E3009F45AF /* DisplayItemList.swift in Sources */,
 				CDE322E31E40AFA700002DBD /* MyProfileViewController.swift in Sources */,
 				CD33D1DD1E5883EB00D38DB9 /* CustDetailsPlaceOrderReqModel.swift in Sources */,
 				CDE322DD1E40789800002DBD /* MyFavouritesTableViewCell.swift in Sources */,
@@ -762,6 +777,7 @@
 				CDB5D1151E3F4E7000AC20F0 /* ProductListTableViewCell.swift in Sources */,
 				CD0560111E6465DC00E87A07 /* ProducerLocationModel.swift in Sources */,
 				CDE322DB1E4077C800002DBD /* MyFavouritesTableViewController.swift in Sources */,
+				CDDA80271E659697009F45AF /* DurationResModel.swift in Sources */,
 				CDCE59381E420FE500BE36CE /* VendorLangCodeRequestModel.swift in Sources */,
 				CDCE592F1E41C59800BE36CE /* ServiceFacade.swift in Sources */,
 				CDE6FDAC1E52E9AD009A18E7 /* ServiceFacadeUser.swift in Sources */,

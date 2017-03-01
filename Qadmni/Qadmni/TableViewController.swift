@@ -8,55 +8,53 @@
 
 import UIKit
 import XLPagerTabStrip
+import CoreLocation
+import EVReflection
+import Alamofire
 
 class TableViewController: UITableViewController , IndicatorInfoProvider {
     var categoryId :Int32 = 0
-    var categoryName: String = ""
-    
-    init(categoryId: Int32 ,categoryName: String)
+    var categoryName: String?
+    var itemsData: [DisplayItemList]=[]
+    /*init(categoryId: Int32 ,categoryName: String,items:[DisplayItemList])
     {
         //super.init()
         self.categoryId = categoryId
         self.categoryName = categoryName
-        super.init(style: UITableViewStyle.plain)
-    }
+        self.itemsData=items
+        super.init(nibName: nil, bundle: nil)
+    }*/
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 //        fatalError("init(coder:) has not been implemented")
     }
     
+    public func setInfo(categoryId: Int32 ,categoryName: String?,items:[DisplayItemList]){
+        self.categoryId = categoryId
+        self.categoryName = categoryName
+        self.itemsData=items
+    }
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo
     {
-        return IndicatorInfo.init(title: categoryName)
+        var initCategory = categoryName == nil ? "" : categoryName
+        return IndicatorInfo.init(title: initCategory!)
     }
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+//        self.tableView.register(CustItemListTableViewCell.self, forCellReuseIdentifier: "cellidentifier")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         
-        let custItemListUser = CustomerUserRequestModel()
-        let custItemListData = CustItemListReqModel()
-        let custLangCode = CustomerLangCodeRequestModel()
-        custItemListData.categoryId = categoryId
-        let serviceFacadeUser = ServiceFacadeUser(configUrl : PropertyReaderFile.getBaseUrl())
-        serviceFacadeUser.CustomerItemlist(customerDataRequest: custItemListData,
-                                           customerUserRequest: custItemListUser,
-                                           customerLangCodeRequest: custLangCode,
-                                           completionHandler: {
-                                            response  in
-        })
-        
-        
-        
-                
-        
-        
-            }
+    }
     
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -67,16 +65,49 @@ class TableViewController: UITableViewController , IndicatorInfoProvider {
     
      override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 0
+        return itemsData.count
     }
 
     
 override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustItemListTableViewCell
+       let cell = tableView.dequeueReusableCell(withIdentifier: "cellidentifier", for: indexPath) as? CustItemListTableViewCell
+    if(cell != nil)
+    {
+        cell?.itemName.text = self.itemsData[indexPath.row].itemName
+        cell?.itemDescription.text = self.itemsData[indexPath.row].itemDesc
+        cell?.distanceLabel.text = self.itemsData[indexPath.row].producerData.distance
+        cell?.timeLabel.text = self.itemsData[indexPath.row].producerData.time
+        cell?.producerNameLabel.text = self.itemsData[indexPath.row].producerData.businessName
+        cell?.offerLabel.text = self.itemsData[indexPath.row].offerText
+        cell?.itemName.text = self.itemsData[indexPath.row].itemName
+        let amountString : String = String(self.itemsData[indexPath.row].unitPrice)
+        cell?.amountLabel.text = amountString
+        let reviewString : String = String(self.itemsData[indexPath.row].reviews)
+        cell?.reviewLabel.text = reviewString + " Review"
+        
+        
+        let url = URL(string:self.itemsData[indexPath.row].imageUrl)
+        if(url == nil){}
+        else
+        {
+        let data = NSData(contentsOf:url!)
+            cell?.itemImage.image = UIImage(data:data as! Data)
+        }
+    
+        
+        
+        
+        
+        
+    
+    
+    }
+  
+    
+    
+    
 
-        // Configure the cell...
-
-        return cell
+        return cell!
     }
     
 

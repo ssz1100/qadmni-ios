@@ -10,7 +10,7 @@ import UIKit
 import Cosmos
 
 class CustItemListTableViewCell: UITableViewCell {
-    @IBOutlet var displayItemImage: UIView!
+    
     @IBOutlet var itemName: UILabel!
     @IBOutlet var favImage: UIImageView!
     @IBOutlet var itemRatingView: CosmosView!
@@ -20,6 +20,11 @@ class CustItemListTableViewCell: UITableViewCell {
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var amountLabel: UILabel!
     @IBOutlet var qautityLabel: UILabel!
+    @IBOutlet var offerLabel: UILabel!
+    
+    @IBOutlet var itemImage : UIImageView!
+    
+    @IBOutlet var reviewLabel: UILabel!
     
 
     override func awakeFromNib() {
