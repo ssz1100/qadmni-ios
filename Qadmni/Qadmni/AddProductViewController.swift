@@ -61,6 +61,12 @@ UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDeleg
     
     @IBAction func addProductSaveButton(_ sender: UIButton) {
         
+        let checkOut : Bool = validateData()
+        
+        if(!checkOut)
+        {
+            return;
+        }
         if (productId > 0)
         {
             let vendorUser : VendorUserRequestModel = self.userDefaultManager.getVendorDetail()
@@ -90,20 +96,27 @@ UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDeleg
                                                 if (self.isImagePicked)
                                                 {
                                                     self.addMulipartImage(productId: self.productId)
-                                                    let alertView = UIAlertController.init(title:"Update product" , message:response?.message, preferredStyle: .alert)
-                                                    let callActionHandler = { (action:UIAlertAction!) -> Void in
-                                                        if (response?.errorCode == 0){
-                                                        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                                                        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ProductListViewController") as UIViewController
-                                                        self.present(vc, animated: true, completion: nil)
+                                                    if (response?.errorCode == 0)
+                                                    {
+                                                        let alertView = UIAlertController.init(title:"Update product" , message:"Product updated successfully", preferredStyle: .alert)
+                                                        let callActionHandler = { (action:UIAlertAction!) -> Void in
+                                                            
+                                                            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                                            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ProductListViewController") as UIViewController
+                                                            self.present(vc, animated: true, completion: nil)
+                                                            
+                                                            
                                                         }
-                                                        
+                                                        let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: callActionHandler)
+                                                        alertView.addAction(defaultAction)
+                                                        alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
+                                                        self.present(alertView, animated: true)
+
                                                     }
-                                                    let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: callActionHandler)
-                                                    alertView.addAction(defaultAction)
-                                                    alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
-                                                    self.present(alertView, animated: true)
-                                                }
+                                                    else{
+                                                        self.showAlertMessage(title: "Update product", message: (response?.message)!)
+                                                    }
+                                                                                                    }
             })
         
         
@@ -136,18 +149,24 @@ UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDeleg
 //                                       self.productId = (response?.productId)!
 //                                        print(self.productId)
                                         self.addMulipartImage(productId: (response?.productId)!)
-                                        let alertView = UIAlertController.init(title:"Update product" , message:response?.message, preferredStyle: .alert)
-                                        let callActionHandler = { (action:UIAlertAction!) -> Void in
-                                            if (response?.errorCode == 0){
-                                            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                                            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ProductListViewController") as UIViewController
-                                            self.present(vc, animated: true, completion: nil)
+                                        if (response?.errorCode == 0)
+                                        {
+                                            let alertView = UIAlertController.init(title:"Add product" , message:"Product added successfully", preferredStyle: .alert)
+                                            let callActionHandler = { (action:UIAlertAction!) -> Void in
+                                                
+                                                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                                let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ProductListViewController") as UIViewController
+                                                self.present(vc, animated: true, completion: nil)
+                                                
                                             }
+                                            let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: callActionHandler)
+                                            alertView.addAction(defaultAction)
+                                            alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
+                                            self.present(alertView, animated: true)
+                                        }else{
+                                        self.showAlertMessage(title: "Add product" , message: (response?.message)!)
                                         }
-                                        let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: callActionHandler)
-                                        alertView.addAction(defaultAction)
-                                        alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
-                                        self.present(alertView, animated: true)
+                                        
 
 
         })
@@ -294,6 +313,54 @@ UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDeleg
         return categoryname
     
     }
+    
+    func validateData() -> Bool
+    {
+        
+        if (self.categoryPickerTxtField.text?.isEmpty)!
+        {
+            self.showAlertMessage(title: "Info", message: "Please select category")
+            return false
+        }
+        else if (self.productNameEnglishTxt.text?.isEmpty)!
+        {
+            self.showAlertMessage(title: "Info", message: "Please enter product name in english")
+            return false
+        }
+        else if (self.productNameArabicTxt.text?.isEmpty)!
+        {
+            self.showAlertMessage(title: "Info", message: "Please enter product name in arabic")
+            return false
+        }
+        else if (self.productDetailEnglishTxt.text?.isEmpty)!
+        {
+            self.showAlertMessage(title: "Info", message: "Please enter product description in english")
+            return false
+        }
+        else if (self.productDetailArabicTxt.text?.isEmpty)!
+        {
+            self.showAlertMessage(title: "Info", message: "Please enter product description in arabic")
+            return false
+        }
+        else if (self.priceTxtField.text?.isEmpty)!
+        {
+            self.showAlertMessage(title: "Info", message: "Please enter price")
+            return false
+        }
+        else if (!self.isImagePicked)
+        {
+            self.showAlertMessage(title: "Info", message: "Please select product image")
+            return false
+        }
+
+        return true
+        
+        
+    }
+    
+    
+
+
 
     
 }

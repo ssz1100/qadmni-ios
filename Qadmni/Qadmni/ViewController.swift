@@ -9,40 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    
-    
-    
-
+    var userDefaultManager : UserDefaultManager = UserDefaultManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+//        if(userDefaultManager.getUserType() == 1)
+//        {
+//            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc: VendorLoginViewController = storyboard.instantiateViewController(withIdentifier: "VendorLoginViewController") as! VendorLoginViewController
+//            self.present(vc, animated: true, completion: nil)
+//        
+//        }else if(userDefaultManager.getUserType() == 2)
+//        {
+//            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc: UserLoginViewController = storyboard.instantiateViewController(withIdentifier: "UserLoginViewController") as! UserLoginViewController
+//            self.present(vc, animated: true, completion: nil)
+//        }
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "quickStartSegue" {
-//            
-//            let custCategoryUser = CustomerUserRequestModel()
-//            let custCategoryData = CustcategoryListReqModel()
-//            let custLangCode = CustomerLangCodeRequestModel()
-//
-//            let serviceFacadeUser = ServiceFacadeUser(configUrl : PropertyReaderFile.getBaseUrl())
-//            
-//            serviceFacadeUser.CustomerCategory(customerDataRequest: custCategoryData,
-//                                               customerUserRequest: custCategoryUser,
-//                                               customerLangCodeRequest: custLangCode,
-//                                               completionHandler: {
-//                                                response in
-//                                                
-//                                                let destinationController = segue.destination as! QuickStartViewController
-//                                                destinationController.categoryArray = response as! [CustCategoryListResModel]
-//            })
-            
-                                                
+    
 
             
             

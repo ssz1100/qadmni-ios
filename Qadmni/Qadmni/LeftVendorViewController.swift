@@ -10,6 +10,7 @@ import UIKit
 import SWRevealViewController
 
 class LeftVendorViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    var userDefaultManager : UserDefaultManager = UserDefaultManager()
     @IBOutlet var vendorTableView: UITableView!
     
     @IBOutlet var leftProfileImage: UIImageView!
@@ -63,11 +64,14 @@ class LeftVendorViewController: UIViewController,UITableViewDataSource,UITableVi
         {
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let vc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "OrderStatusNavigation") as! UINavigationController
-           
+                self.present(vc, animated: true, completion: nil)
+        }
+        else if (indexPath as NSIndexPath).row == 3
+        {
+            self.userDefaultManager.getUserDetailClear()
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") 
             self.present(vc, animated: true, completion: nil)
-
-
-        
         }
     }
 

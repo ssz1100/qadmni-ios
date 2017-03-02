@@ -25,8 +25,25 @@ public class UserDefaultManager
         userDefaults.setValue(vendorResponse?.businessLong, forKey: "vendorBusinessLong")
         userDefaults.setValue(vendorResponse?.emailId, forKey: "vendorEmailId")
         userDefaults.setValue(vendorResponse?.password, forKey: "vendorPassword")
+        userDefaults.setValue("vendor", forKey: "userType")
         userDefaults.synchronize()
      
+    }
+    
+    public func getVendorDetailClear ()
+    {
+        userDefaults.setValue(nil, forKey: "vendorproducerId")
+        userDefaults.setValue(nil, forKey: "vendorproducerName")
+        userDefaults.setValue(nil, forKey: "vendorBusinessNameEn")
+        userDefaults.setValue(nil, forKey: "vendorBusinessNameAr")
+        userDefaults.setValue(nil, forKey: "vendorBusinessAddress")
+        userDefaults.setValue(nil, forKey: "vendorBusinessLat")
+        userDefaults.setValue(nil, forKey: "vendorBusinessLong")
+        userDefaults.setValue(nil, forKey: "vendorEmailId")
+        userDefaults.setValue(nil, forKey: "vendorPassword")
+        userDefaults.setValue(nil, forKey: "userType")
+        userDefaults.synchronize()
+
     }
     public func getVendorDetail()-> VendorUserRequestModel
     {
@@ -56,8 +73,21 @@ public class UserDefaultManager
         userDefaults.setValue(customerResponse?.phone, forKey: "customerphone")
         userDefaults.setValue(customerResponse?.emailId, forKey: "customerEmailId")
         userDefaults.setValue(customerResponse?.password, forKey: "customerPassword")
+        userDefaults.setValue("customer", forKey: "userType")
         userDefaults.synchronize()
     
+    }
+    
+    public func getUserDetailClear()
+    {
+        userDefaults.setValue(nil, forKey: "customerId")
+        userDefaults.setValue(nil, forKey: "customername")
+        userDefaults.setValue(nil, forKey: "customerphone")
+        userDefaults.setValue(nil, forKey: "customerEmailId")
+        userDefaults.setValue(nil, forKey: "customerPassword")
+        userDefaults.setValue(nil, forKey: "userType")
+        userDefaults.synchronize()
+
     }
     
     public func getCustomerCredential() -> CustomerUserRequestModel
@@ -69,6 +99,16 @@ public class UserDefaultManager
         return customerUserRequestModel
     
     }
-
+    
+    public func getUserType() -> String
+    {
+        var userType : String = ""
+         userType = userDefaults.value(forKey: "userType") as! String
+        
+        return userType
+    }
+    
+   
+    
 
 }

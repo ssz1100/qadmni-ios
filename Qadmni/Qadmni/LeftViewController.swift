@@ -9,12 +9,15 @@
 import UIKit
 
 class LeftViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    var userDefaultManager : UserDefaultManager = UserDefaultManager()
     
+    @IBOutlet var profileImage: UIImageView!
     var menuNameArray:Array = [String]()
     var menuIconImage :Array = [UIImage]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.profileImage.roundedImageView()
 
         menuNameArray = ["My Cart","My Orders","My Favourites","My Profile","Setting","Partner Login","Logout"]
         menuIconImage = [UIImage(named:"shoppingcart")!,UIImage(named:"basket")!,UIImage(named:"favourites")!,UIImage(named:"profile")!,UIImage(named:"setting")!,UIImage(named:"shop")!,UIImage(named:"logout")!]
@@ -36,10 +39,23 @@ class LeftViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         
     }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (indexPath as NSIndexPath).row == 1
+        {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "UserCartViewController")
+            self.present(vc, animated: true, completion: nil)
+        }
+        else if (indexPath as NSIndexPath).row == 6
+        {
+            self.userDefaultManager.getUserDetailClear()
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ViewController")
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+
     
     
 
