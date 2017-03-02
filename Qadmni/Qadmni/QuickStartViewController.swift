@@ -21,6 +21,7 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
     let locationManager = CLLocationManager()
     var customerLattitude : Double = 0
     var customerLongitude : Double = 0
+    let coreData = CoreData()
     
     var categoryListGroup = DispatchGroup()
     var categoryArray : [CustCategoryListResModel] = []
@@ -245,6 +246,7 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
             displayItem.offerText=itemInfo.offerText
             displayItem.categoryId=itemInfo.categoryId
             displayItem.reviews=itemInfo.reviews
+            displayItem.itemQuantity = coreData.getItemQuantity(itemId: itemInfo.itemId)
             
             displayItem.producerData=self.getProducerById(producerId:itemInfo.producerId,producers:producers)
             self.itemList.append(displayItem)

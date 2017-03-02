@@ -67,6 +67,15 @@ extension UIButton
     self.layer.borderWidth = 1
     self.layer.borderColor = UIColor.white.cgColor
     }
+    
+    public func roundedBlackColorBorderButton()
+    {
+        
+        self.layer.cornerRadius = 10
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.black.cgColor
+    }
+
 }
 
 extension UILabel

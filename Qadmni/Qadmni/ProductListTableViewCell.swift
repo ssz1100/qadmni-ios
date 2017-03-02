@@ -21,6 +21,8 @@ class ProductListTableViewCell: UITableViewCell {
     
     @IBOutlet var productPrice: UILabel!
     
+    @IBOutlet var updateProductOutlet: UIButton!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

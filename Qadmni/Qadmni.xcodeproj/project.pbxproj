@@ -114,6 +114,10 @@
 		CDE322E11E40A18700002DBD /* dummy_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDE322E01E40A18700002DBD /* dummy_image.jpg */; };
 		CDE322E31E40AFA700002DBD /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE322E21E40AFA700002DBD /* MyProfileViewController.swift */; };
 		CDE322E51E40B41E00002DBD /* header_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CDE322E41E40B41E00002DBD /* header_icon.png */; };
+		CDE440B31E67EC3B006BE971 /* VendorUpdateProductReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE440B21E67EC3B006BE971 /* VendorUpdateProductReqModel.swift */; };
+		CDE440B51E67EF20006BE971 /* VendorItemsDetailReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE440B41E67EF20006BE971 /* VendorItemsDetailReqModel.swift */; };
+		CDE440B71E67F5EE006BE971 /* VendorItemDetailResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE440B61E67F5EE006BE971 /* VendorItemDetailResModel.swift */; };
+		CDE440B91E680303006BE971 /* default_img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDE440B81E680303006BE971 /* default_img.jpg */; };
 		CDE6FDAC1E52E9AD009A18E7 /* ServiceFacadeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6FDAB1E52E9AD009A18E7 /* ServiceFacadeUser.swift */; };
 		CDE6FDB01E52EB37009A18E7 /* CustomerLoginRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6FDAF1E52EB37009A18E7 /* CustomerLoginRequestModel.swift */; };
 		CDE6FDB21E52EB50009A18E7 /* CustomerUserRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6FDB11E52EB50009A18E7 /* CustomerUserRequestModel.swift */; };
@@ -246,6 +250,10 @@
 		CDE322E01E40A18700002DBD /* dummy_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dummy_image.jpg; sourceTree = "<group>"; };
 		CDE322E21E40AFA700002DBD /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		CDE322E41E40B41E00002DBD /* header_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_icon.png; sourceTree = "<group>"; };
+		CDE440B21E67EC3B006BE971 /* VendorUpdateProductReqModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorUpdateProductReqModel.swift; sourceTree = "<group>"; };
+		CDE440B41E67EF20006BE971 /* VendorItemsDetailReqModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorItemsDetailReqModel.swift; sourceTree = "<group>"; };
+		CDE440B61E67F5EE006BE971 /* VendorItemDetailResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorItemDetailResModel.swift; sourceTree = "<group>"; };
+		CDE440B81E680303006BE971 /* default_img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = default_img.jpg; sourceTree = "<group>"; };
 		CDE6FDAB1E52E9AD009A18E7 /* ServiceFacadeUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceFacadeUser.swift; sourceTree = "<group>"; };
 		CDE6FDAF1E52EB37009A18E7 /* CustomerLoginRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerLoginRequestModel.swift; sourceTree = "<group>"; };
 		CDE6FDB11E52EB50009A18E7 /* CustomerUserRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerUserRequestModel.swift; sourceTree = "<group>"; };
@@ -397,6 +405,7 @@
 		CDC945621E2F54C300E6946F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CDE440B81E680303006BE971 /* default_img.jpg */,
 				CDAE23AB1E60628A0024F4A4 /* form_wiz_1.jpg */,
 				CDAE23AD1E6062A50024F4A4 /* form_wiz_2.jpg */,
 				CDAE23AF1E6062B70024F4A4 /* form_wiz_3.jpg */,
@@ -489,6 +498,8 @@
 				CDB0A7391E5EEAF700009C91 /* VendorOrderReqModel.swift */,
 				CDAE23B31E6070C50024F4A4 /* UpdateDelStatusViewController.swift */,
 				CDE6FDC11E53457A009A18E7 /* VendorForgotPasswordRequestModel.swift */,
+				CDE440B21E67EC3B006BE971 /* VendorUpdateProductReqModel.swift */,
+				CDE440B41E67EF20006BE971 /* VendorItemsDetailReqModel.swift */,
 			);
 			name = VendorRequestModel;
 			sourceTree = "<group>";
@@ -503,6 +514,7 @@
 				CDB0A73B1E5EEDCE00009C91 /* VendorOrderResponseModel.swift */,
 				CDB0A73D1E5EFD8200009C91 /* UpdateStatusModel.swift */,
 				CD81D7421E4B335900FA33FE /* AddProductResponseModel.swift */,
+				CDE440B61E67F5EE006BE971 /* VendorItemDetailResModel.swift */,
 			);
 			name = VendorResponseModel;
 			sourceTree = "<group>";
@@ -628,6 +640,7 @@
 				CDE322DF1E409D1F00002DBD /* profile_back_demo.jpg in Resources */,
 				CDE322E51E40B41E00002DBD /* header_icon.png in Resources */,
 				CD9FA4481E49ED1F002BC631 /* splash_screen_back_one.png in Resources */,
+				CDE440B91E680303006BE971 /* default_img.jpg in Resources */,
 				CDFB2FFE1E32211C00A742E9 /* register_back.jpg in Resources */,
 				CDA429C41E3CA0B80069D928 /* ic_lang_setting_banner.png in Resources */,
 				CDC9455B1E2F522B00E6946F /* LaunchScreen.storyboard in Resources */,
@@ -706,6 +719,7 @@
 				CDE6FDB81E52EC06009A18E7 /* CustomerBaseResponseModel.swift in Sources */,
 				CD9923391E3742BD00B814EA /* TableViewController.swift in Sources */,
 				CDC945561E2F522B00E6946F /* Qadmni.xcdatamodeld in Sources */,
+				CDE440B71E67F5EE006BE971 /* VendorItemDetailResModel.swift in Sources */,
 				CD81D7471E4B3D4B00FA33FE /* VendorCategoryResponseModel.swift in Sources */,
 				CDE6FDB61E52EBC6009A18E7 /* CustomerLoginResponseModel.swift in Sources */,
 				CDC945501E2F522B00E6946F /* ViewController.swift in Sources */,
@@ -763,6 +777,7 @@
 				CDA4A0021E5C1FCD00F6A100 /* CustProcessOrderResModel.swift in Sources */,
 				CDE6FDC01E533D3B009A18E7 /* VendorForgotPasswordViewController.swift in Sources */,
 				CD9565151E5AB8FE00AF3A7E /* CustChargeBreakupResModel.swift in Sources */,
+				CDE440B51E67EF20006BE971 /* VendorItemsDetailReqModel.swift in Sources */,
 				CD9291DE1E61AB150040D5AD /* CustCategoryListResModel.swift in Sources */,
 				CD9B2BA31E54375A008A949F /* CoreData.swift in Sources */,
 				CD84D93A1E3B28390083BF71 /* UserCartTableViewCell.swift in Sources */,
@@ -783,6 +798,7 @@
 				CDE6FDAC1E52E9AD009A18E7 /* ServiceFacadeUser.swift in Sources */,
 				CD05600D1E64626600E87A07 /* CustItemListResModel.swift in Sources */,
 				CDCE593A1E42132A00BE36CE /* VendorLoginResponseModel.swift in Sources */,
+				CDE440B31E67EC3B006BE971 /* VendorUpdateProductReqModel.swift in Sources */,
 				CDFB30041E32498D00A742E9 /* VendorShopDetailViewController.swift in Sources */,
 				CD6FF9B91E5B21B400616634 /* ProcessItemTableViewCell.swift in Sources */,
 				CD7CDC6C1E360C3900D35F19 /* LeftViewController.swift in Sources */,

@@ -58,7 +58,7 @@ class ProductListViewController: UIViewController,UITableViewDataSource,UITableV
            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "AddProductViewController") as UIViewController
     
-           self.present(vc, animated: true, completion: nil)
+           self.navigationController?.pushViewController(vc, animated: true)
     
         }
 
@@ -74,6 +74,7 @@ class ProductListViewController: UIViewController,UITableViewDataSource,UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProductListTableViewCell
         
+        cell.updateProductOutlet.roundedBlackColorBorderButton()
         cell.displayProductName.text? = self.vendorItemResponseModel[indexPath.row].itemName
         let price:Double = self.vendorItemResponseModel[indexPath.row].price
         let priceString:String = String(format:"%.2f", price)
@@ -97,9 +98,24 @@ class ProductListViewController: UIViewController,UITableViewDataSource,UITableV
         cell.productAvailableLabel.text = "Not Available for sale"
         }
         
+        cell.updateProductOutlet.tag = indexPath.row
+        cell.updateProductOutlet.addTarget(self, action:#selector(updateProductButton(sender:)), for: .touchUpInside)
+        
         return cell
         
     }
+    
+    func updateProductButton(sender : UIButton)
+    {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: AddProductViewController = storyboard.instantiateViewController(withIdentifier: "AddProductViewController") as! AddProductViewController
+        vc.productId = self.vendorItemResponseModel[sender.tag].itemId
+        self.navigationController?.pushViewController(vc, animated: true)
+    
+    
+    }
+    
+    
     
 
     

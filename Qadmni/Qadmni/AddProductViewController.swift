@@ -14,9 +14,10 @@ UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDeleg
     var categoryId : Int = 0
     var userDefaultManager : UserDefaultManager = UserDefaultManager()
     var imageURL : URL? = nil
-    //var productId : Int32 = 0
+    var productId : Int32 = 0
     var image : UIImage!
     var imageData: Data!
+    var isImagePicked : Bool = false
 
     
     let pickerView = UIPickerView()
@@ -55,9 +56,58 @@ UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDeleg
     }
   
     @IBAction func addProductCancelButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func addProductSaveButton(_ sender: UIButton) {
+        
+        if (productId > 0)
+        {
+            let vendorUser : VendorUserRequestModel = self.userDefaultManager.getVendorDetail()
+            let vendorData = VendorUpdateProductReqModel()
+            let vendorLangCode = VendorLangCodeRequestmodel()
+            
+            vendorData.categoryId = categoryId
+            vendorData.itemNameEn = self.productNameEnglishTxt.text!
+            vendorData.itemNameAr = self.productNameArabicTxt.text!
+            vendorData.itemDescEn = self.productDetailEnglishTxt.text!
+            vendorData.itemDescAr = self.productDetailArabicTxt.text!
+            vendorData.offerText = self.productOfferTxt.text!
+            let price : String = self.priceTxtField.text!
+            let priceDouble : Double = Double(price)!
+            if (priceDouble == nil)
+            {
+                return
+            }
+            vendorData.price = priceDouble
+            
+            let serviceFacade = ServiceFacade(configUrl : PropertyReaderFile.getBaseUrl())
+            serviceFacade.vendorUpdateProduct(vendorDataRequest: vendorData,
+                                              vendorUserRequest: vendorUser,
+                                              vendorLangCodeRequest: vendorLangCode,
+                                              completionHandler: {
+                                                response in
+                                                if (self.isImagePicked)
+                                                {
+                                                    self.addMulipartImage(productId: self.productId)
+                                                    let alertView = UIAlertController.init(title:"Update product" , message:response?.message, preferredStyle: .alert)
+                                                    let callActionHandler = { (action:UIAlertAction!) -> Void in
+                                                        if (response?.errorCode == 0){
+                                                        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                                        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ProductListViewController") as UIViewController
+                                                        self.present(vc, animated: true, completion: nil)
+                                                        }
+                                                        
+                                                    }
+                                                    let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: callActionHandler)
+                                                    alertView.addAction(defaultAction)
+                                                    alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
+                                                    self.present(alertView, animated: true)
+                                                }
+            })
+        
+        
+        }else{
         
         let vendorUser : VendorUserRequestModel = self.userDefaultManager.getVendorDetail()
         let vendorData = AddProductRequestModel()
@@ -86,11 +136,22 @@ UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDeleg
 //                                       self.productId = (response?.productId)!
 //                                        print(self.productId)
                                         self.addMulipartImage(productId: (response?.productId)!)
-                                        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                                        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ProductListViewController") as UIViewController
-                                        self.present(vc, animated: true, completion: nil)
+                                        let alertView = UIAlertController.init(title:"Update product" , message:response?.message, preferredStyle: .alert)
+                                        let callActionHandler = { (action:UIAlertAction!) -> Void in
+                                            if (response?.errorCode == 0){
+                                            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ProductListViewController") as UIViewController
+                                            self.present(vc, animated: true, completion: nil)
+                                            }
+                                        }
+                                        let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: callActionHandler)
+                                        alertView.addAction(defaultAction)
+                                        alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
+                                        self.present(alertView, animated: true)
+
 
         })
+        }
         
         
 
@@ -131,6 +192,52 @@ UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDeleg
         
         })
         
+        if (productId > 0)
+        {
+            let vendorItemDetailUser : VendorUserRequestModel = self.userDefaultManager.getVendorDetail()
+            let vendorItemDetailData = VendorItemDetailReqModel()
+            vendorItemDetailData.productId = productId
+            let vendorLangCode = VendorLangCodeRequestmodel()
+            
+            
+            let serviceFacade = ServiceFacade(configUrl : PropertyReaderFile.getBaseUrl())
+            serviceFacade.vendorItemDetail(vendorDataRequest: vendorItemDetailData,
+                                           vendorUserRequest: vendorItemDetailUser,
+                                           vendorLangCodeRequest: vendorLangCode,
+                                           completionHandler: {
+                                            response in
+                                            self.productNameEnglishTxt.text = response?.itemNameEn
+                                            self.productNameArabicTxt.text = response?.itemNameAr
+                                            self.productDetailEnglishTxt.text = response?.itemDescEn
+                                            self.productDetailArabicTxt.text = response?.itemDescAr
+                                            self.productNameArabicTxt.text = response?.itemNameAr
+                                            self.productOfferTxt.text = response?.offerText
+                                            let price : Double = (response?.unitPrice)!
+                                            self.priceTxtField.text = String(price)
+                                            self.categoryPickerTxtField.text = self.getCategoryName(categoryId: (response?.categoryId)!)
+                                            
+                                            if(response?.isActive == 1)
+                                            {
+                                            self.switchOutlet.isOn = true
+                                            }
+                                            else{
+                                            self.switchOutlet.isOn = false
+                                            }
+                                            
+                                            let url = URL(string:(response?.imageUrl)!)
+                                            if(url == nil){}
+                                            else
+                                            {
+                                                let data = NSData(contentsOf:url!)
+                                                self.productDisplay.image = UIImage(data:data as! Data)
+                                            }
+
+            })
+        
+        
+        
+        }
+        
     
     }
 
@@ -141,21 +248,12 @@ UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDeleg
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
     {
         imageURL = (info[UIImagePickerControllerReferenceURL] as! NSURL) as URL
-        
-        //let imageName = imageURL?.absoluteString
-        
-        
-         let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+            let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
             productDisplay.image = pickedImage
+            isImagePicked = true
             image = productDisplay.image!
             imageData = UIImageJPEGRepresentation(image!, 100)
-        
-           
-            
-        
-        
-        
-        dismiss(animated: true, completion: nil)
+            dismiss(animated: true, completion: nil)
       
     }
    
@@ -183,6 +281,19 @@ UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDeleg
         self.view.endEditing(true)
     }
     
+    func getCategoryName(categoryId : Int) -> String
+    {   var categoryname : String = ""
+        for category in categoryData
+        {
+            if (category.categoryId == categoryId)
+            {
+            categoryname = category.category
+            }
+            
+        }
+        return categoryname
+    
+    }
 
     
 }

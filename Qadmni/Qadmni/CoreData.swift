@@ -139,6 +139,28 @@ public class CoreData
         
         return itemInfoList
     }
+    
+    func getItemQuantity(itemId : Int32) -> Int32
+    {
+        var quantity : Int32 = 0
+        let managedObjectContext: NSManagedObjectContext = getManagedObjectContext()
+        do{
+            let fetchRequest: NSFetchRequest<User>=User.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "productId == %ld", itemId)
+            let searchResult=try managedObjectContext.fetch(fetchRequest)
+            if(!searchResult.isEmpty)            {
+                let oldUser : User=searchResult[0]
+                quantity = Int32(oldUser.productQuantity)
+                
+            }
+            
+        }catch{
+            print("Error with request: \(error)")
+        }
+        return quantity
+
+    
+    }
 
 
         

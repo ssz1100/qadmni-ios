@@ -547,6 +547,104 @@ public class ServiceFacade
 
     }
     
+    
+    public func vendorItemDetail(vendorDataRequest:VendorItemDetailReqModel?,
+                                 vendorUserRequest:VendorUserRequestModel?,
+                                 vendorLangCodeRequest:VendorLangCodeRequestmodel?,
+                                 completionHandler: @escaping (VendorItemDetailResModel?)->Void)
+    {
+        let endPointUrl : URL = URL(string:baseUrl + "itemdetails")!
+        let vendorDataString : String? = vendorDataRequest?.toJsonString()
+        let vendorUserString : String? = vendorUserRequest?.toJsonString()
+        let vendorLangCodeString : String? = vendorLangCodeRequest?.toJsonString()
+        
+        let vendorItemDetailParameter: Parameters = buildRequestParameters(dataString: vendorDataString, userString: vendorUserString, langCodeString: vendorLangCodeString)
+        
+        Alamofire.request(endPointUrl,
+                          method: .post,
+                          parameters: vendorItemDetailParameter,
+                          encoding: JSONEncoding.default,
+                          headers: nil)
+            .responseJSON{
+                response in
+                var vendorItemDetailResModel = VendorItemDetailResModel()
+                guard response.result.isSuccess else{
+                    completionHandler(vendorItemDetailResModel)
+                    return
+                }
+                guard  let responseValue = response.result.value as? [String : AnyObject]
+                    else{
+                        completionHandler(vendorItemDetailResModel)
+                        return
+                        
+                }
+                
+                let responseErrorCode : Int32 = responseValue["errorCode"] as! Int32
+                vendorItemDetailResModel.errorCode = responseErrorCode
+                let responseErrorMessage : String = (responseValue["message"] as? String)!
+                vendorItemDetailResModel.message = responseErrorMessage
+                
+                if(responseErrorCode == 0){
+                    let responseData : String? = responseValue["data"] as? String
+                    
+                    let dict : NSDictionary = EVReflection.dictionaryFromJson(responseData);
+                    
+                    vendorItemDetailResModel = EVReflection.setPropertiesfromDictionary(dict, anyObject: vendorItemDetailResModel)
+                    vendorItemDetailResModel = VendorItemDetailResModel(json : responseData)
+                    
+                }
+                completionHandler(vendorItemDetailResModel)
+                
+        }
+        
+    }
+    
+    public func vendorUpdateProduct(vendorDataRequest:VendorUpdateProductReqModel?,
+                                 vendorUserRequest:VendorUserRequestModel?,
+                                 vendorLangCodeRequest:VendorLangCodeRequestmodel?,
+                                 completionHandler: @escaping (BaseResponseModel?)->Void)
+    {
+        let endPointUrl : URL = URL(string:baseUrl + "updateproduct")!
+        let vendorDataString : String? = vendorDataRequest?.toJsonString()
+        let vendorUserString : String? = vendorUserRequest?.toJsonString()
+        let vendorLangCodeString : String? = vendorLangCodeRequest?.toJsonString()
+        
+        let vendorUpdateProductParameter: Parameters = buildRequestParameters(dataString: vendorDataString, userString: vendorUserString, langCodeString: vendorLangCodeString)
+        
+        Alamofire.request(endPointUrl,
+                          method: .post,
+                          parameters: vendorUpdateProductParameter,
+                          encoding: JSONEncoding.default,
+                          headers: nil)
+            .responseJSON{
+                response in
+                var baseResponseModel = BaseResponseModel()
+                guard response.result.isSuccess else{
+                    completionHandler(baseResponseModel)
+                    return
+                }
+                guard  let responseValue = response.result.value as? [String : AnyObject]
+                    else{
+                        completionHandler(baseResponseModel)
+                        return
+                        
+                }
+                
+                let responseErrorCode : Int32 = responseValue["errorCode"] as! Int32
+                baseResponseModel.errorCode = responseErrorCode
+                let responseErrorMessage : String = (responseValue["message"] as? String)!
+                baseResponseModel.message = responseErrorMessage
+                completionHandler(baseResponseModel)
+                
+        }
+        
+    }
+    
+
+
+    
+    
+    
    
 
     
