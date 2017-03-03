@@ -41,7 +41,7 @@ public class UserDefaultManager
         userDefaults.setValue(nil, forKey: "vendorBusinessLong")
         userDefaults.setValue(nil, forKey: "vendorEmailId")
         userDefaults.setValue(nil, forKey: "vendorPassword")
-        userDefaults.setValue(nil, forKey: "userType")
+        userDefaults.setValue("other", forKey: "userType")
         userDefaults.synchronize()
 
     }
@@ -85,7 +85,7 @@ public class UserDefaultManager
         userDefaults.setValue(nil, forKey: "customerphone")
         userDefaults.setValue(nil, forKey: "customerEmailId")
         userDefaults.setValue(nil, forKey: "customerPassword")
-        userDefaults.setValue(nil, forKey: "userType")
+        userDefaults.setValue("other", forKey: "userType")
         userDefaults.synchronize()
 
     }
@@ -102,6 +102,10 @@ public class UserDefaultManager
     
     public func getUserType() -> String
     {
+        if(userDefaults.value(forKey: "userType") == nil)
+        {
+            userDefaults.setValue("other", forKey: "userType")
+        }
         var userType : String = ""
          userType = userDefaults.value(forKey: "userType") as! String
         

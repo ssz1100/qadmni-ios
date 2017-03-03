@@ -66,6 +66,8 @@
 		CDA4A0351E5C6BCC00F6A100 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA4A0341E5C6BCC00F6A100 /* MobileCoreServices.framework */; };
 		CDA4A0371E5C6BE200F6A100 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA4A0361E5C6BE200F6A100 /* SystemConfiguration.framework */; };
 		CDA4A0391E5C6BF300F6A100 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA4A0381E5C6BF300F6A100 /* SafariServices.framework */; };
+		CDA7F6591E694F0C0072F9E1 /* ic_demo_track_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDA7F6581E694F0C0072F9E1 /* ic_demo_track_image.jpg */; };
+		CDA7F65B1E6952BB0072F9E1 /* ic_demo_tracker_timer_not_available.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDA7F65A1E6952BB0072F9E1 /* ic_demo_tracker_timer_not_available.jpg */; };
 		CDAE23AC1E60628A0024F4A4 /* form_wiz_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDAE23AB1E60628A0024F4A4 /* form_wiz_1.jpg */; };
 		CDAE23AE1E6062A50024F4A4 /* form_wiz_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDAE23AD1E6062A50024F4A4 /* form_wiz_2.jpg */; };
 		CDAE23B01E6062B70024F4A4 /* form_wiz_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDAE23AF1E6062B70024F4A4 /* form_wiz_3.jpg */; };
@@ -200,6 +202,8 @@
 		CDA4A0361E5C6BE200F6A100 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CDA4A0381E5C6BF300F6A100 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		CDA4A03A1E5C6F7900F6A100 /* Qadmni-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Qadmni-Bridging-Header.h"; sourceTree = "<group>"; };
+		CDA7F6581E694F0C0072F9E1 /* ic_demo_track_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ic_demo_track_image.jpg; sourceTree = "<group>"; };
+		CDA7F65A1E6952BB0072F9E1 /* ic_demo_tracker_timer_not_available.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ic_demo_tracker_timer_not_available.jpg; sourceTree = "<group>"; };
 		CDAE23AB1E60628A0024F4A4 /* form_wiz_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = form_wiz_1.jpg; sourceTree = "<group>"; };
 		CDAE23AD1E6062A50024F4A4 /* form_wiz_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = form_wiz_2.jpg; sourceTree = "<group>"; };
 		CDAE23AF1E6062B70024F4A4 /* form_wiz_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = form_wiz_3.jpg; sourceTree = "<group>"; };
@@ -405,6 +409,8 @@
 		CDC945621E2F54C300E6946F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CDA7F65A1E6952BB0072F9E1 /* ic_demo_tracker_timer_not_available.jpg */,
+				CDA7F6581E694F0C0072F9E1 /* ic_demo_track_image.jpg */,
 				CDE440B81E680303006BE971 /* default_img.jpg */,
 				CDAE23AB1E60628A0024F4A4 /* form_wiz_1.jpg */,
 				CDAE23AD1E6062A50024F4A4 /* form_wiz_2.jpg */,
@@ -642,6 +648,7 @@
 				CD9FA4481E49ED1F002BC631 /* splash_screen_back_one.png in Resources */,
 				CDE440B91E680303006BE971 /* default_img.jpg in Resources */,
 				CDFB2FFE1E32211C00A742E9 /* register_back.jpg in Resources */,
+				CDA7F6591E694F0C0072F9E1 /* ic_demo_track_image.jpg in Resources */,
 				CDA429C41E3CA0B80069D928 /* ic_lang_setting_banner.png in Resources */,
 				CDC9455B1E2F522B00E6946F /* LaunchScreen.storyboard in Resources */,
 				CDA429C81E3CB9F80069D928 /* ic_action_camera.png in Resources */,
@@ -651,6 +658,7 @@
 				CDAE23B01E6062B70024F4A4 /* form_wiz_3.jpg in Resources */,
 				CDAE23AC1E60628A0024F4A4 /* form_wiz_1.jpg in Resources */,
 				CDB5D1131E3F441C00AC20F0 /* ice_cream_one.jpg in Resources */,
+				CDA7F65B1E6952BB0072F9E1 /* ic_demo_tracker_timer_not_available.jpg in Resources */,
 				CDC9456A1E2F828900E6946F /* login_back.jpg in Resources */,
 				CDC945531E2F522B00E6946F /* Main.storyboard in Resources */,
 			);

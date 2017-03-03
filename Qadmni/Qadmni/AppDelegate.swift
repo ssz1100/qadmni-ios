@@ -33,9 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         PayPalMobile .initializeWithClientIds(forEnvironments: [PayPalEnvironmentProduction:"ARUsUW_-mWCE1NAAdf0Xy4KtxxpTgv9KsM3XtEpG3DlW3C3t7J_Qikz1dA1DfUUN2c0UQUpKfGJaG23z" ,
                                                                 PayPalEnvironmentSandbox: "AazpbjT0kIEf-4PEdLZL7S9Y6F2BU5zLN9vOn9AGgkjLcLHj0bFwIrOxQK-7vXwmT-0Q9SmVGapM5hDS"])
+        
+        
     
         
-        if(userDefaultManager.getUserType() == "")
+        if(userDefaultManager.getUserType() == "other")
         {
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ViewController")
