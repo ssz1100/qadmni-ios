@@ -106,14 +106,13 @@ extension UIView
     
     func roundedGreyBorder()
     {
-        self.layer.borderColor = UIColor.gray.cgColor
+        self.layer.borderColor = UIColor.lightGray.cgColor
         self.layer.borderWidth = 1
         self.layer.cornerRadius = 10
         self.layer.masksToBounds = true
     }
     
     }
-
 extension UIImageView
 {
     func roundedImageView()

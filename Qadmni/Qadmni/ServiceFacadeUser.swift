@@ -406,6 +406,114 @@ public class ServiceFacadeUser
         }
         
     }
+    
+    
+    public func userLiveOrderStatus(customerDataRequest:UserOrderHistoryReqModel?,
+                                 customerUserRequest:CustomerUserRequestModel?,
+                                 customerLangCodeRequest:CustomerLangCodeRequestModel?,
+                                 completionHandler: @escaping ([UserOrderHistoryResModel?])->Void)
+    {
+        let endPointUrl : URL = URL(string:baseUrl + "liveorderlist")!
+        let customerDataString : String? = ""
+        let customerUserString : String? = ""
+        let customerLangCodeString : String? = ""
+        
+        let liveOrderStatusParameter: Parameters = buildRequestParameters(dataString: customerDataString, userString: customerUserString, langCodeString: customerLangCodeString)
+        
+        
+        Alamofire.request(endPointUrl,
+                          method: .post,
+                          parameters: liveOrderStatusParameter,
+                          encoding: JSONEncoding.default,
+                          headers: nil)
+            .responseJSON{
+                response in
+                let userOrderHistoryResModel = UserOrderHistoryResModel()
+                guard response.result.isSuccess else{
+                    //completionHandler(vendorItemResponseModel)
+                    return
+                }
+                guard  let responseValue = response.result.value as? [String : AnyObject]
+                    else{
+                        //completionHandler(vendorItemResponseModel)
+                        return
+                        
+                }
+                
+                let responseErrorCode : Int32 = responseValue["errorCode"] as! Int32
+                vendorOrderResponseModel.errorCode = responseErrorCode
+                let responseErrorMessage : String = (responseValue["message"] as? String)!
+                vendorOrderResponseModel.message = responseErrorMessage
+                
+                var dict: Array<UserOrderHistoryResModel> = []
+                if(responseErrorCode == 0)
+                {
+                    let responseData : String = (responseValue["data"] as? String)!
+                    dict=[UserOrderHistoryResModel](json:responseData)
+                    
+                }
+                
+                
+                completionHandler(dict)
+                
+        }
+    
+    }
+    
+    
+    public func userPastOrderStatus(customerDataRequest:UserOrderHistoryReqModel?,
+                                    customerUserRequest:CustomerUserRequestModel?,
+                                    customerLangCodeRequest:CustomerLangCodeRequestModel?,
+                                    completionHandler: @escaping ([PastOrderResModel?])->Void)
+    {
+        let endPointUrl : URL = URL(string:baseUrl + "pastorderlist")!
+        let customerDataString : String? = ""
+        let customerUserString : String? = ""
+        let customerLangCodeString : String? = ""
+        
+        let pastOrderStatusParameter: Parameters = buildRequestParameters(dataString: customerDataString, userString: customerUserString, langCodeString: customerLangCodeString)
+        
+        
+        Alamofire.request(endPointUrl,
+                          method: .post,
+                          parameters: pastOrderStatusParameter,
+                          encoding: JSONEncoding.default,
+                          headers: nil)
+            .responseJSON{
+                response in
+                let pastOrderResModel = PastOrderResModel()
+                guard response.result.isSuccess else{
+                    //completionHandler(vendorItemResponseModel)
+                    return
+                }
+                guard  let responseValue = response.result.value as? [String : AnyObject]
+                    else{
+                        //completionHandler(vendorItemResponseModel)
+                        return
+                        
+                }
+                
+                let responseErrorCode : Int32 = responseValue["errorCode"] as! Int32
+                vendorOrderResponseModel.errorCode = responseErrorCode
+                let responseErrorMessage : String = (responseValue["message"] as? String)!
+                vendorOrderResponseModel.message = responseErrorMessage
+                
+                var dict: Array<PastOrderResModel> = []
+                if(responseErrorCode == 0)
+                {
+                    let responseData : String = (responseValue["data"] as? String)!
+                    dict=[PastOrderResModel](json:responseData)
+                    
+                }
+                
+                
+                completionHandler(dict)
+                
+        }
+        
+    }
+
+
 
     
 

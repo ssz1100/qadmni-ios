@@ -45,7 +45,7 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
             guard changeCurrentIndex == true else { return }
             oldCell?.label.textColor = .black
             newCell?.label.textColor =  self?.purpleInspireColor
-//            self.buttonBarView.selectedBar.backgroundColor = UIColor.white
+
         }
         
         self.menuButton.target = revealViewController()

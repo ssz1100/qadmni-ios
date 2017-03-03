@@ -37,26 +37,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     
         
-        if(userDefaultManager.getUserType() == "other")
-        {
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ViewController")
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.window?.rootViewController = vc
-            
-        }else if(userDefaultManager.getUserType() == "vendor")
-        {
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "VendorSWRevealViewController")
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.window?.rootViewController = vc
-        }else if(userDefaultManager.getUserType() == "customer")
-        {
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "SWRevealViewController")
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.window?.rootViewController = vc
-        }
+//        if(userDefaultManager.getUserType() == "other")
+//        {
+//            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ViewController")
+//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//            appDelegate.window?.rootViewController = vc
+//            
+//        }else if(userDefaultManager.getUserType() == "vendor")
+//        {
+//            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "VendorSWRevealViewController")
+//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//            appDelegate.window?.rootViewController = vc
+//        }else if(userDefaultManager.getUserType() == "customer")
+//        {
+//            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "SWRevealViewController")
+//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//            appDelegate.window?.rootViewController = vc
+//        }
 
         
         return true
