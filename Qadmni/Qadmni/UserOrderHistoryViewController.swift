@@ -9,8 +9,10 @@
 import UIKit
 import Foundation
 import XLPagerTabStrip
+import MBProgressHUD
 
 class UserOrderHistoryViewController: ButtonBarPagerTabStripViewController {
+   
      let purpleInspireColor = UIColor(red:0.13, green:0.03, blue:0.25, alpha:1.0)
 
     override func viewDidLoad() {
@@ -38,11 +40,10 @@ class UserOrderHistoryViewController: ButtonBarPagerTabStripViewController {
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController]
     {
-//        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let liveOrder = storyboard.instantiateViewController(withIdentifier: "LiveOrderTableViewController")
-//        let pastOrder = storyboard.instantiateViewController(withIdentifier: "PastOrderTableViewController")
-        
-        return[LiveOrderTableViewController(),PastOrderTableViewController()]
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let liveOrder = storyboard.instantiateViewController(withIdentifier: "LiveOrderTableViewController") as! LiveOrderTableViewController
+        let pastOrder = storyboard.instantiateViewController(withIdentifier: "PastOrderTableViewController") as! PastOrderTableViewController
+        return[liveOrder,pastOrder]
     }
     override func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int, withProgressPercentage progressPercentage: CGFloat, indexWasChanged: Bool)
     {

@@ -414,11 +414,12 @@ public class ServiceFacadeUser
                                  completionHandler: @escaping ([UserOrderHistoryResModel?])->Void)
     {
         let endPointUrl : URL = URL(string:baseUrl + "liveorderlist")!
-        let customerDataString : String? = ""
-        let customerUserString : String? = ""
-        let customerLangCodeString : String? = ""
+        let customerDataString : String? = customerDataRequest?.toJsonString()
+        let customerUserString : String? = customerUserRequest?.toJsonString()
+        let customerLangCodeString : String? = customerLangCodeRequest?.toJsonString()
         
         let liveOrderStatusParameter: Parameters = buildRequestParameters(dataString: customerDataString, userString: customerUserString, langCodeString: customerLangCodeString)
+        print(liveOrderStatusParameter)
         
         
         Alamofire.request(endPointUrl,
@@ -439,11 +440,12 @@ public class ServiceFacadeUser
                         return
                         
                 }
+                print(responseValue)
                 
                 let responseErrorCode : Int32 = responseValue["errorCode"] as! Int32
-                vendorOrderResponseModel.errorCode = responseErrorCode
+                userOrderHistoryResModel.errorCode = responseErrorCode
                 let responseErrorMessage : String = (responseValue["message"] as? String)!
-                vendorOrderResponseModel.message = responseErrorMessage
+                userOrderHistoryResModel.message = responseErrorMessage
                 
                 var dict: Array<UserOrderHistoryResModel> = []
                 if(responseErrorCode == 0)
@@ -467,11 +469,12 @@ public class ServiceFacadeUser
                                     completionHandler: @escaping ([PastOrderResModel?])->Void)
     {
         let endPointUrl : URL = URL(string:baseUrl + "pastorderlist")!
-        let customerDataString : String? = ""
-        let customerUserString : String? = ""
-        let customerLangCodeString : String? = ""
+        let customerDataString : String? = customerDataRequest?.toJsonString()
+        let customerUserString : String? = customerUserRequest?.toJsonString()
+        let customerLangCodeString : String? = customerLangCodeRequest?.toJsonString()
         
         let pastOrderStatusParameter: Parameters = buildRequestParameters(dataString: customerDataString, userString: customerUserString, langCodeString: customerLangCodeString)
+        print(pastOrderStatusParameter)
         
         
         Alamofire.request(endPointUrl,
@@ -492,11 +495,11 @@ public class ServiceFacadeUser
                         return
                         
                 }
-                
+                print(responseValue)
                 let responseErrorCode : Int32 = responseValue["errorCode"] as! Int32
-                vendorOrderResponseModel.errorCode = responseErrorCode
+                pastOrderResModel.errorCode = responseErrorCode
                 let responseErrorMessage : String = (responseValue["message"] as? String)!
-                vendorOrderResponseModel.message = responseErrorMessage
+                pastOrderResModel.message = responseErrorMessage
                 
                 var dict: Array<PastOrderResModel> = []
                 if(responseErrorCode == 0)
@@ -514,14 +517,6 @@ public class ServiceFacadeUser
     }
 
 
-
-    
-
-
-    
-    
-    
-    
 
     private func buildRequestParameters(dataString:String?, userString: String?, langCodeString : String?) -> Parameters{
         var params: Parameters = Parameters()

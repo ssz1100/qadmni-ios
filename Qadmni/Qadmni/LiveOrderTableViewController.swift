@@ -10,7 +10,9 @@ import UIKit
 import XLPagerTabStrip
 
 class LiveOrderTableViewController: UITableViewController , IndicatorInfoProvider {
-   
+    var userDefaultManager : UserDefaultManager = UserDefaultManager()
+    var userOrderHistoryResModel : [UserOrderHistoryResModel] = []
+    
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo
     {
        return IndicatorInfo(title: "Live order")
@@ -19,12 +21,24 @@ class LiveOrderTableViewController: UITableViewController , IndicatorInfoProvide
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        let customerData = UserOrderHistoryReqModel()
+        let customerUser :CustomerUserRequestModel = self.userDefaultManager.getCustomerCredential()
+        let customerLangCode = CustomerLangCodeRequestModel()
+        
+         let serviceFacadeUser = ServiceFacadeUser(configUrl : PropertyReaderFile.getBaseUrl())
+        serviceFacadeUser.userLiveOrderStatus(customerDataRequest: customerData,
+                                              customerUserRequest: customerUser, customerLangCodeRequest: customerLangCode,
+                                              completionHandler: {
+                                                response in
+                                                self.userOrderHistoryResModel = response as! [UserOrderHistoryResModel]
+                                                self.tableView.reloadData()
+        })
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,25 +48,48 @@ class LiveOrderTableViewController: UITableViewController , IndicatorInfoProvide
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
+   
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+       
+        return userOrderHistoryResModel.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! LiveOrderTableViewCell
+        if (cell != nil)
+        {
+        cell.producerNameLabel.text = self.userOrderHistoryResModel[indexPath.row].producerBusinessName
+        cell.orderIdLabel.text = String(self.userOrderHistoryResModel[indexPath.row].orderId)
+        let serverdateFormatter = DateFormatter()
+        serverdateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        let strDate:String = self.userOrderHistoryResModel[indexPath.row].orderDate
+        let date = serverdateFormatter.date(from: strDate)
+        
+        let displayDateFormatter = DateFormatter()
+        displayDateFormatter.dateFormat = "dd/MM/yyyy hh:mm a"
+        let displayDate = displayDateFormatter.string(from: date!)
+        cell.orderDatelabel.text = displayDate
+        cell.paymentModeLabel.text = self.userOrderHistoryResModel[indexPath.row].paymentMode
+        cell.deliveryLabel.text = self.userOrderHistoryResModel[indexPath.row].deliveryMode
+        cell.amountLabel.text = String(self.userOrderHistoryResModel[indexPath.row].amountInSAR)
+        cell.orderStatuslabel.text = self.userOrderHistoryResModel[indexPath.row].currentStatusCode
+        
+        if (self.userOrderHistoryResModel[indexPath.row].stageNo == 1)
+        {
+            cell.statusImageview.image = UIImage(named: "form_wiz_1.jpg")
+        }else if (self.userOrderHistoryResModel[indexPath.row].stageNo == 2)
+        {
+            cell.statusImageview.image = UIImage(named: "form_wiz_2.jpg")
+        }else
+            {
+            cell.statusImageview.image = UIImage(named: "form_wiz_3.jpg")
+            }
+        }
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

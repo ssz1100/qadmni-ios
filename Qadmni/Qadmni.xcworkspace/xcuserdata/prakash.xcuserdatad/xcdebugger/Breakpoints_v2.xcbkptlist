@@ -19,5 +19,149 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Qadmni/LiveOrderTableViewController.swift"
+            timestampString = "510303162.559069"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Qadmni/ServiceFacadeUser.swift"
+            timestampString = "510304113.346233"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "499"
+            endingLineNumber = "499"
+            landmarkName = "userPastOrderStatus(customerDataRequest:customerUserRequest:customerLangCodeRequest:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Qadmni/ServiceFacadeUser.swift"
+            timestampString = "510304113.346233"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "501"
+            endingLineNumber = "501"
+            landmarkName = "userPastOrderStatus(customerDataRequest:customerUserRequest:customerLangCodeRequest:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Qadmni.ServiceFacadeUser.(userPastOrderStatus (customerDataRequest : Swift.Optional&lt;Qadmni.UserOrderHistoryReqModel&gt;, customerUserRequest : Swift.Optional&lt;Qadmni.CustomerUserRequestModel&gt;, customerLangCodeRequest : Swift.Optional&lt;Qadmni.CustomerLangCodeRequestModel&gt;, completionHandler : (Swift.Array&lt;Swift.Optional&lt;Qadmni.PastOrderResModel&gt;&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "Qadmni"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prakash/Documents/VibeosysProjects/qadmni-ios/Qadmni/Qadmni/ServiceFacadeUser.swift"
+                  timestampString = "510304114.571883"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "501"
+                  endingLineNumber = "501"
+                  offsetFromSymbolStart = "1791">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Qadmni.ServiceFacadeUser.(userPastOrderStatus (customerDataRequest : Swift.Optional&lt;Qadmni.UserOrderHistoryReqModel&gt;, customerUserRequest : Swift.Optional&lt;Qadmni.CustomerUserRequestModel&gt;, customerLangCodeRequest : Swift.Optional&lt;Qadmni.CustomerLangCodeRequestModel&gt;, completionHandler : (Swift.Array&lt;Swift.Optional&lt;Qadmni.PastOrderResModel&gt;&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "Qadmni"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prakash/Documents/VibeosysProjects/qadmni-ios/Qadmni/Qadmni/ServiceFacadeUser.swift"
+                  timestampString = "510304114.575738"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "501"
+                  endingLineNumber = "501"
+                  offsetFromSymbolStart = "3422">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Qadmni/ServiceFacadeUser.swift"
+            timestampString = "510304113.346233"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "445"
+            endingLineNumber = "445"
+            landmarkName = "userLiveOrderStatus(customerDataRequest:customerUserRequest:customerLangCodeRequest:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Qadmni/ServiceFacadeUser.swift"
+            timestampString = "510304113.346233"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "447"
+            endingLineNumber = "447"
+            landmarkName = "userLiveOrderStatus(customerDataRequest:customerUserRequest:customerLangCodeRequest:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Qadmni.ServiceFacadeUser.(userLiveOrderStatus (customerDataRequest : Swift.Optional&lt;Qadmni.UserOrderHistoryReqModel&gt;, customerUserRequest : Swift.Optional&lt;Qadmni.CustomerUserRequestModel&gt;, customerLangCodeRequest : Swift.Optional&lt;Qadmni.CustomerLangCodeRequestModel&gt;, completionHandler : (Swift.Array&lt;Swift.Optional&lt;Qadmni.UserOrderHistoryResModel&gt;&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "Qadmni"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prakash/Documents/VibeosysProjects/qadmni-ios/Qadmni/Qadmni/ServiceFacadeUser.swift"
+                  timestampString = "510304114.58397"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "447"
+                  endingLineNumber = "447"
+                  offsetFromSymbolStart = "1791">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Qadmni.ServiceFacadeUser.(userLiveOrderStatus (customerDataRequest : Swift.Optional&lt;Qadmni.UserOrderHistoryReqModel&gt;, customerUserRequest : Swift.Optional&lt;Qadmni.CustomerUserRequestModel&gt;, customerLangCodeRequest : Swift.Optional&lt;Qadmni.CustomerLangCodeRequestModel&gt;, completionHandler : (Swift.Array&lt;Swift.Optional&lt;Qadmni.UserOrderHistoryResModel&gt;&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "Qadmni"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prakash/Documents/VibeosysProjects/qadmni-ios/Qadmni/Qadmni/ServiceFacadeUser.swift"
+                  timestampString = "510304114.586054"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "447"
+                  endingLineNumber = "447"
+                  offsetFromSymbolStart = "3422">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

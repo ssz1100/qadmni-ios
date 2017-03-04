@@ -52,6 +52,8 @@
 		CD9B2BA31E54375A008A949F /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9B2BA21E54375A008A949F /* CoreData.swift */; };
 		CD9B2BA51E543C3F008A949F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9B2BA41E543C3F008A949F /* CoreData.framework */; };
 		CD9B2BCA1E5489D5008A949F /* MyCartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9B2BC91E5489D5008A949F /* MyCartModel.swift */; };
+		CD9C09821E6A84FD00DDFDC8 /* LiveOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9C09811E6A84FD00DDFDC8 /* LiveOrderTableViewCell.swift */; };
+		CD9C09841E6A851200DDFDC8 /* PastOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9C09831E6A851200DDFDC8 /* PastOrderTableViewCell.swift */; };
 		CD9FA4441E498D67002BC631 /* VendorSignupRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA4431E498D67002BC631 /* VendorSignupRequestModel.swift */; };
 		CD9FA4461E49903A002BC631 /* VendorEmailValidateRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9FA4451E49903A002BC631 /* VendorEmailValidateRequestModel.swift */; };
 		CD9FA4481E49ED1F002BC631 /* splash_screen_back_one.png in Resources */ = {isa = PBXBuildFile; fileRef = CD9FA4471E49ED1F002BC631 /* splash_screen_back_one.png */; };
@@ -194,6 +196,8 @@
 		CD9B2BA21E54375A008A949F /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		CD9B2BA41E543C3F008A949F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CD9B2BC91E5489D5008A949F /* MyCartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCartModel.swift; sourceTree = "<group>"; };
+		CD9C09811E6A84FD00DDFDC8 /* LiveOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveOrderTableViewCell.swift; sourceTree = "<group>"; };
+		CD9C09831E6A851200DDFDC8 /* PastOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastOrderTableViewCell.swift; sourceTree = "<group>"; };
 		CD9FA4431E498D67002BC631 /* VendorSignupRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorSignupRequestModel.swift; sourceTree = "<group>"; };
 		CD9FA4451E49903A002BC631 /* VendorEmailValidateRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorEmailValidateRequestModel.swift; sourceTree = "<group>"; };
 		CD9FA4471E49ED1F002BC631 /* splash_screen_back_one.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_screen_back_one.png; sourceTree = "<group>"; };
@@ -362,6 +366,8 @@
 				CDB5D1181E3F5DCE00AC20F0 /* VendorOrderStatusTableViewCell.swift */,
 				CDE322DC1E40789800002DBD /* MyFavouritesTableViewCell.swift */,
 				CD0560081E6456C300E87A07 /* CustItemListTableViewCell.swift */,
+				CD9C09811E6A84FD00DDFDC8 /* LiveOrderTableViewCell.swift */,
+				CD9C09831E6A851200DDFDC8 /* PastOrderTableViewCell.swift */,
 			);
 			name = TableViewCell;
 			sourceTree = "<group>";
@@ -775,6 +781,7 @@
 				CDE6FDBE1E5331AD009A18E7 /* CustomerForgotPasswordRequestModel.swift in Sources */,
 				CD81D73C1E4AF13600FA33FE /* VendorItemResponseModel.swift in Sources */,
 				CDE6FDBA1E531996009A18E7 /* CustomerRegisterRequestModel.swift in Sources */,
+				CD9C09841E6A851200DDFDC8 /* PastOrderTableViewCell.swift in Sources */,
 				CDA4A0291E5C473200F6A100 /* CustConfirmOrderReqModel.swift in Sources */,
 				CDE6FDBC1E531A5B009A18E7 /* CustomerRegisterResponseModel.swift in Sources */,
 				CDCE59341E41CB1900BE36CE /* BaseResponseModel.swift in Sources */,
@@ -834,6 +841,7 @@
 				CDE6FDAC1E52E9AD009A18E7 /* ServiceFacadeUser.swift in Sources */,
 				CD05600D1E64626600E87A07 /* CustItemListResModel.swift in Sources */,
 				CDCE593A1E42132A00BE36CE /* VendorLoginResponseModel.swift in Sources */,
+				CD9C09821E6A84FD00DDFDC8 /* LiveOrderTableViewCell.swift in Sources */,
 				CDE440B31E67EC3B006BE971 /* VendorUpdateProductReqModel.swift in Sources */,
 				CDFB30041E32498D00A742E9 /* VendorShopDetailViewController.swift in Sources */,
 				CD6FF9B91E5B21B400616634 /* ProcessItemTableViewCell.swift in Sources */,

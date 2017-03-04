@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="q4C-cn-6CH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1992,7 +1992,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="230" id="cE9-5j-S9Q">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="230" id="cE9-5j-S9Q" customClass="PastOrderTableViewCell" customModule="Qadmni" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="230"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cE9-5j-S9Q" id="fzj-YQ-0i0">
@@ -2128,6 +2128,15 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="tex-UI-PNG" secondAttribute="bottom" constant="5" id="yLO-dJ-mxa"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="amountLabel" destination="tlb-el-O9n" id="Z1y-Fu-P1I"/>
+                                    <outlet property="feedbackButtonOutlet" destination="qq4-he-HXt" id="Zdb-cp-vQZ"/>
+                                    <outlet property="orderDateLabel" destination="Qc7-01-y5d" id="dmg-J2-Sq1"/>
+                                    <outlet property="orderIdLabel" destination="iLY-xU-oze" id="M8a-iK-coo"/>
+                                    <outlet property="statusImageview" destination="X2s-st-ma8" id="Vv4-gl-IR4"/>
+                                    <outlet property="statusLabel" destination="P54-Mg-jRe" id="VB9-MX-7Sv"/>
+                                    <outlet property="viewDetailsOutlet" destination="L1i-T7-HOS" id="N7J-UG-3EW"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -2149,7 +2158,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="338" id="iXT-7e-9yi">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="338" id="iXT-7e-9yi" customClass="LiveOrderTableViewCell" customModule="Qadmni" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="338"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iXT-7e-9yi" id="sPM-r6-gMv">
@@ -2339,6 +2348,18 @@
                                         <constraint firstItem="hQ9-dP-rbK" firstAttribute="leading" secondItem="sPM-r6-gMv" secondAttribute="leadingMargin" constant="15" id="jTQ-2D-2im"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="amountLabel" destination="oSJ-Eo-fsF" id="1tz-nI-jtP"/>
+                                    <outlet property="deliveryLabel" destination="Kt9-Nl-0Um" id="SWF-Kj-0Hz"/>
+                                    <outlet property="feedbackButtonOutlet" destination="8B3-Gm-iOk" id="N1T-AY-eJD"/>
+                                    <outlet property="orderDatelabel" destination="SgA-w2-qVb" id="RCU-MX-1W5"/>
+                                    <outlet property="orderIdLabel" destination="yFK-xF-nbL" id="HqJ-Ni-IfE"/>
+                                    <outlet property="orderStatuslabel" destination="4WT-OI-EI7" id="2ma-g7-lzr"/>
+                                    <outlet property="paymentModeLabel" destination="coQ-og-5GN" id="n2Y-Ah-bUv"/>
+                                    <outlet property="producerNameLabel" destination="TGu-Nc-geX" id="E7a-OD-jba"/>
+                                    <outlet property="statusImageview" destination="JLh-Vi-jOe" id="8ht-qB-oc3"/>
+                                    <outlet property="trackOrderButtonOutlet" destination="SUy-os-KyZ" id="ShS-Fh-TpU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

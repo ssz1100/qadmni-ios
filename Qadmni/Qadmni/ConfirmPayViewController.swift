@@ -99,6 +99,25 @@ class ConfirmPayViewController: UIViewController,UITableViewDataSource,UITableVi
                                                completionHandler: {
                                                 response in
                                                 debugPrint(response)
+                                                if (response?.errorCode == 0)
+                                                {
+                                                    let alertView = UIAlertController.init(title:"Order Placed" , message: "Order has been placed successfully", preferredStyle: .alert)
+                                                    let callActionHandler = { (action:UIAlertAction!) -> Void in
+                                                        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                                        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "UserOrderHistoryViewController") as UIViewController
+                                                        self.present(vc, animated: true, completion: nil)
+                                                    }
+                                                    let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: callActionHandler)
+                                                    alertView.addAction(defaultAction)
+                                                    alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
+                                                    self.present(alertView, animated: true)
+                                                }
+                                                else{
+                                                    self.showAlertMessage(title: "Order failed", message: (response?.message)!)
+                                                
+                                                }
+                                                
+                                                
         })
     
     

@@ -10,6 +10,8 @@ import UIKit
 import XLPagerTabStrip
 
 class PastOrderTableViewController: UITableViewController , IndicatorInfoProvider {
+     var userDefaultManager : UserDefaultManager = UserDefaultManager()
+    var pastOrderResModel : [PastOrderResModel] = []
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo
     {
@@ -19,13 +21,24 @@ class PastOrderTableViewController: UITableViewController , IndicatorInfoProvide
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        let customerData = UserOrderHistoryReqModel()
+        let customerUser :CustomerUserRequestModel = self.userDefaultManager.getCustomerCredential()
+        let customerLangCode = CustomerLangCodeRequestModel()
+        
+        let serviceFacadeUser = ServiceFacadeUser(configUrl : PropertyReaderFile.getBaseUrl())
+        serviceFacadeUser.userPastOrderStatus(customerDataRequest: customerData,
+                                              customerUserRequest: customerUser,
+                                              customerLangCodeRequest: customerLangCode,
+                                              completionHandler: {
+                                                response in
+                                                self.pastOrderResModel = response as! [PastOrderResModel]
+                                                self.tableView.reloadData()
+        })
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
+           }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -34,25 +47,38 @@ class PastOrderTableViewController: UITableViewController , IndicatorInfoProvide
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
+   
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return pastOrderResModel.count
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! PastOrderTableViewCell
+        
+        cell.orderIdLabel.text = String(self.pastOrderResModel[indexPath.row].orderId)
+        let serverdateFormatter = DateFormatter()
+        serverdateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        let strDate:String = self.pastOrderResModel[indexPath.row].orderDate
+        let date = serverdateFormatter.date(from: strDate)
+        
+        let displayDateFormatter = DateFormatter()
+        displayDateFormatter.dateFormat = "dd/MM/yyyy hh:mm a"
+        let displayDate = displayDateFormatter.string(from: date!)
+        cell.orderDateLabel.text = displayDate
+        
+        cell.amountLabel.text = String(self.pastOrderResModel[indexPath.row].amountInSAR)
+        cell.statusLabel.text = self.pastOrderResModel[indexPath.row].deliveryStatus
+        cell.statusImageview.image = UIImage(named: "form_wiz_3.jpg")
+        
+        
+
+       
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
