@@ -16,15 +16,10 @@ class TableViewController: UITableViewController , IndicatorInfoProvider {
     var categoryId :Int32 = 0
     var categoryName: String?
     var itemsData: [DisplayItemList]=[]
+    var mainItemsData: [DisplayItemList]=[]
     let coreData = CoreData()
-    /*init(categoryId: Int32 ,categoryName: String,items:[DisplayItemList])
-    {
-        //super.init()
-        self.categoryId = categoryId
-        self.categoryName = categoryName
-        self.itemsData=items
-        super.init(nibName: nil, bundle: nil)
-    }*/
+    var userDefaultManager : UserDefaultManager = UserDefaultManager()
+    var sortType = SortByConstant()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -34,12 +29,12 @@ class TableViewController: UITableViewController , IndicatorInfoProvider {
     public func setInfo(categoryId: Int32 ,categoryName: String?,items:[DisplayItemList]){
         self.categoryId = categoryId
         self.categoryName = categoryName
-        self.itemsData=items
+        self.mainItemsData=items
     }
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo
     {
-        var initCategory = categoryName == nil ? "" : categoryName
+        let initCategory = categoryName == nil ? "" : categoryName
         return IndicatorInfo.init(title: initCategory!)
     }
 
@@ -48,7 +43,53 @@ class TableViewController: UITableViewController , IndicatorInfoProvider {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-//        self.tableView.register(CustItemListTableViewCell.self, forCellReuseIdentifier: "cellidentifier")
+        
+
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+       
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.itemsData=self.mainItemsData
+        let filterByPrice :Double = self.userDefaultManager.getFiltertedByPrice()
+        if (filterByPrice > 10){
+        self.itemsData=self.itemsData.filter({ (item) -> Bool in
+            return item.unitPrice <= filterByPrice
+        })
+        }
+        
+        let filterByDistance :Double = self.userDefaultManager.getFiltertedByDistance()
+        if (filterByDistance > 1){
+            self.itemsData=self.itemsData.filter({ (item) -> Bool in
+                return item.producerData.distanceDouble <= filterByDistance
+            })
+        }
+
+        
+        let selectedSort : Int = self.userDefaultManager.getSelectedSortBy()
+        
+        if(selectedSort == sortType.distanceSort)
+        {
+            self.itemsData.sort(by: { (item1, item2) -> Bool in
+                return item1.producerData.distanceDouble < item2.producerData.distanceDouble
+            })
+        }else if (selectedSort == sortType.priceSort)
+        {
+            self.itemsData.sort(by: { (item1, item2) -> Bool in
+                return item1.unitPrice < item2.unitPrice
+            })
+        }
+        else if (selectedSort == sortType.reviewSort)
+        {
+            self.itemsData.sort(by: { (item1, item2) -> Bool in
+                return item1.reviews > item2.reviews
+            })
+        }
+        tableView.reloadData()
     }
     
     

@@ -112,6 +112,61 @@ public class UserDefaultManager
         return userType
     }
     
+    func getSelectedSortBy() -> Int
+    {
+        var selectedSort : Int = 0
+        if(userDefaults.value(forKey: "selectedSortBy") == nil)
+        {
+            userDefaults.setValue(0, forKey: "selectedSortBy")
+        }
+        selectedSort = userDefaults.value(forKey: "selectedSortBy") as! Int
+        
+        return selectedSort
+           
+    }
+    func setSelectedSortBy(selectedSort : Int)
+    {
+        userDefaults.setValue(selectedSort, forKey: "selectedSortBy")
+    
+    }
+    
+    func getFiltertedByDistance() -> Double
+    {
+        var filterByDistance : Double = 0
+        if(userDefaults.value(forKey: "filterByDistance") == nil)
+        {
+            userDefaults.setValue(0, forKey: "filterByDistance")
+        }
+        filterByDistance = userDefaults.value(forKey: "filterByDistance") as! Double
+        
+        return filterByDistance
+
+    }
+    func setFiltertedByDistance(filterByDistance : Double)
+    {
+        userDefaults.setValue(filterByDistance, forKey: "filterByDistance")
+        
+    }
+    
+    func getFiltertedByPrice() -> Double
+    {
+        var filterByPrice : Double = 0
+        if(userDefaults.value(forKey: "filterByPrice") == nil)
+        {
+            userDefaults.setValue(0, forKey: "filterByPrice")
+        }
+        filterByPrice = userDefaults.value(forKey: "filterByPrice") as! Double
+        
+        return filterByPrice
+        
+    }
+    func setFiltertedByPrice(filterByPrice : Double)
+    {
+        userDefaults.setValue(filterByPrice, forKey: "filterByPrice")
+        
+    }
+
+    
    
     
 

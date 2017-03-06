@@ -105,7 +105,7 @@ class ConfirmPayViewController: UIViewController,UITableViewDataSource,UITableVi
                                                     let callActionHandler = { (action:UIAlertAction!) -> Void in
                                                         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                                                         let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "UserOrderHistoryViewController") as UIViewController
-                                                        self.present(vc, animated: true, completion: nil)
+                                                        self.navigationController?.pushViewController(vc, animated: true)
                                                     }
                                                     let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: callActionHandler)
                                                     alertView.addAction(defaultAction)
