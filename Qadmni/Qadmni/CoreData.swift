@@ -160,9 +160,33 @@ public class CoreData
         return quantity
     }
     
+    func deleteCartData()
+    {
+        let managedObjectContext: NSManagedObjectContext = getManagedObjectContext()
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        do {
+            let searchResults = try managedObjectContext.fetch(fetchRequest)
+            for userDetail in searchResults as [NSManagedObject] {
+                managedObjectContext.delete(userDetail)
+               
+            }
+        }catch {
+            print("Error with request: \(error)")
+        }
+        do {
+            try managedObjectContext.save()
+            print("saved!")
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        } catch {
+            
+        }
+
+    }
+    
 
 
-        
+    
         // MARK: - Core Data stack
         
         func getApplicationDocumentsDirectory() -> NSURL {

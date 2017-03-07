@@ -19,6 +19,7 @@ class UserCartViewController: UIViewController, UITableViewDataSource,UITableVie
     }
     
     @IBAction func addMoreButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func proceedToPayButton(_ sender: UIButton) {

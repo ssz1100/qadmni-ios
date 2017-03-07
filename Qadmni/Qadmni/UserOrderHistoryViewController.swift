@@ -12,6 +12,14 @@ import XLPagerTabStrip
 import MBProgressHUD
 
 class UserOrderHistoryViewController: ButtonBarPagerTabStripViewController {
+    
+    
+    @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SWRevealViewController")
+        self.present(vc, animated: true, completion: nil)
+        }
+    
    
      let purpleInspireColor = UIColor(red:0.13, green:0.03, blue:0.25, alpha:1.0)
 

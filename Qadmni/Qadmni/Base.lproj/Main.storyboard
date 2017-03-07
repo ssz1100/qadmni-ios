@@ -2021,7 +2021,14 @@
                             <constraint firstItem="H14-FU-an2" firstAttribute="top" secondItem="SSc-3q-Amh" secondAttribute="bottom" id="tyx-7N-E03"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="efE-An-zzZ"/>
+                    <navigationItem key="navigationItem" id="efE-An-zzZ">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="M8A-HS-o3Y">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="backButtonTapped:" destination="F8L-HW-gIz" id="8RX-jX-iqE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="buttonBarView" destination="br1-X2-Hjd" id="Qur-5y-mPx"/>
                         <outlet property="containerView" destination="SSc-3q-Amh" id="1IV-vr-95M"/>
@@ -4355,9 +4362,9 @@
         <!--Navigation Controller-->
         <scene sceneID="jpy-gx-3eK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9lh-mk-ZYZ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="userCartNavigation" automaticallyAdjustsScrollViewInsets="NO" id="9lh-mk-ZYZ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="oEa-p0-gHJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oEa-p0-gHJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.59215686270000001" green="0.48627450979999998" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -5931,7 +5938,7 @@
         <!--Navigation Controller-->
         <scene sceneID="xpn-lF-bSJ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q4C-cn-6CH" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="UserOrderHistoryNavigation" automaticallyAdjustsScrollViewInsets="NO" id="q4C-cn-6CH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qVy-ZP-fZT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

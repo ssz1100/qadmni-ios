@@ -41,10 +41,22 @@ class LeftViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if (indexPath as NSIndexPath).row == 1
+        if (indexPath as NSIndexPath).row == 0
         {
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "UserCartViewController")
+            let vc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "userCartNavigation") as! UINavigationController
+            self.present(vc, animated: true, completion: nil)
+        }
+        else if (indexPath as NSIndexPath).row == 1
+        {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "UserOrderHistoryNavigation") as! UINavigationController
+            self.present(vc, animated: true, completion: nil)
+        }
+        else if (indexPath as NSIndexPath).row == 5
+        {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "VendorLoginViewController")
             self.present(vc, animated: true, completion: nil)
         }
         else if (indexPath as NSIndexPath).row == 6

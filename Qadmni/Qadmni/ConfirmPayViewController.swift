@@ -11,6 +11,7 @@ import UIKit
 class ConfirmPayViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,PayPalPaymentDelegate {
     
     var custProcessOrderResModel: CustProcessOrderResModel = CustProcessOrderResModel()
+    var coreData = CoreData()
     
     var environment:String = ""
     var payPalConfig = PayPalConfiguration() // default
@@ -104,8 +105,9 @@ class ConfirmPayViewController: UIViewController,UITableViewDataSource,UITableVi
                                                     let alertView = UIAlertController.init(title:"Order Placed" , message: "Order has been placed successfully", preferredStyle: .alert)
                                                     let callActionHandler = { (action:UIAlertAction!) -> Void in
                                                         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                                                        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "UserOrderHistoryViewController") as UIViewController
-                                                        self.navigationController?.pushViewController(vc, animated: true)
+                                                        let vc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "UserOrderHistoryNavigation") as! UINavigationController
+                                                        self.present(vc, animated: true)
+                                                        self.coreData.deleteCartData()
                                                     }
                                                     let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: callActionHandler)
                                                     alertView.addAction(defaultAction)
