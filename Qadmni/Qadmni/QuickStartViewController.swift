@@ -14,7 +14,7 @@ import CoreLocation
 import Alamofire
 import EVReflection
 
-class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocationManagerDelegate
+class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocationManagerDelegate,UISearchBarDelegate
     
 {
     var initialLoading : Bool = true
@@ -27,7 +27,15 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
     var categoryArray : [CustCategoryListResModel] = []
     var itemList:[DisplayItemList]=[]
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBAction func searchBittonBarItem(_ sender: UIBarButtonItem) {
+//        let searchController = UISearchController()
+//        
+//        searchController.searchBar.delegate = self
+//        self.searchDisplayController?.displaysSearchBarInNavigationBar = true
+        
 
+    }
+    
     let purpleInspireColor = UIColor(red:0.13, green:0.03, blue:0.25, alpha:1.0)
     
     override func viewDidLoad() {
@@ -289,6 +297,15 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
         return producer
     }
     
+    func createSearchBar()
+    {
+        let searchBar = UISearchBar()
+        searchBar.showsCancelButton = false
+        searchBar.placeholder = "Enter your search"
+        searchBar.delegate = self
+        
+    }
+       
 }
 
 

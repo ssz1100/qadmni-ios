@@ -15,6 +15,7 @@ target 'Qadmni' do
  pod 'GoogleMaps'
  pod 'GooglePlaces'
  pod 'PayPal-iOS-SDK'
+ pod 'OneSignal'
  
   # Pods for Qadmni
 

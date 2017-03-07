@@ -15,6 +15,7 @@ import IQKeyboardManagerSwift
 import Alamofire
 import  EVReflection
 import MBProgressHUD
+import OneSignal
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         PayPalMobile .initializeWithClientIds(forEnvironments: [PayPalEnvironmentProduction:"ARUsUW_-mWCE1NAAdf0Xy4KtxxpTgv9KsM3XtEpG3DlW3C3t7J_Qikz1dA1DfUUN2c0UQUpKfGJaG23z" ,
                                                                 PayPalEnvironmentSandbox: "AazpbjT0kIEf-4PEdLZL7S9Y6F2BU5zLN9vOn9AGgkjLcLHj0bFwIrOxQK-7vXwmT-0Q9SmVGapM5hDS"])
+        OneSignal.initWithLaunchOptions(launchOptions, appId: "29d2c9ef-09ee-468b-96c9-b26340758d9a")
+        
         
         
     

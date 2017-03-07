@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import OneSignal
 
 class UserLoginViewController: UIViewController,UITextFieldDelegate {
     var userDefaultManager : UserDefaultManager = UserDefaultManager()
-    
+    var resultDelegate : LoginResultDelegate?
     
     @IBOutlet weak var userNameTxtField: UITextField!
 
@@ -33,6 +34,12 @@ class UserLoginViewController: UIViewController,UITextFieldDelegate {
         let customerLoginUser = CustomerUserRequestModel()
         let customerLangCode = CustomerLangCodeRequestModel()
         
+        OneSignal.idsAvailable({(_ userId, _ pushToken) in
+            customerLoginData.pushId = userId!
+            
+        })
+
+        
         customerLoginData.emailId = self.userNameTxtField.text!
         customerLoginData.password = self.passwordTxtField.text!
         
@@ -49,9 +56,9 @@ class UserLoginViewController: UIViewController,UITextFieldDelegate {
                                                 response?.emailId = self.userNameTxtField.text!
                                                 response?.password = self.passwordTxtField.text!
                                                self.userDefaultManager.saveCustomerData(customerResponse: response)
-                                                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                                                let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "SWRevealViewController") as UIViewController
-                                                self.present(vc, animated: true, completion: nil)
+                                                self.dismiss(animated: true, completion: nil)
+                                                self.resultDelegate?.getResult(result: true)
+                                                
                                                 
                                                 
                                                 
@@ -140,10 +147,11 @@ class UserLoginViewController: UIViewController,UITextFieldDelegate {
     {
         self.view.endEditing(true)
     }
-    
+  }
 
+public protocol LoginResultDelegate {
+    func getResult(result:Bool)
     
-
     
-
 }
+

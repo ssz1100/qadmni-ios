@@ -8,22 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,LoginResultDelegate {
     var userDefaultManager : UserDefaultManager = UserDefaultManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if(userDefaultManager.getUserType() == 1)
-//        {
-//            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let vc: VendorLoginViewController = storyboard.instantiateViewController(withIdentifier: "VendorLoginViewController") as! VendorLoginViewController
-//            self.present(vc, animated: true, completion: nil)
-//        
-//        }else if(userDefaultManager.getUserType() == 2)
-//        {
-//            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let vc: UserLoginViewController = storyboard.instantiateViewController(withIdentifier: "UserLoginViewController") as! UserLoginViewController
-//            self.present(vc, animated: true, completion: nil)
-//        }
+        
         
     }
 
@@ -32,12 +21,23 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "loginSegue" {
             
-            
+            let destinationController = segue.destination as! UserLoginViewController
+            destinationController.resultDelegate = self
             
             
         }
+        
+    }
+
+    func getResult(result: Bool) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SWRevealViewController")
+        self.present(vc, animated: true, completion: nil)
+    }
+    }
 
 
 

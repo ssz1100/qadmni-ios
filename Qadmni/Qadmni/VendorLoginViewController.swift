@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import EVReflection
 import MBProgressHUD
+import OneSignal
 
 class VendorLoginViewController: UIViewController,UITextFieldDelegate {
     
@@ -41,7 +42,10 @@ class VendorLoginViewController: UIViewController,UITextFieldDelegate {
         let vendorLoginData = LoginVendorRequestModel()
         let vendorLangCode = VendorLangCodeRequestmodel()
         
-        
+        OneSignal.idsAvailable({(_ userId, _ pushToken) in
+            vendorLoginData.pushNotificationId = userId!
+
+        })
         vendorLoginData.emailId = userNameTxtField.text!
         vendorLoginData.password = passwordTxtField.text!
         

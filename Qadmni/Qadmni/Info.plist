@@ -4,15 +4,10 @@
 <dict>
 	<key>BaseUrl</key>
 	<string>http://192.168.1.6:8087/</string>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSExceptionDomains</key>
-		<dict/>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Qadmni</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -25,16 +20,27 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Qadmini would like to access photo , Please permit us</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Qadmini would like to access  current location , Please permit us</string>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict/>
+	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Qadmini would like to access  current location , Please permit us</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Qadmini would like to access photo , Please permit us</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

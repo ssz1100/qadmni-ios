@@ -170,6 +170,7 @@
 		CD33D1DE1E5884FE00D38DB9 /* ItemRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemRequestModel.swift; sourceTree = "<group>"; };
 		CD33D1E01E58867800D38DB9 /* PaymentMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
 		CD33D1E21E5887C000D38DB9 /* DelieveryMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelieveryMethods.swift; sourceTree = "<group>"; };
+		CD6C80F71E6D705100FD12D5 /* Qadmni.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Qadmni.entitlements; sourceTree = "<group>"; };
 		CD6FF9B81E5B21B400616634 /* ProcessItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessItemTableViewCell.swift; sourceTree = "<group>"; };
 		CD6FF9BA1E5B21D900616634 /* ProcessServiceTaxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessServiceTaxTableViewCell.swift; sourceTree = "<group>"; };
 		CD7CDC691E35EEA000D35F19 /* QuickStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickStartViewController.swift; sourceTree = "<group>"; };
@@ -404,6 +405,7 @@
 		CDC9454C1E2F522B00E6946F /* Qadmni */ = {
 			isa = PBXGroup;
 			children = (
+				CD6C80F71E6D705100FD12D5 /* Qadmni.entitlements */,
 				CDC9454D1E2F522B00E6946F /* AppDelegate.swift */,
 				CD9B2BA11E543730008A949F /* CoreDataManager */,
 				CDE6FDAD1E52EA81009A18E7 /* CustomerRequestModel */,
@@ -642,9 +644,17 @@
 				TargetAttributes = {
 					CDC945491E2F522B00E6946F = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 2TURKNDYVZ;
+						DevelopmentTeam = 6KFJ8CY7CN;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -700,7 +710,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		62E2BE2754BE6B0101558858 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -715,7 +725,7 @@
 		};
 		875FCEA955C3882055F1F369 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -730,7 +740,7 @@
 		};
 		FC063FE480E3D0695EFCF16E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -968,7 +978,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -979,10 +989,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 2TURKNDYVZ;
+				CODE_SIGN_ENTITLEMENTS = Qadmni/Qadmni.entitlements;
+				DEVELOPMENT_TEAM = 6KFJ8CY7CN;
 				INFOPLIST_FILE = Qadmni/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.qadmni.Qadmni;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Qadmni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Qadmni/Qadmni-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -996,13 +1008,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 2TURKNDYVZ;
+				CODE_SIGN_ENTITLEMENTS = Qadmni/Qadmni.entitlements;
+				DEVELOPMENT_TEAM = 6KFJ8CY7CN;
 				INFOPLIST_FILE = Qadmni/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.qadmni.Qadmni;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Qadmni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Qadmni/Qadmni-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

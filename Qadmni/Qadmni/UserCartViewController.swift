@@ -9,8 +9,9 @@
 import UIKit
 
 @available(iOS 10.0, *)
-class UserCartViewController: UIViewController, UITableViewDataSource,UITableViewDelegate {
+class UserCartViewController: UIViewController, UITableViewDataSource,UITableViewDelegate,LoginResultDelegate {
     var cartList : [MyCartModel] = []
+    var userDefaultManager : UserDefaultManager = UserDefaultManager()
     
     @IBOutlet var tableview: UITableView!
     
@@ -21,6 +22,17 @@ class UserCartViewController: UIViewController, UITableViewDataSource,UITableVie
     }
     
     @IBAction func proceedToPayButton(_ sender: UIButton) {
+        if(userDefaultManager.getUserType()=="other")
+        {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "UserLoginViewController") as UIViewController
+            self.present(vc, animated: true, completion: nil)
+        }else{
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "PlaceOrderViewController") as UIViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+        
+        }
     }
     
     @IBAction func myCartBackButton(_ sender: Any) {
@@ -46,6 +58,24 @@ class UserCartViewController: UIViewController, UITableViewDataSource,UITableVie
         // Dispose of any resources that can be recreated.
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "proceedToPaySegue" {
+//            if(userDefaultManager.getUserType() == "other")
+//            {
+//                let destinationController = segue.destination as! UserLoginViewController
+//                destinationController.resultDelegate = self
+//
+//            }else{
+//            let destinationController = segue.destination as! PlaceOrderViewController
+//            }
+//            
+//            
+//            
+//        }
+//        
+//    }
+//
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return cartList.count
@@ -59,17 +89,12 @@ class UserCartViewController: UIViewController, UITableViewDataSource,UITableVie
         cell.quantitylabel.text = quantity
                 return cell
     }
+    
+    func getResult(result: Bool) {
+       
+    }
+
        
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

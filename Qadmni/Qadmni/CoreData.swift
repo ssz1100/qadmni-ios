@@ -158,9 +158,8 @@ public class CoreData
             print("Error with request: \(error)")
         }
         return quantity
-
-    
     }
+    
 
 
         
