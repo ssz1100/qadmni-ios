@@ -142,6 +142,13 @@
 		CDE6FDC01E533D3B009A18E7 /* VendorForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6FDBF1E533D3B009A18E7 /* VendorForgotPasswordViewController.swift */; };
 		CDE6FDC21E53457A009A18E7 /* VendorForgotPasswordRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6FDC11E53457A009A18E7 /* VendorForgotPasswordRequestModel.swift */; };
 		CDEC80CF1E449BB8004FE5B6 /* GoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC80CE1E449BB8004FE5B6 /* GoogleMapViewController.swift */; };
+		CDF996AC1E711AD60007D493 /* TrackOrderReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF996AB1E711AD60007D493 /* TrackOrderReqModel.swift */; };
+		CDF996AE1E711B580007D493 /* TrackOrderResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF996AD1E711B580007D493 /* TrackOrderResModel.swift */; };
+		CDF996B01E711FA20007D493 /* TrackOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF996AF1E711FA20007D493 /* TrackOrderViewController.swift */; };
+		CDF996B21E711FBF0007D493 /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF996B11E711FBF0007D493 /* OrderDetailsViewController.swift */; };
+		CDF996B41E71343F0007D493 /* OrderItemDetailResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF996B31E71343F0007D493 /* OrderItemDetailResModel.swift */; };
+		CDF996B61E7134F80007D493 /* OrderItemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF996B51E7134F80007D493 /* OrderItemsList.swift */; };
+		CDF996BA1E71399F0007D493 /* OrderDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF996B91E71399F0007D493 /* OrderDetailsTableViewCell.swift */; };
 		CDFB2FFE1E32211C00A742E9 /* register_back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDFB2FFD1E32211C00A742E9 /* register_back.jpg */; };
 		CDFB30001E3221CC00A742E9 /* UserRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFB2FFF1E3221CC00A742E9 /* UserRegisterViewController.swift */; };
 		CDFB30021E323F8100A742E9 /* VendorRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFB30011E323F8100A742E9 /* VendorRegisterViewController.swift */; };
@@ -291,6 +298,13 @@
 		CDE6FDBF1E533D3B009A18E7 /* VendorForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		CDE6FDC11E53457A009A18E7 /* VendorForgotPasswordRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorForgotPasswordRequestModel.swift; sourceTree = "<group>"; };
 		CDEC80CE1E449BB8004FE5B6 /* GoogleMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
+		CDF996AB1E711AD60007D493 /* TrackOrderReqModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackOrderReqModel.swift; sourceTree = "<group>"; };
+		CDF996AD1E711B580007D493 /* TrackOrderResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackOrderResModel.swift; sourceTree = "<group>"; };
+		CDF996AF1E711FA20007D493 /* TrackOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackOrderViewController.swift; sourceTree = "<group>"; };
+		CDF996B11E711FBF0007D493 /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
+		CDF996B31E71343F0007D493 /* OrderItemDetailResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderItemDetailResModel.swift; sourceTree = "<group>"; };
+		CDF996B51E7134F80007D493 /* OrderItemsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderItemsList.swift; sourceTree = "<group>"; };
+		CDF996B91E71399F0007D493 /* OrderDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		CDFB2FFD1E32211C00A742E9 /* register_back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = register_back.jpg; sourceTree = "<group>"; };
 		CDFB2FFF1E3221CC00A742E9 /* UserRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegisterViewController.swift; sourceTree = "<group>"; };
 		CDFB30011E323F8100A742E9 /* VendorRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorRegisterViewController.swift; sourceTree = "<group>"; };
@@ -371,6 +385,7 @@
 				CD0560081E6456C300E87A07 /* CustItemListTableViewCell.swift */,
 				CD9C09811E6A84FD00DDFDC8 /* LiveOrderTableViewCell.swift */,
 				CD9C09831E6A851200DDFDC8 /* PastOrderTableViewCell.swift */,
+				CDF996B91E71399F0007D493 /* OrderDetailsTableViewCell.swift */,
 			);
 			name = TableViewCell;
 			sourceTree = "<group>";
@@ -470,6 +485,8 @@
 				CD0484C61E698B930052FB2D /* UserOrderHistoryViewController.swift */,
 				CD0484C81E698BB40052FB2D /* LiveOrderTableViewController.swift */,
 				CD0484CA1E698BD70052FB2D /* PastOrderTableViewController.swift */,
+				CDF996AF1E711FA20007D493 /* TrackOrderViewController.swift */,
+				CDF996B11E711FBF0007D493 /* OrderDetailsViewController.swift */,
 			);
 			name = UserViewControllers;
 			sourceTree = "<group>";
@@ -579,6 +596,7 @@
 				CDA4A0281E5C473200F6A100 /* CustConfirmOrderReqModel.swift */,
 				CD05600A1E6461D000E87A07 /* CustItemListReqModel.swift */,
 				CD0484CC1E69AC400052FB2D /* UserOrderHistoryReqModel.swift */,
+				CDF996AB1E711AD60007D493 /* TrackOrderReqModel.swift */,
 			);
 			name = CustomerRequestModel;
 			sourceTree = "<group>";
@@ -605,6 +623,9 @@
 				CDDA802A1E65A7E3009F45AF /* DisplayItemList.swift */,
 				CD0484CE1E69AC970052FB2D /* UserOrderHistoryResModel.swift */,
 				CD0484D01E69B1F40052FB2D /* PastOrderResModel.swift */,
+				CDF996AD1E711B580007D493 /* TrackOrderResModel.swift */,
+				CDF996B31E71343F0007D493 /* OrderItemDetailResModel.swift */,
+				CDF996B51E7134F80007D493 /* OrderItemsList.swift */,
 			);
 			name = CustomerResponseModel;
 			sourceTree = "<group>";
@@ -768,6 +789,7 @@
 				CDCE592D1E41C2CE00BE36CE /* LoginVendorRequestModel.swift in Sources */,
 				CDE6FDB81E52EC06009A18E7 /* CustomerBaseResponseModel.swift in Sources */,
 				CD0484CB1E698BD70052FB2D /* PastOrderTableViewController.swift in Sources */,
+				CDF996B21E711FBF0007D493 /* OrderDetailsViewController.swift in Sources */,
 				CD9923391E3742BD00B814EA /* TableViewController.swift in Sources */,
 				CDC945561E2F522B00E6946F /* Qadmni.xcdatamodeld in Sources */,
 				CDE440B71E67F5EE006BE971 /* VendorItemDetailResModel.swift in Sources */,
@@ -776,6 +798,7 @@
 				CDC945501E2F522B00E6946F /* ViewController.swift in Sources */,
 				CD0484C71E698B930052FB2D /* UserOrderHistoryViewController.swift in Sources */,
 				CDC52C491E30E4BF00C860FA /* VendorLoginViewController.swift in Sources */,
+				CDF996B41E71343F0007D493 /* OrderItemDetailResModel.swift in Sources */,
 				CDDA80291E65970A009F45AF /* DistanceResModel.swift in Sources */,
 				CDB5D10B1E3F0D8900AC20F0 /* LeftVendorViewController.swift in Sources */,
 				CDA429C61E3CA7F60069D928 /* SettingViewController.swift in Sources */,
@@ -799,10 +822,14 @@
 				CDE6FDBC1E531A5B009A18E7 /* CustomerRegisterResponseModel.swift in Sources */,
 				CDCE59341E41CB1900BE36CE /* BaseResponseModel.swift in Sources */,
 				CD9565111E5AB78900AF3A7E /* CustPlaceOrderResModel.swift in Sources */,
+				CDF996BA1E71399F0007D493 /* OrderDetailsTableViewCell.swift in Sources */,
 				CD81D73A1E4AEFFE00FA33FE /* VendorItemRequestModel.swift in Sources */,
 				CDDA80231E658D93009F45AF /* ProducerItemListdataModel.swift in Sources */,
+				CDF996AC1E711AD60007D493 /* TrackOrderReqModel.swift in Sources */,
 				CD05600B1E6461D100E87A07 /* CustItemListReqModel.swift in Sources */,
+				CDF996AE1E711B580007D493 /* TrackOrderResModel.swift in Sources */,
 				CD0484D11E69B1F40052FB2D /* PastOrderResModel.swift in Sources */,
+				CDF996B01E711FA20007D493 /* TrackOrderViewController.swift in Sources */,
 				CD33D1E11E58867800D38DB9 /* PaymentMethod.swift in Sources */,
 				CD05600F1E6462B300E87A07 /* ItemInfoModel.swift in Sources */,
 				CDE6FDB21E52EB50009A18E7 /* CustomerUserRequestModel.swift in Sources */,
@@ -855,6 +882,7 @@
 				CDE6FDAC1E52E9AD009A18E7 /* ServiceFacadeUser.swift in Sources */,
 				CD05600D1E64626600E87A07 /* CustItemListResModel.swift in Sources */,
 				CDCE593A1E42132A00BE36CE /* VendorLoginResponseModel.swift in Sources */,
+				CDF996B61E7134F80007D493 /* OrderItemsList.swift in Sources */,
 				CD9C09821E6A84FD00DDFDC8 /* LiveOrderTableViewCell.swift in Sources */,
 				CDE440B31E67EC3B006BE971 /* VendorUpdateProductReqModel.swift in Sources */,
 				CDFB30041E32498D00A742E9 /* VendorShopDetailViewController.swift in Sources */,

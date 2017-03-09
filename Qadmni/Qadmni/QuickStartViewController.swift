@@ -22,17 +22,17 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
     var customerLattitude : Double = 0
     var customerLongitude : Double = 0
     let coreData = CoreData()
+    var tableViewController = TableViewController()
+    var searchData : [UIViewController] = []
     
     var categoryListGroup = DispatchGroup()
     var categoryArray : [CustCategoryListResModel] = []
     var itemList:[DisplayItemList]=[]
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBAction func searchBittonBarItem(_ sender: UIBarButtonItem) {
-//        let searchController = UISearchController()
-//        
-//        searchController.searchBar.delegate = self
-//        self.searchDisplayController?.displaysSearchBarInNavigationBar = true
-        
+        let searchController = UISearchController(searchResultsController: tableViewController)
+        searchController.searchBar.delegate = self
+        self.present(searchController, animated:true, completion: nil)
 
     }
     
@@ -75,6 +75,13 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
        self.settings.style.selectedBarHeight = 2
      self.settings.style.selectedBarBackgroundColor = UIColor.gray
         PagerTabStripBehaviour.progressive(skipIntermediateViewControllers: true, elasticIndicatorLimit: true)
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 90, height: 45))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "qadmni_img_logo_english.png")
+        imageView.image = image
+        navigationItem.titleView = imageView
+        
+        
     
     }
 
@@ -99,6 +106,7 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
         }else{
             controllerList = self.generateViewControllerList(categoryList: categoryArray)
         }
+        searchData = controllerList
                 return controllerList
  }
 

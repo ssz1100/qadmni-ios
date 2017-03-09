@@ -515,6 +515,108 @@ public class ServiceFacadeUser
         }
         
     }
+    
+    public func customerTrackOrder(customerDataRequest:TrackOrderReqModel?,
+                                 customerUserRequest:CustomerUserRequestModel?,
+                                 customerLangCodeRequest:CustomerLangCodeRequestModel?,
+                                 completionHandler: @escaping (TrackOrderResModel?)->Void)
+    {
+        let endPointUrl : URL = URL(string:baseUrl + "trackorder")!
+        let customerDataString : String? = customerDataRequest?.toJsonString()
+        let customerUserString : String? = customerUserRequest?.toJsonString()
+        let customerLangCodeString : String? = customerLangCodeRequest?.toJsonString()
+        
+        let customerTrackOrderParameter: Parameters = buildRequestParameters(dataString: customerDataString, userString: customerUserString, langCodeString: customerLangCodeString)
+        
+        Alamofire.request(endPointUrl,
+                          method: .post,
+                          parameters: customerTrackOrderParameter,
+                          encoding: JSONEncoding.default,
+                          headers: nil)
+            .responseJSON{
+                response in
+                var trackOrderResModel : TrackOrderResModel = TrackOrderResModel()
+                guard response.result.isSuccess else{
+                    completionHandler(trackOrderResModel)
+                    return
+                }
+                guard  let responseValue = response.result.value as? [String : AnyObject]
+                    else{
+                        completionHandler(trackOrderResModel)
+                        return
+                        
+                }
+                
+                let responseErrorCode : Int32 = responseValue["errorCode"] as! Int32
+                trackOrderResModel.errorCode = responseErrorCode
+                let responseErrorMessage : String = (responseValue["message"] as? String)!
+                trackOrderResModel.message = responseErrorMessage
+                
+                if(responseErrorCode == 0){
+                    let responseRegisterData : String? = responseValue["data"] as? String
+                    
+                    let dict : NSDictionary = EVReflection.dictionaryFromJson(responseRegisterData);
+                    
+                    trackOrderResModel = EVReflection.setPropertiesfromDictionary(dict, anyObject: trackOrderResModel)
+                    trackOrderResModel = TrackOrderResModel(json : responseRegisterData)
+                    
+                }
+                completionHandler(trackOrderResModel)
+                
+        }
+    }
+    
+    public func customerOrderDetail(customerDataRequest:TrackOrderReqModel?,
+                                   customerUserRequest:CustomerUserRequestModel?,
+                                   customerLangCodeRequest:CustomerLangCodeRequestModel?,
+                                   completionHandler: @escaping (OrderItemDetailResModel?)->Void)
+    {
+        let endPointUrl : URL = URL(string:baseUrl + "orderitemdetails")!
+        let customerDataString : String? = customerDataRequest?.toJsonString()
+        let customerUserString : String? = customerUserRequest?.toJsonString()
+        let customerLangCodeString : String? = customerLangCodeRequest?.toJsonString()
+        
+        let customerOrderDetailsParameter: Parameters = buildRequestParameters(dataString: customerDataString, userString: customerUserString, langCodeString: customerLangCodeString)
+        
+        Alamofire.request(endPointUrl,
+                          method: .post,
+                          parameters: customerOrderDetailsParameter,
+                          encoding: JSONEncoding.default,
+                          headers: nil)
+            .responseJSON{
+                response in
+                var orderItemDetailResModel : OrderItemDetailResModel = OrderItemDetailResModel()
+                guard response.result.isSuccess else{
+                    completionHandler(orderItemDetailResModel)
+                    return
+                }
+                guard  let responseValue = response.result.value as? [String : AnyObject]
+                    else{
+                        completionHandler(orderItemDetailResModel)
+                        return
+                        
+                }
+                
+                let responseErrorCode : Int32 = responseValue["errorCode"] as! Int32
+                orderItemDetailResModel.errorCode = responseErrorCode
+                let responseErrorMessage : String = (responseValue["message"] as? String)!
+                orderItemDetailResModel.message = responseErrorMessage
+                
+                if(responseErrorCode == 0){
+                    let responseRegisterData : String? = responseValue["data"] as? String
+                    
+                    let dict : NSDictionary = EVReflection.dictionaryFromJson(responseRegisterData);
+                    
+                    orderItemDetailResModel = EVReflection.setPropertiesfromDictionary(dict, anyObject: orderItemDetailResModel)
+                    orderItemDetailResModel = OrderItemDetailResModel(json : responseRegisterData)
+                    
+                }
+                completionHandler(orderItemDetailResModel)
+                
+        }
+    }
+
+
 
 
 

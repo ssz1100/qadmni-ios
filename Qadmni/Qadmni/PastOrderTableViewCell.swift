@@ -10,6 +10,7 @@ import UIKit
 
 class PastOrderTableViewCell: UITableViewCell {
 
+    @IBOutlet var subView: UIView!
     @IBOutlet var feedbackButtonOutlet: UIButton!
     @IBOutlet var amountLabel: UILabel!
     @IBOutlet var viewDetailsOutlet: UIButton!

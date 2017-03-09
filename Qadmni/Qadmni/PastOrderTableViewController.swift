@@ -55,7 +55,8 @@ class PastOrderTableViewController: UITableViewController , IndicatorInfoProvide
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! PastOrderTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PastOrderTableViewCell
+        cell.subView.roundedGreyBorder()
         
         cell.orderIdLabel.text = String(self.pastOrderResModel[indexPath.row].orderId)
         let serverdateFormatter = DateFormatter()
@@ -71,11 +72,7 @@ class PastOrderTableViewController: UITableViewController , IndicatorInfoProvide
         cell.amountLabel.text = String(self.pastOrderResModel[indexPath.row].amountInSAR)
         cell.statusLabel.text = self.pastOrderResModel[indexPath.row].deliveryStatus
         cell.statusImageview.image = UIImage(named: "form_wiz_3.jpg")
-        
-        
-
        
-
         return cell
     }
     

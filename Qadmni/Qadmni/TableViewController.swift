@@ -21,10 +21,10 @@ class TableViewController: UITableViewController , IndicatorInfoProvider {
     var userDefaultManager : UserDefaultManager = UserDefaultManager()
     var sortType = SortByConstant()
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-//        fatalError("init(coder:) has not been implemented")
-    }
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+////        fatalError("init(coder:) has not been implemented")
+//    }
     
     public func setInfo(categoryId: Int32 ,categoryName: String?,items:[DisplayItemList]){
         self.categoryId = categoryId

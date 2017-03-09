@@ -14,14 +14,16 @@ import CoreLocation
 class PlaceOrderViewController: UIViewController,GoogleMapDelegate ,CLLocationManagerDelegate, GMSMapViewDelegate,OnCheckClickedDelegate {
     var googleMapsView: GMSMapView!
     var location = CLLocation()
-    let datePicker = UIDatePicker()
+    
     var userDefaultManager : UserDefaultManager = UserDefaultManager()
     var coreData : CoreData = CoreData()
+    var textString : String = ""
     
     var productInfo : [ItemRequestModel] = []
     var deliveryAddress : String = ""
     var deliveryMethod : String = ""
     var deliverySchedule : Int32 = 0
+    var checkDeliverySchedule : Bool=false
     var paymentMethod : String = ""
     var isGift: Bool = false
     var giftMessage : String = ""
@@ -54,6 +56,14 @@ class PlaceOrderViewController: UIViewController,GoogleMapDelegate ,CLLocationMa
     }
     
     @IBAction func PlaceYourButtonTapped(_ sender: UIButton) {
+        
+        let checkOut : Bool = validateData()
+        
+        if(!checkOut)
+        {
+            return;
+        }
+        
         
         let customerPlaceOrderData = CustDetailsPlaceOrderReqModel()
         let customerPlaceOrderUser :CustomerUserRequestModel = self.userDefaultManager.getCustomerCredential()
@@ -235,10 +245,7 @@ class PlaceOrderViewController: UIViewController,GoogleMapDelegate ,CLLocationMa
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        
        
-        
-                
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -284,15 +291,45 @@ class PlaceOrderViewController: UIViewController,GoogleMapDelegate ,CLLocationMa
             if(values){
                 deliverySchedule = 0
                 scheduleDateTimeOutlet.isChecked = false
+                checkDeliverySchedule = true
+            
             }
             break
         case scheduleDateTimeOutlet.tag:
             if(values){
                 asapButtonOutlet.isChecked = false
-                
+                checkDeliverySchedule = true
+                let alertView = UIAlertController.init(title: "Info", message: "select date and time", preferredStyle: .alert)
+                let callActionHandler = { (action:UIAlertAction!) -> Void in
+                    
+                    
+                }
+                let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: nil)
+                let defaultAction2 = UIAlertAction.init(title:"Cancel", style: .destructive, handler: callActionHandler)
+                alertView.addAction(defaultAction)
+                alertView.addAction(defaultAction2)
+                alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
+               
+                alertView.addTextField(configurationHandler: { (textField :UITextField) in
+                    textField.addTarget(self, action: #selector(self.textFieldAction(sender:)), for:.editingDidBegin)
+                    textField.placeholder = "Select date and time"
+                    textField.borderStyle = UITextBorderStyle.roundedRect
+                    
+                    
         
+//                    let dateFormatter = DateFormatter()
+//                    dateFormatter.dateFormat = "dd MMM hh:mm a"
+//                    textField.text = dateFormatter.string(from:self.datePicker.date)
+//                    self.dateAndTimeLabel.text = textField.text
+                    
+                    textField.text = self.textString
+
+                    
+                    
+                })
+                self.present(alertView, animated: true)
                 
-            }
+                }
             break
         case paypalButtonOutlet.tag:
             if(values){
@@ -338,6 +375,56 @@ class PlaceOrderViewController: UIViewController,GoogleMapDelegate ,CLLocationMa
             break
         }
     }
+    
+    func validateData() -> Bool
+    {
+         if (mainAddress.text == "Select address")
+        {
+            self.showAlertMessage(title: "Info", message: "Please select delivery address")
+            return false
+        }
+        else if (self.deliveryMethod == "")
+        {
+            self.showAlertMessage(title: "Info", message: "Please select delivery mode")
+            return false
+        }
+        else if (self.paymentMethod == "")
+        {
+            self.showAlertMessage(title: "Info", message: "Please select payment mode")
+            return false
+        }
+        else if (checkDeliverySchedule == false)
+        {
+            self.showAlertMessage(title: "Info", message: "Please select  delivery schedule")
+            return false
+
+        }
+        
+        return true
+        
+        
+    }
+    func handleTap(sender:UIDatePicker)
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM hh:mm a"
+        
+        self.textString = dateFormatter.string(from:sender.date)
+        
+    }
+    func textFieldAction(sender : UITextField)
+    {
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .dateAndTime
+        sender.inputView = datePicker
+        datePicker.addTarget(self, action: #selector(handleTap(sender:)), for: UIControlEvents.allEvents)
+    
+    }
+
+   
+
+    
+    
 
     
 }

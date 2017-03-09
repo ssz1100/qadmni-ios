@@ -16,7 +16,8 @@ class UserCartViewController: UIViewController, UITableViewDataSource,UITableVie
     @IBOutlet var tableview: UITableView!
     
     @IBAction func editCartButton(_ sender: UIButton) {
-    }
+        self.isEditing = !self.isEditing
+        }
     
     @IBAction func addMoreButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
@@ -46,6 +47,8 @@ class UserCartViewController: UIViewController, UITableViewDataSource,UITableVie
 
       tableview.delegate = self
       tableview.dataSource = self
+        
+        self.isEditing = true
         let coreData = CoreData()
         
        cartList =  coreData.getUserCoreDataDetails()
@@ -90,6 +93,23 @@ class UserCartViewController: UIViewController, UITableViewDataSource,UITableVie
         cell.quantitylabel.text = quantity
                 return cell
     }
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("Deleted")
+            
+        }
+    }
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+    }
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    
     
     func getResult(result: Bool) {
        
