@@ -21,5 +21,6 @@ public class DisplayItemList {
     var reviews : Int32 = 0
     var producerData = ProducerItemListdataModel()
     var itemQuantity : Int32 = 0
+    var isFavourite : Bool = false
 
 }

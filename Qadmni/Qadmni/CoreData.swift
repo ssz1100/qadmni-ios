@@ -183,6 +183,99 @@ public class CoreData
         }
 
     }
+    func saveUserFavourites(myfavourites : MyFavouritesModel)
+    {
+        let managedObjectContext: NSManagedObjectContext = getManagedObjectContext()
+        do{
+            
+        let entity =  NSEntityDescription.entity(forEntityName: "Favourites", in: managedObjectContext)
+        let userfavourite = NSManagedObject(entity: entity!, insertInto: managedObjectContext)
+        userfavourite.setValue(myfavourites.itemId, forKey: "itemId")
+    
+        }catch{
+        print("Error with request: \(error)")
+        }
+        
+        //save the object
+        do {
+            try managedObjectContext.save()
+            print("saved!")
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        } catch {
+            
+        }
+    
+    }
+    func isMyfavourites(itemId : Int32)->Bool
+    {
+        var isFavourite : Bool = false
+        let managedObjectContext: NSManagedObjectContext = getManagedObjectContext()
+        do{
+            let fetchRequest: NSFetchRequest<Favourites>=Favourites.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "itemId == %ld", itemId)
+            let searchResult=try managedObjectContext.fetch(fetchRequest)
+            if(!searchResult.isEmpty){
+            isFavourite = true
+            }else{
+            isFavourite = false
+            }
+            
+        }catch{
+            print("Error with request: \(error)")
+        }
+        return isFavourite
+    }
+    
+    func deleteMyFavourite()
+    {
+        let managedObjectContext: NSManagedObjectContext = getManagedObjectContext()
+        let fetchRequest: NSFetchRequest<Favourites> = Favourites.fetchRequest()
+        do {
+            let searchResults = try managedObjectContext.fetch(fetchRequest)
+            for userfavourite in searchResults as [NSManagedObject] {
+                managedObjectContext.delete(userfavourite)
+                
+            }
+        }catch {
+            print("Error with request: \(error)")
+        }
+        do {
+            try managedObjectContext.save()
+            print("saved!")
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        } catch {
+            
+        }
+        
+    }
+    
+    
+    func deletemyFavouriteItem(itemId : Int32)
+    {
+        let managedObjectContext: NSManagedObjectContext = getManagedObjectContext()
+        do{
+        let fetchRequest: NSFetchRequest<Favourites>=Favourites.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "itemId == %ld", itemId)
+        let searchResult=try managedObjectContext.fetch(fetchRequest)
+        if(!searchResult.isEmpty){
+            let favItem : Favourites=searchResult[0]
+            managedObjectContext.delete(favItem)
+            }}catch{
+                print("Error to delete data \(error)")
+        }
+            
+        do {
+            try managedObjectContext.save()
+            print("saved!")
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        } catch {
+            
+        }
+        
+    }
     
 
 

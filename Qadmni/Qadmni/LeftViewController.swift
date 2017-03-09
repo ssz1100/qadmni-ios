@@ -10,6 +10,7 @@ import UIKit
 
 class LeftViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var userDefaultManager : UserDefaultManager = UserDefaultManager()
+    var coreData = CoreData()
     
     @IBOutlet var profileImage: UIImageView!
     var menuNameArray:Array = [String]()
@@ -62,6 +63,7 @@ class LeftViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         else if (indexPath as NSIndexPath).row == 6
         {
             self.userDefaultManager.getUserDetailClear()
+            coreData.deleteMyFavourite()
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ViewController")
             self.present(vc, animated: true, completion: nil)

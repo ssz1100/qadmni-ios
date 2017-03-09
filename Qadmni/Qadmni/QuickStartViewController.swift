@@ -24,6 +24,7 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
     let coreData = CoreData()
     var tableViewController = TableViewController()
     var searchData : [UIViewController] = []
+     var userDefaultManager : UserDefaultManager = UserDefaultManager()
     
     var categoryListGroup = DispatchGroup()
     var categoryArray : [CustCategoryListResModel] = []
@@ -162,32 +163,69 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
         if(customerLattitude>0&&customerLongitude>0)
         {
             locationManager.stopUpdatingLocation()
-            let custItemListUser = CustomerUserRequestModel()
-            let custItemListData = CustItemListReqModel()
-            let custLangCode = CustomerLangCodeRequestModel()
-            custItemListData.categoryId = 0
-            let serviceFacadeUser = ServiceFacadeUser(configUrl : PropertyReaderFile.getBaseUrl())
-            serviceFacadeUser.CustomerItemlist(customerDataRequest: custItemListData,
-                                               customerUserRequest: custItemListUser,
-                                               customerLangCodeRequest: custLangCode,
-                                               completionHandler: {
-                                                response  in
-                                                //                                            self.getDistanceAndTime(custLat: self.customerLattitude, custLong: self.customerLongitude, producerLat:(response?.producerLocations[0].businessLat)!, producerLong: (response?.producerLocations[0].businessLong)!)
-                                                let producerLocationsData : [ProducerLocationModel]=(response?.producerLocations)!
-                                                var producerList:[ProducerItemListdataModel]=[]
-                                                for producerLocationmodel:ProducerLocationModel in producerLocationsData
-                                                {
-                                                    var producerListData : ProducerItemListdataModel=ProducerItemListdataModel()
-                                                    producerListData.businessLat=producerLocationmodel.businessLat
-                                                    producerListData.businessLong=producerLocationmodel.businessLong
-                                                    producerListData.businessName=producerLocationmodel.businessName
-                                                    producerListData.producerId=producerLocationmodel.producerId
-                                                    producerList.append(producerListData)
-                                                }
-                                                self.getLocationInBack(producers: producerList, items: (response?.itemInfoList)!)
-                                                
-            })
+            if (userDefaultManager.getUserType() == "other")
+            {
+                self.customerItemListRequest()
+            }else
+            {
+                coreData.deleteMyFavourite()
+                let addfavouriteReqModel = AddfavouriteReqModel()
+                let customerAddfavUser :CustomerUserRequestModel = self.userDefaultManager.getCustomerCredential()
+                let customerAddfavLangCode = CustomerLangCodeRequestModel()
+                let serviceFacadeUser = ServiceFacadeUser(configUrl : PropertyReaderFile.getBaseUrl())
+                serviceFacadeUser.customerAddFavourites(customerDataRequest: addfavouriteReqModel,
+                                                        customerUserRequest: customerAddfavUser,
+                                                        customerLangCodeRequest: customerAddfavLangCode,
+                                                        completionHandler: {
+                                                            response in
+                                                            if (response?.errorCode == 0)
+                                                            {
+                                                                for item in (response?.itemInfoList)!
+                                                                {
+                                                                    var myFavorite = MyFavouritesModel()
+                                                                    myFavorite.itemId = item.itemId
+                                                                    self.coreData.saveUserFavourites(myfavourites: myFavorite)
+
+                                                                }
+                                                            }else{
+                                                           print("No favourite found")
+                                                            }
+                                                            self.customerItemListRequest()
+                })
+            
+            }
+            
         }
+
+    }
+    
+    func customerItemListRequest()
+    {
+        let custItemListUser = CustomerUserRequestModel()
+        let custItemListData = CustItemListReqModel()
+        let custLangCode = CustomerLangCodeRequestModel()
+        custItemListData.categoryId = 0
+        let serviceFacadeUser = ServiceFacadeUser(configUrl : PropertyReaderFile.getBaseUrl())
+        serviceFacadeUser.CustomerItemlist(customerDataRequest: custItemListData,
+                                           customerUserRequest: custItemListUser,
+                                           customerLangCodeRequest: custLangCode,
+                                           completionHandler: {
+                                            response  in
+                                            //                                            self.getDistanceAndTime(custLat: self.customerLattitude, custLong: self.customerLongitude, producerLat:(response?.producerLocations[0].businessLat)!, producerLong: (response?.producerLocations[0].businessLong)!)
+                                            let producerLocationsData : [ProducerLocationModel]=(response?.producerLocations)!
+                                            var producerList:[ProducerItemListdataModel]=[]
+                                            for producerLocationmodel:ProducerLocationModel in producerLocationsData
+                                            {
+                                                var producerListData : ProducerItemListdataModel=ProducerItemListdataModel()
+                                                producerListData.businessLat=producerLocationmodel.businessLat
+                                                producerListData.businessLong=producerLocationmodel.businessLong
+                                                producerListData.businessName=producerLocationmodel.businessName
+                                                producerListData.producerId=producerLocationmodel.producerId
+                                                producerList.append(producerListData)
+                                            }
+                                            self.getLocationInBack(producers: producerList, items: (response?.itemInfoList)!)
+                                            
+        })
 
     }
     
@@ -263,6 +301,7 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
             displayItem.categoryId=itemInfo.categoryId
             displayItem.reviews=itemInfo.reviews
             displayItem.itemQuantity = coreData.getItemQuantity(itemId: itemInfo.itemId)
+            displayItem.isFavourite = coreData.isMyfavourites(itemId: itemInfo.itemId)
             
             displayItem.producerData=self.getProducerById(producerId:itemInfo.producerId,producers:producers)
             self.itemList.append(displayItem)

@@ -120,6 +120,7 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
         let rating : Double = Double(self.itemsData[indexPath.row].rating)!
         cell?.itemRatingView.rating = rating
         
+        
         let url = URL(string:self.itemsData[indexPath.row].imageUrl)
         if(url == nil){}
         else
@@ -129,8 +130,20 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
         }
         
         cell?.qautityLabel.text = String(self.itemsData[indexPath.row].itemQuantity)
+        if (self.itemsData[indexPath.row].isFavourite)
+        {
+            cell?.favImage.image = UIImage(named :"favouritesSelected")
+        }else{
+            cell?.favImage.image = UIImage(named :"favourites")
+        }
         cell?.stepperValue.tag = indexPath.row
         cell?.stepperValue.addTarget(self, action:#selector(stepperTapped(sender:)), for: .touchUpInside)
+        cell?.favImage.tag = indexPath.row
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tappedMe(sender:)))
+
+        cell?.favImage.addGestureRecognizer(tap)
+        cell?.favImage.isUserInteractionEnabled = true
+
             }
           return cell!
     }
@@ -148,6 +161,46 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
         tableView.reloadData()
         
     
+    }
+    func tappedMe(sender:UITapGestureRecognizer)
+    {
+        let itemInfoData : DisplayItemList = itemsData[(sender.view?.tag)!]
+        let addRemoveFavReqModel = AddRemoveFavReqModel()
+        addRemoveFavReqModel.productId = itemInfoData.itemId
+        if (itemInfoData.isFavourite)
+        {
+        addRemoveFavReqModel.favFlag = 0
+        }
+        else{
+        addRemoveFavReqModel.favFlag = 1
+        }
+        let customerAddfavUser :CustomerUserRequestModel = self.userDefaultManager.getCustomerCredential()
+        let customerAddfavLangCode = CustomerLangCodeRequestModel()
+        let serviceFacadeUser = ServiceFacadeUser(configUrl : PropertyReaderFile.getBaseUrl())
+        serviceFacadeUser.customerAddRemoveFavourites(customerDataRequest: addRemoveFavReqModel,
+                                                      customerUserRequest: customerAddfavUser,
+                                                      customerLangCodeRequest: customerAddfavLangCode,
+                                                      completionHandler: {
+                                                        response in
+                                                        debugPrint(response)
+                                                        if(response?.errorCode == 0)
+                                                        {
+                                                        itemInfoData.isFavourite = !itemInfoData.isFavourite
+                                                            if(itemInfoData.isFavourite)
+                                                            {
+                                                                var myfavourites = MyFavouritesModel()
+                                                                    myfavourites.itemId = itemInfoData.itemId
+                                                            self.coreData.saveUserFavourites(myfavourites: myfavourites)
+                                                            }else{
+                                                                self.coreData.deletemyFavouriteItem(itemId: itemInfoData.itemId)
+                                                            
+                                                            }
+                                                            self.tableView.reloadData()
+                                                        }
+                                                        
+        })
+
+        
     }
     
 
