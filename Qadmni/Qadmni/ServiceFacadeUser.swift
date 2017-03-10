@@ -671,12 +671,13 @@ public class ServiceFacadeUser
                                       customerLangCodeRequest:CustomerLangCodeRequestModel?,
                                       completionHandler: @escaping (CustomerBaseResponseModel?)->Void)
     {
-        let endPointUrl : URL = URL(string:baseUrl + "addremovefavorites")!
+        let endPointUrl : URL = URL(string:baseUrl + "addremovefavorite")!
         let customerDataString : String? = customerDataRequest?.toJsonString()
         let customerUserString : String? = customerUserRequest?.toJsonString()
         let customerLangCodeString : String? = customerLangCodeRequest?.toJsonString()
         
         let custAddRemoveFavouriteParameter: Parameters = buildRequestParameters(dataString: customerDataString, userString: customerUserString, langCodeString: customerLangCodeString)
+        print(custAddRemoveFavouriteParameter)
         
         Alamofire.request(endPointUrl,
                           method: .post,
