@@ -12,4 +12,5 @@ import EVReflection
 public class AddfavouritesResponseModel : CustomerBaseResponseModel
 {
     var itemInfoList : [ItemInfoModel] = []
+    var producerLocations : [ProducerLocationModel] = []
 }

@@ -7,33 +7,27 @@
 //
 
 import UIKit
+import Cosmos
 
 class MyFavouritesTableViewCell: UITableViewCell {
     
     
-    @IBOutlet var subView: UIView!
-    
-    @IBOutlet var displayImageFav: UIImageView!
-    
-    @IBOutlet var productNamefav: UILabel!
-    @IBOutlet var ratingbarFav: UIView!
-    
-    @IBOutlet var vendorName: UILabel!
-    
-    @IBOutlet var productDescription: UILabel!
-    
-    @IBOutlet var distanceLabel: UILabel!
-    
-    @IBOutlet var moneyLabel: UILabel!
-    
-    @IBOutlet var timeLabel: UILabel!
-    
-    @IBOutlet var reviewsLabel: UILabel!
-    @IBOutlet var quantityStepper: UIStepper!
-    
-    @IBOutlet var quantityLabel: UILabel!
+    @IBOutlet var itemName: UILabel!
     @IBOutlet var favImage: UIImageView!
+    @IBOutlet var itemRatingView: CosmosView!
+    @IBOutlet var producerNameLabel: UILabel!
+    @IBOutlet var itemDescription: UILabel!
+    @IBOutlet var distanceLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var amountLabel: UILabel!
+    @IBOutlet var qautityLabel: UILabel!
+    @IBOutlet var offerLabel: UILabel!
     
+    @IBOutlet var itemImage : UIImageView!
+    
+    @IBOutlet var reviewLabel: UILabel!
+    
+    @IBOutlet var stepperValue : UIStepper!
 
     override func awakeFromNib() {
         super.awakeFromNib()

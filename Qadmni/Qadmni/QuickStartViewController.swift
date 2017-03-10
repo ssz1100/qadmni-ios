@@ -17,6 +17,7 @@ import EVReflection
 class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocationManagerDelegate,UISearchBarDelegate
     
 {
+    
     var initialLoading : Bool = true
     let locationManager = CLLocationManager()
     var customerLattitude : Double = 0
@@ -39,6 +40,7 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
     
     let purpleInspireColor = UIColor(red:0.13, green:0.03, blue:0.25, alpha:1.0)
     
+    
     override func viewDidLoad() {
         settings.style.buttonBarBackgroundColor = .white
         settings.style.buttonBarItemBackgroundColor = .white
@@ -54,6 +56,7 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
             guard changeCurrentIndex == true else { return }
             oldCell?.label.textColor = .black
             newCell?.label.textColor =  self?.purpleInspireColor
+            
 
         }
         
@@ -151,6 +154,7 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
     override func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int)
     {
     }
+    
 
 
     // Mark :- CLLocationManagerDelegate
