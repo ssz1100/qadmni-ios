@@ -165,6 +165,38 @@ public class UserDefaultManager
         userDefaults.setValue(filterByPrice, forKey: "filterByPrice")
         
     }
+    func getUserProfiledetail()-> UserProfileDetail
+    {
+        let userProfile = UserProfileDetail()
+        userProfile.name = userDefaults.value(forKey: "customername") as! String
+         userProfile.email = userDefaults.value(forKey: "customerEmailId") as! String
+         userProfile.password = userDefaults.value(forKey: "customerPassword") as! String
+         userProfile.phoneNumber = userDefaults.value(forKey: "customerphone") as! String
+        return userProfile
+}
+    func saveUpdatedCustomerDetails(updateProfile : UserProfileDetail)
+    {
+         userDefaults.setValue(updateProfile.name, forKey: "customername")
+        userDefaults.setValue(updateProfile.password, forKey: "customerPassword")
+        userDefaults.setValue(updateProfile.phoneNumber, forKey: "customerphone")
+        
+    }
+    func getVendorProfiledetail()-> VendorProfileDetail
+    {
+        let vendorProfile = VendorProfileDetail()
+        vendorProfile.name = userDefaults.value(forKey: "vendorproducerName") as! String
+        vendorProfile.email = userDefaults.value(forKey: "vendorEmailId") as! String
+        vendorProfile.password = userDefaults.value(forKey: "vendorPassword") as! String
+        return vendorProfile
+    }
+    func saveUpdatedVendorDetails(updateVendorProfile : VendorProfileDetail)
+    {
+        userDefaults.setValue(updateVendorProfile.name, forKey: "vendorproducerName")
+        userDefaults.setValue(updateVendorProfile.password, forKey: "vendorPassword")
+        
+    }
+
+
 
     
    

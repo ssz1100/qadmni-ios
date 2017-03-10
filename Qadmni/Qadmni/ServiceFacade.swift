@@ -640,6 +640,50 @@ public class ServiceFacade
         
     }
     
+    public func updateVendorProfile(vendorDataRequest:UpdateVendorProfileReqModel?,
+                                     vendorUserRequest:VendorUserRequestModel?,
+                                     vendorLangCodeRequest:VendorLangCodeRequestmodel?,
+                                     completionHandler: @escaping (BaseResponseModel?)->Void)
+    {
+        let endPointUrl : URL = URL(string:baseUrl + "updateproducerprofile")!
+        let vendorDataString : String? = vendorDataRequest?.toJsonString()
+        let vendorUserString : String? = vendorUserRequest?.toJsonString()
+        let vendorLangCodeString : String? = vendorLangCodeRequest?.toJsonString()
+        
+        let updateVendorProfileParameter: Parameters = buildRequestParameters(dataString: vendorDataString, userString: vendorUserString, langCodeString: vendorLangCodeString)
+        
+        
+        Alamofire.request(endPointUrl,
+                          method: .post,
+                          parameters: updateVendorProfileParameter,
+                          encoding: JSONEncoding.default,
+                          headers: nil)
+            .responseJSON{
+                response in
+                let baseResponseModel = BaseResponseModel()
+                guard response.result.isSuccess else{
+                    completionHandler(baseResponseModel)
+                    return
+                }
+                guard  let responseValue = response.result.value as? [String : AnyObject]
+                    else{
+                        completionHandler(baseResponseModel)
+                        return
+                        
+                }
+                
+                let responseErrorCode : Int32 = responseValue["errorCode"] as! Int32
+                baseResponseModel.errorCode = responseErrorCode
+                let responseErrorMessage : String = (responseValue["message"] as? String)!
+                baseResponseModel.message = responseErrorMessage
+                
+                completionHandler(baseResponseModel)
+                
+        }
+        
+    }
+
+    
 
 
     

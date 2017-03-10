@@ -706,6 +706,46 @@ public class ServiceFacadeUser
                 
         }
     }
+    
+    public func customerUpdateProfile(customerDataRequest:UpdateCustProfileReqModel?,
+                                            customerUserRequest:CustomerUserRequestModel?,
+                                            customerLangCodeRequest:CustomerLangCodeRequestModel?,
+                                            completionHandler: @escaping (CustomerBaseResponseModel?)->Void)
+    {
+        let endPointUrl : URL = URL(string:baseUrl + "updatecustomerprofile")!
+        let customerDataString : String? = customerDataRequest?.toJsonString()
+        let customerUserString : String? = customerUserRequest?.toJsonString()
+        let customerLangCodeString : String? = customerLangCodeRequest?.toJsonString()
+        
+        let custUpdateProfileParameter: Parameters = buildRequestParameters(dataString: customerDataString, userString: customerUserString, langCodeString: customerLangCodeString)        
+        Alamofire.request(endPointUrl,
+                          method: .post,
+                          parameters: custUpdateProfileParameter,
+                          encoding: JSONEncoding.default,
+                          headers: nil)
+            .responseJSON{
+                response in
+                var customerBaseResponseModel : CustomerBaseResponseModel = CustomerBaseResponseModel()
+                guard response.result.isSuccess else{
+                    completionHandler(customerBaseResponseModel)
+                    return
+                }
+                guard  let responseValue = response.result.value as? [String : AnyObject]
+                    else{
+                        completionHandler(customerBaseResponseModel)
+                        return
+                        
+                }
+                
+                let responseErrorCode : Int32 = responseValue["errorCode"] as! Int32
+                customerBaseResponseModel.errorCode = responseErrorCode
+                let responseErrorMessage : String = (responseValue["message"] as? String)!
+                customerBaseResponseModel.message = responseErrorMessage
+                completionHandler(customerBaseResponseModel)
+                
+        }
+    }
+
 
     
 

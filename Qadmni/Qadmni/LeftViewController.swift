@@ -54,6 +54,13 @@ class LeftViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             let vc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "UserOrderHistoryNavigation") as! UINavigationController
             self.present(vc, animated: true, completion: nil)
         }
+        else if (indexPath as NSIndexPath).row == 3
+        {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "MyProfileNavigation") as! UINavigationController
+            self.present(vc, animated: true, completion: nil)
+            
+        }
         else if (indexPath as NSIndexPath).row == 5
         {
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

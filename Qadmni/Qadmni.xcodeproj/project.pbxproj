@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD013F9D1E72767400696C12 /* VendorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD013F9C1E72767400696C12 /* VendorProfileViewController.swift */; };
+		CD013F9F1E727BF800696C12 /* UserProfileDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD013F9E1E727BF800696C12 /* UserProfileDetail.swift */; };
+		CD013FA11E7282DE00696C12 /* UpdateCustProfileReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD013FA01E7282DD00696C12 /* UpdateCustProfileReqModel.swift */; };
 		CD0377951E33657B00FAE471 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0377941E33657B00FAE471 /* ForgotPasswordViewController.swift */; };
 		CD0484C51E6978560052FB2D /* test_order_details_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD0484C41E6978560052FB2D /* test_order_details_image.jpg */; };
 		CD0484C71E698B930052FB2D /* UserOrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0484C61E698B930052FB2D /* UserOrderHistoryViewController.swift */; };
@@ -20,6 +23,8 @@
 		CD05600D1E64626600E87A07 /* CustItemListResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD05600C1E64626600E87A07 /* CustItemListResModel.swift */; };
 		CD05600F1E6462B300E87A07 /* ItemInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD05600E1E6462B300E87A07 /* ItemInfoModel.swift */; };
 		CD0560111E6465DC00E87A07 /* ProducerLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0560101E6465DC00E87A07 /* ProducerLocationModel.swift */; };
+		CD1B4A5F1E72996900D86E13 /* UpdateVendorProfileReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B4A5E1E72996900D86E13 /* UpdateVendorProfileReqModel.swift */; };
+		CD1B4A611E729AA200D86E13 /* VendorProfileDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B4A601E729AA200D86E13 /* VendorProfileDetail.swift */; };
 		CD33D1DB1E5854D300D38DB9 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33D1DA1E5854D300D38DB9 /* CheckBox.swift */; };
 		CD33D1DD1E5883EB00D38DB9 /* CustDetailsPlaceOrderReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33D1DC1E5883EB00D38DB9 /* CustDetailsPlaceOrderReqModel.swift */; };
 		CD33D1DF1E5884FE00D38DB9 /* ItemRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33D1DE1E5884FE00D38DB9 /* ItemRequestModel.swift */; };
@@ -163,6 +168,9 @@
 /* Begin PBXFileReference section */
 		394D19E85BDCCD123005A67E /* Pods_Qadmni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Qadmni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAAECFAA4EF22160736EB017 /* Pods-Qadmni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qadmni.release.xcconfig"; path = "Pods/Target Support Files/Pods-Qadmni/Pods-Qadmni.release.xcconfig"; sourceTree = "<group>"; };
+		CD013F9C1E72767400696C12 /* VendorProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorProfileViewController.swift; sourceTree = "<group>"; };
+		CD013F9E1E727BF800696C12 /* UserProfileDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileDetail.swift; sourceTree = "<group>"; };
+		CD013FA01E7282DD00696C12 /* UpdateCustProfileReqModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCustProfileReqModel.swift; sourceTree = "<group>"; };
 		CD0377941E33657B00FAE471 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		CD0484C41E6978560052FB2D /* test_order_details_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_order_details_image.jpg; sourceTree = "<group>"; };
 		CD0484C61E698B930052FB2D /* UserOrderHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserOrderHistoryViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +184,8 @@
 		CD05600C1E64626600E87A07 /* CustItemListResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustItemListResModel.swift; sourceTree = "<group>"; };
 		CD05600E1E6462B300E87A07 /* ItemInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemInfoModel.swift; sourceTree = "<group>"; };
 		CD0560101E6465DC00E87A07 /* ProducerLocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProducerLocationModel.swift; sourceTree = "<group>"; };
+		CD1B4A5E1E72996900D86E13 /* UpdateVendorProfileReqModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateVendorProfileReqModel.swift; sourceTree = "<group>"; };
+		CD1B4A601E729AA200D86E13 /* VendorProfileDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorProfileDetail.swift; sourceTree = "<group>"; };
 		CD33D1DA1E5854D300D38DB9 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		CD33D1DC1E5883EB00D38DB9 /* CustDetailsPlaceOrderReqModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustDetailsPlaceOrderReqModel.swift; sourceTree = "<group>"; };
 		CD33D1DE1E5884FE00D38DB9 /* ItemRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemRequestModel.swift; sourceTree = "<group>"; };
@@ -482,6 +492,7 @@
 		CDCE59221E41AD5F00BE36CE /* UserViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CDE322E21E40AFA700002DBD /* MyProfileViewController.swift */,
 				CD0377941E33657B00FAE471 /* ForgotPasswordViewController.swift */,
 				CDE322DA1E4077C800002DBD /* MyFavouritesTableViewController.swift */,
 				CD7CDC6B1E360C3900D35F19 /* LeftViewController.swift */,
@@ -515,6 +526,7 @@
 				CDEC80CE1E449BB8004FE5B6 /* GoogleMapViewController.swift */,
 				CD9A11521E45ADBF0043DA43 /* SearchResultsController.swift */,
 				CDE6FDBF1E533D3B009A18E7 /* VendorForgotPasswordViewController.swift */,
+				CD013F9C1E72767400696C12 /* VendorProfileViewController.swift */,
 			);
 			name = VendorViewControllers;
 			sourceTree = "<group>";
@@ -525,7 +537,6 @@
 				CDC9454F1E2F522B00E6946F /* ViewController.swift */,
 				CDA429C51E3CA7F60069D928 /* SettingViewController.swift */,
 				CD7CDC691E35EEA000D35F19 /* QuickStartViewController.swift */,
-				CDE322E21E40AFA700002DBD /* MyProfileViewController.swift */,
 				CD9923381E3742BD00B814EA /* TableViewController.swift */,
 				CD33D1DA1E5854D300D38DB9 /* CheckBox.swift */,
 				CDC9456F1E2F98C800E6946F /* UITextField + textfield.swift */,
@@ -560,6 +571,7 @@
 				CDE6FDC11E53457A009A18E7 /* VendorForgotPasswordRequestModel.swift */,
 				CDE440B21E67EC3B006BE971 /* VendorUpdateProductReqModel.swift */,
 				CDE440B41E67EF20006BE971 /* VendorItemsDetailReqModel.swift */,
+				CD1B4A5E1E72996900D86E13 /* UpdateVendorProfileReqModel.swift */,
 			);
 			name = VendorRequestModel;
 			sourceTree = "<group>";
@@ -586,6 +598,8 @@
 				CD33D1E01E58867800D38DB9 /* PaymentMethod.swift */,
 				CD33D1E21E5887C000D38DB9 /* DelieveryMethods.swift */,
 				CD9C09861E6ACB4000DDFDC8 /* SortByConstant.swift */,
+				CD013F9E1E727BF800696C12 /* UserProfileDetail.swift */,
+				CD1B4A601E729AA200D86E13 /* VendorProfileDetail.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -608,6 +622,7 @@
 				CDF996AB1E711AD60007D493 /* TrackOrderReqModel.swift */,
 				CDF996BF1E7170E40007D493 /* AddfavouriteReqModel.swift */,
 				CDF746811E718B0700A8E1E4 /* AddRemoveFavReqModel.swift */,
+				CD013FA01E7282DD00696C12 /* UpdateCustProfileReqModel.swift */,
 			);
 			name = CustomerRequestModel;
 			sourceTree = "<group>";
@@ -801,6 +816,7 @@
 				CDCE592D1E41C2CE00BE36CE /* LoginVendorRequestModel.swift in Sources */,
 				CDE6FDB81E52EC06009A18E7 /* CustomerBaseResponseModel.swift in Sources */,
 				CD0484CB1E698BD70052FB2D /* PastOrderTableViewController.swift in Sources */,
+				CD013FA11E7282DE00696C12 /* UpdateCustProfileReqModel.swift in Sources */,
 				CDF996B21E711FBF0007D493 /* OrderDetailsViewController.swift in Sources */,
 				CD9923391E3742BD00B814EA /* TableViewController.swift in Sources */,
 				CDC945561E2F522B00E6946F /* Qadmni.xcdatamodeld in Sources */,
@@ -815,11 +831,13 @@
 				CDB5D10B1E3F0D8900AC20F0 /* LeftVendorViewController.swift in Sources */,
 				CDA429C61E3CA7F60069D928 /* SettingViewController.swift in Sources */,
 				CD33D1DB1E5854D300D38DB9 /* CheckBox.swift in Sources */,
+				CD1B4A5F1E72996900D86E13 /* UpdateVendorProfileReqModel.swift in Sources */,
 				CDA4A0041E5C201300F6A100 /* PayPalInfoResModel.swift in Sources */,
 				CDFB30021E323F8100A742E9 /* VendorRegisterViewController.swift in Sources */,
 				CD0484C91E698BB40052FB2D /* LiveOrderTableViewController.swift in Sources */,
 				CD9FA4441E498D67002BC631 /* VendorSignupRequestModel.swift in Sources */,
 				CDFB30001E3221CC00A742E9 /* UserRegisterViewController.swift in Sources */,
+				CD1B4A611E729AA200D86E13 /* VendorProfileDetail.swift in Sources */,
 				CDDA80251E659646009F45AF /* GoogleDistanceResModel.swift in Sources */,
 				CD33D1E31E5887C000D38DB9 /* DelieveryMethods.swift in Sources */,
 				CDB0A73E1E5EFD8200009C91 /* UpdateStatusModel.swift in Sources */,
@@ -902,11 +920,13 @@
 				CD9C09821E6A84FD00DDFDC8 /* LiveOrderTableViewCell.swift in Sources */,
 				CDE440B31E67EC3B006BE971 /* VendorUpdateProductReqModel.swift in Sources */,
 				CDFB30041E32498D00A742E9 /* VendorShopDetailViewController.swift in Sources */,
+				CD013F9F1E727BF800696C12 /* UserProfileDetail.swift in Sources */,
 				CD6FF9B91E5B21B400616634 /* ProcessItemTableViewCell.swift in Sources */,
 				CD7CDC6C1E360C3900D35F19 /* LeftViewController.swift in Sources */,
 				CDCE59321E41C64700BE36CE /* PropertyReaderFile.swift in Sources */,
 				CD81D7411E4B314B00FA33FE /* AddProductRequestModel.swift in Sources */,
 				CDC945701E2F98C800E6946F /* UITextField + textfield.swift in Sources */,
+				CD013F9D1E72767400696C12 /* VendorProfileViewController.swift in Sources */,
 				CDA4A0001E5C1D7200F6A100 /* CustProcessOrderReqModel.swift in Sources */,
 				CDC9456E1E2F919B00E6946F /* UserLoginViewController.swift in Sources */,
 				CD84D9371E3B144C0083BF71 /* UserCartViewController.swift in Sources */,

@@ -66,6 +66,12 @@ class LeftVendorViewController: UIViewController,UITableViewDataSource,UITableVi
             let vc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "OrderStatusNavigation") as! UINavigationController
                 self.present(vc, animated: true, completion: nil)
         }
+        else if (indexPath as NSIndexPath).row == 1
+        {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "VendorProfileNavigation") as! UINavigationController
+            self.present(vc, animated: true, completion: nil)
+        }
         else if (indexPath as NSIndexPath).row == 3
         {
             self.userDefaultManager.getUserDetailClear()

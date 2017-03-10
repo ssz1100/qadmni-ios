@@ -11,5 +11,6 @@ import EVReflection
 
 public class AddfavouriteReqModel : EVObject
 {
+    
 }
 
