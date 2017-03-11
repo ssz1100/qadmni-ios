@@ -745,12 +745,97 @@ public class ServiceFacadeUser
                 
         }
     }
-
-
     
-
-
-
+    public func customerReviewItem(customerDataRequest:ReviewItemReqModel?,
+                                    customerUserRequest:CustomerUserRequestModel?,
+                                    customerLangCodeRequest:CustomerLangCodeRequestModel?,
+                                    completionHandler: @escaping ([ReviewItemResModel?])->Void)
+    {
+        let endPointUrl : URL = URL(string:baseUrl + "reviewitems")!
+        let customerDataString : String? = customerDataRequest?.toJsonString()
+        let customerUserString : String? = customerUserRequest?.toJsonString()
+        let customerLangCodeString : String? = customerLangCodeRequest?.toJsonString()
+        
+        let reviewItemParameter: Parameters = buildRequestParameters(dataString: customerDataString, userString: customerUserString, langCodeString: customerLangCodeString)
+        Alamofire.request(endPointUrl,
+                          method: .post,
+                          parameters: reviewItemParameter,
+                          encoding: JSONEncoding.default,
+                          headers: nil)
+            .responseJSON{
+                response in
+                let reviewItemResModel = ReviewItemResModel()
+                guard response.result.isSuccess else{
+                    //completionHandler(vendorItemResponseModel)
+                    return
+                }
+                guard  let responseValue = response.result.value as? [String : AnyObject]
+                    else{
+                        //completionHandler(vendorItemResponseModel)
+                        return
+                        
+                }
+                print(responseValue)
+                
+                let responseErrorCode : Int32 = responseValue["errorCode"] as! Int32
+                reviewItemResModel.errorCode = responseErrorCode
+                let responseErrorMessage : String = (responseValue["message"] as? String)!
+                reviewItemResModel.message = responseErrorMessage
+                
+                var dict: Array<ReviewItemResModel> = []
+                if(responseErrorCode == 0)
+                {
+                    let responseData : String = (responseValue["data"] as? String)!
+                    dict=[ReviewItemResModel](json:responseData)
+                    
+                }
+                
+                
+                completionHandler(dict)
+                
+        }
+        
+    }
+    
+    public func customerSubmitFeedback(customerDataRequest:SubmitFeebackDataReqModel?,
+                                      customerUserRequest:CustomerUserRequestModel?,
+                                      customerLangCodeRequest:CustomerLangCodeRequestModel?,
+                                      completionHandler: @escaping (CustomerBaseResponseModel?)->Void)
+    {
+        let endPointUrl : URL = URL(string:baseUrl + "submitfeedback")!
+        let customerDataString : String? = customerDataRequest?.toJsonString()
+        let customerUserString : String? = customerUserRequest?.toJsonString()
+        let customerLangCodeString : String? = customerLangCodeRequest?.toJsonString()
+        
+        let custSubmitFeedbackParameter: Parameters = buildRequestParameters(dataString: customerDataString, userString: customerUserString, langCodeString: customerLangCodeString)
+        print(custSubmitFeedbackParameter)
+        Alamofire.request(endPointUrl,
+                          method: .post,
+                          parameters: custSubmitFeedbackParameter,
+                          encoding: JSONEncoding.default,
+                          headers: nil)
+            .responseJSON{
+                response in
+                var customerBaseResponseModel : CustomerBaseResponseModel = CustomerBaseResponseModel()
+                guard response.result.isSuccess else{
+                    completionHandler(customerBaseResponseModel)
+                    return
+                }
+                guard  let responseValue = response.result.value as? [String : AnyObject]
+                    else{
+                        completionHandler(customerBaseResponseModel)
+                        return
+                        
+                }
+                
+                let responseErrorCode : Int32 = responseValue["errorCode"] as! Int32
+                customerBaseResponseModel.errorCode = responseErrorCode
+                let responseErrorMessage : String = (responseValue["message"] as? String)!
+                customerBaseResponseModel.message = responseErrorMessage
+                completionHandler(customerBaseResponseModel)
+                
+        }
+    }
 
 
 

@@ -90,6 +90,10 @@ class LiveOrderTableViewController: UITableViewController , IndicatorInfoProvide
         }
         cell.trackOrderButtonOutlet.tag = indexPath.row
         cell.trackOrderButtonOutlet.addTarget(self, action:#selector(trackOrderButton(sender:)), for: .touchUpInside)
+        
+        cell.feedbackButtonOutlet.tag = indexPath.row
+        cell.feedbackButtonOutlet.addTarget(self, action:#selector(feedbackButton(sender:)), for: .touchUpInside)
+        
 
         return cell
     }
@@ -101,6 +105,15 @@ class LiveOrderTableViewController: UITableViewController , IndicatorInfoProvide
         vc.orderId = self.userOrderHistoryResModel[sender.tag].orderId
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func feedbackButton(sender : UIButton)
+    {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: UserFeedbackViewController = storyboard.instantiateViewController(withIdentifier: "UserFeedbackViewController") as! UserFeedbackViewController
+        vc.orderId = self.userOrderHistoryResModel[sender.tag].orderId
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
 
 }
