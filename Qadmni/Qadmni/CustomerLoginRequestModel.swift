@@ -13,7 +13,7 @@ public class CustomerLoginRequestModel : EVObject
 {
     var emailId : String = ""
     var password : String = ""
-    var pushId : String = ""
+    var pushId : String? 
     var osVersionType : String = "IO"
 
 }

@@ -42,14 +42,19 @@ class VendorLoginViewController: UIViewController,UITextFieldDelegate {
         let vendorLoginData = LoginVendorRequestModel()
         let vendorLangCode = VendorLangCodeRequestmodel()
         
-        OneSignal.idsAvailable({(_ userId, _ pushToken) in
-            vendorLoginData.pushNotificationId = userId!
-
-        })
-        vendorLoginData.emailId = userNameTxtField.text!
-        vendorLoginData.password = passwordTxtField.text!
+        DispatchQueue.global(qos: .background).async {
+            OneSignal.idsAvailable({(_ userId, _ pushToken) in
+                print("UserId:\(userId)")
+                vendorLoginData.pushNotificationId = userId!
+                if pushToken != nil {
+                    print("pushToken:\(pushToken)")
+                }
+            })
+        DispatchQueue.main.async {
+        vendorLoginData.emailId = self.userNameTxtField.text!
+        vendorLoginData.password = self.passwordTxtField.text!
         
-        showActivity()
+        self.showActivity()
         
         let serviceFacade = ServiceFacade(configUrl : PropertyReaderFile.getBaseUrl())
         serviceFacade.vendorLogin(vendorDataRequest: vendorLoginData,
@@ -85,6 +90,8 @@ class VendorLoginViewController: UIViewController,UITextFieldDelegate {
                                     
         
         })
+            }
+        }
         
         
         

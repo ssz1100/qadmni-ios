@@ -29,13 +29,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          print(NSHomeDirectory())
         IQKeyboardManager.sharedManager().enable = true
 
-        GMSServices.provideAPIKey("AIzaSyA8CA7g54OOFJFaMp9j8FzS0K0uh4azFCM")
-        GMSPlacesClient.provideAPIKey("AIzaSyA8CA7g54OOFJFaMp9j8FzS0K0uh4azFCM")
+//        GMSServices.provideAPIKey("AIzaSyA8CA7g54OOFJFaMp9j8FzS0K0uh4azFCM")
+//        GMSPlacesClient.provideAPIKey("AIzaSyA8CA7g54OOFJFaMp9j8FzS0K0uh4azFCM")
+
+        GMSServices.provideAPIKey(Bundle.main.object(forInfoDictionaryKey: "GMSservicesKey") as! String)
+        GMSPlacesClient.provideAPIKey(Bundle.main.object(forInfoDictionaryKey: "GMSPlacesKey") as! String)
+
         
-        PayPalMobile .initializeWithClientIds(forEnvironments: [PayPalEnvironmentProduction:"ARUsUW_-mWCE1NAAdf0Xy4KtxxpTgv9KsM3XtEpG3DlW3C3t7J_Qikz1dA1DfUUN2c0UQUpKfGJaG23z" ,
-                                                                PayPalEnvironmentSandbox: "AazpbjT0kIEf-4PEdLZL7S9Y6F2BU5zLN9vOn9AGgkjLcLHj0bFwIrOxQK-7vXwmT-0Q9SmVGapM5hDS"])
-        OneSignal.initWithLaunchOptions(launchOptions, appId: "29d2c9ef-09ee-468b-96c9-b26340758d9a")
-        
+//        PayPalMobile .initializeWithClientIds(forEnvironments: [PayPalEnvironmentProduction:"ARUsUW_-mWCE1NAAdf0Xy4KtxxpTgv9KsM3XtEpG3DlW3C3t7J_Qikz1dA1DfUUN2c0UQUpKfGJaG23z" ,
+//                                                                PayPalEnvironmentSandbox: "AazpbjT0kIEf-4PEdLZL7S9Y6F2BU5zLN9vOn9AGgkjLcLHj0bFwIrOxQK-7vXwmT-0Q9SmVGapM5hDS"])
+        PayPalMobile .initializeWithClientIds(forEnvironments: [PayPalEnvironmentProduction:Bundle.main.object(forInfoDictionaryKey: "PayPalEnvironmentProduction") as! String ,
+                                                                PayPalEnvironmentSandbox: Bundle.main.object(forInfoDictionaryKey: "PayPalEnvironmentSandbox")as!String])
+        //OneSignal.initWithLaunchOptions(launchOptions, appId: "29d2c9ef-09ee-468b-96c9-b26340758d9a")
+        OneSignal.initWithLaunchOptions(launchOptions, appId:Bundle.main.object(forInfoDictionaryKey: "OneSignalKey") as! String)
         
         
     

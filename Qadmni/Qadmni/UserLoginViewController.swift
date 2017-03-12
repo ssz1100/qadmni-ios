@@ -12,6 +12,7 @@ import OneSignal
 class UserLoginViewController: UIViewController,UITextFieldDelegate {
     var userDefaultManager : UserDefaultManager = UserDefaultManager()
     var resultDelegate : LoginResultDelegate?
+    //var userId : String = ""
     
     @IBOutlet weak var userNameTxtField: UITextField!
 
@@ -33,13 +34,15 @@ class UserLoginViewController: UIViewController,UITextFieldDelegate {
         let customerLoginData = CustomerLoginRequestModel()
         let customerLoginUser = CustomerUserRequestModel()
         let customerLangCode = CustomerLangCodeRequestModel()
-        
-        OneSignal.idsAvailable({(_ userId, _ pushToken) in
-            customerLoginData.pushId = userId!
-            
-        })
-
-        
+        DispatchQueue.global(qos: .background).async {
+            OneSignal.idsAvailable({(_ userId, _ pushToken) in
+                print("UserId:\(userId)")
+                customerLoginData.pushId = userId!
+                if pushToken != nil {
+                    print("pushToken:\(pushToken)")
+                }
+            })
+            DispatchQueue.main.async {
         customerLoginData.emailId = self.userNameTxtField.text!
         customerLoginData.password = self.passwordTxtField.text!
         
@@ -73,6 +76,9 @@ class UserLoginViewController: UIViewController,UITextFieldDelegate {
                                             
         
         })
+            }
+            
+        }
         
         
         

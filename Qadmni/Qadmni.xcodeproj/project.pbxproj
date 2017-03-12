@@ -41,6 +41,10 @@
 		CD7FF3861E73E34100A35039 /* ReviewItemResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7FF3851E73E34100A35039 /* ReviewItemResModel.swift */; };
 		CD7FF3881E73EBE300A35039 /* SubmitFeedbackItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7FF3871E73EBE300A35039 /* SubmitFeedbackItemModel.swift */; };
 		CD7FF38A1E73EC5A00A35039 /* SubmitFeebackDataReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7FF3891E73EC5A00A35039 /* SubmitFeebackDataReqModel.swift */; };
+		CD7FF38C1E7404CC00A35039 /* VendorSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7FF38B1E7404CC00A35039 /* VendorSettingViewController.swift */; };
+		CD7FF3911E740D8500A35039 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7FF38E1E740D8500A35039 /* GlobalConstants.swift */; };
+		CD7FF3921E740D8500A35039 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7FF38F1E740D8500A35039 /* LanguageManager.swift */; };
+		CD7FF3931E740D8500A35039 /* CustomLocale.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7FF3901E740D8500A35039 /* CustomLocale.swift */; };
 		CD81D73A1E4AEFFE00FA33FE /* VendorItemRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD81D7391E4AEFFE00FA33FE /* VendorItemRequestModel.swift */; };
 		CD81D73C1E4AF13600FA33FE /* VendorItemResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD81D73B1E4AF13600FA33FE /* VendorItemResponseModel.swift */; };
 		CD81D73F1E4B0DAD00FA33FE /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD81D73E1E4B0DAD00FA33FE /* UserDefaultManager.swift */; };
@@ -209,6 +213,12 @@
 		CD7FF3851E73E34100A35039 /* ReviewItemResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewItemResModel.swift; sourceTree = "<group>"; };
 		CD7FF3871E73EBE300A35039 /* SubmitFeedbackItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitFeedbackItemModel.swift; sourceTree = "<group>"; };
 		CD7FF3891E73EC5A00A35039 /* SubmitFeebackDataReqModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitFeebackDataReqModel.swift; sourceTree = "<group>"; };
+		CD7FF38B1E7404CC00A35039 /* VendorSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorSettingViewController.swift; sourceTree = "<group>"; };
+		CD7FF38E1E740D8500A35039 /* GlobalConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		CD7FF38F1E740D8500A35039 /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		CD7FF3901E740D8500A35039 /* CustomLocale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLocale.swift; sourceTree = "<group>"; };
+		CD7FF3981E742C7300A35039 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		CD7FF3991E742C7300A35039 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CD81D7391E4AEFFE00FA33FE /* VendorItemRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorItemRequestModel.swift; sourceTree = "<group>"; };
 		CD81D73B1E4AF13600FA33FE /* VendorItemResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorItemResponseModel.swift; sourceTree = "<group>"; };
 		CD81D73E1E4B0DAD00FA33FE /* UserDefaultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
@@ -393,6 +403,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CD7FF38D1E740D6100A35039 /* LanguageHelper */ = {
+			isa = PBXGroup;
+			children = (
+				CD7FF38E1E740D8500A35039 /* GlobalConstants.swift */,
+				CD7FF38F1E740D8500A35039 /* LanguageManager.swift */,
+				CD7FF3901E740D8500A35039 /* CustomLocale.swift */,
+			);
+			name = LanguageHelper;
+			sourceTree = "<group>";
+		};
 		CD81D73D1E4B0D8300FA33FE /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +474,7 @@
 			children = (
 				CD6C80F71E6D705100FD12D5 /* Qadmni.entitlements */,
 				CDC9454D1E2F522B00E6946F /* AppDelegate.swift */,
+				CD7FF38D1E740D6100A35039 /* LanguageHelper */,
 				CD9B2BA11E543730008A949F /* CoreDataManager */,
 				CDE6FDAD1E52EA81009A18E7 /* CustomerRequestModel */,
 				CDE6FDAE1E52EA9A009A18E7 /* CustomerResponseModel */,
@@ -505,6 +526,7 @@
 		CDCE59221E41AD5F00BE36CE /* UserViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CDA429C51E3CA7F60069D928 /* SettingViewController.swift */,
 				CDE322E21E40AFA700002DBD /* MyProfileViewController.swift */,
 				CD0377941E33657B00FAE471 /* ForgotPasswordViewController.swift */,
 				CDE322DA1E4077C800002DBD /* MyFavouritesTableViewController.swift */,
@@ -541,6 +563,7 @@
 				CD9A11521E45ADBF0043DA43 /* SearchResultsController.swift */,
 				CDE6FDBF1E533D3B009A18E7 /* VendorForgotPasswordViewController.swift */,
 				CD013F9C1E72767400696C12 /* VendorProfileViewController.swift */,
+				CD7FF38B1E7404CC00A35039 /* VendorSettingViewController.swift */,
 			);
 			name = VendorViewControllers;
 			sourceTree = "<group>";
@@ -549,7 +572,6 @@
 			isa = PBXGroup;
 			children = (
 				CDC9454F1E2F522B00E6946F /* ViewController.swift */,
-				CDA429C51E3CA7F60069D928 /* SettingViewController.swift */,
 				CD7CDC691E35EEA000D35F19 /* QuickStartViewController.swift */,
 				CD9923381E3742BD00B814EA /* TableViewController.swift */,
 				CD33D1DA1E5854D300D38DB9 /* CheckBox.swift */,
@@ -864,6 +886,7 @@
 				CDE6FDC21E53457A009A18E7 /* VendorForgotPasswordRequestModel.swift in Sources */,
 				CDCE592B1E41C1D900BE36CE /* BaseRequestModel.swift in Sources */,
 				CDE6FDBE1E5331AD009A18E7 /* CustomerForgotPasswordRequestModel.swift in Sources */,
+				CD7FF3931E740D8500A35039 /* CustomLocale.swift in Sources */,
 				CD81D73C1E4AF13600FA33FE /* VendorItemResponseModel.swift in Sources */,
 				CDE6FDBA1E531996009A18E7 /* CustomerRegisterRequestModel.swift in Sources */,
 				CD9C09841E6A851200DDFDC8 /* PastOrderTableViewCell.swift in Sources */,
@@ -877,6 +900,7 @@
 				CDF996AC1E711AD60007D493 /* TrackOrderReqModel.swift in Sources */,
 				CD05600B1E6461D100E87A07 /* CustItemListReqModel.swift in Sources */,
 				CDF996AE1E711B580007D493 /* TrackOrderResModel.swift in Sources */,
+				CD7FF3921E740D8500A35039 /* LanguageManager.swift in Sources */,
 				CD0484D11E69B1F40052FB2D /* PastOrderResModel.swift in Sources */,
 				CDF996B01E711FA20007D493 /* TrackOrderViewController.swift in Sources */,
 				CDF996BC1E7166860007D493 /* MyFavouritesModel.swift in Sources */,
@@ -893,6 +917,7 @@
 				CDB5D1171E3F5CFA00AC20F0 /* VendorOrderStatusTableViewController.swift in Sources */,
 				CDB5D1191E3F5DCE00AC20F0 /* VendorOrderStatusTableViewCell.swift in Sources */,
 				CDB0A73A1E5EEAF800009C91 /* VendorOrderReqModel.swift in Sources */,
+				CD7FF38C1E7404CC00A35039 /* VendorSettingViewController.swift in Sources */,
 				CD33D1DF1E5884FE00D38DB9 /* ItemRequestModel.swift in Sources */,
 				CDDA802B1E65A7E3009F45AF /* DisplayItemList.swift in Sources */,
 				CDE322E31E40AFA700002DBD /* MyProfileViewController.swift in Sources */,
@@ -928,6 +953,7 @@
 				CDAE23B41E6070C50024F4A4 /* UpdateDelStatusViewController.swift in Sources */,
 				CD0377951E33657B00FAE471 /* ForgotPasswordViewController.swift in Sources */,
 				CDA429C21E3C89720069D928 /* FilterViewController.swift in Sources */,
+				CD7FF3911E740D8500A35039 /* GlobalConstants.swift in Sources */,
 				CDB5D1151E3F4E7000AC20F0 /* ProductListTableViewCell.swift in Sources */,
 				CD0560111E6465DC00E87A07 /* ProducerLocationModel.swift in Sources */,
 				CDF746821E718B0700A8E1E4 /* AddRemoveFavReqModel.swift in Sources */,
@@ -965,6 +991,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CDC945521E2F522B00E6946F /* Base */,
+				CD7FF3981E742C7300A35039 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -973,6 +1000,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CDC9455A1E2F522B00E6946F /* Base */,
+				CD7FF3991E742C7300A35039 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -984,6 +1012,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1033,6 +1062,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

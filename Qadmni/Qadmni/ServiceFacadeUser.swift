@@ -30,6 +30,7 @@ public class ServiceFacadeUser
         let customerLangCodeString : String? = customerLangCodeRequest?.toJsonString()
         
         let customerLoginParameter: Parameters = buildRequestParameters(dataString: customerLoginDataString, userString: customerLoginUserString, langCodeString: customerLangCodeString)
+        print(customerLoginParameter)
         
         Alamofire.request(endPointUrl,
                           method: .post,

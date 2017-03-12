@@ -13,7 +13,7 @@ public class LoginVendorRequestModel : EVObject
 {
     var emailId : String = ""
     var password : String = ""
-    var pushNotificationId : String = ""
+    var pushNotificationId : String?
     var pushDeviceOsType : String = "IO"
 
 }

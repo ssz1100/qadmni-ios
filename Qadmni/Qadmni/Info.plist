@@ -4,6 +4,16 @@
 <dict>
 	<key>BaseUrl</key>
 	<string>http://192.168.1.6:8087/</string>
+	<key>GMSservicesKey</key>
+	<string>AIzaSyA8CA7g54OOFJFaMp9j8FzS0K0uh4azFCM</string>
+	<key>GMSPlacesKey</key>
+	<string>AIzaSyA8CA7g54OOFJFaMp9j8FzS0K0uh4azFCM</string>
+	<key>OneSignalKey</key>
+	<string>29d2c9ef-09ee-468b-96c9-b26340758d9a</string>
+	<key>PayPalEnvironmentProduction</key>
+	<string>ARUsUW_-mWCE1NAAdf0Xy4KtxxpTgv9KsM3XtEpG3DlW3C3t7J_Qikz1dA1DfUUN2c0UQUpKfGJaG23z</string>
+	<key>PayPalEnvironmentSandbox</key>
+	<string>AazpbjT0kIEf-4PEdLZL7S9Y6F2BU5zLN9vOn9AGgkjLcLHj0bFwIrOxQK-7vXwmT-0Q9SmVGapM5hDS</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -52,8 +62,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 </dict>
 </plist>

@@ -81,6 +81,7 @@ public class ServiceFacade
         let vendorLangCodeString : String? = vendorLangCodeRequest?.toJsonString()
         
         let vendorLoginParameter: Parameters = buildRequestParameters(dataString: vendorLoginDataString, userString: vendorLoginUserString, langCodeString: vendorLangCodeString)
+        print(vendorLoginParameter)
         
         Alamofire.request(endPointUrl,
                           method: .post,

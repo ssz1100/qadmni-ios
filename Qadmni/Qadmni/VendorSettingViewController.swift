@@ -1,28 +1,21 @@
 //
-//  SettingViewController.swift
+//  VendorSettingViewController.swift
 //  Qadmni
 //
-//  Created by Prakash Sabale on 28/01/17.
+//  Created by Prakash Sabale on 11/03/17.
 //  Copyright © 2017 Qadmni. All rights reserved.
 //
 
 import UIKit
 
-class SettingViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
+class VendorSettingViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     let pickerView = UIPickerView()
     var languageArray = ["English","Arabic"]
-    
-    @IBOutlet var subView: UIView!
-    @IBOutlet var launguageTxtField: UITextField!
-
-    @IBAction func launguageTxtFieldAction(_ sender: UITextField) {
+    @IBAction func saveSettingButton(_ sender: UIButton) {
     }
+    @IBOutlet var langTxtField: UITextField!
     
-    @IBAction func SaveSettingButtonTapped(_ sender: UIButton) {
-    }
-  
-    
-    @IBAction func backButtontapped(_ sender: UIBarButtonItem) {
+    @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -30,8 +23,7 @@ class SettingViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
         super.viewDidLoad()
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
-        self.launguageTxtField.inputView = self.pickerView
-
+        self.langTxtField.inputView = self.pickerView
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,12 +40,13 @@ class SettingViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
         return languageArray.count
     }
     public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            return languageArray[row]
-    
-        }
+        return languageArray[row]
+        
+    }
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-        self.launguageTxtField.text = languageArray[row]
-        self.launguageTxtField.isUserInteractionEnabled = false
+        self.langTxtField.text = languageArray[row]
+        self.langTxtField.isUserInteractionEnabled = false
+        self.view.endEditing(true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
