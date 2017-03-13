@@ -12,6 +12,7 @@ import EVReflection
 
 public class ServiceFacadeUser
 {
+    var userDefaultManager : UserDefaultManager = UserDefaultManager()
     var baseUrl : String
     
     init( configUrl : String?)
@@ -314,11 +315,12 @@ public class ServiceFacadeUser
         let customerLangCodeString : String? = ""
         
         let custCategoryParameter: Parameters = buildRequestParameters(dataString: customerDataString, userString: customerUserString, langCodeString: customerLangCodeString)
+        print(custCategoryParameter)
         //let dispatchQueue = DispatchQueue(label: "Main", qos: .userInitiated, attributes: .concurrent, autoreleaseFrequency: .inherit, target: nil)
         
         let alamoFireRequest:DataRequest = Alamofire.request(endPointUrl,
                           method: .post,
-                          parameters: nil,
+                          parameters: custCategoryParameter,
                           encoding: JSONEncoding.default,
                           headers: nil);
         
@@ -366,6 +368,7 @@ public class ServiceFacadeUser
         let custLangCodeString : String? = customerLangCodeRequest?.toJsonString()
         
         let custOrderParameter: Parameters = buildRequestParameters(dataString: custDataString, userString: custUserString, langCodeString: custLangCodeString)
+        print(custOrderParameter)
         
         
         Alamofire.request(endPointUrl,
@@ -845,7 +848,7 @@ public class ServiceFacadeUser
         
         params["data"] = dataString as AnyObject?
         params["user"] = userString as AnyObject?
-        params["langCode"] = langCodeString as AnyObject?
+        params["langCode"] = self.userDefaultManager.getLanguageCode()
         return params
     }
 

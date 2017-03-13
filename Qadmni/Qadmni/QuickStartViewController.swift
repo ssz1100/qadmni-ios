@@ -32,8 +32,9 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
     var itemList:[DisplayItemList]=[]
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBAction func searchBittonBarItem(_ sender: UIBarButtonItem) {
-        let searchController = UISearchController(searchResultsController: tableViewController)
+        let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
+        
         self.present(searchController, animated:true, completion: nil)
 
     }
@@ -59,9 +60,18 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
             
 
         }
-        
-        self.menuButton.target = revealViewController()
+        let revealController = revealViewController()
+        self.menuButton.target = revealController
+        if(userDefaultManager.getLanguageCode() == "En")
+        {
         self.menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+        }else{
+        let rearController = self.storyboard?.instantiateViewController(withIdentifier: "LeftViewController")
+        revealController?.setRight(rearController, animated: true)
+        self.menuButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+        }
+      
+        
         super.viewDidLoad()
         self.locationManager.requestAlwaysAuthorization()
         locationManager.delegate = self

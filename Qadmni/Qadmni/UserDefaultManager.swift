@@ -195,6 +195,25 @@ public class UserDefaultManager
         userDefaults.setValue(updateVendorProfile.password, forKey: "vendorPassword")
         
     }
+    func getLanguageCode() -> String
+    {
+        if(userDefaults.value(forKey: "LanguageCode") == nil)
+        {
+            userDefaults.setValue("En", forKey: "LanguageCode")
+        }
+        var languageCode : String = ""
+        languageCode = userDefaults.value(forKey: "LanguageCode") as! String
+        
+        return languageCode
+        
+    }
+    func setLanguageCode(languageCode : String)
+    {
+        userDefaults.setValue(languageCode, forKey: "LanguageCode")
+        
+    }
+
+    
 
 
 

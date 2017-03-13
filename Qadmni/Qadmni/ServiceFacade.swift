@@ -12,6 +12,7 @@ import EVReflection
 
 public class ServiceFacade
 {
+    var userDefaultManager : UserDefaultManager = UserDefaultManager()
     var baseUrl : String
     
     init( configUrl : String?)
@@ -699,7 +700,7 @@ public class ServiceFacade
         
         params["data"] = dataString as AnyObject?
         params["user"] = userString as AnyObject?
-        params["langCode"] = langCodeString as AnyObject?
+        params["langCode"] = self.userDefaultManager.getLanguageCode()
         return params
     }
     

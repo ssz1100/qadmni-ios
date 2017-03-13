@@ -11,6 +11,8 @@ import UIKit
 class SettingViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     let pickerView = UIPickerView()
     var languageArray = ["English","Arabic"]
+    var userDefaultManager : UserDefaultManager = UserDefaultManager()
+    
     
     @IBOutlet var subView: UIView!
     @IBOutlet var launguageTxtField: UITextField!
@@ -19,6 +21,23 @@ class SettingViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
     }
     
     @IBAction func SaveSettingButtonTapped(_ sender: UIButton) {
+        let languageStr : String = self.launguageTxtField.text!
+        if(languageStr == "")
+        {
+            self.showAlertMessage(title: "Info", message: "Please Select Language")
+        }else if (languageStr == "English")
+        {
+        self.userDefaultManager.setLanguageCode(languageCode: "En")
+            LanguageManager.sharedInstance.setLocale("en")
+        }else if (languageStr == "Arabic")
+        {
+        self.userDefaultManager.setLanguageCode(languageCode: "Ar")
+            LanguageManager.sharedInstance.setLocale("ar")
+        }
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "SWRevealViewController") as UIViewController
+        self.present(vc, animated: true, completion: nil)
+        
     }
   
     

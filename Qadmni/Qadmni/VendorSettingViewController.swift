@@ -11,7 +11,20 @@ import UIKit
 class VendorSettingViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     let pickerView = UIPickerView()
     var languageArray = ["English","Arabic"]
+    var userDefaultManager : UserDefaultManager = UserDefaultManager()
     @IBAction func saveSettingButton(_ sender: UIButton) {
+        let languageStr : String = self.langTxtField.text!
+        if(languageStr == "")
+        {
+            self.showAlertMessage(title: "Info", message: "Please Select Language")
+        }else if (languageStr == "English")
+        {
+            self.userDefaultManager.setLanguageCode(languageCode: "En")
+        }else if (languageStr == "Arabic")
+        {
+            self.userDefaultManager.setLanguageCode(languageCode: "Ar")
+        }
+
     }
     @IBOutlet var langTxtField: UITextField!
     
