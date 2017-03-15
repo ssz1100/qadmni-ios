@@ -197,21 +197,68 @@ public class UserDefaultManager
     }
     func getLanguageCode() -> String
     {
-        if(userDefaults.value(forKey: "LanguageCode") == nil)
-        {
-            userDefaults.setValue("En", forKey: "LanguageCode")
+        var languageCode : String = GlobalConstants.englishCode
+        var langCode = userDefaults.value(forKey: "LanguageCode") as? String
+        if(langCode != nil && langCode != ""){
+            languageCode = langCode!
         }
-        var languageCode : String = ""
-        languageCode = userDefaults.value(forKey: "LanguageCode") as! String
+        //languageCode = userDefaults.value(forKey: "LanguageCode") as! String
         
+        print(languageCode)
         return languageCode
         
     }
     func setLanguageCode(languageCode : String)
     {
         userDefaults.setValue(languageCode, forKey: "LanguageCode")
-        
+        //LanguageManager.sharedInstance.setLocale(languageCode)
+
     }
+    func getVendorname()-> String
+    {
+        if(userDefaults.value(forKey: "vendorproducerName") == nil)
+        {
+            userDefaults.setValue("", forKey: "vendorproducerName")
+        }
+        var vendorName : String = ""
+        vendorName = userDefaults.value(forKey: "vendorproducerName") as! String
+        
+        return vendorName
+    }
+    func getVendorEmailId()-> String
+    {
+        if(userDefaults.value(forKey: "vendorEmailId") == nil)
+        {
+            userDefaults.setValue("", forKey: "vendorEmailId")
+        }
+        var vendorEmail : String = ""
+        vendorEmail = userDefaults.value(forKey: "vendorEmailId") as! String
+        
+        return vendorEmail
+    }
+    func getUserEmailId()-> String
+    {
+        if(userDefaults.value(forKey: "customerEmailId") == nil)
+        {
+            userDefaults.setValue("", forKey: "customerEmailId")
+        }
+        var customerEmail : String = ""
+        customerEmail = userDefaults.value(forKey: "customerEmailId") as! String
+        
+        return customerEmail
+    }
+    func getUserName()-> String
+    {
+        if(userDefaults.value(forKey: "customername") == nil)
+        {
+            userDefaults.setValue("", forKey: "customername")
+        }
+        var customerName : String = ""
+        customerName = userDefaults.value(forKey: "customername") as! String
+        
+        return customerName
+    }
+
 
     
 

@@ -116,7 +116,7 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
         let amountString : String = String(self.itemsData[indexPath.row].unitPrice)
         cell?.amountLabel.text = amountString
         let reviewString : String = String(self.itemsData[indexPath.row].reviews)
-        cell?.reviewLabel.text = reviewString + " Review"
+        cell?.reviewLabel.text = reviewString
         let rating : Double = Double(self.itemsData[indexPath.row].rating)!
         cell?.itemRatingView.rating = rating
         

@@ -19,9 +19,9 @@ class LanguageManager: NSObject {
         
         super.init()
         let english = CustomLocale(languageCode: GlobalConstants.englishCode, countryCode: "gb", name: "United Kingdom")
-        let finnish  = CustomLocale(languageCode: GlobalConstants.arabicLangCode, countryCode: "ar", name: "Finland")
-        self.availableLocales = [english,finnish]
-        self.lprojBasePath =  getSelectedLocale()
+        let arabic  = CustomLocale(languageCode: GlobalConstants.arabicLangCode, countryCode: "ar", name: "Arabic")
+        self.availableLocales = [english,arabic]
+        self.lprojBasePath =  "en"
     }
     
     
@@ -56,8 +56,9 @@ class LanguageManager: NSObject {
     
     func setLocale(_ langCode:String){
         
-        UserDefaults.standard.set([langCode], forKey: "AppleLanguages")//replaces Locale.preferredLanguages
+        UserDefaults.standard.set(langCode, forKey: "AppleLanguages")//replaces Locale.preferredLanguages
         UserDefaults.standard.synchronize()
-        self.lprojBasePath =  getSelectedLocale()
+        self.lprojBasePath = langCode
+        
     }
 }

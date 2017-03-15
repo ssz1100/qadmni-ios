@@ -20,10 +20,16 @@ class VendorSettingViewController: UIViewController,UIPickerViewDelegate,UIPicke
         }else if (languageStr == "English")
         {
             self.userDefaultManager.setLanguageCode(languageCode: "En")
+             LanguageManager.sharedInstance.setLocale("en")
         }else if (languageStr == "Arabic")
         {
             self.userDefaultManager.setLanguageCode(languageCode: "Ar")
+            LanguageManager.sharedInstance.setLocale("ar")
         }
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "VendorSWRevealViewController") as UIViewController
+        self.present(vc, animated: true, completion: nil)
+        
 
     }
     @IBOutlet var langTxtField: UITextField!
@@ -37,6 +43,7 @@ class VendorSettingViewController: UIViewController,UIPickerViewDelegate,UIPicke
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
         self.langTxtField.inputView = self.pickerView
+        
     }
 
     override func didReceiveMemoryWarning() {

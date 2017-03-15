@@ -14,6 +14,8 @@ class LeftVendorViewController: UIViewController,UITableViewDataSource,UITableVi
     @IBOutlet var vendorTableView: UITableView!
     
     @IBOutlet var leftProfileImage: UIImageView!
+    @IBOutlet var vendorNameLabel: UILabel!
+    @IBOutlet var vendorEmailIdLabel: UILabel!
     
     var menuNameArray:Array = [String]()
     var menuIconImage :Array = [UIImage]()
@@ -21,11 +23,19 @@ class LeftVendorViewController: UIViewController,UITableViewDataSource,UITableVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        menuNameArray = ["My Orders","My Profile","Setting","Logout"]
+        
+        if(userDefaultManager.getLanguageCode() == "En")
+        {
+             menuNameArray = ["My Orders","My Profile","Setting","Logout"]
+        }else{
+            menuNameArray = ["طلباتي","ملفي","اعدادات ","اخرج"]
+        }
         menuIconImage = [UIImage(named:"basket")!,UIImage(named:"profile")!,UIImage(named:"setting")!,UIImage(named:"logout")!]
         
         leftProfileImage.roundedImageView()
+        vendorNameLabel.text=userDefaultManager.getVendorname()
+        vendorEmailIdLabel.text=userDefaultManager.getVendorEmailId()
+        
         vendorTableView.delegate = self
         vendorTableView.dataSource = self
         
@@ -70,6 +80,12 @@ class LeftVendorViewController: UIViewController,UITableViewDataSource,UITableVi
         {
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let vc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "VendorProfileNavigation") as! UINavigationController
+            self.present(vc, animated: true, completion: nil)
+        }
+        else if (indexPath as NSIndexPath).row == 2
+        {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "VendorSettingNavigation") as! UINavigationController
             self.present(vc, animated: true, completion: nil)
         }
         else if (indexPath as NSIndexPath).row == 3

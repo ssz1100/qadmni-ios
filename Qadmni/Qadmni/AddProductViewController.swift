@@ -9,7 +9,7 @@
 import UIKit
 
 class AddProductViewController: UIViewController,
-UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
+UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate{
     let imagePickerController = UIImagePickerController()
     var categoryId : Int = 0
     var userDefaultManager : UserDefaultManager = UserDefaultManager()

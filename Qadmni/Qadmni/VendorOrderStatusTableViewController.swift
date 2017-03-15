@@ -11,6 +11,10 @@ import UIKit
 class VendorOrderStatusTableViewController: UITableViewController {
     var vendorOrderResponseModel : [VendorOrderResponseModel] = []
     var userDefaultManager : UserDefaultManager = UserDefaultManager()
+    
+    @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

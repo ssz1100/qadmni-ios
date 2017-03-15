@@ -130,9 +130,9 @@ class ConfirmPayViewController: UIViewController,UITableViewDataSource,UITableVi
         itemTableView.delegate = self
         serviceTaxTableView.delegate = self
         let finalPriceString : String = String(self.placeOrderResModel.totalAmountInSAR)
-        finalPriceLabel.text = "SAR "+finalPriceString
+        finalPriceLabel.text = finalPriceString
         let payInUSDString : String = String(self.placeOrderResModel.totalAmountInUSD)
-        payButtonOutlet.setTitle("Pay USD"+payInUSDString, for: .normal)
+        payButtonOutlet.setTitle("Pay USD  "+payInUSDString, for: .normal)
         
         }
 

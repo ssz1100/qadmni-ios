@@ -20,9 +20,24 @@ class ProductListViewController: UIViewController,UITableViewDataSource,UITableV
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 90, height: 45))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "qadmni_img_logo_english.png")
+        imageView.image = image
+        navigationItem.titleView = imageView
 
-        self.menuButton.target = revealViewController()
-        self.menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+        let revealController = revealViewController()
+        self.menuButton.target = revealController
+        if(userDefaultManager.getLanguageCode() == "En")
+        {
+            self.menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+        }else{
+            let rearController = self.storyboard?.instantiateViewController(withIdentifier: "LeftVendorViewController")
+            revealController?.setRight(rearController, animated: true)
+            self.menuButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+        }
+
         
                 let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         

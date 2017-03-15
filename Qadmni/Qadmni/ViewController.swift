@@ -12,22 +12,22 @@ class ViewController: UIViewController,LoginResultDelegate {
     var userDefaultManager : UserDefaultManager = UserDefaultManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        print(Locale.current.languageCode as Any)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+       
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "loginSegue" {
             
             let destinationController = segue.destination as! UserLoginViewController
             destinationController.resultDelegate = self
-            
-            
+        }
+        else if (segue.identifier == "quickStartSegue")
+        {
+            /*self.dismiss(animated: false){
+                self.presentedViewController?.dismiss(animated: false, completion: nil)
+            }*/
         }
         
     }
