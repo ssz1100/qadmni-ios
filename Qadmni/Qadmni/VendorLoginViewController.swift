@@ -26,6 +26,13 @@ class VendorLoginViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var subView: UIView!
     
+    @IBAction func backButtonTapped(_ sender: UIButton)
+    {
+        self.dismiss(animated:true, completion: nil)
+        
+    }
+
+    
     @IBAction func loginVendorButtonTapped(_ sender: UIButton)
     {
         

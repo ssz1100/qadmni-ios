@@ -197,22 +197,36 @@ public class UserDefaultManager
     }
     func getLanguageCode() -> String
     {
-        var languageCode : String = GlobalConstants.englishCode
+        var languageCode : String = "En"
         var langCode = userDefaults.value(forKey: "LanguageCode") as? String
         if(langCode != nil && langCode != ""){
             languageCode = langCode!
         }
-        //languageCode = userDefaults.value(forKey: "LanguageCode") as! String
         
-        print(languageCode)
         return languageCode
-        
     }
     func setLanguageCode(languageCode : String)
     {
         userDefaults.setValue(languageCode, forKey: "LanguageCode")
-        //LanguageManager.sharedInstance.setLocale(languageCode)
+        
+    }
+    func setLocale(languageCode : String)
+    {
+        userDefaults.setValue(languageCode, forKey: "LocaleCode")
+        LanguageManager.sharedInstance.setLocale(languageCode)
+    }
+    func getLocale()-> String
+    {
+        var localeCode: String = ""
+        var tempLocaleCode : String = GlobalConstants.englishCode
+        var localeLanguage = userDefaults.value(forKey: "LocaleCode") as? String
+        if(localeLanguage != nil && localeLanguage != ""){
+            localeCode = localeLanguage!
+        }else{
+            localeLanguage = tempLocaleCode
+        }
 
+        return localeCode
     }
     func getVendorname()-> String
     {

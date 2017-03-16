@@ -21,6 +21,13 @@ class UserLoginViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var loginButtonOutlet: UIButton!
     
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "SWRevealViewController") as UIViewController
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func loginButton(_ sender: UIButton) {
         
         let checkOut : Bool = validateData()

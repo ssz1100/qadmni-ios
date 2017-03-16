@@ -15,7 +15,7 @@ class PastOrderTableViewController: UITableViewController , IndicatorInfoProvide
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo
     {
-        return IndicatorInfo(title: "Past order")
+        return IndicatorInfo(title: "Past orders")
     }
 
 
@@ -60,7 +60,7 @@ class PastOrderTableViewController: UITableViewController , IndicatorInfoProvide
         
         cell.orderIdLabel.text = String(self.pastOrderResModel[indexPath.row].orderId)
         let serverdateFormatter = DateFormatter()
-        serverdateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        serverdateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         let strDate:String = self.pastOrderResModel[indexPath.row].orderDate
         let date = serverdateFormatter.date(from: strDate)
         

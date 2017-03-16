@@ -28,8 +28,9 @@ class SettingViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
   
     
     @IBAction func backButtontapped(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
-    }
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "SWRevealViewController") as UIViewController
+        self.present(vc, animated: true, completion: nil)    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,14 +75,27 @@ class SettingViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
         {
             if (languageStr == "English"){
                 self.userDefaultManager.setLanguageCode(languageCode: "En")
-                LanguageManager.sharedInstance.setLocale("en")
+               self.userDefaultManager.setLocale(languageCode: GlobalConstants.englishCode)
             }else{
                 self.userDefaultManager.setLanguageCode(languageCode: "Ar")
-                LanguageManager.sharedInstance.setLocale("ar")
+                self.userDefaultManager.setLocale(languageCode: GlobalConstants.arabicLangCode)
             }
+            
+            
+            let alertView = UIAlertController.init(title: "Setting Saved", message: "Please close this app to make the changes in effect", preferredStyle: .alert)
+            let callActionHandler = { (action:UIAlertAction!) -> Void in
+                
                 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as UIViewController
                 self.present(vc, animated: true, completion: nil)
+            }
+            let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: callActionHandler)
+            alertView.addAction(defaultAction)
+            alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
+            self.present(alertView, animated: true)
+            
+
+            
             }
             }
     

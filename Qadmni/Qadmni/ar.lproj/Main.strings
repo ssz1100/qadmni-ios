@@ -837,3 +837,15 @@
 /* Class = "UILabel"; text = "SAR"; ObjectID = "ALl-HK-hv1"; */
 "ALl-HK-hv1.text" = "اراء";
 
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "7aS-rW-g53"; */
+"7aS-rW-g53.normalTitle" = "عُد";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "jdg-7K-xu3"; */
+"jdg-7K-xu3.normalTitle" = "عُد";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "zA6-zG-38W"; */
+"zA6-zG-38W.normalTitle" = "عُد";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "fFn-aH-knI"; */
+"fFn-aH-knI.normalTitle" = "عُد";
+

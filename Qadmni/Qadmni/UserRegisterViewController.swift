@@ -25,6 +25,11 @@ class UserRegisterViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var subView: UIView!
     
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     @IBAction func registerUser(_ sender: UIButton) {
         
         let checkOut : Bool = validateData()

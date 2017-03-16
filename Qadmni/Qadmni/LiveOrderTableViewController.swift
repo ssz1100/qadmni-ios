@@ -15,7 +15,7 @@ class LiveOrderTableViewController: UITableViewController , IndicatorInfoProvide
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo
     {
-       return IndicatorInfo(title: "Live order")
+       return IndicatorInfo(title: "Live orders")
     }
 
 
@@ -64,7 +64,7 @@ class LiveOrderTableViewController: UITableViewController , IndicatorInfoProvide
         cell.producerNameLabel.text = self.userOrderHistoryResModel[indexPath.row].producerBusinessName
         cell.orderIdLabel.text = String(self.userOrderHistoryResModel[indexPath.row].orderId)
         let serverdateFormatter = DateFormatter()
-        serverdateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        serverdateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         let strDate:String = self.userOrderHistoryResModel[indexPath.row].orderDate
         let date = serverdateFormatter.date(from: strDate)
         
@@ -72,8 +72,21 @@ class LiveOrderTableViewController: UITableViewController , IndicatorInfoProvide
         displayDateFormatter.dateFormat = "dd/MM/yyyy hh:mm a"
         let displayDate = displayDateFormatter.string(from: date!)
         cell.orderDatelabel.text = displayDate
-        cell.paymentModeLabel.text = self.userOrderHistoryResModel[indexPath.row].paymentMode
-        cell.deliveryLabel.text = self.userOrderHistoryResModel[indexPath.row].deliveryMode
+            var paymentModeLabel : String = self.userOrderHistoryResModel[indexPath.row].paymentMode
+            if(paymentModeLabel == PaymentMethod.cash)
+            {
+                cell.paymentModeLabel.text = "Cash"
+            }else{
+                cell.paymentModeLabel.text = "PayPal"
+            }
+            var deliveryMode : String = self.userOrderHistoryResModel[indexPath.row].deliveryMode
+            if(deliveryMode == DelieveryMethods.homeDeleivery)
+            {
+                cell.deliveryLabel.text =  "Home Delivery"
+            }else{
+                cell.deliveryLabel.text =  "Pick up"
+            }
+        
         cell.amountLabel.text = String(self.userOrderHistoryResModel[indexPath.row].amountInSAR)
         cell.orderStatuslabel.text = self.userOrderHistoryResModel[indexPath.row].currentStatusCode
         

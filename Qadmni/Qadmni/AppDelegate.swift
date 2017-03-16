@@ -42,8 +42,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                                 PayPalEnvironmentSandbox: Bundle.main.object(forInfoDictionaryKey: "PayPalEnvironmentSandbox")as!String])
         //OneSignal.initWithLaunchOptions(launchOptions, appId: "29d2c9ef-09ee-468b-96c9-b26340758d9a")
         OneSignal.initWithLaunchOptions(launchOptions, appId:Bundle.main.object(forInfoDictionaryKey: "OneSignalKey") as! String)
-        
-        LanguageManager.sharedInstance.setLocale(userDefaultManager.getLanguageCode())
+        var locale = userDefaultManager.getLocale()
+        print(locale)
+        LanguageManager.sharedInstance.setLocale(locale)
+    
     
         
         if(userDefaultManager.getUserType() == "other")

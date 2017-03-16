@@ -38,7 +38,9 @@ class UserCartViewController: UIViewController, UITableViewDataSource,UITableVie
     }
     
     @IBAction func myCartBackButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "SWRevealViewController") as UIViewController
+       self.present(vc, animated: true, completion: nil)
     }
     
 
