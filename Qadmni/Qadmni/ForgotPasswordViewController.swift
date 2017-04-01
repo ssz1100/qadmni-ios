@@ -38,7 +38,7 @@ class ForgotPasswordViewController: UIViewController {
                                                     {
                                                        
                                                         
-                                                let alertView = UIAlertController.init(title:"Forgot Password", message: "Credential is sent to registered email id ", preferredStyle: .alert)
+                                                let alertView = UIAlertController.init(title:NSLocalizedString("success.title", comment: ""), message: NSLocalizedString("forgotPassword.message", comment: ""), preferredStyle: .alert)
                                                 let callActionHandler = { (action:UIAlertAction!) -> Void in
                                                             
                                                 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -46,14 +46,14 @@ class ForgotPasswordViewController: UIViewController {
                                                 self.present(vc, animated: true, completion: nil)
                                                             
                                                 }
-                                                let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: callActionHandler)
+                                                let defaultAction = UIAlertAction.init(title: NSLocalizedString("okLabel", comment: ""), style: .default, handler: callActionHandler)
                                                 alertView.addAction(defaultAction)
                                                 alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
                                                 self.present(alertView, animated: true)
     
                                                 }
                                                 else{
-                                                        self.showAlertMessage(title: "Alert", message:(response?.message)!)
+                                                        self.showAlertMessage(title: NSLocalizedString("serverError", comment: ""), message:(response?.message)!)
                                                     }
 
         

@@ -1,0 +1,71 @@
+/* 
+  Localizable.strings
+  Qadmni
+
+  Created by Prakash Sabale on 30/03/17.
+  Copyright © 2017 Qadmni. All rights reserved.
+*/
+
+availableForSaleText = "متوفر للبيع ";
+notavailableForSaleText = "خلص عليك!";
+Orderhasbeenplaced = "اكدنا طلبك";
+Deliveryinprogress = "التوصيل قيد التنفيذ";
+Delivered = "وصلك";
+Orderplaced = "كود الطلب ";
+Readytopickup = "جاهز تاخذه";
+Orderpickupcomplete = "الحمدلله اخذت طلبك";
+Timeforpickupisover = "خلص وقتك عشان تاخذه";
+okLabel = "تمام";
+cancelLabel = "الغاء";
+alertLabel = "Alert";
+username.message = "ادخل اسم المستخدم";
+password.message = "لوسمحت اكتب كلمه المرور";
+name.message = "لوسمحت اكتب اسمك ياجميل ";
+email.message = "لوسمحت ادخل الايميل ";
+phoneNumber.message = "رقم الجوال";
+correctPassword.message = "غلط عليك اكتب كلمه المرور الصح";
+correctPhoneNumber.message = "ادخل رقم الجوال الصحيح";
+profile.password = "ماتقدر تترك خانه الرقم السري فاضيه ";
+profile.username = "ماتقدر تترك خانه الاسم فاضيه ";
+profile.phoneNumber = "ماتقدر تترك خانه رقم الجوال فاضيه ";
+setting.selectLanguage = "Please Select Language";
+setting.settingSaved = "Setting Saved";
+setting.savedMessage = "Please close this app to make the changes in effect";
+shopDetails.englishname = "تدخل اسم المحل بالانجليزي";
+shopDetails.arabicname = "ادخل اسم المحل بالعربي";
+shopDetails.buisnessLocation = "اختر موقع صحيح";
+addProduct.productNameEnglish = "ادخل اسم المنتج بالانجليزيه";
+addProduct.productNameArabic = "ا دخل اسم المنتج بالعربي";
+addProduct.productDetailsEnglish = "اضيف معلومات المنتج بالنجليزيه";
+addProduct.productDetailArabic = "ادخل معلومات المنتج بالعربي";
+addProduct.price = "ادخل السعر الصحيح";
+addProduct.productImageMessage = "لوسمحت اختار صوره المنتج ";
+addProduct.categoryList = "Please select category";
+serverError = "اووبس خطأ الخادم";
+registrationSuccess.title = "Registration Success";
+registrationSuccess.message = "تم تسجيل التاجر بنجاح";
+success.title = "Success";
+addProduct.message = "Product added successfully";
+updateProduct.message = "نجح تحديث المنتج";
+forgotPassword.message = "تم ارسال البيانات لتسجيل معرف الايميل";
+profile.message = "نجح تحديث الملف الشخصي";
+myCart.message = "ضيافتك ما فيها منتج، اختر منتجاتك";
+myCart.productQuantityLabel = "Product Quantity";
+myCart.enterProductQuantity = "Enter product quantity";
+placeOrder.title = "Place Order";
+placeOrder.dateandTimeMessage = "Please select date & time";
+placeOrder.GiftMessage = "Gift message";
+placeOrder.message = "Upto 180 characters";
+placeOrder.Entergiftmessage = "Enter gift message";
+placeOrder.selectAddress = "ماحددت مكانك !";
+placeOrder.paymentType = "Please select payment type";
+placeOrder.deliveryMode = "Please select delivery mode";
+placeOrder.deliveryType = "Please select delivery type";
+confirmOrder.message = "اكدنا طلبك";
+payUSD.label = "PAY USD   ";
+cashLabel = "كاش";
+paypalLabel = "باي بال";
+pickUpLabel = "استلام الطلب";
+homeDelivery = "يجيك لعندك";
+
+

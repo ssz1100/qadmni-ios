@@ -42,10 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                                 PayPalEnvironmentSandbox: Bundle.main.object(forInfoDictionaryKey: "PayPalEnvironmentSandbox")as!String])
         //OneSignal.initWithLaunchOptions(launchOptions, appId: "29d2c9ef-09ee-468b-96c9-b26340758d9a")
         OneSignal.initWithLaunchOptions(launchOptions, appId:Bundle.main.object(forInfoDictionaryKey: "OneSignalKey") as! String)
-        var locale = userDefaultManager.getLocale()
-        print(locale)
-        LanguageManager.sharedInstance.setLocale(locale)
-    
+        
+        
     
         
         if(userDefaultManager.getUserType() == "other")
@@ -68,7 +66,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.window?.rootViewController = vc
         }
-
+//        let view = UIView()
+//        let image : UIImage = UIImage(named:"test_logo.png")!
+//        let imageView = UIImageView()
+//        imageView.image = image
+//        imageView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+//        view.addSubview(imageView)
+//        UIView.animate(withDuration: 0.6, animations: {
+//            imageView.transform = CGAffineTransform.identity.scaledBy(x: 0.6, y: 0.6)
+//        }, completion: { (finish) in
+//            UIView.animate(withDuration: 0.6, animations: {
+//                imageView.transform = CGAffineTransform.identity
+//            })
+//        })
+        
         
         return true
     }

@@ -143,7 +143,7 @@ extension UIViewController
             
             print("showAlert")
         }
-        let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: callActionHandler)
+        let defaultAction = UIAlertAction.init(title: NSLocalizedString("okLabel", comment: ""), style: .default, handler: callActionHandler)
         alertView.addAction(defaultAction)
         alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
         self.present(alertView, animated: true)

@@ -26,7 +26,7 @@ class LeftVendorViewController: UIViewController,UITableViewDataSource,UITableVi
         
         if(userDefaultManager.getLanguageCode() == "En")
         {
-             menuNameArray = ["My Orders","My Profile","Setting","Logout"]
+             menuNameArray = ["My Orders","My Profile","Settings","Logout"]
         }else{
             menuNameArray = ["طلباتي","ملفي","اعدادات ","اخرج"]
         }

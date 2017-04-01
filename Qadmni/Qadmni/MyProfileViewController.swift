@@ -13,7 +13,9 @@ class MyProfileViewController: UIViewController,UITextFieldDelegate {
     var myProfile = UserProfileDetail()
     
     @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "SWRevealViewController") as UIViewController
+        self.present(vc, animated: true, completion: nil)
     }
     @IBOutlet var profileImage: UIImageView!
     
@@ -51,14 +53,14 @@ class MyProfileViewController: UIViewController,UITextFieldDelegate {
                                                     self.hideActivity()
                                                     if(response?.errorCode == 0)
                                                     {
-                                                    self.showAlertMessage(title: "Profile Update", message: "Profile updated successfully")
+                                                    self.showAlertMessage(title: NSLocalizedString("success.title", comment: ""), message: NSLocalizedString("profile.message", comment: ""))
                                                         let updatedProfile = UserProfileDetail()
                                                         updatedProfile.password = self.passwordTxtField.text!
                                                         updatedProfile.phoneNumber = self.addressTxtField.text!
                                                         updatedProfile.name = self.nameTxtField.text!
                                                         self.userDefaultManager.saveUpdatedCustomerDetails(updateProfile:updatedProfile)
                                                     }else{
-                                                        self.showAlertMessage(title: "Profile update Failed", message: (response?.message)!)
+                                                        self.showAlertMessage(title:NSLocalizedString("serverError", comment: "") , message: (response?.message)!)
                                                     }
                                                     
         })
@@ -76,6 +78,8 @@ class MyProfileViewController: UIViewController,UITextFieldDelegate {
         
         self.emailtxtField.isUserInteractionEnabled = false
         
+        
+        
         }
     
     override func viewDidLayoutSubviews()
@@ -92,17 +96,17 @@ class MyProfileViewController: UIViewController,UITextFieldDelegate {
         
         if (self.passwordTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter password")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("profile.password", comment: ""))
             return false
         }
         else if (self.addressTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter phone number")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("profile.phoneNumber", comment: ""))
             return false
         }
         else if (self.nameTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter name")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("profile.username", comment: ""))
             return false
         }
 

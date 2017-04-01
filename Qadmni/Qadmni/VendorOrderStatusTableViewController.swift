@@ -13,7 +13,9 @@ class VendorOrderStatusTableViewController: UITableViewController {
     var userDefaultManager : UserDefaultManager = UserDefaultManager()
     
     @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "VendorSWRevealViewController") as UIViewController
+        self.present(vc, animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
@@ -60,13 +62,27 @@ class VendorOrderStatusTableViewController: UITableViewController {
         let orderIdString: String = String(self.vendorOrderResponseModel[indexPath.row].orderId)
         cell.orderIdLabel.text = orderIdString
         cell.customerNameLabel.text = self.vendorOrderResponseModel[indexPath.row].customerName
-        cell.paymentModeLabel.text = self.vendorOrderResponseModel[indexPath.row].paymentMethod
-        cell.deleiveryTypeLabel.text = self.vendorOrderResponseModel[indexPath.row].deliveryType
+        if (self.vendorOrderResponseModel[indexPath.row].paymentMode == PaymentMethod.payPal)
+        {
+            cell.paymentModeLabel.text = NSLocalizedString("paypalLabel", comment: "")
+        }else if (self.vendorOrderResponseModel[indexPath.row].paymentMode == PaymentMethod.cash)
+        {
+            cell.paymentModeLabel.text = NSLocalizedString("cashLabel", comment: "")
+        }
+        
+        if (self.vendorOrderResponseModel[indexPath.row].deliveryMethod == DelieveryMethods.homeDeleivery)
+        {
+            cell.deleiveryTypeLabel.text = NSLocalizedString("homeDelivery", comment: "")
+        }else if (self.vendorOrderResponseModel[indexPath.row].deliveryMethod == DelieveryMethods.pickUp)
+        {
+            cell.deleiveryTypeLabel.text = NSLocalizedString("pickUpLabel", comment: "")
+        }
+        
         let amountString : String = String(self.vendorOrderResponseModel[indexPath.row].amountInSAR)
         cell.amountLabel.text = amountString
         
         let serverdateFormatter = DateFormatter()
-        serverdateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        serverdateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         let strDate:String = self.vendorOrderResponseModel[indexPath.row].orderDate
         let date = serverdateFormatter.date(from: strDate)
         

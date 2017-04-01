@@ -28,6 +28,7 @@ class CustItemListTableViewCell: UITableViewCell {
     
     @IBOutlet var stepperValue : UIStepper!
     
+    @IBOutlet var offerImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

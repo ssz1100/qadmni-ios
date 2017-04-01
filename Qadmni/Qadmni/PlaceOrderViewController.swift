@@ -14,6 +14,7 @@ import CoreLocation
 class PlaceOrderViewController: UIViewController,GoogleMapDelegate ,CLLocationManagerDelegate, GMSMapViewDelegate,OnCheckClickedDelegate {
     var googleMapsView: GMSMapView!
     var location = CLLocation()
+     var pickDateTimeTextField : UITextField!
     
     var userDefaultManager : UserDefaultManager = UserDefaultManager()
     var coreData : CoreData = CoreData()
@@ -100,7 +101,7 @@ class PlaceOrderViewController: UIViewController,GoogleMapDelegate ,CLLocationMa
                                                     
                                                 }
                                                 else{
-                                                    self.showAlertMessage(title: "Alert", message:(response?.message)!)
+                                                    self.showAlertMessage(title: NSLocalizedString("serverError", comment: ""), message:(response?.message)!)
                                                 }
 
         
@@ -299,21 +300,23 @@ class PlaceOrderViewController: UIViewController,GoogleMapDelegate ,CLLocationMa
             if(values){
                 asapButtonOutlet.isChecked = false
                 checkDeliverySchedule = true
-                let alertView = UIAlertController.init(title: "Info", message: "select date and time", preferredStyle: .alert)
+                let alertView = UIAlertController.init(title: NSLocalizedString("placeOrder.title", comment: ""), message: NSLocalizedString("placeOrder.dateandTimeMessage", comment: ""), preferredStyle: .alert)
                 let callActionHandler = { (action:UIAlertAction!) -> Void in
                     
+                    self.dateAndTimeLabel.text = self.pickDateTimeTextField.text
+                    self.deliverySchedule=self.dateToLong(strDate: self.pickDateTimeTextField.text!)
                     
                 }
-                let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: nil)
-                let defaultAction2 = UIAlertAction.init(title:"Cancel", style: .destructive, handler: callActionHandler)
+                let defaultAction = UIAlertAction.init(title: NSLocalizedString("okLabel", comment: ""), style: .default, handler: callActionHandler)
+                let defaultAction2 = UIAlertAction.init(title:NSLocalizedString("cancelLabel", comment: ""), style: .destructive, handler: nil)
                 alertView.addAction(defaultAction)
                 alertView.addAction(defaultAction2)
                 alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
                
                 alertView.addTextField(configurationHandler: { (textField :UITextField) in
                     textField.addTarget(self, action: #selector(self.textFieldAction(sender:)), for:.editingDidBegin)
-                    textField.placeholder = "Select date and time"
-                    textField.borderStyle = UITextBorderStyle.roundedRect
+                    self.createTextField(textField: textField)
+                    
                     
                     
         
@@ -322,7 +325,7 @@ class PlaceOrderViewController: UIViewController,GoogleMapDelegate ,CLLocationMa
 //                    textField.text = dateFormatter.string(from:self.datePicker.date)
 //                    self.dateAndTimeLabel.text = textField.text
                     
-                    textField.text = self.textString
+                    //textField.text = self.textString
 
                     
                     
@@ -346,18 +349,18 @@ class PlaceOrderViewController: UIViewController,GoogleMapDelegate ,CLLocationMa
         case giftWrapButtonOutlet.tag:
             if(values){
                 
-                let alertView = UIAlertController.init(title: "Gift Message", message: "upto 180 characters", preferredStyle: .alert)
+                let alertView = UIAlertController.init(title: NSLocalizedString("placeOrder.GiftMessage", comment: ""), message: NSLocalizedString("placeOrder.message", comment: ""), preferredStyle: .alert)
                 let callActionHandler = { (action:UIAlertAction!) -> Void in
                     
                     self.giftWrapButtonOutlet.isChecked = false
                 }
-                let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: nil)
-                let defaultAction2 = UIAlertAction.init(title:"Cancel", style: .destructive, handler: callActionHandler)
+                let defaultAction = UIAlertAction.init(title: NSLocalizedString("okLabel", comment: ""), style: .default, handler: nil)
+                let defaultAction2 = UIAlertAction.init(title:NSLocalizedString("cancelLabel", comment: ""), style: .destructive, handler: callActionHandler)
                 alertView.addAction(defaultAction)
                 alertView.addAction(defaultAction2)
                 alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
                 alertView.addTextField(configurationHandler: { (textField :UITextField) in
-                    textField.placeholder = "Enter Message"
+                    textField.placeholder = NSLocalizedString("placeOrder.Entergiftmessage", comment: "")
                     textField.borderStyle = UITextBorderStyle.roundedRect
                     self.giftMessage = textField.text!
                 })
@@ -378,24 +381,24 @@ class PlaceOrderViewController: UIViewController,GoogleMapDelegate ,CLLocationMa
     
     func validateData() -> Bool
     {
-         if (mainAddress.text == "Select address")
+         if (mainAddress.text == "Select address" || mainAddress.text == "اختر موقعك")
         {
-            self.showAlertMessage(title: "Info", message: "Please select delivery address")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("placeOrder.selectAddress", comment: ""))
             return false
         }
         else if (self.deliveryMethod == "")
         {
-            self.showAlertMessage(title: "Info", message: "Please select delivery mode")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("placeOrder.deliveryMode", comment: ""))
             return false
         }
         else if (self.paymentMethod == "")
         {
-            self.showAlertMessage(title: "Info", message: "Please select payment mode")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("placeOrder.paymentType", comment: ""))
             return false
         }
         else if (checkDeliverySchedule == false)
         {
-            self.showAlertMessage(title: "Info", message: "Please select  delivery schedule")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("placeOrder.deliveryType", comment: ""))
             return false
 
         }
@@ -407,9 +410,9 @@ class PlaceOrderViewController: UIViewController,GoogleMapDelegate ,CLLocationMa
     func handleTap(sender:UIDatePicker)
     {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMM hh:mm a"
+        dateFormatter.dateFormat = "dd MMM yyyy hh:mm a"
         
-        self.textString = dateFormatter.string(from:sender.date)
+        self.pickDateTimeTextField.text = dateFormatter.string(from:sender.date)
         
     }
     func textFieldAction(sender : UITextField)
@@ -420,11 +423,19 @@ class PlaceOrderViewController: UIViewController,GoogleMapDelegate ,CLLocationMa
         datePicker.addTarget(self, action: #selector(handleTap(sender:)), for: UIControlEvents.allEvents)
     
     }
-
-   
-
+    private func createTextField(textField :UITextField)
+    {
+        textField.placeholder = NSLocalizedString("placeOrder.dateandTimeMessage", comment: "")
+        textField.borderStyle = UITextBorderStyle.roundedRect
+        self.pickDateTimeTextField = textField
+        
+    }
     
-    
-
-    
-}
+    private func dateToLong(strDate : String) -> Int32
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat="dd MMM yyyy hh:mm a"
+        let longDate : Int32 = Int32((dateFormatter.date(from: strDate)?.timeIntervalSince1970)!)
+        return longDate
+    }
+ }

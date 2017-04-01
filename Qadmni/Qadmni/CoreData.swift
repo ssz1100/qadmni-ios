@@ -12,6 +12,7 @@ import CoreData
 
 public class CoreData
 {
+    
         // MARK: - Core Data stack
         public static let sharedInstance = CoreData()
     
@@ -70,7 +71,8 @@ public class CoreData
             } catch {
                 
             }
-        }
+        
+    }
     
     
     func getUserCoreDataDetails () -> [MyCartModel] {
@@ -158,6 +160,22 @@ public class CoreData
             print("Error with request: \(error)")
         }
         return quantity
+    }
+    func getMyCartCount()->Int
+    {
+        var cartCount : Int = 0
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        
+        do {
+            //go get the results
+            let searchResults = try getManagedObjectContext().fetch(fetchRequest)
+            cartCount = searchResults.count
+            print ("num of results = \(searchResults.count)")
+            
+        } catch {
+            print("Error with request: \(error)")
+        }
+        return cartCount
     }
     
     func deleteCartData()
@@ -352,6 +370,8 @@ public class CoreData
         }// end of function
 }// end of class
 
+
+
 /*    private lazy var applicationDocumentsDirectory: URL = {
  // The directory the application uses to store the Core Data store file. This code uses a directory named in the application's documents Application Support directory.
  
@@ -411,4 +431,5 @@ public class CoreData
  
  
 }*/
+
 

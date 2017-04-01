@@ -17,28 +17,47 @@ import EVReflection
 class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocationManagerDelegate,UISearchBarDelegate
     
 {
+    var itemListCallCompleted = false
+    //var isLocationUpdated = false
+    var selectedTableView : SearchItemDelegate?
+    //var selectedTableView : UITableViewController?
+    var searchItemDelegate : SearchItemDelegate?
+    let mySpecialNotificationKey = "com.Qadmni"
+    @IBOutlet var myCartBarItem: UIBarButtonItem!
     
     var initialLoading : Bool = true
     let locationManager = CLLocationManager()
     var customerLattitude : Double = 0
     var customerLongitude : Double = 0
     let coreData = CoreData()
-    var tableViewController = TableViewController()
+    //var tableViewController = TableViewController()
     var searchData : [UIViewController] = []
      var userDefaultManager : UserDefaultManager = UserDefaultManager()
+    
     
     var categoryListGroup = DispatchGroup()
     var categoryArray : [CustCategoryListResModel] = []
     var itemList:[DisplayItemList]=[]
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBAction func searchBittonBarItem(_ sender: UIBarButtonItem) {
-        let searchController = UISearchController(searchResultsController: nil)
+        let searchController = UISearchController(searchResultsController:nil)
         searchController.searchBar.delegate = self
+        definesPresentationContext = true
         
         self.present(searchController, animated:true, completion: nil)
 
     }
     
+    
+    
+    var CurrentViewController: SearchItemDelegate {
+        get{
+            return selectedTableView!
+        }
+        set{
+            selectedTableView = newValue
+        }
+    }
     let purpleInspireColor = UIColor(red:0.13, green:0.03, blue:0.25, alpha:1.0)
     
     
@@ -73,18 +92,21 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
       
         
         super.viewDidLoad()
-        self.locationManager.requestAlwaysAuthorization()
-        locationManager.delegate = self
-        
-        
-        // For use in foreground
+//        if(isLocationUpdated)
+//        {
+//        //call to api
+//            
+//        }
+//        else{
         self.locationManager.requestWhenInUseAuthorization()
-        
+        locationManager.delegate = self
         if CLLocationManager.locationServicesEnabled() {
-            
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
+                
+                locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+                locationManager.startUpdatingLocation()
+            //}
         }
+        
         
        self.settings.style.selectedBarHeight = 2
      self.settings.style.selectedBarBackgroundColor = UIColor.gray
@@ -95,7 +117,11 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
         imageView.image = image
         navigationItem.titleView = imageView
         
+        setBadge()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(QuickStartViewController.actOnSpecialNotification), name: NSNotification.Name(rawValue: mySpecialNotificationKey), object: nil)
+    
+       
     
     }
 
@@ -113,9 +139,8 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
         if(categoryArray.count == 0) {
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let tableView = storyboard.instantiateViewController(withIdentifier: "TableViewController") as! TableViewController
-            tableView.setInfo(categoryId: 0, categoryName: nil, items: [])
-
-            //let tableView : TableViewController = TableViewController(categoryId: 0, categoryName:"",items:[])
+            //let notifier = ItemNotifier()
+            tableView.setInfo(categoryId: 0, categoryName: nil, items: [],parentView : self)
             controllerList.append(tableView)
         }else{
             controllerList = self.generateViewControllerList(categoryList: categoryArray)
@@ -131,12 +156,14 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
     var vc : [UIViewController] = []
     
     for category:CustCategoryListResModel in categoryList {
+        print("Name of category from Quick Start : ",category.category)
         var items:[DisplayItemList]=[]
         items = getItemsByCategory(categoryId:category.categoryId)
         //var tableView : TableViewController = TableViewController.init(categoryId: Int32(category.categoryId), categoryName: category.category,items:items)
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let tableView = storyboard.instantiateViewController(withIdentifier: "TableViewController") as! TableViewController
-        tableView.setInfo(categoryId: Int32(category.categoryId), categoryName: category.category,items:items)
+        //let notifier = ItemNotifier()
+        tableView.setInfo(categoryId: Int32(category.categoryId), categoryName: category.category,items:items,parentView : self)
         
         vc.append(tableView)
           }
@@ -171,49 +198,59 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
-        customerLattitude = 18.5248902//locValue.latitude
-        customerLongitude = 73.7225364//locValue.longitude
+       // print("locations = \(locValue.latitude) \(locValue.longitude)")
+        customerLattitude =   locValue.latitude //18.5493561
+        customerLongitude =  locValue.longitude //73.7871573
         if(customerLattitude>0&&customerLongitude>0)
         {
             locationManager.stopUpdatingLocation()
-            if (userDefaultManager.getUserType() == "other")
+            //isLocationUpdated = true
+            if(!itemListCallCompleted)
             {
-                self.customerItemListRequest()
-            }else
-            {
-                coreData.deleteMyFavourite()
-                let addfavouriteReqModel = AddfavouriteReqModel()
-                let customerAddfavUser :CustomerUserRequestModel = self.userDefaultManager.getCustomerCredential()
-                let customerAddfavLangCode = CustomerLangCodeRequestModel()
-                let serviceFacadeUser = ServiceFacadeUser(configUrl : PropertyReaderFile.getBaseUrl())
-                serviceFacadeUser.customerAddFavourites(customerDataRequest: addfavouriteReqModel,
-                                                        customerUserRequest: customerAddfavUser,
-                                                        customerLangCodeRequest: customerAddfavLangCode,
-                                                        completionHandler: {
-                                                            response in
-                                                            if (response?.errorCode == 0)
-                                                            {
-                                                                for item in (response?.itemInfoList)!
-                                                                {
-                                                                    var myFavorite = MyFavouritesModel()
-                                                                    myFavorite.itemId = item.itemId
-                                                                    self.coreData.saveUserFavourites(myfavourites: myFavorite)
-
-                                                                }
-                                                            }else{
-                                                           print("No favourite found")
-                                                            }
-                                                            self.customerItemListRequest()
-                })
-            
+                self.getItemList()
             }
+        }
+
+    }
+    
+    fileprivate func getItemList()
+    {
+        itemListCallCompleted = true
+        if (!userDefaultManager.isCustomerLoggedIn())
+        {
+            self.getItemListDetails()
+        }else
+        {
+            coreData.deleteMyFavourite()
+            let addfavouriteReqModel = AddfavouriteReqModel()
+            let customerAddfavUser :CustomerUserRequestModel = self.userDefaultManager.getCustomerCredential()
+            let customerAddfavLangCode = CustomerLangCodeRequestModel()
+            let serviceFacadeUser = ServiceFacadeUser(configUrl : PropertyReaderFile.getBaseUrl())
+            serviceFacadeUser.customerAddFavourites(customerDataRequest: addfavouriteReqModel,
+                                                    customerUserRequest: customerAddfavUser,
+                                                    customerLangCodeRequest: customerAddfavLangCode,
+                                                    completionHandler: {
+                                                        response in
+                                                        if (response?.errorCode == 0)
+                                                        {
+                                                            for item in (response?.itemInfoList)!
+                                                            {
+                                                                var myFavorite = MyFavouritesModel()
+                                                                myFavorite.itemId = item.itemId
+                                                                self.coreData.saveUserFavourites(myfavourites: myFavorite)
+                                                                
+                                                            }
+                                                        }else{
+                                                            print("No favourite found")
+                                                        }
+                                                        self.getItemListDetails()
+            })
             
         }
 
     }
     
-    func customerItemListRequest()
+    fileprivate func getItemListDetails()
     {
         let custItemListUser = CustomerUserRequestModel()
         let custItemListData = CustItemListReqModel()
@@ -237,13 +274,13 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
                                                 producerListData.producerId=producerLocationmodel.producerId
                                                 producerList.append(producerListData)
                                             }
-                                            self.getLocationInBack(producers: producerList, items: (response?.itemInfoList)!)
+                                            self.getProducerLocations(producers: producerList, items: (response?.itemInfoList)!)
                                             
         })
 
     }
     
-    func getLocationInBack(producers:[ProducerItemListdataModel],items:[ItemInfoModel])
+    fileprivate func getProducerLocations(producers:[ProducerItemListdataModel],items:[ItemInfoModel])
    {
     
     DispatchQueue.global(qos: .background).async {
@@ -293,13 +330,13 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
         
         DispatchQueue.main.async {
             print("This is run on the main queue, after the previous code in outer block")
-            self.prepareDataForList(producers: producers,items:items)
+            self.prepareCategoryItems(producers: producers,items:items)
             }
         }
 
     }
     
-    func prepareDataForList(producers:[ProducerItemListdataModel],items:[ItemInfoModel])
+    fileprivate func prepareCategoryItems(producers:[ProducerItemListdataModel],items:[ItemInfoModel])
     {
         self.itemList.removeAll()
         print("Ready to prepare data")
@@ -329,19 +366,21 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
         //var categoryArray : [CustCategoryListResModel] = []
         let serviceFacadeUser = ServiceFacadeUser(configUrl : PropertyReaderFile.getBaseUrl())
         
-        self.categoryListGroup.enter()
+       // self.categoryListGroup.enter()
         serviceFacadeUser.CustomerCategory(customerDataRequest: custCategoryData,
                                            customerUserRequest: custCategoryUser,
                                            customerLangCodeRequest: custLangCode,
                                            completionHandler:{
                                             response in
-                                            
+                                            if(self.categoryArray.count == 0)
+                                            {
+                                        
                                             self.categoryArray = response as! [CustCategoryListResModel]
                                             //self.datasource = viewControllers()
                                             self.initialLoading = false
                                             self.reloadPagerTabStripView()
                                             //self.categoryListGroup.leave()
-                                            
+                                            }
         })
 
     }
@@ -363,11 +402,54 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
         let searchBar = UISearchBar()
         searchBar.showsCancelButton = false
         searchBar.placeholder = "Enter your search"
-        searchBar.delegate = self
+       // searchBar.delegate = self
         
     }
-       
+func actOnSpecialNotification() {
+   print("Nsnotification for quickStartcontroller")
+    setBadge()
 }
+func setBadge()
+    {
+        var badgeCount : Int = 0
+        badgeCount = coreData.getMyCartCount()
+        if (badgeCount == 0)
+        {
+            self.myCartBarItem.removeBadge()
+        }
+        else{
+        self.myCartBarItem.addBadge(number: badgeCount)
+        }
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
+    {
+        print("In quickStart searchBarDelegate Implementation")
+        //CurrentViewController.getSearchItem(searchText: searchText)
+        //if(CurrentViewController != nil)
+        //{
+        
+            CurrentViewController.getSearchItem(searchText: searchText)
+        //}
+//        if(self.searchItemDelegate != nil)
+//        {
+//        self.searchItemDelegate?.getSearchItem(searchText: searchText)
+//        }
+        
+        
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
+    {
+      CurrentViewController.getSearchItem(searchText:"")
+        //self.searchItemDelegate?.getSearchItem(searchText: "")
+    }
+
+}
+public protocol SearchItemDelegate {
+    func getSearchItem(searchText:String)
+    
+    
+}
+
 
 
 

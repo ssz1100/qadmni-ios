@@ -30,6 +30,11 @@ class VendorShopDetailViewController: UIViewController,GoogleMapDelegate,UITextF
     
     @IBOutlet weak var subView: UIView!
     
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     @IBAction func shopRegisterButton(_ sender: UIButton) {
         
         let checkOut : Bool = validateData()
@@ -68,14 +73,14 @@ class VendorShopDetailViewController: UIViewController,GoogleMapDelegate,UITextF
                                    
                                         if(response?.errorCode == 0)
                                         {
-                                            let alertView = UIAlertController.init(title:"Registration Success", message:response?.message , preferredStyle: .alert)
+                                            let alertView = UIAlertController.init(title:NSLocalizedString("registrationSuccess.title", comment: ""), message: NSLocalizedString("registrationSuccess.message", comment: ""), preferredStyle: .alert)
                                             let callActionHandler = { (action:UIAlertAction!) -> Void in
                                                 
                                                 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                                                 let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "VendorLoginViewController") as UIViewController
                                                 self.present(vc, animated: true, completion: nil)
                                             }
-                                            let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: callActionHandler)
+                                            let defaultAction = UIAlertAction.init(title: NSLocalizedString("okLabel", comment: ""), style: .default, handler: callActionHandler)
                                             alertView.addAction(defaultAction)
                                             alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
                                             self.present(alertView, animated: true)
@@ -83,7 +88,7 @@ class VendorShopDetailViewController: UIViewController,GoogleMapDelegate,UITextF
                                         }
                                         else
                                         {
-                                            self.showAlertMessage(title: "Registration Failed", message: "Please Try Again")
+                                            self.showAlertMessage(title: NSLocalizedString("serverError", comment: ""), message: (response?.message)!)
                                             self.businessNameTxtField.text! = ""
                                             self.businessNameArabicTxtField.text! = ""
                                         
@@ -114,19 +119,9 @@ class VendorShopDetailViewController: UIViewController,GoogleMapDelegate,UITextF
         let businessNameImage = UIImage(named:"shop")
         businessNameTxtField.addLeftIcon(businessNameImage, frame: frame, imageSize: imageSize)
         businessNameArabicTxtField.addLeftIcon(businessNameImage, frame: frame, imageSize: imageSize)
-//        let businesslocationImage = UIImage(named:"location")
-//        businessLocationTxtField.addLeftIcon(businesslocationImage, frame: frame, imageSize: imageSize)
         
-
-        
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
-//        
-//        businessLocationView.addGestureRecognizer(tap)
-//        
-//        businessLocationView.isUserInteractionEnabled = true
-//        
-//        self.businessLocationView.addGestureRecognizer(tap)
-        
+        businessNameTxtField.delegate = self
+        businessNameArabicTxtField.delegate = self
         
         
         
@@ -186,17 +181,17 @@ class VendorShopDetailViewController: UIViewController,GoogleMapDelegate,UITextF
         
         if (self.businessNameTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter business name in english")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("shopDetails.englishname", comment: ""))
             return false
         }
         else if (self.businessNameArabicTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter business name in arabic")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("shopDetails.arabicname", comment: ""))
             return false
         }
         else if (businessLattitude == 0.0 || businessLongitude == 0.0)
         {
-            self.showAlertMessage(title: "Info", message: "Please enter business location")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("shopDetails.buisnessLocation", comment: ""))
             return false
         }
         

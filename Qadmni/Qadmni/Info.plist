@@ -19,13 +19,15 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleVersion</key>
 	<string>2</string>
 	<key>GMSPlacesKey</key>
 	<string>AIzaSyA8CA7g54OOFJFaMp9j8FzS0K0uh4azFCM</string>
 	<key>GMSservicesKey</key>
 	<string>AIzaSyA8CA7g54OOFJFaMp9j8FzS0K0uh4azFCM</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
@@ -37,6 +39,10 @@
 		<key>NSExceptionDomains</key>
 		<dict/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Qadmni would like to access your photos for profile</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Qadmini would like to access privacy data , Please permit us</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Qadmini would like to access  current location , Please permit us</string>
 	<key>NSPhotoLibraryUsageDescription</key>

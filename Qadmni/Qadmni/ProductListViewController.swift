@@ -106,7 +106,7 @@ class ProductListViewController: UIViewController,UITableViewDataSource,UITableV
         let productAvailable: Int = self.vendorItemResponseModel[indexPath.row].availableForSale
             if (productAvailable == 1)
             {
-                cell.productAvailableLabel.text = "Available for Sale"
+                cell.productAvailableLabel.text = NSLocalizedString("availableForSaleText", comment: "")  //"Available for Sale"
         }
         else
             {

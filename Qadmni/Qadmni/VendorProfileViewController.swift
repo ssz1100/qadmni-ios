@@ -13,7 +13,9 @@ class VendorProfileViewController: UIViewController {
     var vendorProfile = VendorProfileDetail()
    
     @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "VendorSWRevealViewController") as UIViewController
+        self.present(vc, animated: true, completion: nil)
     }
     @IBOutlet var profileImage: UIImageView!
     
@@ -46,13 +48,13 @@ class VendorProfileViewController: UIViewController {
                                             self.hideActivity()
                                             if(response?.errorCode == 0)
                                             {
-                                                self.showAlertMessage(title: "Profile Update", message: "Profile updated successfully")
+                                                self.showAlertMessage(title:NSLocalizedString("success.title", comment: "") , message:NSLocalizedString("profile.message", comment: ""))
                                                 let updatedVendorprofile = VendorProfileDetail()
                                                 updatedVendorprofile.name = self.nameTxtField.text!
                                                 updatedVendorprofile.password = self.passwordTxtField.text!
                                                 self.userDefaultManager.saveUpdatedVendorDetails(updateVendorProfile: updatedVendorprofile)
                                             }else{
-                                                self.showAlertMessage(title: "Profile update Failed", message: (response?.message)!)
+                                                self.showAlertMessage(title: NSLocalizedString("serverError", comment: ""), message: (response?.message)!)
                                             }
         })
         
@@ -80,12 +82,12 @@ class VendorProfileViewController: UIViewController {
         
         if (self.passwordTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter password")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("profile.password", comment: ""))
             return false
         }
         else if (self.nameTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter name")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("profile.username", comment: ""))
             return false
         }
         return true

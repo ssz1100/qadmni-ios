@@ -67,7 +67,7 @@ class VendorRegisterViewController: UIViewController,UITextFieldDelegate {
                                             
                                             }
                                           else{
-                                            self.showAlertMessage(title: "Alert", message: "Email Id Exist with another user pleaser try different")
+                                            self.showAlertMessage(title: NSLocalizedString("serverError", comment: ""), message: (response?.message)!)
                                             }
                                             
                                             
@@ -102,6 +102,12 @@ class VendorRegisterViewController: UIViewController,UITextFieldDelegate {
         password = passwordTxtField.text!
         emailId = emailTxtField.text!
         
+        nameTxtField.delegate = self
+        passwordTxtField.delegate = self
+        confirmPasswordTxtField.delegate = self
+        emailTxtField.delegate = self
+        phoneTxtField.delegate = self
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -128,32 +134,37 @@ class VendorRegisterViewController: UIViewController,UITextFieldDelegate {
         
         if (self.nameTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter name")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("name.message", comment: ""))
             return false
         }
         else if (self.passwordTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter password")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("password.message", comment: ""))
             return false
         }
         else if (self.confirmPasswordTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter confirmpassword")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("password.message", comment: ""))
             return false
         }
         else if (self.emailTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter email")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("email.message", comment: ""))
             return false
         }
         else if (self.phoneTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter phonenumber")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("phoneNumber.message", comment: ""))
             return false
         }
         else if (self.passwordTxtField.text != self.confirmPasswordTxtField.text)
         {
-            self.showAlertMessage(title: "Alert", message: "Password unmatched")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("correctPassword.message", comment: ""))
+            return false
+        }
+        else if ((phoneTxtField.text?.characters.count)! < 10)
+        {
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("correctPhoneNumber.message", comment: ""))
             return false
         }
         return true
@@ -195,6 +206,18 @@ class VendorRegisterViewController: UIViewController,UITextFieldDelegate {
     {
         self.view.endEditing(true)
     }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let charsLimit = 10
+        
+        let startingLength = phoneTxtField.text?.characters.count ?? 0
+        let lengthToAdd = string.characters.count
+        let lengthToReplace =  range.length
+        let newLength = startingLength + lengthToAdd - lengthToReplace
+        
+        return newLength <= charsLimit
+    }
+
     
 
    

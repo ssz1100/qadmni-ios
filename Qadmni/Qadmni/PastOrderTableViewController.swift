@@ -12,10 +12,18 @@ import XLPagerTabStrip
 class PastOrderTableViewController: UITableViewController , IndicatorInfoProvider {
      var userDefaultManager : UserDefaultManager = UserDefaultManager()
     var pastOrderResModel : [PastOrderResModel] = []
+    var orderStatusConstant = OrderStatusConstant()
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo
     {
-        return IndicatorInfo(title: "Past orders")
+        if(userDefaultManager.getLanguageCode() == "En")
+        {
+            return IndicatorInfo(title: "Past orders")
+        }else
+        {
+            return IndicatorInfo(title: "طلباتك القديمه ")
+        }
+
     }
 
 
@@ -69,8 +77,9 @@ class PastOrderTableViewController: UITableViewController , IndicatorInfoProvide
         let displayDate = displayDateFormatter.string(from: date!)
         cell.orderDateLabel.text = displayDate
         
+        cell.orderStatusLabel.text = orderStatusConstant.getValueOrderStatus(key: self.pastOrderResModel[indexPath.row].deliveryStatus)
         cell.amountLabel.text = String(self.pastOrderResModel[indexPath.row].amountInSAR)
-        cell.statusLabel.text = self.pastOrderResModel[indexPath.row].deliveryStatus
+        
         cell.statusImageview.image = UIImage(named: "form_wiz_3.jpg")
        
         return cell

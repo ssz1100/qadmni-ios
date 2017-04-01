@@ -12,10 +12,17 @@ import XLPagerTabStrip
 class LiveOrderTableViewController: UITableViewController , IndicatorInfoProvider {
     var userDefaultManager : UserDefaultManager = UserDefaultManager()
     var userOrderHistoryResModel : [UserOrderHistoryResModel] = []
+     var orderStatusConstant = OrderStatusConstant()
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo
     {
+        if(userDefaultManager.getLanguageCode() == "En")
+        {
        return IndicatorInfo(title: "Live orders")
+        }else
+        {
+            return IndicatorInfo(title: "طلباتك الحين ")
+        }
     }
 
 
@@ -72,23 +79,11 @@ class LiveOrderTableViewController: UITableViewController , IndicatorInfoProvide
         displayDateFormatter.dateFormat = "dd/MM/yyyy hh:mm a"
         let displayDate = displayDateFormatter.string(from: date!)
         cell.orderDatelabel.text = displayDate
-            var paymentModeLabel : String = self.userOrderHistoryResModel[indexPath.row].paymentMode
-            if(paymentModeLabel == PaymentMethod.cash)
-            {
-                cell.paymentModeLabel.text = "Cash"
-            }else{
-                cell.paymentModeLabel.text = "PayPal"
-            }
-            var deliveryMode : String = self.userOrderHistoryResModel[indexPath.row].deliveryMode
-            if(deliveryMode == DelieveryMethods.homeDeleivery)
-            {
-                cell.deliveryLabel.text =  "Home Delivery"
-            }else{
-                cell.deliveryLabel.text =  "Pick up"
-            }
-        
+        cell.paymentModeLabel.text = self.userOrderHistoryResModel[indexPath.row].paymentMode
+        cell.deliveryLabel.text = self.userOrderHistoryResModel[indexPath.row].deliveryMode
         cell.amountLabel.text = String(self.userOrderHistoryResModel[indexPath.row].amountInSAR)
         cell.orderStatuslabel.text = self.userOrderHistoryResModel[indexPath.row].currentStatusCode
+        cell.orderStatusLabel.text = orderStatusConstant.getValueOrderStatus(key: self.userOrderHistoryResModel[indexPath.row].currentStatusCode)
         
         if (self.userOrderHistoryResModel[indexPath.row].stageNo == 1)
         {

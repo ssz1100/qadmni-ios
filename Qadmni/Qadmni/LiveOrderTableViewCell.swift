@@ -21,6 +21,7 @@ class LiveOrderTableViewCell: UITableViewCell {
     @IBOutlet var orderDatelabel: UILabel!
     @IBOutlet var orderIdLabel: UILabel!
     @IBOutlet var producerNameLabel: UILabel!
+    @IBOutlet var orderStatusLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

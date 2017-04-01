@@ -59,6 +59,7 @@ class FilterViewController: UIViewController {
     @IBAction func clearButtonTapped(_ sender: Any) {
         userDefaultManager.setFiltertedByDistance(filterByDistance: 0)
         userDefaultManager.setFiltertedByPrice(filterByPrice: 0)
+        self.userDefaultManager.setSelectedSortBy(selectedSort:sortType.noSort)
         self.dismiss(animated: true, completion: nil)
     }
     

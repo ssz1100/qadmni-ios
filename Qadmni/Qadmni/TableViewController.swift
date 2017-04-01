@@ -12,24 +12,38 @@ import CoreLocation
 import EVReflection
 import Alamofire
 
-class TableViewController: UITableViewController , IndicatorInfoProvider {
+class TableViewController: UITableViewController , IndicatorInfoProvider,SearchItemDelegate {
+    let mySpecialNotificationKey = "com.Qadmni"
     var categoryId :Int32 = 0
     var categoryName: String?
-    var itemsData: [DisplayItemList]=[]
-    var mainItemsData: [DisplayItemList]=[]
+    var filteredItemList: [DisplayItemList]=[]
+    var originalItemList: [DisplayItemList]=[]
+    var filteredOutput :[DisplayItemList]=[]
     let coreData = CoreData()
     var userDefaultManager : UserDefaultManager = UserDefaultManager()
     var sortType = SortByConstant()
+    var isFilterData:Bool = false
+    var searchResult : Bool = false
+    var parentView : QuickStartViewController? = nil
+    //var cache = NSCache()
+    
+   // var quickStartViewController = QuickStartViewController()
     
 //    required init?(coder aDecoder: NSCoder) {
 //        super.init(coder: aDecoder)
 ////        fatalError("init(coder:) has not been implemented")
 //    }
     
-    public func setInfo(categoryId: Int32 ,categoryName: String?,items:[DisplayItemList]){
+    public func setInfo(categoryId: Int32 ,categoryName: String?,items:[DisplayItemList],parentView : QuickStartViewController)
+    {
         self.categoryId = categoryId
         self.categoryName = categoryName
-        self.mainItemsData=items
+        self.originalItemList = items
+        self.filteredItemList = items
+        print("Items %d in %d category", originalItemList.count, categoryId)
+        self.parentView = parentView
+        //self.parentView?.searchItemDelegate = self
+        
     }
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo
@@ -44,7 +58,7 @@ class TableViewController: UITableViewController , IndicatorInfoProvider {
         tableView.delegate = self
         tableView.dataSource = self
         
-
+         NotificationCenter.default.addObserver(self, selector: #selector(TableViewController.updateNotificationCartCount), name: NSNotification.Name(rawValue: mySpecialNotificationKey), object: nil)
         
     }
     
@@ -54,17 +68,23 @@ class TableViewController: UITableViewController , IndicatorInfoProvider {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.itemsData=self.mainItemsData
+        //var controller: QuickStartViewController = parentView as! QuickStartViewController
+        parentView?.CurrentViewController = self
+        //controller.CurrentViewController = self
+        
+        
+        self.filteredItemList=self.originalItemList
         let filterByPrice :Double = self.userDefaultManager.getFiltertedByPrice()
-        if (filterByPrice > 10){
-        self.itemsData=self.itemsData.filter({ (item) -> Bool in
+        if (filterByPrice != 0){
+        self.filteredItemList=self.filteredItemList.filter({ (item) -> Bool in
             return item.unitPrice <= filterByPrice
+            
         })
         }
         
         let filterByDistance :Double = self.userDefaultManager.getFiltertedByDistance()
         if (filterByDistance > 1){
-            self.itemsData=self.itemsData.filter({ (item) -> Bool in
+            self.filteredItemList=self.filteredItemList.filter({ (item) -> Bool in
                 return item.producerData.distanceDouble <= filterByDistance
             })
         }
@@ -74,21 +94,22 @@ class TableViewController: UITableViewController , IndicatorInfoProvider {
         
         if(selectedSort == sortType.distanceSort)
         {
-            self.itemsData.sort(by: { (item1, item2) -> Bool in
+            self.filteredItemList.sort(by: { (item1, item2) -> Bool in
                 return item1.producerData.distanceDouble < item2.producerData.distanceDouble
             })
         }else if (selectedSort == sortType.priceSort)
         {
-            self.itemsData.sort(by: { (item1, item2) -> Bool in
+            self.filteredItemList.sort(by: { (item1, item2) -> Bool in
                 return item1.unitPrice < item2.unitPrice
             })
         }
         else if (selectedSort == sortType.reviewSort)
         {
-            self.itemsData.sort(by: { (item1, item2) -> Bool in
+            self.filteredItemList.sort(by: { (item1, item2) -> Bool in
                 return item1.reviews > item2.reviews
             })
         }
+        self.filteredOutput = self.filteredItemList
         tableView.reloadData()
     }
     
@@ -97,8 +118,11 @@ class TableViewController: UITableViewController , IndicatorInfoProvider {
 
     
      override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return itemsData.count
+//        if(searchResult)
+//        {
+//            return filteredData.count
+//        }
+        return filteredItemList.count
     }
 
     
@@ -106,31 +130,59 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
        let cell = tableView.dequeueReusableCell(withIdentifier: "cellidentifier", for: indexPath) as? CustItemListTableViewCell
     if(cell != nil)
     {
-        cell?.itemName.text = self.itemsData[indexPath.row].itemName
-        cell?.itemDescription.text = self.itemsData[indexPath.row].itemDesc
-        cell?.distanceLabel.text = self.itemsData[indexPath.row].producerData.distance
-        cell?.timeLabel.text = self.itemsData[indexPath.row].producerData.time
-        cell?.producerNameLabel.text = self.itemsData[indexPath.row].producerData.businessName
-        cell?.offerLabel.text = self.itemsData[indexPath.row].offerText
-        cell?.itemName.text = self.itemsData[indexPath.row].itemName
-        let amountString : String = String(self.itemsData[indexPath.row].unitPrice)
+        if(indexPath.row == 0)
+        {
+            self.showActivity()
+        }
+        if(indexPath.row == self.filteredItemList.count - 1)
+        {
+        self.hideActivity()
+        }
+        self.showActivity()
+        cell?.contentView.backgroundColor = .white
+        cell?.itemName.text = self.filteredItemList[indexPath.row].itemName
+        cell?.itemDescription.text = self.filteredItemList[indexPath.row].itemDesc
+        cell?.distanceLabel.text = self.filteredItemList[indexPath.row].producerData.distance
+        cell?.timeLabel.text = self.filteredItemList[indexPath.row].producerData.time
+        cell?.producerNameLabel.text = self.filteredItemList[indexPath.row].producerData.businessName
+        if(self.filteredItemList[indexPath.row].offerText == "")
+        {
+            cell?.offerLabel.isHidden = true
+            cell?.offerImageView.isHidden = true
+        }
+        cell?.offerLabel.text = self.filteredItemList[indexPath.row].offerText
+        cell?.itemName.text = self.filteredItemList[indexPath.row].itemName
+        let amountString : String = String(self.filteredItemList[indexPath.row].unitPrice)
         cell?.amountLabel.text = amountString
-        let reviewString : String = String(self.itemsData[indexPath.row].reviews)
+        let reviewString : String = String(self.filteredItemList[indexPath.row].reviews)
         cell?.reviewLabel.text = reviewString
-        let rating : Double = Double(self.itemsData[indexPath.row].rating)!
+        let rating : Double = Double(self.filteredItemList[indexPath.row].rating)!
         cell?.itemRatingView.rating = rating
         
         
-        let url = URL(string:self.itemsData[indexPath.row].imageUrl)
-        if(url == nil){}
-        else
-        {
-        let data = NSData(contentsOf:url!)
-            cell?.itemImage.image = UIImage(data:data as! Data)
-        }
+        let url = URL(string:self.filteredItemList[indexPath.row].imageUrl)
+//        if(url == nil){}
+//        else
+//        {
+        //let data = NSData(contentsOf:url!)
+            //cell?.itemImage = imageFromUrl(url) //= UIImage(data:data as! Data)
+        //}
         
-        cell?.qautityLabel.text = String(self.itemsData[indexPath.row].itemQuantity)
-        if (self.itemsData[indexPath.row].isFavourite)
+        DispatchQueue.global(qos: .background).async (execute : {
+            DispatchQueue.main.async {
+                do{
+                   let data = try NSData(contentsOf:url!) as Data
+                    cell?.itemImage.image =  UIImage(data: data, scale: 1)
+                } catch let error as NSError{
+                
+                }
+                
+                }
+            })
+        
+        
+        cell?.qautityLabel.text = String(self.filteredItemList[indexPath.row].itemQuantity)
+        if (self.filteredItemList[indexPath.row].isFavourite)
         {
             cell?.favImage.image = UIImage(named :"favouritesSelected")
         }else{
@@ -145,26 +197,31 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
         cell?.favImage.isUserInteractionEnabled = true
 
             }
+        self.hideActivity()
           return cell!
     }
     
     func stepperTapped(sender : UIStepper)
     {
-        itemsData[sender.tag].itemQuantity = Int32(sender.value)
+        filteredItemList[sender.tag].itemQuantity = Int32(sender.value)
         let cartModel:MyCartModel=MyCartModel()
-        cartModel.productId=itemsData[sender.tag].itemId
-        cartModel.producerId=itemsData[sender.tag].producerData.producerId
-        cartModel.productName=itemsData[sender.tag].itemName
-        cartModel.productQuantity = Int16(itemsData[sender.tag].itemQuantity)
-        cartModel.unitPrice=itemsData[sender.tag].unitPrice
+        cartModel.productId=filteredItemList[sender.tag].itemId
+        cartModel.producerId=filteredItemList[sender.tag].producerData.producerId
+        cartModel.productName=filteredItemList[sender.tag].itemName
+        cartModel.productQuantity = Int16(filteredItemList[sender.tag].itemQuantity)
+        cartModel.unitPrice=filteredItemList[sender.tag].unitPrice
         coreData.storeUserData(cartModel: cartModel)
+
+        NotificationCenter.default.post(name: Notification.Name(rawValue: mySpecialNotificationKey), object: self)
         tableView.reloadData()
         
     
     }
     func tappedMe(sender:UITapGestureRecognizer)
     {
-        let itemInfoData : DisplayItemList = itemsData[(sender.view?.tag)!]
+        
+        
+        let itemInfoData : DisplayItemList = filteredItemList[(sender.view?.tag)!]
         let addRemoveFavReqModel = AddRemoveFavReqModel()
         addRemoveFavReqModel.productId = itemInfoData.itemId
         if (itemInfoData.isFavourite)
@@ -174,6 +231,10 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
         else{
         addRemoveFavReqModel.favFlag = 1
         }
+        
+        if(self.userDefaultManager.isCustomerLoggedIn())
+        {
+        
         let customerAddfavUser :CustomerUserRequestModel = self.userDefaultManager.getCustomerCredential()
         let customerAddfavLangCode = CustomerLangCodeRequestModel()
         let serviceFacadeUser = ServiceFacadeUser(configUrl : PropertyReaderFile.getBaseUrl())
@@ -182,13 +243,13 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
                                                       customerLangCodeRequest: customerAddfavLangCode,
                                                       completionHandler: {
                                                         response in
-                                                        debugPrint(response)
+                                                        
                                                         if(response?.errorCode == 0)
                                                         {
                                                         itemInfoData.isFavourite = !itemInfoData.isFavourite
                                                             if(itemInfoData.isFavourite)
                                                             {
-                                                                var myfavourites = MyFavouritesModel()
+                                                                let myfavourites = MyFavouritesModel()
                                                                     myfavourites.itemId = itemInfoData.itemId
                                                             self.coreData.saveUserFavourites(myfavourites: myfavourites)
                                                             }else{
@@ -200,9 +261,107 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
                                                         
         })
 
-        
+        }
     }
     
+    func updateNotificationCartCount() {
+     //print("Nsnotification for tableViewcontroller")
+    }
+    
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
+//    {
+//        var filterOutput = [DisplayItemList]
+//        if (isFilterData)
+//        {
+//            filterOutput = filteredData
+//        }
+//        else{
+//            filterOutput = itemsData
+//        }
+//        
+//            filterOutput = filterOutput.filter({ (item) -> Bool in
+//                let searchByName: NSString = item.itemName as NSString
+//                let searchByDesc : NSString = item.itemDesc as NSString
+//                let nameRange = searchByName.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+//                let descRange = searchByDesc.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+//                return nameRange.location != NSNotFound
+//                return descRange.location != NSNotFound
+//            })
+//            if(filterOutput.count == 0){
+//                searchResult = false
+//            } else {
+//                searchResult = true
+//            }
+//        self.tableView.reloadData()
+//    }
+    
+    func getSearchItem(searchText: String) {
+        print("In tableview searchBar")
+        self.filteredItemList = self.filteredOutput
+        if(searchText != ""){
+        self.filteredItemList = self.filteredItemList.filter(
+            {
+                item in
+                return self.searchItem(item: item, searchText: searchText)
+        })
+        }
+        
+        //                        if(itemData.count == 0){
+        //                            searchResult = false
+        //                        } else {
+        //                            searchResult = true
+        //                        }
+        self.tableView.reloadData()
+    }
+    
+    fileprivate func searchItem(item:DisplayItemList , searchText : String) -> Bool
+    {
+    
+        let searchByName: NSString = item.itemName as NSString
+        let searchByDesc : NSString = item.itemDesc as NSString
+        let nameRange = searchByName.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+        let descRange = searchByDesc.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+        
+        
+        return nameRange.location != NSNotFound || descRange.location != NSNotFound
+    
+    }
+    
+    /*fileprivate func imageForUrl(urlString: String, completionHandler:@escaping (_ image: UIImage?,_ url: String) -> ()) {
+        DispatchQueue.global(qos: .background).async { () in
+            var data: NSData? = self.cache.objectForKey(urlString) as? NSData
+            
+            if let goodData = data {
+                let image = UIImage(data: goodData as Data)
+                DispatchQueue.main.async(execute: {() in
+                    completionHandler(image, urlString)
+                })
+                return
+            }
+            
+            var downloadTask: URLSessionDataTask = URLSession.shared.dataTask(with: NSURL(string: urlString) as! URLRequest, completionHandler: {(data: Data!, response: URLResponse!, error: Error!) -> Void in
+                if (error != nil) {
+                    completionHandler(image: nil, url: urlString)
+                    return
+                }
+                
+                if data != nil {
+                    let image = UIImage(data: data)
+                    self.cache.setObject(data, forKey: urlString)
+                    dispatch_async(dispatch_get_main_queue(), {() in
+                        completionHandler(image: image, url: urlString)
+                    })
+                    return
+                }
+                
+            })
+            
+            downloadTask.resume()
+        }
+        
+    }*/
+    
+   }
 
-  
-}
+
+

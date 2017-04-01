@@ -10,6 +10,7 @@ import Foundation
 
 public class SortByConstant
 {
+    var noSort : Int = 0
     var distanceSort : Int = 1
     var priceSort : Int = 2
     var reviewSort : Int = 3

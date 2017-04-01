@@ -13,6 +13,8 @@ class VendorOrderDetailsViewController: UIViewController,UIPickerViewDelegate,UI
     var userDefaultManager : UserDefaultManager = UserDefaultManager()
     var changeStatusData : [UpdateStatusModel] = []
     let pickerView = UIPickerView()
+    var orderStatusConstant = OrderStatusConstant()
+    var statusId : Int32 = 0
 
     @IBOutlet var readyToPickTxtField: UITextField!
     @IBOutlet var changeStatusView: UIView!
@@ -26,6 +28,7 @@ class VendorOrderDetailsViewController: UIViewController,UIPickerViewDelegate,UI
     @IBOutlet var giftMessageLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
     @IBOutlet var statusImageview: UIImageView!
+    @IBOutlet var orderStatusLabel: UILabel!
     
     @IBAction func showOnMapButtonTapped(_ sender: UIButton) {
     }
@@ -35,22 +38,21 @@ class VendorOrderDetailsViewController: UIViewController,UIPickerViewDelegate,UI
         let updateDelStatusViewController = UpdateDelStatusViewController()
         let vendorLangCode = VendorLangCodeRequestmodel()
         updateDelStatusViewController.orderId = self.vendorOrderResponseModel.orderId
-        updateDelStatusViewController.deliveryStatusId = self.vendorOrderResponseModel.deliveryStatusId
+        updateDelStatusViewController.deliveryStatusId = Int(self.statusId)
+        self.showActivity()
         let serviceFacade = ServiceFacade(configUrl : PropertyReaderFile.getBaseUrl())
         serviceFacade.UpdateDeliveryStatus(vendorDataRequest: updateDelStatusViewController,
                                            vendorUserRequest: updateStatusUser,
                                            vendorLangCodeRequest: vendorLangCode,
                                            completionHandler: {
                                             response in
+                                            self.hideActivity()
                                             if (response?.errorCode == 0)
                                             {
-                                            self.showAlertMessage(title: "Order Status", message: (response?.message)!)
+                                            self.showAlertMessage(title: NSLocalizedString("success.title", comment: ""), message: (response?.message)!)
                                             }else{
-                                                self.showAlertMessage(title: "Order Status", message: (response?.message)!)
-
+                                                self.showAlertMessage(title: NSLocalizedString("serverError", comment: ""), message: (response?.message)!)
                                             }
-        
-        
         })
     }
     
@@ -60,15 +62,34 @@ class VendorOrderDetailsViewController: UIViewController,UIPickerViewDelegate,UI
         let orderIdString : String = String(self.vendorOrderResponseModel.orderId)
         self.orderIdLabel.text = orderIdString
         self.addressLabel.text = self.vendorOrderResponseModel.deliveryAddress
-        self.paymentModeLabel.text = self.vendorOrderResponseModel.paymentMethod
+    
         self.deliveryTypeLabel.text = self.vendorOrderResponseModel.deliveryType
+        
+        if (self.vendorOrderResponseModel.paymentMode == PaymentMethod.payPal)
+        {
+            self.paymentModeLabel.text = NSLocalizedString("paypalLabel", comment: "")
+        }else if (self.vendorOrderResponseModel.paymentMode == PaymentMethod.cash)
+        {
+            self.paymentModeLabel.text = NSLocalizedString("cashLabel", comment: "")
+        }
+        
+        if (self.vendorOrderResponseModel.deliveryMethod == DelieveryMethods.homeDeleivery)
+        {
+            self.deliveryTypeLabel.text = NSLocalizedString("homeDelivery", comment: "")
+        }else if (self.vendorOrderResponseModel.deliveryMethod == DelieveryMethods.pickUp)
+        {
+            self.deliveryTypeLabel.text = NSLocalizedString("pickUpLabel", comment: "")
+        }
+
         self.customerNameLabel.text = self.vendorOrderResponseModel.customerName
         let amountString : String = String(self.vendorOrderResponseModel.amountInSAR)
         self.amountLabel.text = amountString
         
+        orderStatusLabel.text = orderStatusConstant.getValueOrderStatus(key: self.vendorOrderResponseModel.currentStatusCode)
+        
         
         let serverdateFormatter = DateFormatter()
-        serverdateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        serverdateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         let strDate:String = self.vendorOrderResponseModel.orderDate
         let date = serverdateFormatter.date(from: strDate)
         
@@ -137,14 +158,21 @@ class VendorOrderDetailsViewController: UIViewController,UIPickerViewDelegate,UI
         var readableString : String = ""
 
         switch (statusMessage) {
-        case  "READY_TO_PICKUP":
-            readableString = "Ready to pickup"
+        case  orderStatusConstant.readyToPickUp :
+            readableString = NSLocalizedString("Readytopickup", comment: "")
             break
-        case "Order Status waiting" :
-         readableString =  "Order Status waiting"
+        case orderStatusConstant.deliveryInProgress :
+            readableString =  NSLocalizedString("Deliveryinprogress", comment: "")
             break
-        case "PICKUP_COMPLETE" :
-            readableString = "Order pickup complete"
+        case orderStatusConstant.orderPlacedCode :
+            readableString = NSLocalizedString("Orderplaced", comment: "")
+            break
+        case orderStatusConstant.pickUpComplete :
+            readableString = NSLocalizedString("Orderpickupcomplete", comment: "")
+            break
+        case orderStatusConstant.timeForPickUpOver :
+            readableString = NSLocalizedString("Timeforpickupisover", comment: "")
+            break
         default:
             readableString = ""
             break
@@ -153,7 +181,32 @@ class VendorOrderDetailsViewController: UIViewController,UIPickerViewDelegate,UI
         
     }
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-        self.readyToPickTxtField.text = changeStatusData[row].statusCode
+        let statusMessage : String = changeStatusData[row].statusCode
+        statusId = changeStatusData[row].statusId
+        var readableString : String = ""
+        
+        switch (statusMessage) {
+        case  orderStatusConstant.readyToPickUp :
+            readableString = NSLocalizedString("Readytopickup", comment: "")
+            break
+        case orderStatusConstant.deliveryInProgress :
+            readableString =  NSLocalizedString("Deliveryinprogress", comment: "")
+            break
+        case orderStatusConstant.orderPlacedCode :
+            readableString = NSLocalizedString("Orderplaced", comment: "")
+            break
+        case orderStatusConstant.pickUpComplete :
+            readableString = NSLocalizedString("Orderpickupcomplete", comment: "")
+            break
+        case orderStatusConstant.timeForPickUpOver :
+            readableString = NSLocalizedString("Timeforpickupisover", comment: "")
+            break
+        default:
+            readableString = ""
+            break
+        }
+
+        self.readyToPickTxtField.text = readableString
         
         self.view.endEditing(true)
     }

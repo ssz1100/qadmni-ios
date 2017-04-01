@@ -92,30 +92,31 @@ class ConfirmPayViewController: UIViewController,UITableViewDataSource,UITableVi
         custConfirmOrderReqModel.amountInUSD = amountInUSD
         custConfirmOrderReqModel.transactionId = transactionId
         custConfirmOrderReqModel.paypalId = paypalId
-        
+        self.showActivity()
         let serviceFacadeUser = ServiceFacadeUser(configUrl : PropertyReaderFile.getBaseUrl())
         serviceFacadeUser.CustomerConfirmOrder(customerDataRequest: custConfirmOrderReqModel,
                                                customerUserRequest: customerConfirmOrderUser,
                                                customerLangCodeRequest: customerLangCode,
                                                completionHandler: {
                                                 response in
+                                                self.hideActivity()
                                                 debugPrint(response)
                                                 if (response?.errorCode == 0)
                                                 {
-                                                    let alertView = UIAlertController.init(title:"Order Placed" , message: "Order has been placed successfully", preferredStyle: .alert)
+                                                    let alertView = UIAlertController.init(title:NSLocalizedString("success.title", comment: "") , message:NSLocalizedString("confirmOrder.message", comment: "") , preferredStyle: .alert)
                                                     let callActionHandler = { (action:UIAlertAction!) -> Void in
                                                         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                                                         let vc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "UserOrderHistoryNavigation") as! UINavigationController
                                                         self.present(vc, animated: true)
                                                         self.coreData.deleteCartData()
                                                     }
-                                                    let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: callActionHandler)
+                                                    let defaultAction = UIAlertAction.init(title: NSLocalizedString("okLabel", comment: ""), style: .default, handler: callActionHandler)
                                                     alertView.addAction(defaultAction)
                                                     alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
                                                     self.present(alertView, animated: true)
                                                 }
                                                 else{
-                                                    self.showAlertMessage(title: "Order failed", message: (response?.message)!)
+                                                    self.showAlertMessage(title: NSLocalizedString("serverError", comment: ""), message: (response?.message)!)
                                                 
                                                 }
                                                 
@@ -132,7 +133,7 @@ class ConfirmPayViewController: UIViewController,UITableViewDataSource,UITableVi
         let finalPriceString : String = String(self.placeOrderResModel.totalAmountInSAR)
         finalPriceLabel.text = finalPriceString
         let payInUSDString : String = String(self.placeOrderResModel.totalAmountInUSD)
-        payButtonOutlet.setTitle("Pay USD  "+payInUSDString, for: .normal)
+        payButtonOutlet.setTitle(NSLocalizedString("payUSD.label", comment: "")+payInUSDString, for: .normal)
         
         }
 

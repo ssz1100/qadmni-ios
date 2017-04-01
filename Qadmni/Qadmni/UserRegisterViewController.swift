@@ -24,11 +24,9 @@ class UserRegisterViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var registerButtonOutlet: UIButton!
     
     @IBOutlet weak var subView: UIView!
-    
     @IBAction func backButtonTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
-    
     
     @IBAction func registerUser(_ sender: UIButton) {
         
@@ -58,14 +56,20 @@ class UserRegisterViewController: UIViewController,UITextFieldDelegate {
                                             if(response?.errorCode == 0)
                                             {
                                                 
-                                                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                                                let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "UserLoginViewController") as UIViewController
-                                                self.present(vc, animated: true, completion: nil)
-                                                
-                                                
+                                                let alertView = UIAlertController.init(title:NSLocalizedString("registrationSuccess.title", comment: ""), message: NSLocalizedString("registrationSuccess.message", comment: ""), preferredStyle: .alert)
+                                                let callActionHandler = { (action:UIAlertAction!) -> Void in
+                                                    
+                                                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                                    let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "UserLoginViewController") as UIViewController
+                                                    self.present(vc, animated: true, completion: nil)
+                                                }
+                                                let defaultAction = UIAlertAction.init(title: NSLocalizedString("okLabel", comment: ""), style: .default, handler: callActionHandler)
+                                                alertView.addAction(defaultAction)
+                                                alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
+                                                self.present(alertView, animated: true)
                                             }
                                             else{
-                                                self.showAlertMessage(title: "Alert", message:(response?.message)!)
+                                                self.showAlertMessage(title: NSLocalizedString("serverError", comment: ""), message:(response?.message)!)
                                             }
 
         
@@ -88,6 +92,13 @@ class UserRegisterViewController: UIViewController,UITextFieldDelegate {
         nameTxtField.addLeftIcon(userNameImage, frame: frame, imageSize: imageSize)
         let phoneImage = UIImage(named:"phone")
         phoneTxtField.addLeftIcon(phoneImage, frame: frame, imageSize: imageSize)
+        
+        nameTxtField.delegate = self
+        passwordTxtField.delegate = self
+        confirmPasswordtxtField.delegate = self
+        emailTxtField.delegate = self
+        phoneTxtField.delegate = self
+        
 
     }
     
@@ -120,32 +131,37 @@ class UserRegisterViewController: UIViewController,UITextFieldDelegate {
         
         if (self.nameTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter name")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("name.message", comment: ""))
             return false
         }
         else if (self.passwordTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter password")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("password.message", comment: ""))
             return false
         }
         else if (self.confirmPasswordtxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter confirmpassword")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("password.message", comment: ""))
             return false
         }
         else if (self.emailTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter email")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("email.message", comment: ""))
             return false
         }
         else if (self.phoneTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter phonenumber")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("phoneNumber.message", comment: ""))
             return false
         }
         else if (self.passwordTxtField.text != self.confirmPasswordtxtField.text)
         {
-            self.showAlertMessage(title: "Alert", message: "Password unmatched")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("correctPassword.message", comment: ""))
+            return false
+        }
+        else if ((phoneTxtField.text?.characters.count)! < 10)
+        {
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("correctPhoneNumber.message", comment: ""))
             return false
         }
         return true
@@ -187,6 +203,18 @@ class UserRegisterViewController: UIViewController,UITextFieldDelegate {
     {
         self.view.endEditing(true)
     }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let charsLimit = 10
+        
+        let startingLength = phoneTxtField.text?.characters.count ?? 0
+        let lengthToAdd = string.characters.count
+        let lengthToReplace =  range.length
+        let newLength = startingLength + lengthToAdd - lengthToReplace
+        
+        return newLength <= charsLimit
+    }
+
 
     
 }

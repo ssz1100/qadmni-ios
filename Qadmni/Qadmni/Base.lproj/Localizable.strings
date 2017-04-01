@@ -1,0 +1,72 @@
+/* 
+  Localizable.strings
+  Qadmni
+
+  Created by Prakash Sabale on 30/03/17.
+  Copyright © 2017 Qadmni. All rights reserved.
+*/
+
+availableForSaleText = "Available for Sale";
+notavailableForSaleText = "Not Available for sale";
+Orderhasbeenplaced = "Order has been placed";
+Deliveryinprogress = "Delivery in progress";
+Delivered = "Delivered";
+Orderplaced = "Order placed";
+Readytopickup = "Ready to pickup";
+Orderpickupcomplete = "Order pickup complete";
+Timeforpickupisover = "Time for pick up is over";
+okLabel = "OK";
+cancelLabel = "Cancel";
+alertLabel = "Alert";
+username.message = "Please enter username";
+password.message = "Please Enter Password";
+name.message = "Please enter your name";
+email.message = "Please enter your email";
+phoneNumber.message = "Please enter phonenumber";
+correctPassword.message = "Please enter correct password";
+correctPhoneNumber.message = "Please enter correct phone number";
+profile.password = "Password cannot be blank";
+profile.username = "Username cannot be blank";
+profile.phoneNumber = "Phone number cannot be blank";
+setting.selectLanguage = "Please Select Language";
+setting.settingSaved = "Setting Saved";
+setting.savedMessage = "Please close this app to make the changes in effect";
+shopDetails.englishname = "Please enter shop name in english";
+shopDetails.arabicname = "Please enter shop name in arabic";
+shopDetails.buisnessLocation = "Please select address correctly";
+addProduct.productNameEnglish = "Please enter product name in english";
+addProduct.productNameArabic = "Please enter product name in arabic";
+addProduct.productDetailsEnglish = "Please enter product details in english";
+addProduct.productDetailArabic = "Please enter product details in arabic";
+addProduct.price = "Please enter valid price";
+addProduct.productImageMessage = "Please select the product image";
+addProduct.categoryList = "Please select category";
+serverError = "Server error";
+registrationSuccess.title = "Registration Success";
+registrationSuccess.message = "Merchant registered successfully";
+success.title = "Success";
+addProduct.message = "Product added successfully";
+updateProduct.message = "Product updated successfully";
+forgotPassword.message = "Credential is sent to registered email id ";
+profile.message = "Profile updated successfully";
+myCart.message = "Your cart is empty,please select the products";
+myCart.productQuantityLabel = "Product Quantity";
+myCart.enterProductQuantity = "Enter product quantity";
+placeOrder.title = "Place Order";
+placeOrder.dateandTimeMessage = "Please select date & time";
+placeOrder.GiftMessage = "Gift message";
+placeOrder.message = "Upto 180 characters";
+placeOrder.Entergiftmessage = "Enter gift message";
+placeOrder.selectAddress = "Address not selected";
+placeOrder.paymentType = "Please select payment type";
+placeOrder.deliveryMode = "Please select delivery mode";
+placeOrder.deliveryType = "Please select delivery type";
+confirmOrder.message = "Order has been placed";
+payUSD.label = "PAY USD   ";
+cashLabel = "Cash";
+paypalLabel = "PayPal";
+pickUpLabel = "Pick Up";
+homeDelivery = "Home Delivery";
+
+
+

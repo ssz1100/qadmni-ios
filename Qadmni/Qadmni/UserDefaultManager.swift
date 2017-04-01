@@ -197,36 +197,21 @@ public class UserDefaultManager
     }
     func getLanguageCode() -> String
     {
-        var languageCode : String = "En"
-        var langCode = userDefaults.value(forKey: "LanguageCode") as? String
-        if(langCode != nil && langCode != ""){
-            languageCode = langCode!
+        if(userDefaults.value(forKey: "LanguageCode") == nil)
+        {
+            userDefaults.setValue("En", forKey: "LanguageCode")
+            LanguageManager.sharedInstance.setLocale("en")
         }
+        var languageCode : String = ""
+        languageCode = userDefaults.value(forKey: "LanguageCode") as! String
         
         return languageCode
+        
     }
     func setLanguageCode(languageCode : String)
     {
         userDefaults.setValue(languageCode, forKey: "LanguageCode")
         
-    }
-    func setLocale(languageCode : String)
-    {
-        userDefaults.setValue(languageCode, forKey: "LocaleCode")
-        LanguageManager.sharedInstance.setLocale(languageCode)
-    }
-    func getLocale()-> String
-    {
-        var localeCode: String = ""
-        var tempLocaleCode : String = GlobalConstants.englishCode
-        var localeLanguage = userDefaults.value(forKey: "LocaleCode") as? String
-        if(localeLanguage != nil && localeLanguage != ""){
-            localeCode = localeLanguage!
-        }else{
-            localeLanguage = tempLocaleCode
-        }
-
-        return localeCode
     }
     func getVendorname()-> String
     {
@@ -271,6 +256,15 @@ public class UserDefaultManager
         customerName = userDefaults.value(forKey: "customername") as! String
         
         return customerName
+    }
+    func isCustomerLoggedIn()-> Bool
+    {
+        if (self.getUserType() == "other")
+        {
+            return false
+        }
+        return true
+        
     }
 
 

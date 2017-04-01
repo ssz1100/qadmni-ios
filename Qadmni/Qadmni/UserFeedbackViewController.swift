@@ -37,19 +37,19 @@ class UserFeedbackViewController: UIViewController,UITableViewDelegate,UITableVi
                                                     debugPrint(response)
                                                     if (response?.errorCode == 0)
                                                     {
-                                                        let alertView = UIAlertController.init(title:"Feedback" , message: response?.message, preferredStyle: .alert)
+                                                        let alertView = UIAlertController.init(title:NSLocalizedString("success.title", comment: "") , message: response?.message, preferredStyle: .alert)
                                                         let callActionHandler = { (action:UIAlertAction!) -> Void in
                                                             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                                                             let vc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "UserOrderHistoryNavigation") as! UINavigationController
                                                             self.present(vc, animated: true)
                                                         }
-                                                        let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: callActionHandler)
+                                                        let defaultAction = UIAlertAction.init(title: NSLocalizedString("okLabel", comment: ""), style: .default, handler: callActionHandler)
                                                         alertView.addAction(defaultAction)
                                                         alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
                                                         self.present(alertView, animated: true)
                                                     }
                                                     else{
-                                                        self.showAlertMessage(title: "Feedback", message: (response?.message)!)
+                                                        self.showAlertMessage(title: NSLocalizedString("serverError", comment: ""), message: (response?.message)!)
                                                         
                                                     }
 

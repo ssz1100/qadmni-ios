@@ -22,16 +22,14 @@ class VendorLoginViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var passwordTxtField: UITextField!
 
     @IBOutlet weak var loginVendorButton: UIButton!
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as UIViewController
+        self.present(vc, animated: true, completion: nil)
+    }
     
     
     @IBOutlet weak var subView: UIView!
-    
-    @IBAction func backButtonTapped(_ sender: UIButton)
-    {
-        self.dismiss(animated:true, completion: nil)
-        
-    }
-
     
     @IBAction func loginVendorButtonTapped(_ sender: UIButton)
     {
@@ -88,7 +86,7 @@ class VendorLoginViewController: UIViewController,UITextFieldDelegate {
                         }
                         else
                         {
-                          self.showAlertMessage(title: "Authenication Error", message: (response?.message)!)
+                          self.showAlertMessage(title: NSLocalizedString("serverError", comment: ""), message: (response?.message)!)
                             self.userNameTxtField.text! = ""
                             self.passwordTxtField.text! = ""
                         }
@@ -115,6 +113,9 @@ class VendorLoginViewController: UIViewController,UITextFieldDelegate {
         userNameTxtField.addLeftIcon(userloginImage, frame: frame, imageSize: imageSize)
         let passwordImage = UIImage(named:"password")    
         passwordTxtField.addLeftIcon(passwordImage, frame: frame, imageSize: imageSize)
+        
+        userNameTxtField.delegate = self
+        passwordTxtField.delegate = self
 
     }
     
@@ -135,12 +136,12 @@ class VendorLoginViewController: UIViewController,UITextFieldDelegate {
         
         if (self.userNameTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please Enter User Name")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("username.message", comment: ""))
             return false
         }
         else if (self.passwordTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please Enter Password")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("password.message", comment: ""))
             return false
         }
                 return true

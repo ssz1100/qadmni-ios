@@ -98,7 +98,7 @@ UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDeleg
                                                     self.addMulipartImage(productId: self.productId)
                                                     if (response?.errorCode == 0)
                                                     {
-                                                        let alertView = UIAlertController.init(title:"Update product" , message:"Product updated successfully", preferredStyle: .alert)
+                                                        let alertView = UIAlertController.init(title:NSLocalizedString("success.title", comment: "") , message:NSLocalizedString("updateProduct.message", comment: ""), preferredStyle: .alert)
                                                         let callActionHandler = { (action:UIAlertAction!) -> Void in
                                                             
                                                             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -107,14 +107,14 @@ UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDeleg
                                                             
                                                             
                                                         }
-                                                        let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: callActionHandler)
+                                                        let defaultAction = UIAlertAction.init(title: NSLocalizedString("okLabel", comment: ""), style: .default, handler: callActionHandler)
                                                         alertView.addAction(defaultAction)
                                                         alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
                                                         self.present(alertView, animated: true)
 
                                                     }
                                                     else{
-                                                        self.showAlertMessage(title: "Update product", message: (response?.message)!)
+                                                        self.showAlertMessage(title: NSLocalizedString("serverError", comment: ""), message: (response?.message)!)
                                                     }
                                                                                                     }
             })
@@ -151,7 +151,7 @@ UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDeleg
                                         self.addMulipartImage(productId: (response?.productId)!)
                                         if (response?.errorCode == 0)
                                         {
-                                            let alertView = UIAlertController.init(title:"Add product" , message:"Product added successfully", preferredStyle: .alert)
+                                            let alertView = UIAlertController.init(title:NSLocalizedString("success.title", comment: ""), message:NSLocalizedString("addProduct.message", comment: ""), preferredStyle: .alert)
                                             let callActionHandler = { (action:UIAlertAction!) -> Void in
                                                 
                                                 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -159,12 +159,12 @@ UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDeleg
                                                 self.present(vc, animated: true, completion: nil)
                                                 
                                             }
-                                            let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: callActionHandler)
+                                            let defaultAction = UIAlertAction.init(title: NSLocalizedString("okLabel", comment: ""), style: .default, handler: callActionHandler)
                                             alertView.addAction(defaultAction)
                                             alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
                                             self.present(alertView, animated: true)
                                         }else{
-                                        self.showAlertMessage(title: "Add product" , message: (response?.message)!)
+                                        self.showAlertMessage(title: NSLocalizedString("serverError", comment: "") , message: (response?.message)!)
                                         }
                                         
 
@@ -319,37 +319,37 @@ UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPickerViewDeleg
         
         if (self.categoryPickerTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please select category")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("addProduct.categoryList", comment: ""))
             return false
         }
         else if (self.productNameEnglishTxt.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter product name in english")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("addProduct.productNameEnglish", comment: ""))
             return false
         }
         else if (self.productNameArabicTxt.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter product name in arabic")
+            self.showAlertMessage(title:NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("addProduct.productNameArabic", comment: ""))
             return false
         }
         else if (self.productDetailEnglishTxt.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter product description in english")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("addProduct.productDetailsEnglish", comment: ""))
             return false
         }
         else if (self.productDetailArabicTxt.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter product description in arabic")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("addProduct.productDetailArabic", comment: ""))
             return false
         }
         else if (self.priceTxtField.text?.isEmpty)!
         {
-            self.showAlertMessage(title: "Info", message: "Please enter price")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("addProduct.price", comment: ""))
             return false
         }
         else if (!self.isImagePicked)
         {
-            self.showAlertMessage(title: "Info", message: "Please select product image")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("addProduct.productImageMessage", comment: ""))
             return false
         }
 

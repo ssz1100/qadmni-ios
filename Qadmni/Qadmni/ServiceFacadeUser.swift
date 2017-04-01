@@ -173,6 +173,7 @@ public class ServiceFacadeUser
         let customerLangCodeString : String? = customerLangCodeRequest?.toJsonString()
         
         let customerPlaceOrderParameter: Parameters = buildRequestParameters(dataString: customerPlaceOrderDataString, userString: customerPlaceOrderUserString, langCodeString: customerLangCodeString)
+        print(customerPlaceOrderParameter)
         
         Alamofire.request(endPointUrl,
                           method: .post,
@@ -223,6 +224,7 @@ public class ServiceFacadeUser
         let customerLangCodeString : String? = customerLangCodeRequest?.toJsonString()
         
         let customerProcessOrderParameter: Parameters = buildRequestParameters(dataString: customerProcessOrderDataString, userString: customerProcessOrderUserString, langCodeString: customerLangCodeString)
+        print(customerProcessOrderParameter)
         
         Alamofire.request(endPointUrl,
                           method: .post,

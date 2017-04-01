@@ -36,7 +36,7 @@ class OrderDetailsViewController: UIViewController,UITableViewDataSource,UITable
                                                 let orderId: Int32  = (response?.orderId)!
                                                 self.orderIdLabel.text! = String(orderId)
                                                 let serverdateFormatter = DateFormatter()
-                                                serverdateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+                                                serverdateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
                                                 let strDate:String = (response?.orderDate)!
                                                 let date = serverdateFormatter.date(from: strDate)
                                                 

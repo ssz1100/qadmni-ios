@@ -30,7 +30,8 @@ class SettingViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
     @IBAction func backButtontapped(_ sender: UIBarButtonItem) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "SWRevealViewController") as UIViewController
-        self.present(vc, animated: true, completion: nil)    }
+        self.present(vc, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,32 +71,29 @@ class SettingViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
          print("Save button Tapped")
         if(languageStr == "")
         {
-            self.showAlertMessage(title: "Info", message: "Please Select Language")
+            self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("setting.selectLanguage", comment: ""))
         }else
         {
             if (languageStr == "English"){
                 self.userDefaultManager.setLanguageCode(languageCode: "En")
-               self.userDefaultManager.setLocale(languageCode: GlobalConstants.englishCode)
+                LanguageManager.sharedInstance.setLocale("en")
             }else{
                 self.userDefaultManager.setLanguageCode(languageCode: "Ar")
-                self.userDefaultManager.setLocale(languageCode: GlobalConstants.arabicLangCode)
+                LanguageManager.sharedInstance.setLocale("ar")
             }
             
-            
-            let alertView = UIAlertController.init(title: "Setting Saved", message: "Please close this app to make the changes in effect", preferredStyle: .alert)
+            let alertView = UIAlertController.init(title: NSLocalizedString("setting.settingSaved", comment: ""), message: NSLocalizedString("setting.savedMessage", comment: ""), preferredStyle: .alert)
             let callActionHandler = { (action:UIAlertAction!) -> Void in
                 
                 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as UIViewController
                 self.present(vc, animated: true, completion: nil)
             }
-            let defaultAction = UIAlertAction.init(title: "OK", style: .default, handler: callActionHandler)
+            let defaultAction = UIAlertAction.init(title: NSLocalizedString("okLabel", comment: ""), style: .default, handler: callActionHandler)
             alertView.addAction(defaultAction)
             alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
             self.present(alertView, animated: true)
-            
 
-            
             }
             }
     

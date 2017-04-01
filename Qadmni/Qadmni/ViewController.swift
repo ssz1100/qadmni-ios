@@ -9,19 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController,LoginResultDelegate {
+    @IBOutlet var imageView: UIImageView!
     var userDefaultManager : UserDefaultManager = UserDefaultManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        print(Locale.current.languageCode as Any)
     }
 
-       
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "loginSegue" {
             
             let destinationController = segue.destination as! UserLoginViewController
             destinationController.resultDelegate = self
+            
+            
         }
         
     }

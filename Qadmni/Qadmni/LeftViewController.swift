@@ -24,7 +24,7 @@ class LeftViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         if(userDefaultManager.getLanguageCode() == "En")
         {
             
-            menuNameArray = ["My Cart","My Orders","My Favourites","My Profile","Setting","Partner Login","Logout"]
+            menuNameArray = ["My Cart","My Orders","My Favourites","My Profile","Settings","Partner Login","Logout"]
         }else{
             menuNameArray = ["دخول الشريك","طلباتي","تفضيلاتي","ملفي","الضبط","دخول الشريك","اخرج"]
         }

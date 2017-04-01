@@ -14,10 +14,10 @@ class PastOrderTableViewCell: UITableViewCell {
     @IBOutlet var feedbackButtonOutlet: UIButton!
     @IBOutlet var amountLabel: UILabel!
     @IBOutlet var viewDetailsOutlet: UIButton!
-    @IBOutlet var statusLabel: UILabel!
     @IBOutlet var statusImageview: UIImageView!
     @IBOutlet var orderDateLabel: UILabel!
     @IBOutlet var orderIdLabel: UILabel!
+    @IBOutlet var orderStatusLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

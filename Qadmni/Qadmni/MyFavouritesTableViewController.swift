@@ -61,12 +61,14 @@ class MyFavouritesTableViewController: UITableViewController,CLLocationManagerDe
                 let addfavouriteReqModel = AddfavouriteReqModel()
                 let customerAddfavUser :CustomerUserRequestModel = self.userDefaultManager.getCustomerCredential()
                 let customerAddfavLangCode = CustomerLangCodeRequestModel()
+            self.showActivity()
                 let serviceFacadeUser = ServiceFacadeUser(configUrl : PropertyReaderFile.getBaseUrl())
                 serviceFacadeUser.customerAddFavourites(customerDataRequest: addfavouriteReqModel,
                                                         customerUserRequest: customerAddfavUser,
                                                         customerLangCodeRequest: customerAddfavLangCode,
                                                         completionHandler: {
                                                             response in
+                                                            self.hideActivity()
                                                             if (response?.errorCode == 0)
                                                             {
                                                                 for item in (response?.itemInfoList)!

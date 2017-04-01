@@ -32,7 +32,7 @@ class GoogleMapViewController: UIViewController,UISearchBarDelegate,LocateOnTheM
         
         if (businessLat == 0.0 || businessLong == 0.0)
         {
-        self.showAlertMessage(title: "Alert", message: "Select Valid Address")
+        self.showAlertMessage(title: NSLocalizedString("alertLabel", comment: ""), message: NSLocalizedString("shopDetails.buisnessLocation", comment: ""))
         
         }
         else
