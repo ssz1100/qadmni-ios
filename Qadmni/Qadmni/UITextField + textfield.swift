@@ -154,6 +154,7 @@ extension UIViewController
     
     func showActivity()
     {
+        
         let loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.indeterminate
         loadingNotification.label.text = "Loading"

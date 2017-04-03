@@ -44,6 +44,8 @@ class UserOrderHistoryViewController: ButtonBarPagerTabStripViewController {
         self.settings.style.selectedBarBackgroundColor = UIColor.gray
         PagerTabStripBehaviour.progressive(skipIntermediateViewControllers: true, elasticIndicatorLimit: true)
         
+        self.automaticallyAdjustsScrollViewInsets = false
+        
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController]
@@ -53,14 +55,19 @@ class UserOrderHistoryViewController: ButtonBarPagerTabStripViewController {
         let pastOrder = storyboard.instantiateViewController(withIdentifier: "PastOrderTableViewController") 
         return[liveOrder,pastOrder]
     }
+    
     override func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int, withProgressPercentage progressPercentage: CGFloat, indexWasChanged: Bool)
     {
-        
+        super.updateIndicator(for: self, fromIndex: fromIndex, toIndex: toIndex, withProgressPercentage: progressPercentage, indexWasChanged: indexWasChanged)
+        print("Printing From index : %d to index : %d",fromIndex,toIndex)
         
     }
     override func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int)
     {
+        print("From index : %d to index : %d",fromIndex,toIndex)
     }
+
+    
     
 
 

@@ -79,15 +79,17 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
             
 
         }
+        
+        
         let revealController = revealViewController()
         self.menuButton.target = revealController
         if(userDefaultManager.getLanguageCode() == "En")
         {
-        self.menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            self.menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
         }else{
-        let rearController = self.storyboard?.instantiateViewController(withIdentifier: "LeftViewController")
-        revealController?.setRight(rearController, animated: true)
-        self.menuButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+            let rearController = self.storyboard?.instantiateViewController(withIdentifier: "LeftViewController")
+            revealController?.setRight(rearController, animated: true)
+            self.menuButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
         }
       
         
@@ -108,9 +110,10 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
         }
         
         
-       self.settings.style.selectedBarHeight = 2
-     self.settings.style.selectedBarBackgroundColor = UIColor.gray
-        PagerTabStripBehaviour.progressive(skipIntermediateViewControllers: true, elasticIndicatorLimit: true)
+        self.settings.style.selectedBarHeight = 2
+        self.settings.style.selectedBarBackgroundColor = UIColor.gray
+        //PagerTabStripBehaviour.progressive(skipIntermediateViewControllers: true, elasticIndicatorLimit: true)
+        self.delegate = self
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 90, height: 45))
         imageView.contentMode = .scaleAspectFit
         let image = UIImage(named: "qadmni_img_logo_english.png")
@@ -120,11 +123,10 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
         setBadge()
         
         NotificationCenter.default.addObserver(self, selector: #selector(QuickStartViewController.actOnSpecialNotification), name: NSNotification.Name(rawValue: mySpecialNotificationKey), object: nil)
-    
-       
+        
+        self.automaticallyAdjustsScrollViewInsets = false
     
     }
-
 
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController]
     {
@@ -185,11 +187,14 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
     }
     override func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int, withProgressPercentage progressPercentage: CGFloat, indexWasChanged: Bool)
      {
-    
+        //super.updateIndicator(for: viewController, fromIndex: fromIndex, toIndex: toIndex, withProgressPercentage: progressPercentage, indexWasChanged: indexWasChanged)
+        super.updateIndicator(for: self, fromIndex: fromIndex, toIndex: toIndex, withProgressPercentage: progressPercentage, indexWasChanged: indexWasChanged)
+        print("Printing From index : %d to index : %d",fromIndex,toIndex)
     
     }
     override func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int)
     {
+        print("From index : %d to index : %d",fromIndex,toIndex)
     }
     
 
@@ -199,8 +204,8 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
        // print("locations = \(locValue.latitude) \(locValue.longitude)")
-        customerLattitude =   locValue.latitude //18.5493561
-        customerLongitude =  locValue.longitude //73.7871573
+        customerLattitude = locValue.latitude //18.5493561
+        customerLongitude = locValue.longitude //73.7871573
         if(customerLattitude>0&&customerLongitude>0)
         {
             locationManager.stopUpdatingLocation()
@@ -442,6 +447,7 @@ func setBadge()
       CurrentViewController.getSearchItem(searchText:"")
         //self.searchItemDelegate?.getSearchItem(searchText: "")
     }
+   
 
 }
 public protocol SearchItemDelegate {

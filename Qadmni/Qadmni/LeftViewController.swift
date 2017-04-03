@@ -34,7 +34,7 @@ class LeftViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
         menuIconImage = [UIImage(named:"shoppingcart")!,UIImage(named:"basket")!,UIImage(named:"favourites")!,UIImage(named:"profile")!,UIImage(named:"setting")!,UIImage(named:"shop")!,UIImage(named:"logout")!]
         userNameLabel.text=userDefaultManager.getUserName()
-        userEmailIdLabel.text = userDefaultManager.getVendorEmailId()
+        userEmailIdLabel.text = userDefaultManager.getUserEmailId()
     }
 
     override func didReceiveMemoryWarning() {

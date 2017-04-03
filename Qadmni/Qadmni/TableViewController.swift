@@ -51,6 +51,7 @@ class TableViewController: UITableViewController , IndicatorInfoProvider,SearchI
         let initCategory = categoryName == nil ? "" : categoryName
         return IndicatorInfo.init(title: initCategory!)
     }
+   
 
 
     override func viewDidLoad() {
@@ -63,8 +64,10 @@ class TableViewController: UITableViewController , IndicatorInfoProvider,SearchI
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       
-
+//        self.showActivity()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+       // self.hideActivity()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -130,15 +133,15 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
        let cell = tableView.dequeueReusableCell(withIdentifier: "cellidentifier", for: indexPath) as? CustItemListTableViewCell
     if(cell != nil)
     {
-        if(indexPath.row == 0)
-        {
-            self.showActivity()
-        }
-        if(indexPath.row == self.filteredItemList.count - 1)
-        {
-        self.hideActivity()
-        }
-        self.showActivity()
+//        if(indexPath.row == 0)
+//        {
+//            self.showActivity()
+//        }
+//        if(indexPath.row == self.filteredItemList.count - 1)
+//        {
+//        self.hideActivity()
+//        }
+//        
         cell?.contentView.backgroundColor = .white
         cell?.itemName.text = self.filteredItemList[indexPath.row].itemName
         cell?.itemDescription.text = self.filteredItemList[indexPath.row].itemDesc
@@ -197,7 +200,6 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
         cell?.favImage.isUserInteractionEnabled = true
 
             }
-        self.hideActivity()
           return cell!
     }
     
