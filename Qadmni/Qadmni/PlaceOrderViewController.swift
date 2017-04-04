@@ -307,8 +307,11 @@ class PlaceOrderViewController: UIViewController,GoogleMapDelegate ,CLLocationMa
                     self.deliverySchedule=self.dateToLong(strDate: self.pickDateTimeTextField.text!)
                     
                 }
+                let cancelActionHandler = { (action:UIAlertAction!) -> Void in
+                 self.scheduleDateTimeOutlet.isChecked = false
+                }
                 let defaultAction = UIAlertAction.init(title: NSLocalizedString("okLabel", comment: ""), style: .default, handler: callActionHandler)
-                let defaultAction2 = UIAlertAction.init(title:NSLocalizedString("cancelLabel", comment: ""), style: .destructive, handler: nil)
+                let defaultAction2 = UIAlertAction.init(title:NSLocalizedString("cancelLabel", comment: ""), style: .destructive, handler: cancelActionHandler)
                 alertView.addAction(defaultAction)
                 alertView.addAction(defaultAction2)
                 alertView.modalPresentationStyle = UIModalPresentationStyle.currentContext
@@ -317,22 +320,14 @@ class PlaceOrderViewController: UIViewController,GoogleMapDelegate ,CLLocationMa
                     textField.addTarget(self, action: #selector(self.textFieldAction(sender:)), for:.editingDidBegin)
                     self.createTextField(textField: textField)
                     
-                    
-                    
-        
-//                    let dateFormatter = DateFormatter()
-//                    dateFormatter.dateFormat = "dd MMM hh:mm a"
-//                    textField.text = dateFormatter.string(from:self.datePicker.date)
-//                    self.dateAndTimeLabel.text = textField.text
-                    
-                    //textField.text = self.textString
-
-                    
-                    
                 })
                 self.present(alertView, animated: true)
                 
-                }
+                }else
+            {
+            self.dateAndTimeLabel.text = NSLocalizedString("Pickadatetime.label", comment: "")
+                self.deliverySchedule = 0
+            }
             break
         case paypalButtonOutlet.tag:
             if(values){

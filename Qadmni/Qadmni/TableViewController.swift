@@ -162,8 +162,9 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
         let rating : Double = Double(self.filteredItemList[indexPath.row].rating)!
         cell?.itemRatingView.rating = rating
         
-        
-        let url = URL(string:self.filteredItemList[indexPath.row].imageUrl)
+       // cell?.itemImage.image = UIImage(named: "ice_cream_one.jpg")
+        cell?.itemImage.downloadedFrom(link: self.filteredItemList[indexPath.row].imageUrl)
+        //let url = URL(string:self.filteredItemList[indexPath.row].imageUrl)
 //        if(url == nil){}
 //        else
 //        {
@@ -171,17 +172,19 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
             //cell?.itemImage = imageFromUrl(url) //= UIImage(data:data as! Data)
         //}
         
-        DispatchQueue.global(qos: .background).async (execute : {
-            DispatchQueue.main.async {
-                do{
-                   let data = try NSData(contentsOf:url!) as Data
-                    cell?.itemImage.image =  UIImage(data: data, scale: 1)
-                } catch let error as NSError{
-                
-                }
-                
-                }
-            })
+//        DispatchQueue.global(qos: .background).async (execute : {
+//            DispatchQueue.main.async {
+//                do{
+//                    if(url == nil){}else{
+//                    let data = try NSData(contentsOf:url!) as Data
+//                    cell?.itemImage.image =  UIImage(data: data)
+//                    }
+//                } catch let error as NSError{
+//                
+//                }
+//                
+//                }
+//            })
         
         
         cell?.qautityLabel.text = String(self.filteredItemList[indexPath.row].itemQuantity)

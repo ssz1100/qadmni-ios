@@ -67,6 +67,6 @@ cashLabel = "Cash";
 paypalLabel = "PayPal";
 pickUpLabel = "Pick Up";
 homeDelivery = "Home Delivery";
-
+Pickadatetime.label = "Pick a date & time";
 
 
