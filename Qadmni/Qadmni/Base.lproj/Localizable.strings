@@ -68,5 +68,8 @@ paypalLabel = "PayPal";
 pickUpLabel = "Pick Up";
 homeDelivery = "Home Delivery";
 Pickadatetime.label = "Pick a date & time";
+notAvailabel.label = "N/A";
+googleDistance.label = "More than 100 miles";
+reviews.label = "Reviews";
 
 

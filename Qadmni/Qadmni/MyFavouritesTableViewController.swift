@@ -22,7 +22,9 @@ class MyFavouritesTableViewController: UITableViewController,CLLocationManagerDe
     var itemList:[DisplayItemList]=[]
     
     @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "SWRevealViewController") as UIViewController
+        self.present(vc, animated: true, completion: nil)
     }
 
     
@@ -51,8 +53,8 @@ class MyFavouritesTableViewController: UITableViewController,CLLocationManagerDe
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
         print("locations = \(locValue.latitude) \(locValue.longitude)")
-        customerLattitude = 18.5248902//locValue.latitude
-        customerLongitude = 73.7225364//locValue.longitude
+        customerLattitude = locValue.latitude
+        customerLongitude = locValue.longitude
         if(customerLattitude>0&&customerLongitude>0)
         {
             locationManager.stopUpdatingLocation()
@@ -122,23 +124,21 @@ class MyFavouritesTableViewController: UITableViewController,CLLocationManagerDe
             cell?.distanceLabel.text = self.itemList[indexPath.row].producerData.distance
             cell?.timeLabel.text = self.itemList[indexPath.row].producerData.time
             cell?.producerNameLabel.text = self.itemList[indexPath.row].producerData.businessName
+            if(self.itemList[indexPath.row].offerText == "")
+            {
+                cell?.offerLabel.isHidden = true
+                cell?.offerImageView.isHidden = true
+            }
             cell?.offerLabel.text = self.itemList[indexPath.row].offerText
             cell?.itemName.text = self.itemList[indexPath.row].itemName
             let amountString : String = String(self.itemList[indexPath.row].unitPrice)
             cell?.amountLabel.text = amountString
             let reviewString : String = String(self.itemList[indexPath.row].reviews)
-            cell?.reviewLabel.text = reviewString + " Review"
+            cell?.reviewLabel.text = reviewString + NSLocalizedString("reviews.label", comment: "")
             let rating : Double = Double(self.itemList[indexPath.row].rating)!
             cell?.itemRatingView.rating = rating
             
-            
-            let url = URL(string:self.itemList[indexPath.row].imageUrl)
-            if(url == nil){}
-            else
-            {
-                let data = NSData(contentsOf:url!)
-                cell?.itemImage.image = UIImage(data:data as! Data)
-            }
+            cell?.itemImage.downloadedFrom(link: self.itemList[indexPath.row].imageUrl)
             
             cell?.qautityLabel.text = String(self.itemList[indexPath.row].itemQuantity)
             if (self.itemList[indexPath.row].isFavourite)
@@ -169,40 +169,50 @@ class MyFavouritesTableViewController: UITableViewController,CLLocationManagerDe
                 let googleDistanceUrl : String = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins="
                 let apiKey : String = "&key="+"AIzaSyA8CA7g54OOFJFaMp9j8FzS0K0uh4azFCM"
                 let custCurrentLocation : String = String(self.customerLattitude)+","+String(self.customerLongitude)
-                // let producerLocation : String = "&destinations=" + String(producerModel.businessLat)+","+String(producerModel.businessLong)
-                let producerLocation : String = "&destinations=18.5319231,73.829899"
+                let producerLocation : String = "&destinations="+String(producerModel.businessLat)+","+String(producerModel.businessLong)
                 let finalString : String = googleDistanceUrl+custCurrentLocation+producerLocation+apiKey
                 
                 Alamofire.request(finalString,
                                   method: .get,
-                                  encoding: JSONEncoding.default)
+                                  encoding:JSONEncoding.default)
                     .responseJSON{
                         response in
                         
                         guard response.result.isSuccess else{
                             return
                         }
-                        //                    guard  let responseValue = response.result.value as? [String : AnyObject]
-                        //                        else{
-                        //                            return
-                        //                    }
-                        
-                        //debugPrint(responseValue)
                         let dict : NSDictionary = response.result.value  as! NSDictionary
-                        var rows: NSArray = dict.value(forKey: "rows") as! NSArray
+                        let rows: NSArray = dict.value(forKey: "rows") as! NSArray
                         let rowsDict:NSDictionary=rows[0] as! NSDictionary
-                        var elements : NSArray = rowsDict.value(forKey: "elements") as! NSArray
+                        let elements : NSArray = rowsDict.value(forKey: "elements") as! NSArray
                         let elementDist:NSDictionary=elements[0] as! NSDictionary
-                        //  var googleDistanceResModel : [GoogleDistanceResModel] = [GoogleDistanceResModel](json:elementDist)
-                        //                   var rows:[GoogleDistanceResModel] = []
-                        //rows=EVReflection.setPropertiesfromDictionary(dict, anyObject:rows )
-                        let distance:NSDictionary=elementDist.value(forKey: "distance") as! NSDictionary
-                        producerModel.distance=distance.value(forKey: "text") as! String
-                        producerModel.distanceDouble=distance.value(forKey: "value") as! Double
-                        let duration : NSDictionary = elementDist.value(forKey: "duration") as! NSDictionary
-                        producerModel.time=duration.value(forKey: "text") as! String
-                        print(dict)
-                        print(elementDist)
+                        
+                        var strDistance : String = ""
+                        var doubleDistance : Double = 0
+                        var strTime : String = ""
+                        
+                        do {
+                            let status : String = elementDist.value(forKey: "status") as! String
+                            if (status == "OK"){
+                                let distance:NSDictionary  =  try elementDist.value(forKey: "distance") as! NSDictionary
+                                strDistance=distance.value(forKey: "text") as! String
+                                doubleDistance=distance.value(forKey: "value") as! Double
+                                let duration : NSDictionary = try elementDist.value(forKey: "duration") as! NSDictionary
+                                strTime = duration.value(forKey: "text") as! String
+                            }else{
+                                strDistance = NSLocalizedString("googleDistance.label", comment: "")
+                                doubleDistance = 0
+                                strTime = NSLocalizedString("notAvailabel.label", comment: "")
+                            }
+                            
+                        } catch{
+                            //print("Could not calculate distance \(error), \(error.userInfo)")
+                            
+                        }
+                        
+                        producerModel.distance = strDistance
+                        producerModel.distanceDouble=doubleDistance
+                        producerModel.time = strTime
                         
                 }
             }

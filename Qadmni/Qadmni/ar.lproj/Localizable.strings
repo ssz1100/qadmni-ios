@@ -68,5 +68,8 @@ paypalLabel = "باي بال";
 pickUpLabel = "استلام الطلب";
 homeDelivery = "يجيك لعندك";
 Pickadatetime.label = "حدد التاريخ اللي يناسبك";
+notAvailabel.label = "N/A";
+googleDistance.label = "More than 100 miles";
+reviews.label = "اراء";
 
 

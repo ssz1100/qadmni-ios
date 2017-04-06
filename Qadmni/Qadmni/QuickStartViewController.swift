@@ -296,8 +296,9 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
             let apiKey : String = "&key="+"AIzaSyA8CA7g54OOFJFaMp9j8FzS0K0uh4azFCM"
             let custCurrentLocation : String = String(self.customerLattitude)+","+String(self.customerLongitude)
            // let producerLocation : String = "&destinations=" + String(producerModel.businessLat)+","+String(producerModel.businessLong)
-            let producerLocation : String = "&destinations=18.5319231,73.829899"
+            let producerLocation : String = "&destinations="+String(producerModel.businessLat)+","+String(producerModel.businessLong)
             let finalString : String = googleDistanceUrl+custCurrentLocation+producerLocation+apiKey
+            print(finalString)
             
             Alamofire.request(finalString,
                               method: .get,
@@ -322,11 +323,32 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
                   //  var googleDistanceResModel : [GoogleDistanceResModel] = [GoogleDistanceResModel](json:elementDist)
 //                   var rows:[GoogleDistanceResModel] = []
                     //rows=EVReflection.setPropertiesfromDictionary(dict, anyObject:rows )
-                    let distance:NSDictionary=elementDist.value(forKey: "distance") as! NSDictionary
-                    producerModel.distance=distance.value(forKey: "text") as! String
-                    producerModel.distanceDouble=distance.value(forKey: "value") as! Double
-                    let duration : NSDictionary = elementDist.value(forKey: "duration") as! NSDictionary
-                   producerModel.time=duration.value(forKey: "text") as! String
+                    var strDistance : String = ""
+                    var doubleDistance : Double = 0
+                    var strTime : String = ""
+                    
+                    do {
+                        var status : String = elementDist.value(forKey: "status") as! String
+                        if (status == "OK"){
+                            let distance:NSDictionary  =  try elementDist.value(forKey: "distance") as! NSDictionary
+                            strDistance=distance.value(forKey: "text") as! String
+                            doubleDistance=distance.value(forKey: "value") as! Double
+                            let duration : NSDictionary = try elementDist.value(forKey: "duration") as! NSDictionary
+                            strTime = duration.value(forKey: "text") as! String
+                        }else{
+                            strDistance = NSLocalizedString("googleDistance.label", comment: "")
+                            doubleDistance = 0
+                            strTime = NSLocalizedString("notAvailabel.label", comment: "")
+                        }
+                       
+                    } catch{
+                        //print("Could not calculate distance \(error), \(error.userInfo)")
+                        
+                    }
+                    
+                    producerModel.distance = strDistance
+                    producerModel.distanceDouble=doubleDistance
+                    producerModel.time = strTime
                     print(dict)
                     print(elementDist)
                     

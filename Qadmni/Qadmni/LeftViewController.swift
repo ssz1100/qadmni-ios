@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LeftViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class LeftViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,LoginResultDelegate {
     var userDefaultManager : UserDefaultManager = UserDefaultManager()
     var coreData = CoreData()
     @IBOutlet var userEmailIdLabel: UILabel!
@@ -17,6 +17,7 @@ class LeftViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var menuNameArray:Array = [String]()
     var menuIconImage :Array = [UIImage]()
 
+    @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.profileImage.roundedImageView()
@@ -35,6 +36,7 @@ class LeftViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         menuIconImage = [UIImage(named:"shoppingcart")!,UIImage(named:"basket")!,UIImage(named:"favourites")!,UIImage(named:"profile")!,UIImage(named:"setting")!,UIImage(named:"shop")!,UIImage(named:"logout")!]
         userNameLabel.text=userDefaultManager.getUserName()
         userEmailIdLabel.text = userDefaultManager.getUserEmailId()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,8 +68,9 @@ class LeftViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             if(userDefaultManager.getUserType() == "other")
             {
                 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "UserLoginViewController") as UIViewController
-                self.present(vc, animated: true, completion: nil)
+                let vc: UserLoginViewController = storyboard.instantiateViewController(withIdentifier: "UserLoginViewController") as! UserLoginViewController
+                vc.resultDelegate = self
+                self.present(vc, animated: true, completion:nil)
                 
             }else{
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -80,9 +83,9 @@ class LeftViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             if(userDefaultManager.getUserType() == "other")
             {
                 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "UserLoginViewController") as UIViewController
-                self.present(vc, animated: true, completion: nil)
-                
+                let vc: UserLoginViewController = storyboard.instantiateViewController(withIdentifier: "UserLoginViewController") as! UserLoginViewController
+                vc.resultDelegate = self
+                self.present(vc, animated: true, completion:nil)
             }else{
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let vc: UINavigationController = storyboard.instantiateViewController(withIdentifier: "MyFavouritesNavigation") as! UINavigationController
@@ -95,8 +98,9 @@ class LeftViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             if(userDefaultManager.getUserType() == "other")
             {
                 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "UserLoginViewController") as UIViewController
-                self.present(vc, animated: true, completion: nil)
+                let vc: UserLoginViewController = storyboard.instantiateViewController(withIdentifier: "UserLoginViewController") as! UserLoginViewController
+                vc.resultDelegate = self
+                self.present(vc, animated: true, completion:nil)
                 
             }else{
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -115,17 +119,10 @@ class LeftViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
         else if (indexPath as NSIndexPath).row == 5
         {
-            if(userDefaultManager.getUserType() == "other")
-            {
-                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "UserLoginViewController") as UIViewController
-                self.present(vc, animated: true, completion: nil)
-                
-            }else{
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "VendorLoginViewController")
             self.present(vc, animated: true, completion: nil)
-            }
+        
         }
         else if (indexPath as NSIndexPath).row == 6
         {
@@ -135,6 +132,9 @@ class LeftViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "ViewController")
             self.present(vc, animated: true, completion: nil)
         }
+    }
+    func getResult(result: Bool) {
+        self.tableView.reloadData()
     }
 
     

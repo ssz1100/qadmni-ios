@@ -28,6 +28,8 @@ class MyFavouritesTableViewCell: UITableViewCell {
     @IBOutlet var reviewLabel: UILabel!
     
     @IBOutlet var stepperValue : UIStepper!
+    
+    @IBOutlet var offerImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
