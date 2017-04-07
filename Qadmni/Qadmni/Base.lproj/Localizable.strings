@@ -71,5 +71,7 @@ Pickadatetime.label = "Pick a date & time";
 notAvailabel.label = "N/A";
 googleDistance.label = "More than 100 miles";
 reviews.label = "Reviews";
+networkError.Label = "Network error";
+networkError.message = "Please connect to the internet";
 
 

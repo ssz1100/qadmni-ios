@@ -306,7 +306,7 @@
 "P54-Mg-jRe.text" = "Order has been placed";
 
 /* Class = "UILabel"; text = "Gift Message"; ObjectID = "PAf-wY-3ja"; */
-"PAf-wY-3ja.text" = "Gift Message";
+"PAf-wY-3ja.text" = "رساله";
 
 /* Class = "UILabel"; text = "4"; ObjectID = "PUe-7i-pJ0"; */
 "PUe-7i-pJ0.text" = "4";
@@ -657,7 +657,7 @@
 "oub-ms-RJ9.normalTitle" = "اختيار";
 
 /* Class = "UILabel"; text = "Gift Message"; ObjectID = "p4a-Yw-1BB"; */
-"p4a-Yw-1BB.text" = "Gift Message";
+"p4a-Yw-1BB.text" = "رساله";
 
 /* Class = "UINavigationItem"; title = "Vendor Dashboard"; ObjectID = "pH8-Df-53p"; */
 "pH8-Df-53p.title" = "لوحه تحكم البائع";
@@ -753,7 +753,7 @@
 "vsm-sB-Wgr.text" = "100 Farther";
 
 /* Class = "UILabel"; text = "Sort By"; ObjectID = "w3Y-kh-3HM"; */
-"w3Y-kh-3HM.text" = "بالنوع";
+"w3Y-kh-3HM.text" = "اختيار التصفيه بــ..";
 
 /* Class = "UITextField"; placeholder = "Phone number"; ObjectID = "wWK-3C-z2a"; */
 "wWK-3C-z2a.placeholder" = "الجوال";
@@ -864,6 +864,8 @@
 
 /* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "L4v-Iv-Tp0"; */
 "L4v-Iv-Tp0.title" = "رجوع";
+
+
 
 
 

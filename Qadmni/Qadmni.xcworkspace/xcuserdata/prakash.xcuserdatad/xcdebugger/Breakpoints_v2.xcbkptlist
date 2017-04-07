@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Qadmni/QuickStartViewController.swift"
-            timestampString = "512910702.940438"
+            timestampString = "513247010.421507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "updateIndicator(for:fromIndex:toIndex:withProgressPercentage:indexWasChanged:)"
             landmarkType = "7">
          </BreakpointContent>

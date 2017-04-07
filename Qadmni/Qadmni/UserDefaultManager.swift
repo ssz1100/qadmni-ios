@@ -267,13 +267,4 @@ public class UserDefaultManager
         
     }
 
-
-    
-
-
-
-    
-   
-    
-
 }

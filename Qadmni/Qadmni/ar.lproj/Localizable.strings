@@ -52,9 +52,9 @@ profile.message = "نجح تحديث الملف الشخصي";
 myCart.message = "ضيافتك ما فيها منتج، اختر منتجاتك";
 myCart.productQuantityLabel = "دخل كميه المنتج";
 myCart.enterProductQuantity = "اكد الطلب";
-placeOrder.title = "اختر التاريخ و اليوم";
-placeOrder.dateandTimeMessage = "رساله مع الهديه";
-placeOrder.GiftMessage = "الى";
+placeOrder.title = "اختر التاريخ و الوقت";
+placeOrder.dateandTimeMessage = "حدد التاريخ والوقت";
+placeOrder.GiftMessage = "رساله";
 placeOrder.message = "الى 180 كلمه";
 placeOrder.Entergiftmessage = "ادخل رساله مع الهديه";
 placeOrder.selectAddress = "ماحددت مكانك !";
@@ -71,5 +71,7 @@ Pickadatetime.label = "حدد التاريخ اللي يناسبك";
 notAvailabel.label = "N/A";
 googleDistance.label = "More than 100 miles";
 reviews.label = "اراء";
+networkError.Label = "مشكله في الشبكه";
+networkError.message = "اشبك على النت";
 
 

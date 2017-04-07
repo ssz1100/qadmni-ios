@@ -64,6 +64,7 @@
 		CD8A5A9E1E56D7800024662D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8A5A9D1E56D7800024662D /* CoreLocation.framework */; };
 		CD9291DC1E61AABC0040D5AD /* CustcategoryListReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9291DB1E61AABB0040D5AD /* CustcategoryListReqModel.swift */; };
 		CD9291DE1E61AB150040D5AD /* CustCategoryListResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9291DD1E61AB150040D5AD /* CustCategoryListResModel.swift */; };
+		CD93EF201E977B9500B71783 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93EF1F1E977B9500B71783 /* NetworkUtils.swift */; };
 		CD9565111E5AB78900AF3A7E /* CustPlaceOrderResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9565101E5AB78900AF3A7E /* CustPlaceOrderResModel.swift */; };
 		CD9565131E5AB82300AF3A7E /* CustOrderedItemResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9565121E5AB82300AF3A7E /* CustOrderedItemResModel.swift */; };
 		CD9565151E5AB8FE00AF3A7E /* CustChargeBreakupResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9565141E5AB8FE00AF3A7E /* CustChargeBreakupResModel.swift */; };
@@ -244,6 +245,7 @@
 		CD8A5A9D1E56D7800024662D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CD9291DB1E61AABB0040D5AD /* CustcategoryListReqModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustcategoryListReqModel.swift; sourceTree = "<group>"; };
 		CD9291DD1E61AB150040D5AD /* CustCategoryListResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustCategoryListResModel.swift; sourceTree = "<group>"; };
+		CD93EF1F1E977B9500B71783 /* NetworkUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		CD9565101E5AB78900AF3A7E /* CustPlaceOrderResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustPlaceOrderResModel.swift; sourceTree = "<group>"; };
 		CD9565121E5AB82300AF3A7E /* CustOrderedItemResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustOrderedItemResModel.swift; sourceTree = "<group>"; };
 		CD9565141E5AB8FE00AF3A7E /* CustChargeBreakupResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustChargeBreakupResModel.swift; sourceTree = "<group>"; };
@@ -646,6 +648,7 @@
 			isa = PBXGroup;
 			children = (
 				CDCE59311E41C64700BE36CE /* PropertyReaderFile.swift */,
+				CD93EF1F1E977B9500B71783 /* NetworkUtils.swift */,
 				CD33D1E01E58867800D38DB9 /* PaymentMethod.swift */,
 				CD33D1E21E5887C000D38DB9 /* DelieveryMethods.swift */,
 				CD9C09861E6ACB4000DDFDC8 /* SortByConstant.swift */,
@@ -889,6 +892,7 @@
 				CDC52C491E30E4BF00C860FA /* VendorLoginViewController.swift in Sources */,
 				CDF996B41E71343F0007D493 /* OrderItemDetailResModel.swift in Sources */,
 				CDDA80291E65970A009F45AF /* DistanceResModel.swift in Sources */,
+				CD93EF201E977B9500B71783 /* NetworkUtils.swift in Sources */,
 				CD7FF3801E73D0AC00A35039 /* SubmitFeedbackTableViewCell.swift in Sources */,
 				CDB5D10B1E3F0D8900AC20F0 /* LeftVendorViewController.swift in Sources */,
 				CDA429C61E3CA7F60069D928 /* SettingViewController.swift in Sources */,

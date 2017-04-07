@@ -45,7 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
     
-        
         if(userDefaultManager.getUserType() == "other")
         {
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -66,19 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.window?.rootViewController = vc
         }
-//        let view = UIView()
-//        let image : UIImage = UIImage(named:"test_logo.png")!
-//        let imageView = UIImageView()
-//        imageView.image = image
-//        imageView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
-//        view.addSubview(imageView)
-//        UIView.animate(withDuration: 0.6, animations: {
-//            imageView.transform = CGAffineTransform.identity.scaledBy(x: 0.6, y: 0.6)
-//        }, completion: { (finish) in
-//            UIView.animate(withDuration: 0.6, animations: {
-//                imageView.transform = CGAffineTransform.identity
-//            })
-//        })
+        
         
         
         return true
@@ -107,6 +94,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
 //        self.saveContext()
     }
+    
+   
 
    //  MARK: - Core Data stack
 

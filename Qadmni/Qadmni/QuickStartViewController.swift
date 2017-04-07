@@ -94,26 +94,29 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
       
         
         super.viewDidLoad()
-//        if(isLocationUpdated)
-//        {
-//        //call to api
-//            
-//        }
-//        else{
-        self.locationManager.requestWhenInUseAuthorization()
-        locationManager.delegate = self
-        if CLLocationManager.locationServicesEnabled() {
+        if(NetworkUtils.isInternetAvailable())
+        {
+            print("Internet is available")
+            self.locationManager.requestWhenInUseAuthorization()
+            locationManager.delegate = self
+            if CLLocationManager.locationServicesEnabled() {
                 
                 locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
                 locationManager.startUpdatingLocation()
-            //}
+            }
+            
+            
+            self.settings.style.selectedBarHeight = 2
+            self.settings.style.selectedBarBackgroundColor = UIColor.gray
+            self.delegate = self
+           
+        }else{
+            print("Internet is Not available")
+            self.hideActivity()
+            self.showAlertMessage(title: NSLocalizedString("networkError.Label", comment: ""), message: NSLocalizedString("networkError.message", comment: ""))
+            
         }
-        
-        
-        self.settings.style.selectedBarHeight = 2
-        self.settings.style.selectedBarBackgroundColor = UIColor.gray
-        //PagerTabStripBehaviour.progressive(skipIntermediateViewControllers: true, elasticIndicatorLimit: true)
-        self.delegate = self
+
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 90, height: 45))
         imageView.contentMode = .scaleAspectFit
         let image = UIImage(named: "qadmni_img_logo_english.png")
@@ -295,7 +298,6 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
             let googleDistanceUrl : String = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins="
             let apiKey : String = "&key="+"AIzaSyA8CA7g54OOFJFaMp9j8FzS0K0uh4azFCM"
             let custCurrentLocation : String = String(self.customerLattitude)+","+String(self.customerLongitude)
-           // let producerLocation : String = "&destinations=" + String(producerModel.businessLat)+","+String(producerModel.businessLong)
             let producerLocation : String = "&destinations="+String(producerModel.businessLat)+","+String(producerModel.businessLong)
             let finalString : String = googleDistanceUrl+custCurrentLocation+producerLocation+apiKey
             print(finalString)
