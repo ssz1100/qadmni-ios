@@ -37,6 +37,7 @@
 		CD5A63D51E84F187006F8ED9 /* BadgeBarbuttonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A63D41E84F187006F8ED9 /* BadgeBarbuttonItem.swift */; };
 		CD6FF9B91E5B21B400616634 /* ProcessItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FF9B81E5B21B400616634 /* ProcessItemTableViewCell.swift */; };
 		CD6FF9BB1E5B21D900616634 /* ProcessServiceTaxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6FF9BA1E5B21D900616634 /* ProcessServiceTaxTableViewCell.swift */; };
+		CD78C01F1E98F51300A1C6EE /* Cakes_uhd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD78C01E1E98F51300A1C6EE /* Cakes_uhd.jpg */; };
 		CD7CDC6A1E35EEA000D35F19 /* QuickStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CDC691E35EEA000D35F19 /* QuickStartViewController.swift */; };
 		CD7CDC6C1E360C3900D35F19 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CDC6B1E360C3900D35F19 /* LeftViewController.swift */; };
 		CD7CDC6E1E361E7400D35F19 /* LeftMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CDC6D1E361E7400D35F19 /* LeftMenuTableViewCell.swift */; };
@@ -217,6 +218,7 @@
 		CD6C80F71E6D705100FD12D5 /* Qadmni.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Qadmni.entitlements; sourceTree = "<group>"; };
 		CD6FF9B81E5B21B400616634 /* ProcessItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessItemTableViewCell.swift; sourceTree = "<group>"; };
 		CD6FF9BA1E5B21D900616634 /* ProcessServiceTaxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessServiceTaxTableViewCell.swift; sourceTree = "<group>"; };
+		CD78C01E1E98F51300A1C6EE /* Cakes_uhd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cakes_uhd.jpg; sourceTree = "<group>"; };
 		CD7CDC691E35EEA000D35F19 /* QuickStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickStartViewController.swift; sourceTree = "<group>"; };
 		CD7CDC6B1E360C3900D35F19 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		CD7CDC6D1E361E7400D35F19 /* LeftMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -520,6 +522,7 @@
 				CDA7F65A1E6952BB0072F9E1 /* ic_demo_tracker_timer_not_available.jpg */,
 				CDA7F6581E694F0C0072F9E1 /* ic_demo_track_image.jpg */,
 				CDE440B81E680303006BE971 /* default_img.jpg */,
+				CD78C01E1E98F51300A1C6EE /* Cakes_uhd.jpg */,
 				CDAE23AB1E60628A0024F4A4 /* form_wiz_1.jpg */,
 				CDAE23AD1E6062A50024F4A4 /* form_wiz_2.jpg */,
 				CDAE23AF1E6062B70024F4A4 /* form_wiz_3.jpg */,
@@ -804,6 +807,7 @@
 				CDC945581E2F522B00E6946F /* Assets.xcassets in Resources */,
 				CD28D9301E77B8730082DF70 /* qadmni_img_logo_english.png in Resources */,
 				CDCF95BD1E8D2B1A00FFB908 /* Localizable.strings in Resources */,
+				CD78C01F1E98F51300A1C6EE /* Cakes_uhd.jpg in Resources */,
 				CDAE23AE1E6062A50024F4A4 /* form_wiz_2.jpg in Resources */,
 				CDAE23B01E6062B70024F4A4 /* form_wiz_3.jpg in Resources */,
 				CD0484C51E6978560052FB2D /* test_order_details_image.jpg in Resources */,

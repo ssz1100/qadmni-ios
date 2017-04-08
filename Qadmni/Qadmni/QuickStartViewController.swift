@@ -109,6 +109,7 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
             self.settings.style.selectedBarHeight = 2
             self.settings.style.selectedBarBackgroundColor = UIColor.gray
             self.delegate = self
+            
            
         }else{
             print("Internet is Not available")
@@ -148,8 +149,14 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
             tableView.setInfo(categoryId: 0, categoryName: nil, items: [],parentView : self)
             controllerList.append(tableView)
         }else{
+            
+           if(userDefaultManager.getLanguageCode() == "Ar")
+            {
+                categoryArray=categoryArray.reversed()
+            }
             controllerList = self.generateViewControllerList(categoryList: categoryArray)
         }
+        
         searchData = controllerList
                 return controllerList
  }
@@ -172,6 +179,7 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
         
         vc.append(tableView)
           }
+    
     return vc
 
 }
@@ -407,8 +415,13 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
                                             self.categoryArray = response as! [CustCategoryListResModel]
                                             //self.datasource = viewControllers()
                                             self.initialLoading = false
-                                            self.reloadPagerTabStripView()
-                                            //self.categoryListGroup.leave()
+                                                self.reloadPagerTabStripView()
+                                                if (self.userDefaultManager.getLanguageCode() == "Ar")
+                                                {
+                                            self.moveToViewController(at: self.categoryArray.count)
+                                             self.reloadPagerTabStripView()
+                                                }
+                                            
                                             }
         })
 

@@ -13,7 +13,7 @@ public class CustPlaceOrderResModel : CustomerBaseResponseModel
 {
     var orderId : Int32 = 0
     var orderedItems : [CustOrderedItemResModel] = []
-    var chargeBreakup : [CustChargeBreakupResModel] = []
+    //var chargeBreakup : [CustChargeBreakupResModel] = []
     var totalAmountInSAR : Double = 0
     var totalAmountInUSD : Double = 0
     

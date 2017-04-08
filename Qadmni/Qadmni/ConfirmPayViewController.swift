@@ -22,7 +22,7 @@ class ConfirmPayViewController: UIViewController,UITableViewDataSource,UITableVi
     @IBOutlet var payButtonOutlet: UIButton!
     
     @IBOutlet var itemTableView: UITableView!
-    @IBOutlet var serviceTaxTableView: UITableView!
+    //@IBOutlet var serviceTaxTableView: UITableView!
     
    
     @IBAction func payButtonTapped(_ sender: UIButton) {
@@ -129,7 +129,7 @@ class ConfirmPayViewController: UIViewController,UITableViewDataSource,UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         itemTableView.delegate = self
-        serviceTaxTableView.delegate = self
+       // serviceTaxTableView.delegate = self
         let finalPriceString : String = String(self.placeOrderResModel.totalAmountInSAR)
         finalPriceLabel.text = finalPriceString
         let payInUSDString : String = String(self.placeOrderResModel.totalAmountInUSD)
@@ -149,17 +149,17 @@ class ConfirmPayViewController: UIViewController,UITableViewDataSource,UITableVi
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(tableView==self.itemTableView)
-        {
+       // if(tableView==self.itemTableView)
+       // {
             return placeOrderResModel.orderedItems.count
-        }
-        else{
-        return placeOrderResModel.chargeBreakup.count
-        }
+       // }
+       // else{
+       // return placeOrderResModel.chargeBreakup.count
+        //}
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if(tableView==self.itemTableView)
-        {
+       // if(tableView==self.itemTableView)
+      //  {
           let itemcell = tableView.dequeueReusableCell(withIdentifier: "itemcell", for: indexPath) as! ProcessItemTableViewCell
             itemcell.itemName.text? = self.placeOrderResModel.orderedItems[indexPath.row].itemName
             let priceString : String = String(format:"%.2f",self.placeOrderResModel.orderedItems[indexPath.row].unitPrice )
@@ -169,15 +169,15 @@ class ConfirmPayViewController: UIViewController,UITableViewDataSource,UITableVi
             
             
             return itemcell
-        }
-        else{
-           let taxcell = tableView.dequeueReusableCell(withIdentifier: "taxcell", for: indexPath) as! ProcessServiceTaxTableViewCell
-            taxcell.servicesLabel.text = self.placeOrderResModel.chargeBreakup[indexPath.row].chargeDetails
-            let serviceFees : String = String(self.placeOrderResModel.chargeBreakup[indexPath.row].amount)
-            taxcell.serviceTaxFees.text = serviceFees
+        //}
+        //else{
+          // let taxcell = tableView.dequeueReusableCell(withIdentifier: "taxcell", for: indexPath) as! ProcessServiceTaxTableViewCell
+           // taxcell.servicesLabel.text = self.placeOrderResModel.chargeBreakup[indexPath.row].chargeDetails
+           // let serviceFees : String = String(self.placeOrderResModel.chargeBreakup[indexPath.row].amount)
+           // taxcell.serviceTaxFees.text = serviceFees
             
-            return taxcell
-        }
+           // return taxcell
+        //}
         
         
     }
