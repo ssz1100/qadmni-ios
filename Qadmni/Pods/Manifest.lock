@@ -1,11 +1,11 @@
 PODS:
   - Alamofire (4.4.0)
   - CardIO (5.4.1)
-  - Cosmos (8.0.2)
+  - Cosmos (9.0.0)
   - DLRadioButton (1.4.9)
-  - EVReflection (4.5.0):
-    - EVReflection/Core (= 4.5.0)
-  - EVReflection/Core (4.5.0)
+  - EVReflection (4.8.2):
+    - EVReflection/Core (= 4.8.2)
+  - EVReflection/Core (4.8.2)
   - GoogleMaps (2.2.0):
     - GoogleMaps/Maps (= 2.2.0)
   - GoogleMaps/Base (2.2.0)
@@ -13,15 +13,15 @@ PODS:
     - GoogleMaps/Base
   - GooglePlaces (2.2.0):
     - GoogleMaps/Base (= 2.2.0)
-  - IQKeyboardManagerSwift (4.0.8)
+  - IQKeyboardManagerSwift (4.0.9)
   - MBProgressHUD (1.0.0)
-  - OneSignal (2.3.7)
-  - PayPal-iOS-SDK (2.16.1):
-    - PayPal-iOS-SDK/CardIO (= 2.16.1)
-    - PayPal-iOS-SDK/Core (= 2.16.1)
-  - PayPal-iOS-SDK/CardIO (2.16.1):
+  - OneSignal (2.5.2)
+  - PayPal-iOS-SDK (2.16.3):
+    - PayPal-iOS-SDK/CardIO (= 2.16.3)
+    - PayPal-iOS-SDK/Core (= 2.16.3)
+  - PayPal-iOS-SDK/CardIO (2.16.3):
     - CardIO (~> 5.4.1)
-  - PayPal-iOS-SDK/Core (2.16.1)
+  - PayPal-iOS-SDK/Core (2.16.3)
   - SWRevealViewController (2.3.0)
   - XLPagerTabStrip (7.0.0)
 
@@ -42,15 +42,15 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
-  Cosmos: 007c0b8e33a85e5363911bdd933571bbe221f7ef
+  Cosmos: 33eee62b2a0418452aef470f711f83c3ea061b7b
   DLRadioButton: 7bb8a6e3768b572469ace553391ab4d2af6f9c19
-  EVReflection: f3ef628809585feefa72bf6a8b1ffd3a7a619bdb
+  EVReflection: 0951547baf234bf0083de3a43d4b67cb00e5e90b
   GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
   GooglePlaces: bca867d5e9da15384c794b945e4226848bc6e9d9
-  IQKeyboardManagerSwift: c04bc9f68473823f825eb44d958fce98d921bead
+  IQKeyboardManagerSwift: 2eefe6c429b86aa08bfbc1b5c891164d754adf91
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  OneSignal: 95c86eec080b8c5e69b85d8ad21c4d38eed1b5a8
-  PayPal-iOS-SDK: 774ac7de2d7c3b0ee7e8a35f8b347fd07787321b
+  OneSignal: 66d08b6b1e3c3858cbf28207ed20f1fa865ab2a2
+  PayPal-iOS-SDK: db237a752c0b388b93a0b9915b30e26878732bdb
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
   XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
 

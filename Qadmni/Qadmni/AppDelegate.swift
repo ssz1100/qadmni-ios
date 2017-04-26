@@ -41,7 +41,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PayPalMobile .initializeWithClientIds(forEnvironments: [PayPalEnvironmentProduction:Bundle.main.object(forInfoDictionaryKey: "PayPalEnvironmentProduction") as! String ,
                                                                 PayPalEnvironmentSandbox: Bundle.main.object(forInfoDictionaryKey: "PayPalEnvironmentSandbox")as!String])
         //OneSignal.initWithLaunchOptions(launchOptions, appId: "29d2c9ef-09ee-468b-96c9-b26340758d9a")
-        OneSignal.initWithLaunchOptions(launchOptions, appId:Bundle.main.object(forInfoDictionaryKey: "OneSignalKey") as! String)
+        do{
+            try OneSignal.initWithLaunchOptions(launchOptions, appId:Bundle.main.object(forInfoDictionaryKey: "OneSignalKey") as! String)
+        
+        }catch let error as Error{
+            print(error)
+        }
+        
         
         
     

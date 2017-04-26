@@ -93,11 +93,13 @@ public class ServiceFacade
                 response in
                 var vendorLoginResponseModel : VendorLoginResponseModel = VendorLoginResponseModel()
                 guard response.result.isSuccess else{
+                    vendorLoginResponseModel.errorCode = -1
                     completionHandler(vendorLoginResponseModel)
                     return
                 }
                 guard  let responseValue = response.result.value as? [String : AnyObject]
                     else{
+                        vendorLoginResponseModel.errorCode = -1
                         completionHandler(vendorLoginResponseModel)
                         return
                         
@@ -143,11 +145,13 @@ public class ServiceFacade
                 response in
                 let baseresponseModel = BaseResponseModel()
                 guard response.result.isSuccess else{
+                    baseresponseModel.errorCode = -1
                     completionHandler(baseresponseModel)
                     return
                 }
                 guard  let responseValue = response.result.value as? [String : AnyObject]
                     else{
+                        baseresponseModel.errorCode = -1
                         completionHandler(baseresponseModel)
                         return
                         
@@ -187,11 +191,13 @@ public class ServiceFacade
                 response in
                 let baseresponseModel = BaseResponseModel()
                 guard response.result.isSuccess else{
+                    baseresponseModel.errorCode = -1
                     completionHandler(baseresponseModel)
                     return
                 }
                 guard  let responseValue = response.result.value as? [String : AnyObject]
                     else{
+                        baseresponseModel.errorCode = -1
                         completionHandler(baseresponseModel)
                         return
                         
@@ -685,15 +691,7 @@ public class ServiceFacade
         
     }
 
-    
-
-
-    
-    
-    
-   
-
-    
+        
     
     private func buildRequestParameters(dataString:String?, userString: String?, langCodeString : String?) -> Parameters{
         var params: Parameters = Parameters()

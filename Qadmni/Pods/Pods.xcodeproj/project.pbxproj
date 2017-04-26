@@ -254,7 +254,6 @@
 		558ABF7795BAF8E3EC9ACD865EB133A5 /* PagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripViewController.swift; path = Sources/PagerTabStripViewController.swift; sourceTree = "<group>"; };
 		56B123F37A7AC4E5D1F5165392702861 /* CardIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIO.h; path = CardIO/CardIO.h; sourceTree = "<group>"; };
 		57184F604E3853677A5EF41A56AC4B70 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5786AE0BDD64B6AA243E3C801D960C62 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = iOS_SDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
 		5A499D33181DE05379041CEB3024C2BD /* XLPagerTabStrip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLPagerTabStrip-dummy.m"; sourceTree = "<group>"; };
 		5BC45D2568A14020056A8CD8268CA270 /* IQTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTextView.swift; path = IQKeyboardManagerSwift/IQTextView/IQTextView.swift; sourceTree = "<group>"; };
 		5C8DCE4313916E1CF20FE337B2187919 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
@@ -294,6 +293,7 @@
 		99897B55723CFC3F3469905E15D998DE /* libopencv_imgproc.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libopencv_imgproc.a; path = CardIO/libopencv_imgproc.a; sourceTree = "<group>"; };
 		9B0916DE41A2D1AFAA86A692AB7D2AF1 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		9C05979433A4DE7C0DBD96A41B7E1C04 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		9E3A675316FE39E82E0C23D4EE7391FA /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = iOS_SDK/OneSignalSDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
 		A06DC89915CB96151EF038B915B18A90 /* CardIOUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOUtilities.h; path = CardIO/CardIOUtilities.h; sourceTree = "<group>"; };
 		A1245472A950CB8B19B999C0C53A12EC /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		A44B31E15AC75D010BA414AE8F83A7E5 /* SWRevealViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SWRevealViewController.framework; path = SWRevealViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -470,14 +470,6 @@
 			path = "../Target Support Files/IQKeyboardManagerSwift";
 			sourceTree = "<group>";
 		};
-		030C0123F5E26C1B67C73A0986141736 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5786AE0BDD64B6AA243E3C801D960C62 /* OneSignal.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		091C7682366BC2E0D16A159E9F904F8A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -505,7 +497,7 @@
 		163717143B13FF9AE416245F24FEFC90 /* OneSignal */ = {
 			isa = PBXGroup;
 			children = (
-				030C0123F5E26C1B67C73A0986141736 /* Frameworks */,
+				DB8A42378542B33B881B87471B0FD789 /* Frameworks */,
 			);
 			name = OneSignal;
 			path = OneSignal;
@@ -963,6 +955,14 @@
 				8221AB28B57F0015E19B98D2B8F3068E /* Frameworks */,
 			);
 			name = Core;
+			sourceTree = "<group>";
+		};
+		DB8A42378542B33B881B87471B0FD789 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E3A675316FE39E82E0C23D4EE7391FA /* OneSignal.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		DE89D80CA250C4242FE35FE26F7E62CD /* Cosmos */ = {

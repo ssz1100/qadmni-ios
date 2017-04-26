@@ -40,13 +40,16 @@ public class ServiceFacadeUser
                           headers: nil)
             .responseJSON{
                 response in
+                
                 var customerLoginResponseModel : CustomerLoginResponseModel = CustomerLoginResponseModel()
                 guard response.result.isSuccess else{
+                    customerLoginResponseModel.errorCode = -1
                     completionHandler(customerLoginResponseModel)
                     return
                 }
                 guard  let responseValue = response.result.value as? [String : AnyObject]
                     else{
+                        customerLoginResponseModel.errorCode = -1
                         completionHandler(customerLoginResponseModel)
                         return
                         
@@ -92,11 +95,13 @@ public class ServiceFacadeUser
                 response in
                 var customerRegisterResponseModel : CustomerRegisterResponseModel = CustomerRegisterResponseModel()
                 guard response.result.isSuccess else{
+                    customerRegisterResponseModel.errorCode = -1
                     completionHandler(customerRegisterResponseModel)
                     return
                 }
                 guard  let responseValue = response.result.value as? [String : AnyObject]
                     else{
+                        customerRegisterResponseModel.errorCode = -1
                         completionHandler(customerRegisterResponseModel)
                         return
                         
@@ -142,11 +147,13 @@ public class ServiceFacadeUser
                 response in
                 let customerBaseResponseModel : CustomerBaseResponseModel = CustomerBaseResponseModel()
                 guard response.result.isSuccess else{
+                    customerBaseResponseModel.errorCode = -1
                     completionHandler(customerBaseResponseModel)
                     return
                 }
                 guard  let responseValue = response.result.value as? [String : AnyObject]
                     else{
+                        customerBaseResponseModel.errorCode = -1
                         completionHandler(customerBaseResponseModel)
                         return
                         
@@ -311,51 +318,64 @@ public class ServiceFacadeUser
                                customerLangCodeRequest:CustomerLangCodeRequestModel?,
                                completionHandler: @escaping ([CustCategoryListResModel?])->Void)
     {
-        let endPointUrl : URL = URL(string:baseUrl + "categorylist")!
-        let customerDataString : String? = ""
-        let customerUserString : String? = ""
-        let customerLangCodeString : String? = ""
+//        let endPointUrl : URL = URL(string:baseUrl + "categorylist")!
+//        let customerDataString : String? = ""
+//        let customerUserString : String? = ""
+//        let customerLangCodeString : String? = ""
+//        
+//        let custCategoryParameter: Parameters = buildRequestParameters(dataString: customerDataString, userString: customerUserString, langCodeString: customerLangCodeString)
+//        print(custCategoryParameter)
+//    
+//        
+//        let alamoFireRequest:DataRequest = Alamofire.request(endPointUrl,
+//                          method: .post,
+//                          parameters: custCategoryParameter,
+//                          encoding: JSONEncoding.default,
+//                          headers: nil);
+//        
+//            alamoFireRequest.responseJSON (queue: DispatchQueue.main, completionHandler: {
+//                response in
+//                let custCategoryListResModel = CustCategoryListResModel()
+//                guard response.result.isSuccess else{
+//                    //completionHandler(nil)
+//                    return
+//                }
+//                guard  let responseValue = response.result.value as? [String : AnyObject]
+//                    else{
+//                      //  completionHandler(nil)
+//                        return
+//                        
+//                }
+//        
+//                let responseErrorCode : Int32 = responseValue["errorCode"] as! Int32
+//                custCategoryListResModel.errorCode = responseErrorCode
+//                let responseErrorMessage : String = (responseValue["message"] as? String)!
+//                custCategoryListResModel.message = responseErrorMessage
+//                
+//                var dict: Array<CustCategoryListResModel> = []
+//                if(responseErrorCode == 0)
+//                {
+//                    let responseData : String = (responseValue["data"] as? String)!
+//                    dict=[CustCategoryListResModel](json:responseData)
+//                    
+//                }
+//                completionHandler(dict)
+//                
+//        })
+        let custCategoryListResModel = CustCategoryListResModel()
+        let responseErrorCode : Int32 = 0
+        custCategoryListResModel.errorCode = responseErrorCode
+        let responseErrorMessage : String = "Success"
+        custCategoryListResModel.message = responseErrorMessage
         
-        let custCategoryParameter: Parameters = buildRequestParameters(dataString: customerDataString, userString: customerUserString, langCodeString: customerLangCodeString)
-        print(custCategoryParameter)
-        //let dispatchQueue = DispatchQueue(label: "Main", qos: .userInitiated, attributes: .concurrent, autoreleaseFrequency: .inherit, target: nil)
-        
-        let alamoFireRequest:DataRequest = Alamofire.request(endPointUrl,
-                          method: .post,
-                          parameters: custCategoryParameter,
-                          encoding: JSONEncoding.default,
-                          headers: nil);
-        
-            alamoFireRequest.responseJSON (queue: DispatchQueue.main, completionHandler: {
-                response in
-                let custCategoryListResModel = CustCategoryListResModel()
-                guard response.result.isSuccess else{
-                    //completionHandler(nil)
-                    return
-                }
-                guard  let responseValue = response.result.value as? [String : AnyObject]
-                    else{
-                      //  completionHandler(nil)
-                        return
-                        
-                }
-                
-                let responseErrorCode : Int32 = responseValue["errorCode"] as! Int32
-                custCategoryListResModel.errorCode = responseErrorCode
-                let responseErrorMessage : String = (responseValue["message"] as? String)!
-                custCategoryListResModel.message = responseErrorMessage
-                
-                var dict: Array<CustCategoryListResModel> = []
-                if(responseErrorCode == 0)
-                {
-                    let responseData : String = (responseValue["data"] as? String)!
-                    dict=[CustCategoryListResModel](json:responseData)
-                    
-                }
-                completionHandler(dict)
-                
-        })
-        
+        var dict: Array<CustCategoryListResModel> = []
+        if(responseErrorCode == 0)
+        {
+            let responseData : String = "[{\"categoryId\":1,\"category\":\"Desserts\"},{\"categoryId\":2,\"category\":\"Chocolates\"}]"
+            dict=[CustCategoryListResModel](json:responseData)
+            
+        }
+        completionHandler(dict)
     }
     
     
@@ -364,53 +384,66 @@ public class ServiceFacadeUser
                             customerLangCodeRequest:CustomerLangCodeRequestModel?,
                             completionHandler: @escaping (CustItemListResModel?)->Void)
     {
-        let endPointUrl : URL = URL(string:baseUrl + "itemlist")!
-        let custDataString : String? = customerDataRequest?.toJsonString()
-        let custUserString : String? = customerUserRequest?.toJsonString()
-        let custLangCodeString : String? = customerLangCodeRequest?.toJsonString()
+//        let endPointUrl : URL = URL(string:baseUrl + "itemlist")!
+//        let custDataString : String? = customerDataRequest?.toJsonString()
+//        let custUserString : String? = customerUserRequest?.toJsonString()
+//        let custLangCodeString : String? = customerLangCodeRequest?.toJsonString()
+//        
+//        let custOrderParameter: Parameters = buildRequestParameters(dataString: custDataString, userString: custUserString, langCodeString: custLangCodeString)
+//        print(custOrderParameter)
+//        print(endPointUrl)
+//        
+//        Alamofire.request(endPointUrl,
+//                          method: .post,
+//                          parameters: custOrderParameter,
+//                          encoding: JSONEncoding.default,
+//                          headers: nil)
+//            .responseJSON{
+//                response in
+//                var custItemListResModel = CustItemListResModel()
+//                guard response.result.isSuccess else{
+//                    completionHandler(custItemListResModel)
+//                    return
+//                }
+//                guard  let responseValue = response.result.value as? [String : AnyObject]
+//                    else{
+//                        completionHandler(custItemListResModel)
+//                        return
+//                        
+//                }
+//                
+//                let responseErrorCode : Int32 = responseValue["errorCode"] as! Int32
+//                custItemListResModel.errorCode = responseErrorCode
+//                let responseErrorMessage : String = (responseValue["message"] as? String)!
+//                custItemListResModel.message = responseErrorMessage
+//                if(responseErrorCode == 0){
+//                    let responseProcessOrderData : String? = responseValue["data"] as? String
+//                    
+//                    let dict : NSDictionary = EVReflection.dictionaryFromJson(responseProcessOrderData);
+//                    
+//                    custItemListResModel = EVReflection.setPropertiesfromDictionary(dict, anyObject: custItemListResModel)
+//                    custItemListResModel = CustItemListResModel(json : responseProcessOrderData)
+//                    
+//                }
+//                completionHandler(custItemListResModel)
+//                
+//        }
+        var custItemListResModel = CustItemListResModel()
+        let responseErrorCode : Int32 = 0
+                        custItemListResModel.errorCode = responseErrorCode
+                        let responseErrorMessage : String = "Success"
+                        custItemListResModel.message = responseErrorMessage
+                        if(responseErrorCode == 0){
+                            let responseProcessOrderData : String? = "{\"itemInfoList\":[{\"itemId\":3958,\"itemDesc\":\"sweet cherry cake\",\"itemName\":\"cake\",\"unitPrice\":450,\"offerText\":\"30 %off\",\"rating\":2.5,\"imageUrl\":\"http:\\/\\/qadmni.com\\/api\\/images\\/589ef1df92449.jpg\",\"reviews\":3,\"producerId\":19353,\"categoryId\":1}],\"producerLocations\":[{\"producerId\":19353,\"businessName\":\"test name\",\"businessLat\":22.755439,\"businessLong\":46.209155}]}"
         
-        let custOrderParameter: Parameters = buildRequestParameters(dataString: custDataString, userString: custUserString, langCodeString: custLangCodeString)
-        print(custOrderParameter)
+                            let dict : NSDictionary = EVReflection.dictionaryFromJson(responseProcessOrderData);
         
+                            custItemListResModel = EVReflection.setPropertiesfromDictionary(dict, anyObject: custItemListResModel)
+                            custItemListResModel = CustItemListResModel(json : responseProcessOrderData)
         
-        Alamofire.request(endPointUrl,
-                          method: .post,
-                          parameters: custOrderParameter,
-                          encoding: JSONEncoding.default,
-                          headers: nil)
-            .responseJSON{
-                response in
-                var custItemListResModel = CustItemListResModel()
-                guard response.result.isSuccess else{
-                    completionHandler(custItemListResModel)
-                    return
-                }
-                guard  let responseValue = response.result.value as? [String : AnyObject]
-                    else{
+                        }
                         completionHandler(custItemListResModel)
-                        return
-                        
-                }
-                
-                let responseErrorCode : Int32 = responseValue["errorCode"] as! Int32
-                custItemListResModel.errorCode = responseErrorCode
-                let responseErrorMessage : String = (responseValue["message"] as? String)!
-                custItemListResModel.message = responseErrorMessage
-                if(responseErrorCode == 0){
-                    let responseProcessOrderData : String? = responseValue["data"] as? String
-                    
-                    let dict : NSDictionary = EVReflection.dictionaryFromJson(responseProcessOrderData);
-                    
-                    custItemListResModel = EVReflection.setPropertiesfromDictionary(dict, anyObject: custItemListResModel)
-                    custItemListResModel = CustItemListResModel(json : responseProcessOrderData)
-                    
-                }
-                completionHandler(custItemListResModel)
 
-                
-                
-        }
-        
     }
     
     

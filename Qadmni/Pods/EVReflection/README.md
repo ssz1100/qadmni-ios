@@ -70,6 +70,7 @@ pod 'EVReflection/MoyaRxSwift'
 - [Custom keyword mapping](https://github.com/evermeer/EVReflection#custom-keyword-mapping)
 - [Custom property converters](https://github.com/evermeer/EVReflection#custom-property-converters)
 - [Custom object converter](https://github.com/evermeer/EVReflection#custom-object-converter)
+- [Custom type converters](https://github.com/evermeer/EVReflection#custom-type-converter)
 - [Skip the serialization or deserialization of specific values](https://github.com/evermeer/EVReflection#skip-the-serialization-or-deserialization-of-specific-values)
 - [Property validators](https://github.com/evermeer/EVReflection#property-validators)
 - [Deserialization class level validations](https://github.com/evermeer/EVReflection#deserialization-class-level-validations)
@@ -342,6 +343,31 @@ override func customConverter() -> AnyObject? {
 }
 ```
 
+
+### Custom type converter
+If you have a custom type that requires special conversion, then you can extend it with the EVCustomReflectable protocol. A good implementation for this can be found in the Realm unit test for the List type. The converter is implemented like this:
+
+```swift
+extension List : EVCustomReflectable {
+    public func constructWith(value: Any?) {
+        if let array = value as? [NSDictionary] {
+            self.removeAll()
+            for dict in array {
+                if let element: T = EVReflection.fromDictionary(dict, anyobjectTypeString: _rlmArray.objectClassName) as? T {
+                    self.append(element)
+                }
+            }
+        }
+    }
+    public func toCodableValue() -> Any {
+        return self.enumerated().map { ($0.element as? EVReflectable)?.toDictionary() ?? NSDictionary() }
+    }
+}
+```
+
+For the usage, please have a look at [the Realm unittest](https://github.com/evermeer/EVReflection/blob/master/UnitTests/RealmTests/RealmTests.swift#L42)
+
+
 ### Skip the serialization or deserialization of specific values
 When there is a need to not (de)serialize specific values like nil NSNull or empty strings you can implement the skipPropertyValue function and return true if the value needs to be skipped. See [Conversion options](https://github.com/evermeer/EVReflection#conversion-options) for when this function will be called.
 
@@ -443,7 +469,7 @@ class Foo: EVObject {
     var allFoo: String = "all Foo"
 
     // What you need to do to get the correct type for when you deserialize inherited classes
-    override func getSpecificType(dict: NSDictionary) -> EVObject {
+    override func getSpecificType(_ dict: NSDictionary) -> EVReflectable {
         if dict["justBar"] != nil {
             return Bar()
         } else if dict["justBaz"] != nil {

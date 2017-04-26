@@ -114,8 +114,9 @@ public class NetworkReachabilityManager {
     /// - returns: The new `NetworkReachabilityManager` instance.
     public convenience init?() {
         var address = sockaddr_in()
+        print(address)
         address.sin_len = UInt8(MemoryLayout<sockaddr_in>.size)
-        address.sin_family = sa_family_t(AF_INET)
+        address.sin_family = sa_family_t(AF_INET6)
 
         guard let reachability = withUnsafePointer(to: &address, { pointer in
             return pointer.withMemoryRebound(to: sockaddr.self, capacity: MemoryLayout<sockaddr>.size) {
