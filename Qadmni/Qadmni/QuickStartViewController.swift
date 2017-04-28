@@ -28,8 +28,8 @@ class QuickStartViewController: ButtonBarPagerTabStripViewController, CLLocation
     
     var initialLoading : Bool = true
     let locationManager = CLLocationManager()
-    var customerLattitude : Double = 0
-    var customerLongitude : Double = 0
+    static var customerLattitude : Double = 24.7136
+    static var customerLongitude : Double = 46.6753
     let coreData = CoreData()
     //var tableViewController = TableViewController()
     var searchData : [UIViewController] = []
@@ -221,16 +221,11 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
        // print("locations = \(locValue.latitude) \(locValue.longitude)")
-        customerLattitude = locValue.latitude //18.5493561
-        customerLongitude = locValue.longitude //73.7871573
-        if(customerLattitude>0&&customerLongitude>0)
+        QuickStartViewController.customerLattitude = locValue.latitude //18.5493561
+        QuickStartViewController.customerLongitude = locValue.longitude //73.7871573
+        if(QuickStartViewController.customerLattitude>0&&QuickStartViewController.customerLongitude>0)
         {
             locationManager.stopUpdatingLocation()
-            //isLocationUpdated = true
-            if(!itemListCallCompleted)
-            {
-                self.getItemList()
-            }
         }
 
     }
@@ -308,86 +303,86 @@ private func generateViewControllerList(categoryList:[CustCategoryListResModel] 
     DispatchQueue.global(qos: .background).async {
         print("This is run on the background queue")
         
-        for producerModel: ProducerItemListdataModel in producers{
-        let sourceCoordinate = CLLocation(latitude: self.customerLattitude, longitude: self.customerLongitude)
-        let destinationCoordinate = CLLocation(latitude: producerModel.businessLat, longitude:producerModel.businessLong)
-        
-            let distanceInMeters : Double = sourceCoordinate.distance(from: destinationCoordinate)
-            print(distanceInMeters)
-            let distanceInMiles : Double = (distanceInMeters / 1609.344)
-            producerModel.distance = String(format:"%.2f", distanceInMiles)+"  miles"
-            producerModel.distanceDouble=distanceInMiles
-            print(distanceInMiles)
-            let speed : Double = 11.11
-            let timeInSec = (distanceInMeters/speed)
-            let timeInMin = (timeInSec / 60 )
-             producerModel.time = String(format:"%.0f", timeInMin)+"  min"
-            
-            
-        }
-        
 //        for producerModel: ProducerItemListdataModel in producers{
-//            let googleDistanceUrl : String = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins="
-//            let apiKey : String = "&key="+"AIzaSyA8CA7g54OOFJFaMp9j8FzS0K0uh4azFCM"
-//            let custCurrentLocation : String = String(self.customerLattitude)+","+String(self.customerLongitude)
-//            let producerLocation : String = "&destinations="+String(producerModel.businessLat)+","+String(producerModel.businessLong)
-//            let finalString : String = googleDistanceUrl+custCurrentLocation+producerLocation+apiKey
-//            print(finalString)
+//        let sourceCoordinate = CLLocation(latitude: self.customerLattitude, longitude: self.customerLongitude)
+//        let destinationCoordinate = CLLocation(latitude: producerModel.businessLat, longitude:producerModel.businessLong)
+//        
+//            let distanceInMeters : Double = sourceCoordinate.distance(from: destinationCoordinate)
+//            print(distanceInMeters)
+//            let distanceInMiles : Double = (distanceInMeters / 1609.344)
+//            producerModel.distance = String(format:"%.2f", distanceInMiles)+"  miles"
+//            producerModel.distanceDouble=distanceInMiles
+//            print(distanceInMiles)
+//            let speed : Double = 11.11
+//            let timeInSec = (distanceInMeters/speed)
+//            let timeInMin = (timeInSec / 60 )
+//             producerModel.time = String(format:"%.0f", timeInMin)+"  min"
 //            
-//            Alamofire.request(finalString,
-//                              method: .get,
-//                              encoding: JSONEncoding.default)
-//                .responseJSON{
-//                    response in
-//                    
-//                    guard response.result.isSuccess else{
-//                        return
-//                    }
-////                    guard  let responseValue = response.result.value as? [String : AnyObject]
-////                        else{
-////                            return
-////                    }
-//                    
-//                    //debugPrint(responseValue)
-//                     let dict : NSDictionary = response.result.value  as! NSDictionary
-//                    var rows: NSArray = dict.value(forKey: "rows") as! NSArray
-//                    let rowsDict:NSDictionary=rows[0] as! NSDictionary
-//                    var elements : NSArray = rowsDict.value(forKey: "elements") as! NSArray
-//                    let elementDist:NSDictionary=elements[0] as! NSDictionary
-//                  //  var googleDistanceResModel : [GoogleDistanceResModel] = [GoogleDistanceResModel](json:elementDist)
-////                   var rows:[GoogleDistanceResModel] = []
-//                    //rows=EVReflection.setPropertiesfromDictionary(dict, anyObject:rows )
-//                    var strDistance : String = ""
-//                    var doubleDistance : Double = 0
-//                    var strTime : String = ""
-//                    
-//                    do {
-//                        var status : String = elementDist.value(forKey: "status") as! String
-//                        if (status == "OK"){
-//                            let distance:NSDictionary  =  try elementDist.value(forKey: "distance") as! NSDictionary
-//                            strDistance=distance.value(forKey: "text") as! String
-//                            doubleDistance=distance.value(forKey: "value") as! Double
-//                            let duration : NSDictionary = try elementDist.value(forKey: "duration") as! NSDictionary
-//                            strTime = duration.value(forKey: "text") as! String
-//                        }else{
-//                            strDistance = NSLocalizedString("googleDistance.label", comment: "")
-//                            doubleDistance = 0
-//                            strTime = NSLocalizedString("notAvailabel.label", comment: "")
-//                        }
-//                       
-//                    } catch{
-//                        //print("Could not calculate distance \(error), \(error.userInfo)")
-//                        
-//                    }
-//                    
-//                    producerModel.distance = strDistance
-//                    producerModel.distanceDouble=doubleDistance
-//                    producerModel.time = strTime
-//                    print(dict)
-//                    print(elementDist)
-//                    
-//            }
+//            
 //        }
+        
+        for producerModel: ProducerItemListdataModel in producers{
+            let googleDistanceUrl : String = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins="
+            let apiKey : String = "&key="+"AIzaSyA8CA7g54OOFJFaMp9j8FzS0K0uh4azFCM"
+            let custCurrentLocation : String = String(QuickStartViewController.customerLattitude)+","+String(QuickStartViewController.customerLongitude)
+            let producerLocation : String = "&destinations="+String(producerModel.businessLat)+","+String(producerModel.businessLong)
+            let finalString : String = googleDistanceUrl+custCurrentLocation+producerLocation+apiKey
+            print(finalString)
+            
+            Alamofire.request(finalString,
+                              method: .get,
+                              encoding: JSONEncoding.default)
+                .responseJSON{
+                    response in
+                    
+                    guard response.result.isSuccess else{
+                        return
+                    }
+//                    guard  let responseValue = response.result.value as? [String : AnyObject]
+//                        else{
+//                            return
+//                    }
+                    
+                    //debugPrint(responseValue)
+                     let dict : NSDictionary = response.result.value  as! NSDictionary
+                    var rows: NSArray = dict.value(forKey: "rows") as! NSArray
+                    let rowsDict:NSDictionary=rows[0] as! NSDictionary
+                    var elements : NSArray = rowsDict.value(forKey: "elements") as! NSArray
+                    let elementDist:NSDictionary=elements[0] as! NSDictionary
+                  //  var googleDistanceResModel : [GoogleDistanceResModel] = [GoogleDistanceResModel](json:elementDist)
+//                   var rows:[GoogleDistanceResModel] = []
+                    //rows=EVReflection.setPropertiesfromDictionary(dict, anyObject:rows )
+                    var strDistance : String = ""
+                    var doubleDistance : Double = 0
+                    var strTime : String = ""
+                    
+                    do {
+                        var status : String = elementDist.value(forKey: "status") as! String
+                        if (status == "OK"){
+                            let distance:NSDictionary  =  try elementDist.value(forKey: "distance") as! NSDictionary
+                            strDistance=distance.value(forKey: "text") as! String
+                            doubleDistance=distance.value(forKey: "value") as! Double
+                            let duration : NSDictionary = try elementDist.value(forKey: "duration") as! NSDictionary
+                            strTime = duration.value(forKey: "text") as! String
+                        }else{
+                            strDistance = NSLocalizedString("googleDistance.label", comment: "")
+                            doubleDistance = 0
+                            strTime = NSLocalizedString("notAvailabel.label", comment: "")
+                        }
+                       
+                    } catch{
+                        //print("Could not calculate distance \(error), \(error.userInfo)")
+                        
+                    }
+                    
+                    producerModel.distance = strDistance
+                    producerModel.distanceDouble=doubleDistance
+                    producerModel.time = strTime
+                    print(dict)
+                    print(elementDist)
+                    
+            }
+        }
         
         DispatchQueue.main.async {
             print("This is run on the main queue, after the previous code in outer block")
